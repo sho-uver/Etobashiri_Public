@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "81440587083",
+    "project_id": "chototsumoshin-21f53",
+    "storage_bucket": "chototsumoshin-21f53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81440587083:android:9177469926d7f8617b3cce",
+        "android_client_info": {
+          "package_name": "com.HishoCompany.Chototsumoshin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81440587083-gtn4tdudm2kd30vfh82gbdsjolg4sndf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjabJYpRIAjtMkC7Wz8AElRxBti7Jc7PY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81440587083-gtn4tdudm2kd30vfh82gbdsjolg4sndf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "81440587083-1j1foq5sjqnl233gn5caaf892ikjt4im.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.HishoCompany.Chototsumoshin"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

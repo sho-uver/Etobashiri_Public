@@ -71,3 +71,12 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+# Additional files to ignore
+libil2cpp.dbg.so
+libil2cpp.sym.so
+libunity.sym.so
+*.symbols.zip
+chototsumoshinIOS*
+Assets/Sound/波imove.wav
+Assets/Sound/風の音とりむ.wav
+arm64-v8a.zip

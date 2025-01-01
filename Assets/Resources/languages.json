@@ -1,0 +1,10 @@
+{
+  "en": {
+    "HELLO": "Hello",
+    "GOODBYE": "Goodbye"
+  },
+  "ja": {
+    "HELLO": "こんにちは",
+    "GOODBYE": "さようなら"
+  }
+}

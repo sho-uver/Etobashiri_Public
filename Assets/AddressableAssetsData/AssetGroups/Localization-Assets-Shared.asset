@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: dab9bc2bf1ef046b2a3a8349e5c6e4bd
+  m_SerializeEntries:
+  - m_GUID: 1317265bd367bf24c8c9252ba14c8797
+    m_Address: Assets/Samples/Localization/1.5.2/Smart Strings - Persistent Variables/String
+      Table/Gender Sample Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27153e20147c06c4c8d1304d28104a87
+    m_Address: Assets/Samples/Localization/1.5.2/Smart Strings - Persistent Variables/String
+      Table/Global Variables Sample Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8e7a50019f3a470f8509d7f8c165e87
+    m_Address: Assets/TextTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 9a235af8c58434af2a97807a960a725f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1f0478b0296934db39e0cc79884d8701, type: 2}
+    - {fileID: 11400000, guid: d592e34a879eb4f34b64740d82671bd0, type: 2}
