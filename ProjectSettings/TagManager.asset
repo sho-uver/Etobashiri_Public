@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - enemy
+  - Enemy
+  - Gate
+  - Wall
+  - LifeThread
+  - Tori
+  - Cleaner
+  - Obstacle
+  - ShiroTori
+  - Goal
+  - Hole
+  - LiberationPower
+  - Mure
+  - Cloud
+  - Hude
+  - Wave
+  - Bubble
+  - Line
+  - BoundWall
+  - JackPod
+  - Weapon
+  - ChinowaPart
+  - Chinowa
+  - BlackCanvas
+  - StartCanvas
+  - Esa
+  - Mikan
+  - lineBack
+  - SnowBall
+  - SnowBallCenser
+  - Ice
+  - Warp
+  - BigTori
+  - Fire
+  - Wind
+  - MureSymbol
+  - SnowBallSound
+  - Suikomi
+  - SpeedEffect
+  - Amaterasu
+  - ChototsuAudio
+  - BomCenser
+  - AmaterasuSymbol
+  - PlusPoint
+  - Tsumuzikaze
+  - Prism
+  - DemoPlayer
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Line
+  - Bubble
+  - Sector
+  - Enemy
+  - Mure
+  - Cleaner
+  - Censer
+  - Wind
+  - LineGetter
+  - Tsumuzikaze
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
