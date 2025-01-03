@@ -7,13 +7,18 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
+using TMPro;
+using UnityEngine.Localization.Settings;
+
+using System.Text.RegularExpressions;
+
 // ScrollViewにめっちゃいいhttps://www.youtube.com/watch?v=UZxxzeRGJxg
 public class Login : MonoBehaviour
 {
     const string STATISTICS_NAME = "Mugen_ver2.1";
     // public string ranking;
     public Text text;
-    public InputField name;
+    public TMP_InputField name;
     public string id;
     public string masterId;
     public string currentName;
@@ -40,21 +45,25 @@ public class Login : MonoBehaviour
     public Text top10;
     public bool top10Flg;
     public int bandsukeChangeNum;
-    string[] ngWords = new string[] { "AV","dick","drug","fuck","FUCK", "Gスポット", "gスポット", "ちんこ", "ちんぽ", "ちんちん","チンチン","ペニス","Chinko","Tinko","まんこ","マンコ","オナニー","マスターベーション","セックス","SEX","sex","あなる","アナル","アナニー","インポ","オメコ","フェラ","ふぇら","イマラチオ","クリトリス","くりとりす","殺","開発者","作成者","製作者","スカトロ","てまん","手マン","中出し","パイパン","おっぱい","オッパイ","パイオツ","ヤクザ","レイプ","巨根","巨乳"}; // NGワードリスト
+    string[] ngWords = new string[] { "AV", "dick", "drug", "fuck", "FUCK", "Gスポット", "gスポット", "ちんこ", "ちんぽ", "ちんちん", "チンチン", "ペニス", "Chinko", "Tinko", "まんこ", "マンコ", "オナニー", "マスターベーション", "セックス", "SEX", "sex", "あなる", "アナル", "アナニー", "インポ", "オメコ", "フェラ", "ふぇら", "イマラチオ", "クリトリス", "くりとりす", "殺", "開発者", "作成者", "製作者", "スカトロ", "てまん", "手マン", "中出し", "パイパン", "おっぱい", "オッパイ", "パイオツ", "ヤクザ", "レイプ", "巨根", "巨乳" }; // NGワードリスト
     public MenuSystem menuSystem;
     public int loginTry;
     public Sprite loginErrorImage;
     public SnapbarManager snapbarManager;
     public NGWordFilter ngWordFilter;
 
+    public TextMeshProUGUI nameChangeMessage;
+    private string tableName = "TextTable"; // Localizationテーブル名を指定
+
+
     void Start()
     {
-        id = PlayerPrefs.GetString("ID","No ID");
-        currentName = PlayerPrefs.GetString("Name","お客さん");
+        id = PlayerPrefs.GetString("ID", "No ID");
+        currentName = PlayerPrefs.GetString("Name", "お客さん");
         // Debug.Log(id);
         // Debug.Log(currentName);
         // if(id == "No ID" || currentName == "お客さん")
-        if(PlayerPrefs.GetInt("FirstLogin",1) == 1)
+        if (PlayerPrefs.GetInt("FirstLogin", 1) == 1)
         {
             FirstTimeLogin();
             OpenFirstAgreeCanvas();
@@ -62,33 +71,29 @@ public class Login : MonoBehaviour
         }
 
         PlayFabClientAPI.LoginWithCustomID(
-            new LoginWithCustomIDRequest { CustomId = id, CreateAccount = true},
-            result => 
+            new LoginWithCustomIDRequest { CustomId = id, CreateAccount = true },
+            result =>
             {
                 Debug.Log("ログイン成功！");
                 SubmitScore(PlayerPrefs.GetInt(STATISTICS_NAME, 0));
                 masterId = result.PlayFabId;
-                PlayerPrefs.SetString("MasterID",masterId);
-                if(!firstLoginFlg)
+                PlayerPrefs.SetString("MasterID", masterId);
+                if (!firstLoginFlg)
                 {
-                    // RequestLeaderBoard();
-                    // RequestFriendLeaderBoard();
                     RequestLeaderBoardAroundPlayer();
                 }
             },
-            error => 
+            error =>
             {
                 Debug.Log("ログイン失敗");
-                // PlayerPrefs.SetString("ID",GenerateCustomID());
-                // id = PlayerPrefs.GetString("ID","No ID");
                 StartCoroutine(LoginAgain(1));
             });
 
-        if(!firstLoginFlg)
+        if (!firstLoginFlg)
         {
             menuSystem.Login();
         }
-        
+
 
     }
 
@@ -109,16 +114,18 @@ public class Login : MonoBehaviour
             // SetPlayerDisplayName("ひまわり");
         }
 
-        if(nameCheckFlg && name.text != currentName)
-        {        
+        /* ここ削除
+        if (nameCheckFlg && name.text != currentName)
+        {
             currentName = name.text;
             NameCheck();
         }
+        */
     }
 
     public void SubmitScore(int playerScore)
     {
-        SetPlayerDisplayName (PlayerPrefs.GetString("Name","お客さん"));
+        SetPlayerDisplayName(PlayerPrefs.GetString("Name", "お客さん"));
         PlayFabClientAPI.UpdatePlayerStatistics(
             new UpdatePlayerStatisticsRequest
             {
@@ -148,17 +155,20 @@ public class Login : MonoBehaviour
         SetPlayerDisplayName(name.text);
     }
 
-    public void SetPlayerDisplayName (string displayName) 
+    public void SetPlayerDisplayName(string displayName)
     {
 
         PlayFabClientAPI.UpdateUserTitleDisplayName(
-            new UpdateUserTitleDisplayNameRequest {
+            new UpdateUserTitleDisplayNameRequest
+            {
                 DisplayName = displayName
             },
-            result => {
+            result =>
+            {
                 Debug.Log("Set display name was succeeded.");
             },
-            error => {
+            error =>
+            {
                 Debug.LogError(error.GenerateErrorReport());
             }
         );
@@ -181,29 +191,29 @@ public class Login : MonoBehaviour
                     x => Debug.Log(string.Format("{0}位:{1} スコア{2}", x.Position + 1, x.DisplayName, x.StatValue))
                     );
                 */
-                /*
-                ranking = "";
-                for (int i = 0; i < result.Leaderboard.Count; i++)
-                {
-                    var x = result.Leaderboard[i];
-                    ranking += string.Format("{0}位:{1}:{2}点", x.Position + 1, x.DisplayName, x.StatValue) + "\n";
-                };
-                text.text = ranking;
-            },
-            error =>
-            {
-                Debug.Log(error.GenerateErrorReport());
-                RequestLeaderBoard();
-            }
-            );
-    }
-    */
+    /*
+    ranking = "";
+    for (int i = 0; i < result.Leaderboard.Count; i++)
+    {
+        var x = result.Leaderboard[i];
+        ranking += string.Format("{0}位:{1}:{2}点", x.Position + 1, x.DisplayName, x.StatValue) + "\n";
+    };
+    text.text = ranking;
+},
+error =>
+{
+    Debug.Log(error.GenerateErrorReport());
+    RequestLeaderBoard();
+}
+);
+}
+*/
     public void BandsukeChange1()
     {
         RequestFriendLeaderBoard();
-        
+
     }
-    
+
     public void BandsukeChange2()
     {
         RequestLeaderBoardAroundPlayer();
@@ -250,7 +260,7 @@ public class Login : MonoBehaviour
                         else
                         {
                             Debug.Log("NGワードは含まれていません。");
-                            if(entry.DisplayName != null)
+                            if (entry.DisplayName != null)
                             {
                                 rankingName = entry.DisplayName;
                             }
@@ -260,12 +270,12 @@ public class Login : MonoBehaviour
                             }
                         }
                     });
-                    
+
 
                     // Instantiate and setup UI elements for rank and player name
                     Text rankText = Instantiate(rankingText, new Vector3(0, 0, 0), Quaternion.identity);
                     Text nameText = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
-                    
+
                     rankText.text = ranking.ToUpper();
                     nameText.text = rankingName.ToUpper();
 
@@ -294,39 +304,37 @@ public class Login : MonoBehaviour
             },
             result =>
             {
-                
+
                 foreach (Transform child in rankingSV.transform)
                 {
                     //自分の子供をDestroyする
                     Destroy(child.gameObject);
                 }
-                Text banduke = Instantiate(bandukeText,new Vector3(0,0,0), Quaternion.identity);
+                Text banduke = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
                 // banduke.text = "好敵手番付";
-                banduke.text = "番付";
+                banduke.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "RankingTitle");
                 // banduke.transform.parent = rankingSV.transform;
-                banduke.transform.SetParent(rankingSV.transform,false);
-                banduke.transform.localScale = new Vector3(1,1,1);
+                banduke.transform.SetParent(rankingSV.transform, false);
+                banduke.transform.localScale = new Vector3(1, 1, 1);
                 // Debug.Log(id);
-                for(int i = 0; i < result.Leaderboard.Count; i++)
+                for (int i = 0; i < result.Leaderboard.Count; i++)
                 {
-                    // Debug.Log(result.Leaderboard[i].PlayFabId);
-                    if(result.Leaderboard[i].PlayFabId == masterId)
+                    if (result.Leaderboard[i].PlayFabId == masterId)
                     {
                         top10Flg = true;
-                        
                         break;
                     }
                 }
 
                 for (int i = 0; i < result.Leaderboard.Count; i++)
                 {
-                    
+
                     string ranking = "";
                     string rankingName = "";
                     Text iremono;
                     Text iremonoName;
                     var x = result.Leaderboard[i];
-                    ranking = string.Format("{0}位 {1}点", x.Position + 1, x.StatValue);
+                    ranking = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "Ranking", arguments: new object[] { x.Position + 1, x.StatValue });
                     ranking.ToUpper();
                     // rankingName = string.Format("{0}", x.DisplayName);
                     ngWordFilter.CheckNGWord(x.DisplayName, (isNG) =>
@@ -339,7 +347,7 @@ public class Login : MonoBehaviour
                         else
                         {
                             Debug.Log("NGワードは含まれていません。");
-                            if(x.DisplayName != null)
+                            if (x.DisplayName != null)
                             {
                                 rankingName = string.Format("{0}", x.DisplayName);
                             }
@@ -350,22 +358,22 @@ public class Login : MonoBehaviour
                         }
                     });
                     rankingName.ToUpper();
-                    iremono = Instantiate(rankingText,new Vector3(0,0,0), Quaternion.identity);
-                    iremonoName = Instantiate(bandukeText,new Vector3(0,0,0), Quaternion.identity);
+                    iremono = Instantiate(rankingText, new Vector3(0, 0, 0), Quaternion.identity);
+                    iremonoName = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
                     iremono.text = ranking;
                     iremonoName.text = rankingName;
                     // iremono.transform.parent = rankingSV.transform;
-                    iremono.transform.SetParent(rankingSV.transform,false);
-                    iremono.transform.localScale = new Vector3(1,1,1);
-                    iremonoName.transform.SetParent(rankingSV.transform,false);
-                    iremonoName.transform.localScale = new Vector3(1,1,1);
-                    
-                    if(result.Leaderboard[i].PlayFabId == masterId)
+                    iremono.transform.SetParent(rankingSV.transform, false);
+                    iremono.transform.localScale = new Vector3(1, 1, 1);
+                    iremonoName.transform.SetParent(rankingSV.transform, false);
+                    iremonoName.transform.localScale = new Vector3(1, 1, 1);
+
+                    if (result.Leaderboard[i].PlayFabId == masterId)
                     {
                         iremono.GetComponent<BandukeText>().SetRedFlg();
                         iremonoName.GetComponent<BandukeText>().SetRedFlg();
                     }
-                    
+
                 }
             },
             error =>
@@ -387,34 +395,34 @@ public class Login : MonoBehaviour
             },
             result =>
             {
-                
+
                 foreach (Transform child in rankingSV.transform)
                 {
                     //自分の子供をDestroyする
                     Destroy(child.gameObject);
                 }
-                Text banduke = Instantiate(bandukeText,new Vector3(0,0,0), Quaternion.identity);
+                Text banduke = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
                 // banduke.text = "好敵手番付";
                 banduke.text = "番付";
                 // banduke.transform.parent = rankingSV.transform;
-                banduke.transform.SetParent(rankingSV.transform,false);
-                banduke.transform.localScale = new Vector3(1,1,1);
+                banduke.transform.SetParent(rankingSV.transform, false);
+                banduke.transform.localScale = new Vector3(1, 1, 1);
                 // Debug.Log(id);
-                for(int i = 0; i < result.Leaderboard.Count; i++)
+                for (int i = 0; i < result.Leaderboard.Count; i++)
                 {
                     // Debug.Log(result.Leaderboard[i].PlayFabId);
-                    if(result.Leaderboard[i].PlayFabId == masterId)
+                    if (result.Leaderboard[i].PlayFabId == masterId)
                     {
                         top10Flg = true;
-                        
+
                         break;
                     }
                 }
-                if(top10Flg)
+                if (top10Flg)
                 {
                     for (int i = 0; i < result.Leaderboard.Count; i++)
                     {
-                        
+
                         string ranking = "";
                         string rankingName = "";
                         Text iremono;
@@ -433,7 +441,7 @@ public class Login : MonoBehaviour
                             else
                             {
                                 Debug.Log("NGワードは含まれていません。");
-                                if(x.DisplayName != null)
+                                if (x.DisplayName != null)
                                 {
                                     rankingName = string.Format("{0}", x.DisplayName);
                                 }
@@ -444,22 +452,22 @@ public class Login : MonoBehaviour
                             }
                         });
                         rankingName.ToUpper();
-                        iremono = Instantiate(rankingText,new Vector3(0,0,0), Quaternion.identity);
-                        iremonoName = Instantiate(bandukeText,new Vector3(0,0,0), Quaternion.identity);
+                        iremono = Instantiate(rankingText, new Vector3(0, 0, 0), Quaternion.identity);
+                        iremonoName = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
                         iremono.text = ranking;
                         iremonoName.text = rankingName;
                         // iremono.transform.parent = rankingSV.transform;
-                        iremono.transform.SetParent(rankingSV.transform,false);
-                        iremono.transform.localScale = new Vector3(1,1,1);
-                        iremonoName.transform.SetParent(rankingSV.transform,false);
-                        iremonoName.transform.localScale = new Vector3(1,1,1);
+                        iremono.transform.SetParent(rankingSV.transform, false);
+                        iremono.transform.localScale = new Vector3(1, 1, 1);
+                        iremonoName.transform.SetParent(rankingSV.transform, false);
+                        iremonoName.transform.localScale = new Vector3(1, 1, 1);
                     };
                 }
                 else
                 {
                     for (int i = 0; i < 10; i++)
                     {
-                        if(result.Leaderboard.Count < 10 && i == 10)
+                        if (result.Leaderboard.Count < 10 && i == 10)
                         {
                             break;
                         }
@@ -481,7 +489,7 @@ public class Login : MonoBehaviour
                             else
                             {
                                 Debug.Log("NGワードは含まれていません。");
-                                if(x.DisplayName != null)
+                                if (x.DisplayName != null)
                                 {
                                     rankingName = string.Format("{0}", x.DisplayName);
                                 }
@@ -492,18 +500,18 @@ public class Login : MonoBehaviour
                             }
                         });
                         rankingName.ToUpper();
-                        iremono = Instantiate(rankingText,new Vector3(0,0,0), Quaternion.identity);
-                        iremonoName = Instantiate(bandukeText,new Vector3(0,0,0), Quaternion.identity);
+                        iremono = Instantiate(rankingText, new Vector3(0, 0, 0), Quaternion.identity);
+                        iremonoName = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
                         iremono.text = ranking;
                         iremonoName.text = rankingName;
                         // iremono.transform.parent = rankingSV.transform;
-                        iremono.transform.SetParent(rankingSV.transform,false);
-                        iremono.transform.localScale = new Vector3(1,1,1);
-                        iremonoName.transform.SetParent(rankingSV.transform,false);
-                        iremonoName.transform.localScale = new Vector3(1,1,1);
+                        iremono.transform.SetParent(rankingSV.transform, false);
+                        iremono.transform.localScale = new Vector3(1, 1, 1);
+                        iremonoName.transform.SetParent(rankingSV.transform, false);
+                        iremonoName.transform.localScale = new Vector3(1, 1, 1);
                     };
                 }
-                
+
             },
             error =>
             {
@@ -516,7 +524,7 @@ public class Login : MonoBehaviour
     public void Old_RequestLeaderBoardAroundPlayer()
     {
         RequestLeaderBoardAroundPlayer_Top10();
-        
+
         // yield return new WaitForSecondsRealtime(1);
         PlayFabClientAPI.GetLeaderboardAroundPlayer(
             new GetLeaderboardAroundPlayerRequest
@@ -528,7 +536,7 @@ public class Login : MonoBehaviour
             result =>
             {
                 bandsukeChangeNum = 1;
-                if(top10Flg)
+                if (top10Flg)
                 {
                     top10Flg = false;
                     // Debug.Log(top10Flg);
@@ -580,7 +588,7 @@ public class Login : MonoBehaviour
                         else
                         {
                             Debug.Log("NGワードは含まれていません。");
-                            if(entry.DisplayName != null)
+                            if (entry.DisplayName != null)
                             {
                                 rankingName = entry.DisplayName;
                             }
@@ -594,7 +602,7 @@ public class Login : MonoBehaviour
                     // Instantiate and setup UI elements for rank and player name
                     Text rankText = Instantiate(rankingText, new Vector3(0, 0, 0), Quaternion.identity);
                     Text nameText = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
-                    
+
                     rankText.text = ranking.ToUpper();
                     nameText.text = rankingName.ToUpper();
 
@@ -702,14 +710,14 @@ public class Login : MonoBehaviour
                 banduke6.transform.SetParent(rankingSV.transform,false);
                 banduke6.transform.localScale = new Vector3(1,1,1);
                 */
-                Text banduke = Instantiate(bandukeText,new Vector3(0,0,0), Quaternion.identity);
+                Text banduke = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
                 banduke.text = "番付";
                 // banduke.transform.parent = rankingSV.transform;
-                banduke.transform.SetParent(rankingSV.transform,false);
-                banduke.transform.localScale = new Vector3(1,1,1);
+                banduke.transform.SetParent(rankingSV.transform, false);
+                banduke.transform.localScale = new Vector3(1, 1, 1);
                 for (int i = 0; i < result.Leaderboard.Count; i++)
                 {
-                    
+
                     string ranking = "";
                     string rankingName = "";
                     Text iremono;
@@ -727,7 +735,7 @@ public class Login : MonoBehaviour
                         else
                         {
                             Debug.Log("NGワードは含まれていません。");
-                            if(x.DisplayName != null)
+                            if (x.DisplayName != null)
                             {
                                 rankingName = string.Format("{0}", x.DisplayName);
                             }
@@ -739,15 +747,15 @@ public class Login : MonoBehaviour
                     });
                     // rankingName = string.Format("{0}", x.DisplayName);
                     rankingName.ToUpper();
-                    iremono = Instantiate(rankingText,new Vector3(0,0,0), Quaternion.identity);
-                    iremonoName = Instantiate(bandukeText,new Vector3(0,0,0), Quaternion.identity);
+                    iremono = Instantiate(rankingText, new Vector3(0, 0, 0), Quaternion.identity);
+                    iremonoName = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
                     iremono.text = ranking;
                     iremonoName.text = rankingName;
                     // iremono.transform.parent = rankingSV.transform;
-                    iremono.transform.SetParent(rankingSV.transform,false);
-                    iremono.transform.localScale = new Vector3(1,1,1);
-                    iremonoName.transform.SetParent(rankingSV.transform,false);
-                    iremonoName.transform.localScale = new Vector3(1,1,1);
+                    iremono.transform.SetParent(rankingSV.transform, false);
+                    iremono.transform.localScale = new Vector3(1, 1, 1);
+                    iremonoName.transform.SetParent(rankingSV.transform, false);
+                    iremonoName.transform.localScale = new Vector3(1, 1, 1);
                 };
             },
             error =>
@@ -802,26 +810,26 @@ public class Login : MonoBehaviour
                     x => Debug.Log(string.Format("{0}位:{1} スコア{2}", x.Position + 1, x.DisplayName, x.StatValue))
                     );
                 */
-                /*
-                ranking = "";
-                for (int i = 0; i < result.Leaderboard.Count; i++)
-                {
-                    var x = result.Leaderboard[i];
-                    ranking += string.Format("{0}位:{1}:{2}点", x.Position + 1, x.DisplayName, x.StatValue) + "\n";
-                };
-                text.text = ranking;
-            },
-            error =>
-            {
-                Debug.Log(error.GenerateErrorReport());
-            }
-            );
-    }
-    */
+    /*
+    ranking = "";
+    for (int i = 0; i < result.Leaderboard.Count; i++)
+    {
+        var x = result.Leaderboard[i];
+        ranking += string.Format("{0}位:{1}:{2}点", x.Position + 1, x.DisplayName, x.StatValue) + "\n";
+    };
+    text.text = ranking;
+},
+error =>
+{
+    Debug.Log(error.GenerateErrorReport());
+}
+);
+}
+*/
 
 
 
-    private string GenerateCustomID() 
+    private string GenerateCustomID()
     {
         int idLength = 32;//IDの長さ
         StringBuilder stringBuilder = new StringBuilder(idLength);
@@ -838,17 +846,17 @@ public class Login : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         PlayFabClientAPI.LoginWithCustomID(
-            new LoginWithCustomIDRequest { CustomId = id, CreateAccount = true},
-            result => 
+            new LoginWithCustomIDRequest { CustomId = id, CreateAccount = true },
+            result =>
             {
                 Debug.Log("ログイン成功！");
                 SubmitScore(PlayerPrefs.GetInt(STATISTICS_NAME, 0));
             },
-            error => 
+            error =>
             {
                 Debug.Log("ログイン失敗");
                 loginTry++;
-                if(loginTry >= 5)
+                if (loginTry >= 5)
                 {
                     snapbarManager.ShowSnapbar("ログインができません。\nネット環境が良い状態で\n再ログインしてください。", loginErrorImage, 10);
                 }
@@ -858,7 +866,7 @@ public class Login : MonoBehaviour
                 }
                 // PlayerPrefs.SetString("ID",GenerateCustomID());
                 // id = PlayerPrefs.GetString("ID","No ID");
-                
+
             });
     }
 
@@ -867,38 +875,39 @@ public class Login : MonoBehaviour
         nameChangeCanvas.SetActive(true);
         homeCanvas.SetActive(false);
         name.text = currentName;
-        NameCheck();
         nameCheckFlg = true;
-        
+
     }
 
     public void CloseNameChangeCanvas()
     {
-        if(ngWordFlg)
+        if (ngWordFlg)
         {
             return;
         }
         PlayFabClientAPI.UpdateUserTitleDisplayName(
-        new UpdateUserTitleDisplayNameRequest {
+        new UpdateUserTitleDisplayNameRequest
+        {
             DisplayName = name.text
         },
-        result => {
+        result =>
+        {
             Debug.Log("Set display name was succeeded.");
             currentName = name.text;
-            PlayerPrefs.SetString("Name",currentName);
+            PlayerPrefs.SetString("Name", currentName);
             nameCheckFlg = false;
             nameChangeCanvas.SetActive(false);
             homeCanvas.SetActive(true);
             // RequestLeaderBoard();
             RequestLeaderBoardAroundPlayer();
-            if(firstLoginFlg)
+            if (firstLoginFlg)
             {
                 menuSystem.Login();
-                PlayerPrefs.SetInt("FirstLogin",0);
+                PlayerPrefs.SetInt("FirstLogin", 0);
             }
-            
         },
-        error => {
+        error =>
+        {
             Debug.LogError(error.GenerateErrorReport());
             NameError();
         }
@@ -908,142 +917,77 @@ public class Login : MonoBehaviour
     public void NameCheckLogin()
     {
         PlayFabClientAPI.UpdateUserTitleDisplayName(
-        new UpdateUserTitleDisplayNameRequest {
-            DisplayName = PlayerPrefs.GetString("Name",currentName)
+        new UpdateUserTitleDisplayNameRequest
+        {
+            DisplayName = PlayerPrefs.GetString("Name", currentName)
         },
-        result => {
+        result =>
+        {
         },
-        error => {
+        error =>
+        {
             Debug.LogError(error.GenerateErrorReport());
             snapbarManager.ShowSnapbar("バグで名前が使えなくなってます。\n名前変更から\n新しい名前を登録してください。", loginErrorImage, 10);
         }
         );
     }
-
-
-public void NameCheck()
-{
-    
-    ngWordFlg = false;
-
-    foreach (string ngWord in ngWords)
+    public void NameSendBtn()
     {
-        if (name.text.Contains(ngWord))
+        string inputText = name.text; // テキストを取得
+        StartCoroutine(NameCheck(inputText));
+    }
+
+    private IEnumerator NameCheck(string inputText)
+    {
+        // 入力規則を満たす正規表現: 半角英数字、全角ひらがな、全角カタカナ
+        string pattern = @"^[a-zA-Z0-9\u3040-\u309F\u30A0-\u30FF]+$";
+
+        if (inputText.Length >= 3 && inputText.Length <= 10 && Regex.IsMatch(inputText, pattern))
         {
-            ngWordFlg = true;
-            break;
+            nameCheckFlg = true;
+        }
+        else
+        {
+            nameCheckFlg = false;
+        }
+
+        yield return null; // 一応コルーチンで非同期処理に対応
+
+        // 入力が正しい場合はサーバーへ送信
+        if (nameCheckFlg)
+        {
+            PlayfabManager.Instance.SetDisplayName(inputText, OnNameSendSuccess, OnNameSendFailure);
+        }
+        else
+        {
+            NameCheckError();
         }
     }
-    /*
-    switch(name.text)
-        {
-            case "早稲田":
-                ngWordFlg = true;
-                break;
-
-            case "WASEDA":
-                ngWordFlg = true;
-                break;
-
-            case "わせだ":
-                ngWordFlg = true;
-                break;
-
-            case "ひだ":
-                ngWordFlg = true;
-                break;
-
-            case "飛田":
-                ngWordFlg = true;
-                break;
-
-            case "ヒダ":
-                ngWordFlg = true;
-                break;
-
-            case "hida":
-                ngWordFlg = true;
-                break;
-
-            case "Hida":
-                ngWordFlg = true;
-                break;
-
-            case "HIDA":
-                ngWordFlg = true;
-                break;
-
-            case "翔梧":
-                ngWordFlg = true;
-                break;
-
-            case "ショウゴ":
-                ngWordFlg = true;
-                break;
-
-            case "しょうご":
-                ngWordFlg = true;
-                break;
-
-            case "Shogo":
-                ngWordFlg = true;
-                break;
-
-            case "SHOGO":
-                ngWordFlg = true;
-                break;
-
-            case "shogo":
-                ngWordFlg = true;
-                break;
-
-            case "飛翔":
-                ngWordFlg = true;
-                break;
-
-            case "ひしょう":
-                ngWordFlg = true;
-                break;
-
-            case "ヒショウ":
-                ngWordFlg = true;
-                break;
-
-            case "HiSho":
-                ngWordFlg = true;
-                break;
-
-            case "HISHO":
-                ngWordFlg = true;
-                break;
-
-            case "hisho":
-                ngWordFlg = true;
-                break;
-
-            case "Hisho":
-                ngWordFlg = true;
-                break;
-
-            case "シュトルム":
-                ngWordFlg = true;
-                break;
-
-            case "STURM":
-                ngWordFlg = true;
-                break;
-        }
-    */
-    if (ngWordFlg)
+    private void OnNameSendSuccess()
     {
-        nameCheckText.text = "この名前は使えません。\n名前を変更してください。";
+        string localizationKey = "NameSuccess";
+        nameChangeMessage.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, localizationKey);
+        nameChangeMessage.color = Color.black;
     }
-    else
+
+    private void OnNameSendFailure(PlayFabError error)
     {
-        nameCheckText.text = "";
-        // nameCheckText.text = "あなたの名前は\n『" + name.text + "』\nでいいですか？";
+        Debug.LogError("名前の送信に失敗しました: " + error.GenerateErrorReport());
+        string localizationKey = "NameFailure";
+        nameChangeMessage.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, localizationKey);
+        nameChangeMessage.color = Color.red;
     }
-}
+    public void nameChangeMessageClear()
+    {
+        nameChangeMessage.text = "";
+    }
+
+    private void NameCheckError()
+    {
+        string localizationKey = "NameFailure";
+        nameChangeMessage.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, localizationKey);
+        nameChangeMessage.color = Color.red;
+    }
 
     public void NameError()
     {
@@ -1053,10 +997,10 @@ public void NameCheck()
     public void FirstTimeLogin()
     {
         // PlayerPrefs.SetString("ID",GenerateCustomID());
-        PlayerPrefs.SetString("ID",SystemInfo.deviceUniqueIdentifier);
-        id = PlayerPrefs.GetString("ID","No ID");
-        PlayerPrefs.SetString("Name","お客さん");
-        currentName = PlayerPrefs.GetString("Name","お客さん");
+        PlayerPrefs.SetString("ID", SystemInfo.deviceUniqueIdentifier);
+        id = PlayerPrefs.GetString("ID", "No ID");
+        PlayerPrefs.SetString("Name", "お客さん");
+        currentName = PlayerPrefs.GetString("Name", "お客さん");
         PlayerPrefs.SetInt("AdCounter", 24);
     }
 

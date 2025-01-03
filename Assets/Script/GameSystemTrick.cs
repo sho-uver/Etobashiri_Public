@@ -37,7 +37,7 @@ public class GameSystemTrick : MonoBehaviour
     public GameObject cleaner;
     public Cleaner cleanerScript;
     public GameObject mainCamera;
-        // アイテム出現タイムの変数を作成する。UpdateでTime.deltaTimeを追加していく。
+    // アイテム出現タイムの変数を作成する。UpdateでTime.deltaTimeを追加していく。
     [SerializeField]
     private float itemAppearTime;
     [SerializeField]
@@ -220,12 +220,12 @@ public class GameSystemTrick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         // Debug.developerConsoleVisible = true;
         // Debug.unityLogger.logEnabled = true;
         // Debug.Log(SceneManager.GetActiveScene().name);
-        
-        Application.targetFrameRate = 60; 
+
+        Application.targetFrameRate = 60;
         ReStart();
         /*初回ログインの処理
         if(PlayerPrefs.GetInt("FirstManual",0) == 0)
@@ -241,9 +241,9 @@ public class GameSystemTrick : MonoBehaviour
         // AdsManager.instance.HideBanner();
         // adsCanvas.GetComponent<AdsManager>().HideBanner();
         // liberationPatten = "Chototsumoshin";
-        
-        restLife = stageLife + Mathf.FloorToInt(PlayerPrefs.GetInt("RestLife",0) / 20);
-        
+
+        restLife = stageLife + Mathf.FloorToInt(PlayerPrefs.GetInt("RestLife", 0) / 20);
+
         // restLife = 4;
         drawlineComponent = drawLine.GetComponent<DrawLine>();
         liberationPatten = PlayerPrefs.GetString("Skill", "Chototsumoshin");
@@ -254,7 +254,7 @@ public class GameSystemTrick : MonoBehaviour
         goal = GameObject.FindWithTag("Goal");
         bokujuCountText.text = "✖︎" + restLife;
         startCanvas = GameObject.FindWithTag("StartCanvas");
-        chototsuLevelPoint = PlayerPrefs.GetInt("ChototsuLevelPoint",0);
+        chototsuLevelPoint = PlayerPrefs.GetInt("ChototsuLevelPoint", 0);
         // chototsuLevelPoint = 100;
         // Time.timeScale = 0f;
         // blackCanvas = GameObject.FindWithTag("BlackCanvas");
@@ -266,13 +266,13 @@ public class GameSystemTrick : MonoBehaviour
         shiki = 1;
         stageCounter = 1;
         stageCounterAll = 0;
-        
+
         ps = player.GetComponent<Player>();
-        scTime = 15 ;
+        scTime = 15;
         ps.SetGear(stageCounterAll);
         toriCounter = 1;
         ps.SetToriCounter(toriCounter);
-        fireworkUI = new GameObject[2]{fireworkUI0,fireworkUI1};
+        fireworkUI = new GameObject[2] { fireworkUI0, fireworkUI1 };
         stageName = SceneManager.GetActiveScene().name;
         beforeLevel = PlayerPrefs.GetInt("MugenLevel", 108);
     }
@@ -280,7 +280,7 @@ public class GameSystemTrick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!startFlg)
+        if (!startFlg)
         {
             return;
         }
@@ -298,42 +298,42 @@ public class GameSystemTrick : MonoBehaviour
         }
         */
         resultEffectTime -= Time.deltaTime;
-        if(resultEffectFlg && resultEffectTime < 0f)
+        if (resultEffectFlg && resultEffectTime < 0f)
         {
-            GameObject firework = Instantiate(fireworkUI[Random.Range(0,2)],resultCanvas.GetComponent<Transform>().position + new Vector3(Random.Range(-300,300),Random.Range(-800,800),-2),transform.rotation);
+            GameObject firework = Instantiate(fireworkUI[Random.Range(0, 2)], resultCanvas.GetComponent<Transform>().position + new Vector3(Random.Range(-300, 300), Random.Range(-800, 800), -2), transform.rotation);
             firework.GetComponent<Transform>().SetParent(resultCanvas.GetComponent<Transform>());
-            resultEffectTime = Random.Range(0.1f,1f);
+            resultEffectTime = Random.Range(0.1f, 1f);
         }
-        if(getHighScoreFlg && resultEffectTime < 0f)
+        if (getHighScoreFlg && resultEffectTime < 0f)
         {
-            GameObject firework = Instantiate(fireworkUIMini,resultCanvas.GetComponent<Transform>().position + new Vector3(Random.Range(-300,300),Random.Range(600,800),-2),transform.rotation);
+            GameObject firework = Instantiate(fireworkUIMini, resultCanvas.GetComponent<Transform>().position + new Vector3(Random.Range(-300, 300), Random.Range(600, 800), -2), transform.rotation);
             firework.GetComponent<Transform>().SetParent(resultCanvas.GetComponent<Transform>());
-            resultEffectTime = Random.Range(0.1f,1f);
+            resultEffectTime = Random.Range(0.1f, 1f);
         }
-        if(levelUpFlg && resultEffectTime < 0f)
+        if (levelUpFlg && resultEffectTime < 0f)
         {
-            GameObject firework = Instantiate(fireworkUIMini,resultCanvas.GetComponent<Transform>().position + new Vector3(Random.Range(-300,300),Random.Range(600,800),-2),transform.rotation);
+            GameObject firework = Instantiate(fireworkUIMini, resultCanvas.GetComponent<Transform>().position + new Vector3(Random.Range(-300, 300), Random.Range(600, 800), -2), transform.rotation);
             firework.GetComponent<Transform>().SetParent(resultCanvas.GetComponent<Transform>());
-            resultEffectTime = Random.Range(0.1f,1f);
+            resultEffectTime = Random.Range(0.1f, 1f);
         }
-        if(getHighScoreFlg && textChikaChikTime < 0)
+        if (getHighScoreFlg && textChikaChikTime < 0)
         {
-            highScoreTextKanban.color = new Color(1,0,0,0.5f);
+            highScoreTextKanban.color = new Color(1, 0, 0, 0.5f);
             textChikaChikTime = 0.1f;
         }
-        else if(getHighScoreFlg && textChikaChikTime >= 0)
+        else if (getHighScoreFlg && textChikaChikTime >= 0)
         {
-            highScoreTextKanban.color += new Color(1,0,0,5f * Time.deltaTime);
+            highScoreTextKanban.color += new Color(1, 0, 0, 5f * Time.deltaTime);
             textChikaChikTime -= Time.deltaTime;
         }
-        if(levelUpFlg && textChikaChikTime < 0)
+        if (levelUpFlg && textChikaChikTime < 0)
         {
-            levelText.color = new Color(1,0,0,0.5f);
+            levelText.color = new Color(1, 0, 0, 0.5f);
             textChikaChikTime = 0.1f;
         }
-        else if(levelUpFlg && textChikaChikTime >= 0)
+        else if (levelUpFlg && textChikaChikTime >= 0)
         {
-            levelText.color += new Color(1,0,0,5f * Time.deltaTime);
+            levelText.color += new Color(1, 0, 0, 5f * Time.deltaTime);
             textChikaChikTime -= Time.deltaTime;
         }
 
@@ -348,7 +348,7 @@ public class GameSystemTrick : MonoBehaviour
             bokujuCountText.text = "あと" + (Mathf.RoundToInt(goal.transform.position.y) - Mathf.RoundToInt(player.transform.position.y)) + "m";
         }
         */
-        
+
         // meter.text = Mathf.RoundToInt(player.transform.position.y) * 10 + bomPoint + "徳";
         /* speed.text = Player.instance.gear.ToString();
         if(player.transform.position.y > gearUpMeter)
@@ -372,9 +372,9 @@ public class GameSystemTrick : MonoBehaviour
         }
         */
 
-        if(toriMeter < player.transform.position.y)
+        if (toriMeter < player.transform.position.y)
         {
-            if(PlayerPrefs.GetInt("完春夏秋冬並木", 0) == 1)
+            if (PlayerPrefs.GetInt("完春夏秋冬並木", 0) == 1)
             {
                 toriMeter += 1000 + toriCounter * 100 * 2 / 3;
             }
@@ -382,12 +382,12 @@ public class GameSystemTrick : MonoBehaviour
             {
                 toriMeter += 1000 + toriCounter * 100;
             }
-            
+
             toriFlg = true;
         }
-        if(player.transform.position.y - road1.transform.position.y > 19.2f)
+        if (player.transform.position.y - road1.transform.position.y > 19.2f)
         {
-            MakeStage(road1,mRoad1);
+            MakeStage(road1, mRoad1);
             /*
             road1.transform.position += new Vector3(0,57.6f,0);
             mRoad1.MakeStageCast(1);
@@ -405,9 +405,9 @@ public class GameSystemTrick : MonoBehaviour
             */
 
         }
-        if(player.transform.position.y - road2.transform.position.y > 19.2f)
+        if (player.transform.position.y - road2.transform.position.y > 19.2f)
         {
-            MakeStage(road2,mRoad2);
+            MakeStage(road2, mRoad2);
             /*
             road2.transform.position += new Vector3(0,57.6f,0);
             mRoad2.MakeStageCast(1);
@@ -424,9 +424,9 @@ public class GameSystemTrick : MonoBehaviour
             */
 
         }
-        if(player.transform.position.y - road3.transform.position.y > 19.2f)
+        if (player.transform.position.y - road3.transform.position.y > 19.2f)
         {
-            MakeStage(road3,mRoad3);
+            MakeStage(road3, mRoad3);
             /*
             road3.transform.position += new Vector3(0,57.6f,0);
             mRoad3.MakeStageCast(1);
@@ -446,10 +446,10 @@ public class GameSystemTrick : MonoBehaviour
         }
     }
 
-    public void MakeStage(GameObject road,MugenRoad mRoad)
+    public void MakeStage(GameObject road, MugenRoad mRoad)
     {
-        road.transform.position += new Vector3(0,57.6f,0);
-        
+        road.transform.position += new Vector3(0, 57.6f, 0);
+
         // Instantiate(bigTori,road.transform.position - new Vector3(0, -9.6f,0), Quaternion.identity);
         /*
         if(stageCounter == 0 && stageCounterAll == 0)
@@ -464,9 +464,9 @@ public class GameSystemTrick : MonoBehaviour
         {
             ps.SetGear(stageCounterAll /100);
         }
-        */  
+        */
         // if(bomPoint >= 1000 * toriCounter)// && !toriFlg)
-        if(toriFlg)
+        if (toriFlg)
         {
             mRoad.MakeTori();
             // ps.SetToriCounter(toriCounter);
@@ -475,29 +475,29 @@ public class GameSystemTrick : MonoBehaviour
             // Instantiate(tori,new Vector3(Random.Range(-2.5f,2.5f), road.transform.position.y,1), Quaternion.identity);
             // toriFlg = true;
         }
-        if(prismFlg)
+        if (prismFlg)
         {
             mRoad.MakePrism(prismName);
             prismFlg = false;
         }
-        switch(shiki)
+        switch (shiki)
         {
             case 1:
                 // if(stageCounter == 6 + stageCounterAll)
                 // if(stageCounter == 4 + stageCounterAll)
-                if(stageCounter == 9)
+                if (stageCounter == 9)
                 {
                     mRoad.ChangeStage(shiki + 1);
-                    Instantiate(bigTori,road.transform.position - new Vector3(0, 10.2f,0), Quaternion.identity);
+                    Instantiate(bigTori, road.transform.position - new Vector3(0, 10.2f, 0), Quaternion.identity);
                     return;
                 }
                 // if(stageCounter == 5 + stageCounterAll)
-                if(stageCounter == 10)
+                if (stageCounter == 10)
                 {
                     mRoad.ChangeStage(shiki + 1);
                 }
                 // if(stageCounter == 6 + stageCounterAll)
-                if(stageCounter == 11)
+                if (stageCounter == 11)
                 {
                     shiki++;
                     mRoad.ChangeStage(shiki);
@@ -507,19 +507,19 @@ public class GameSystemTrick : MonoBehaviour
 
             case 2:
                 // if(stageCounter == 4 + stageCounterAll)
-                if(stageCounter == 9)
+                if (stageCounter == 9)
                 {
                     mRoad.ChangeStage(shiki + 1);
-                    Instantiate(bigTori,road.transform.position - new Vector3(0, 10.2f,0), Quaternion.identity);
+                    Instantiate(bigTori, road.transform.position - new Vector3(0, 10.2f, 0), Quaternion.identity);
                     return;
                 }
                 // if(stageCounter == 5 + stageCounterAll)
-                if(stageCounter == 10)
+                if (stageCounter == 10)
                 {
                     mRoad.ChangeStage(shiki + 1);
                 }
                 // if(stageCounter == 6 + stageCounterAll)
-                if(stageCounter == 11)
+                if (stageCounter == 11)
                 {
                     shiki++;
                     mRoad.ChangeStage(shiki);
@@ -529,27 +529,27 @@ public class GameSystemTrick : MonoBehaviour
 
             case 3:
                 // if(stageCounter == 3 + stageCounterAll)
-                if(stageCounter == 8)
+                if (stageCounter == 8)
                 {
                     taikoAudio.volume = 0.07f;
                     return;
                 }
                 // if(stageCounter == 4 + stageCounterAll)
-                if(stageCounter == 9)
+                if (stageCounter == 9)
                 {
                     mRoad.ChangeStage(shiki + 1);
-                    Instantiate(bigTori,road.transform.position - new Vector3(0, 10.2f,0), Quaternion.identity);
+                    Instantiate(bigTori, road.transform.position - new Vector3(0, 10.2f, 0), Quaternion.identity);
                     taikoAudio.volume = 0.04f;
                     return;
                 }
                 // if(stageCounter == 5 + stageCounterAll)
-                if(stageCounter == 10)
+                if (stageCounter == 10)
                 {
                     mRoad.ChangeStage(shiki + 1);
                     taikoAudio.volume = 0.01f;
                 }
                 // if(stageCounter == 6 + stageCounterAll)
-                if(stageCounter == 11)
+                if (stageCounter == 11)
                 {
                     shiki++;
                     mRoad.ChangeStage(shiki);
@@ -560,75 +560,78 @@ public class GameSystemTrick : MonoBehaviour
 
             case 4:
                 // if(stageCounter == 5)
-                    if(stageCounter == 10)
+                if (stageCounter == 10)
+                {
+                    taikoAudio.volume = 0.01f;
+                    return;
+                }
+                // if(stageCounter == 6)
+                if (stageCounter == 11)
+                {
+                    Instantiate(bigTori, road.transform.position - new Vector3(0, 10.2f, 0), Quaternion.identity);
+                    stageCounterAll++;
+                    if (stageCounterAll >= 12)
                     {
-                        taikoAudio.volume = 0.01f;
-                        return;
+                        mRoad.ChangeStage(5);
                     }
-                    // if(stageCounter == 6)
-                    if(stageCounter == 11)
+                    else
                     {
-                        Instantiate(bigTori,road.transform.position - new Vector3(0, 10.2f,0), Quaternion.identity);
-                        stageCounterAll++;
-                        if(stageCounterAll >= 12){
-                            mRoad.ChangeStage(5);
-                        }
-                        else
-                        {
-                            mRoad.ChangeStage(1);
-                        }
-                        taikoAudio.volume = 0.04f;
-                        mRoad.Year(stageCounterAll);
-                        return;
+                        mRoad.ChangeStage(1);
                     }
-                    // if(stageCounter == 7)
-                    if(stageCounter == 12)
+                    taikoAudio.volume = 0.04f;
+                    mRoad.Year(stageCounterAll);
+                    return;
+                }
+                // if(stageCounter == 7)
+                if (stageCounter == 12)
+                {
+                    if (stageCounterAll >= 12)
                     {
-                        if(stageCounterAll >= 12){
-                            mRoad.ChangeStage(5);
-                        }
-                        else
-                        {
-                            mRoad.ChangeStage(1);
-                        }
-                        taikoAudio.volume = 0.07f;
+                        mRoad.ChangeStage(5);
                     }
-                    // if(stageCounter == 8)
-                    if(stageCounter == 13)
+                    else
                     {
-                        
-                        if(stageCounterAll >= 12){
-                            shiki = 5;
-                            mRoad.ChangeStage(5);
-                        }
-                        else
-                        {
-                            shiki = 1;
-                            mRoad.ChangeStage(1);
-                        }
-                        stageCounter = 0;
-                        // stageCounterAll++;
-                        // toriFlg = false;
-                        ps.SetGear(stageCounterAll);
-                        taikoAudio.volume = 0.1f;
+                        mRoad.ChangeStage(1);
                     }
-                
-                
+                    taikoAudio.volume = 0.07f;
+                }
+                // if(stageCounter == 8)
+                if (stageCounter == 13)
+                {
+
+                    if (stageCounterAll >= 12)
+                    {
+                        shiki = 5;
+                        mRoad.ChangeStage(5);
+                    }
+                    else
+                    {
+                        shiki = 1;
+                        mRoad.ChangeStage(1);
+                    }
+                    stageCounter = 0;
+                    // stageCounterAll++;
+                    // toriFlg = false;
+                    ps.SetGear(stageCounterAll);
+                    taikoAudio.volume = 0.1f;
+                }
+
+
                 break;
 
             case 5:
-                if(stageCounter == 5)
+                if (stageCounter == 5)
                 {
                     mRoad.MakeGoal();
                     mRoad.StopMake();
                     return;
                 }
-                if(stageCounter == 6)
+                if (stageCounter == 6)
                 {
                     mRoad.StopMake();
                     return;
                 }
-                if(stageCounter == 7)
+                if (stageCounter == 7)
                 {
                     mRoad.StopMake();
                     return;
@@ -640,16 +643,16 @@ public class GameSystemTrick : MonoBehaviour
 
     public void StartCountDown()
     {
-        startCanvas.SetActive(false); 
+        startCanvas.SetActive(false);
         countDown.SetActive(true);
-        
+
     }
 
     public void StartGame()
     {
         player.GetComponent<Player>().RunFlgTrue();
         drawlineComponent.StartFlgTrue();
-        startCanvas.SetActive(false); 
+        startCanvas.SetActive(false);
         runCanvas.SetActive(true);
         cleaner.SetActive(true);
         cleanerScript = cleaner.GetComponent<Cleaner>();
@@ -658,12 +661,12 @@ public class GameSystemTrick : MonoBehaviour
         Destroy(demoCtrl);
         startFlg = true;
         // Time.timeScale = 1f;
-        
+
     }
 
     public void StopGame()
     {
-        if(!startFlg)
+        if (!startFlg)
         {
             return;
         }
@@ -697,14 +700,14 @@ public class GameSystemTrick : MonoBehaviour
         // SceneManager.LoadScene("Main");
         // SceneChanger.instance.ChangeMain();
         Time.timeScale = 1f;
-        
+
     }
 
     public void LostLife()
     {
         // SceneChanger.instance.ChangeMenu();
         // Result();
-        if(lostLifeFlg)
+        if (lostLifeFlg)
         {
             return;
         }
@@ -715,14 +718,14 @@ public class GameSystemTrick : MonoBehaviour
         cleanerScript.LostLife();
         mCScript.LostLifeStart();
         StartCoroutine(Vibrate(1));
-        if(restLife <= 0)
+        if (restLife <= 0)
         {
             Login();
-            Invoke("Result",1.5f);
+            Invoke("Result", 1.5f);
         }
         ps.StartCoroutine("ResetPositionChikaChika");
         ps.ReSetBaseSpeed();
-        Invoke("SetLostLifeFlgFalse",1.5f);
+        Invoke("SetLostLifeFlgFalse", 1.5f);
     }
 
     public void SetLostLifeFlgFalse()
@@ -732,37 +735,37 @@ public class GameSystemTrick : MonoBehaviour
 
     public void GetTori(string name)
     {
-        if(name == "Tori")
+        if (name == "Tori")
         {
             // fillChototsuGage += 5;
             StartChototsumoshin();
             // ChototsuGage(100);
         }
-        else if(name == "ShiroTori")
+        else if (name == "ShiroTori")
         {
             // fillChototsuGage += 100;
             ChototsuGage(500);
         }
         // chototsuGageImage.fillAmount = fillChototsuGage / maxChototsuGage;
-        
+
         /*
         if(chototsuGageImage.fillAmount >= 1)
         {
             chototsuFlg = true;
         }
         */
-        
-        
+
+
     }
 
     public void ChototsuGage(int num)
     {
-        
+
         // fillChototsuGage += num + chototsuLevelPoint;
         fillChototsuGage += num;
         // chototsuGageSlider.value = fillChototsuGage / maxChototsuGage;
         // Debug.Log(num); 
-        if(fillChototsuGage / maxChototsuGage >= 1)
+        if (fillChototsuGage / maxChototsuGage >= 1)
         {
             //chototsuFlg = true;
             /*
@@ -776,7 +779,7 @@ public class GameSystemTrick : MonoBehaviour
                 StartChototsumoshin();
             }
             */
-            while(fillChototsuGage >= 100)
+            while (fillChototsuGage >= 100)
             {
                 fillChototsuGage -= 100;
                 chototsuCount++;
@@ -793,12 +796,12 @@ public class GameSystemTrick : MonoBehaviour
         }
         fillChototsuGage -= 100;
         chototsuGageImage.fillAmount = fillChototsuGage / maxChototsuGage;
-        if(chototsuGageImage.fillAmount < 1)
+        if (chototsuGageImage.fillAmount < 1)
         {
             chototsuFlg = false;
         }
-        Vector2 liberationPowerPos = new Vector2(Random.Range(-2.1f,2.1f), player.transform.position.y + 19.2f);
-        Instantiate(liberationPower, liberationPowerPos , transform.rotation);
+        Vector2 liberationPowerPos = new Vector2(Random.Range(-2.1f, 2.1f), player.transform.position.y + 19.2f);
+        Instantiate(liberationPower, liberationPowerPos, transform.rotation);
     }
 
     public void StartChototsumoshin()
@@ -815,55 +818,55 @@ public class GameSystemTrick : MonoBehaviour
         }
         */
 
-                //Debug.Log(chototsuCount);
-                cleaner.GetComponent<Cleaner>().Chototsumoshin();
-                mainCamera.GetComponent<MainCamera>().Chototsumoshin();
-                /*
-        switch(liberationPatten)
+        //Debug.Log(chototsuCount);
+        cleaner.GetComponent<Cleaner>().Chototsumoshin();
+        mainCamera.GetComponent<MainCamera>().Chototsumoshin();
+        /*
+switch(liberationPatten)
+{
+    case "Chototsumoshin":
+        // player.GetComponent<Player>().Chototsumoshin(chototsuCount);
+        player.GetComponent<Player>().Chototsumoshin(5);
+        cleaner.GetComponent<Cleaner>().Chototsumoshin();
+        mainCamera.GetComponent<MainCamera>().Chototsumoshin();
+        // chototsuGageImage.fillAmount = fillChototsuGage / maxChototsuGage;
+        break;
+
+    case "Mure":
+        Vector3 murePos = player.transform.position;
+        murePos.y = murePos.y + 5;
+        Instantiate(mure, murePos, transform.rotation);
+        /*
+        for(int num = 0; num < chototsuCount; num++)
         {
-            case "Chototsumoshin":
-                // player.GetComponent<Player>().Chototsumoshin(chototsuCount);
-                player.GetComponent<Player>().Chototsumoshin(5);
-                cleaner.GetComponent<Cleaner>().Chototsumoshin();
-                mainCamera.GetComponent<MainCamera>().Chototsumoshin();
-                // chototsuGageImage.fillAmount = fillChototsuGage / maxChototsuGage;
-                break;
-
-            case "Mure":
-                Vector3 murePos = player.transform.position;
-                murePos.y = murePos.y + 5;
-                Instantiate(mure, murePos, transform.rotation);
-                /*
-                for(int num = 0; num < chototsuCount; num++)
-                {
-                    Instantiate(mure, murePos, transform.rotation);
-                }
-                
-                
-                break;
-
-            case "Hogeki":
-                drawlineComponent.HogekiCountUp();
-                break;
-
-            case "Deka":
-                /*
-                player.transform.localScale = new Vector3(0.2f + chototsuCount * 0.05f, 0.2f + chototsuCount * 0.05f,1);
-                if(chototsuCount > 4)
-                {
-                    player.GetComponent<Player>().Chototsumoshin(chototsuCount);
-                    Debug.Log(chototsuCount);
-                    cleaner.GetComponent<Cleaner>().Chototsumoshin();
-                    mainCamera.GetComponent<MainCamera>().Chototsumoshin();
-                }
-                
-                player.GetComponent<Player>().Chototsumoshin(10);
-                //Debug.Log(chototsuCount);
-                cleaner.GetComponent<Cleaner>().Chototsumoshin();
-                mainCamera.GetComponent<MainCamera>().Chototsumoshin();
-                break;
+            Instantiate(mure, murePos, transform.rotation);
         }
-        */
+
+
+        break;
+
+    case "Hogeki":
+        drawlineComponent.HogekiCountUp();
+        break;
+
+    case "Deka":
+        /*
+        player.transform.localScale = new Vector3(0.2f + chototsuCount * 0.05f, 0.2f + chototsuCount * 0.05f,1);
+        if(chototsuCount > 4)
+        {
+            player.GetComponent<Player>().Chototsumoshin(chototsuCount);
+            Debug.Log(chototsuCount);
+            cleaner.GetComponent<Cleaner>().Chototsumoshin();
+            mainCamera.GetComponent<MainCamera>().Chototsumoshin();
+        }
+
+        player.GetComponent<Player>().Chototsumoshin(10);
+        //Debug.Log(chototsuCount);
+        cleaner.GetComponent<Cleaner>().Chototsumoshin();
+        mainCamera.GetComponent<MainCamera>().Chototsumoshin();
+        break;
+}
+*/
         chototsuFlg = true;
     }
 
@@ -891,19 +894,19 @@ public class GameSystemTrick : MonoBehaviour
         // PlayerPrefs.SetInt("Saisen", PlayerPrefs.GetInt("Saisen",0) + currentScore);
         // PlayerPrefs.SetInt("LevelPoint", PlayerPrefs.GetInt("LevelPoint",0) + currentScore);
         // ResultEffect();
-        switch(stageName)
+        switch (stageName)
         {
             case "Mugen":
-                    // Debug.Log(PlayerPrefs.GetInt("STATISTICS_NAME", 1));
+                // Debug.Log(PlayerPrefs.GetInt("STATISTICS_NAME", 1));
+                highScore = PlayerPrefs.GetInt(STATISTICS_NAME, 0);
+                if (currentScore >= highScore)
+                {
+                    // Debug.Log(currentScore);
+                    // Debug.Log(highScore);
+                    PlayerPrefs.SetInt(STATISTICS_NAME, currentScore);
                     highScore = PlayerPrefs.GetInt(STATISTICS_NAME, 0);
-                    if(currentScore >= highScore)
-                    {
-                        // Debug.Log(currentScore);
-                        // Debug.Log(highScore);
-                        PlayerPrefs.SetInt(STATISTICS_NAME, currentScore);
-                        highScore = PlayerPrefs.GetInt(STATISTICS_NAME,0);
-                        // Debug.Log(PlayerPrefs.GetInt(STATISTICS_NAME, 1));
-                        getHighScoreFlg = true;
+                    // Debug.Log(PlayerPrefs.GetInt(STATISTICS_NAME, 1));
+                    getHighScoreFlg = true;
                     /*
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -912,7 +915,7 @@ public class GameSystemTrick : MonoBehaviour
                     */
                     resultPattern = "最高徳";
                     StartCoroutine(SubmitScore(currentScore));
-                    
+
                 }
                 else
                 {
@@ -924,10 +927,10 @@ public class GameSystemTrick : MonoBehaviour
                     resultPattern = "普通";
                     StartCoroutine(SubmitScore(highScore));
                     // RequestLeaderBoard();
-                    
+
                 }
-                altBonnoPoint = PlayerPrefs.GetInt("MugenToku", 0) +  currentScore; //* (1 + PlayerPrefs.GetInt("猪春夏秋冬並木",0) + PlayerPrefs.GetInt("犬春夏秋冬並木",0) + PlayerPrefs.GetInt("鳥春夏秋冬並木",0) + PlayerPrefs.GetInt("猿春夏秋冬並木",0) + PlayerPrefs.GetInt("羊春夏秋冬並木",0) + PlayerPrefs.GetInt("馬春夏秋冬並木",0) + PlayerPrefs.GetInt("蛇春夏秋冬並木",0) + PlayerPrefs.GetInt("龍春夏秋冬並木",0) + PlayerPrefs.GetInt("兎春夏秋冬並木",0) + PlayerPrefs.GetInt("虎春夏秋冬並木",0) + PlayerPrefs.GetInt("牛春夏秋冬並木",0) + PlayerPrefs.GetInt("鼠春夏秋冬並木",0) + PlayerPrefs.GetInt("達のんびり草原",0) * 2 + PlayerPrefs.GetInt("達春夏秋冬並木",0) * 2　+ PlayerPrefs.GetInt("達桃源郷積乱雲",0) * 2);
-                getMoney = currentScore * (1 + PlayerPrefs.GetInt("猪春夏秋冬並木",0) + PlayerPrefs.GetInt("犬春夏秋冬並木",0) * 2 + PlayerPrefs.GetInt("鳥春夏秋冬並木",0) * 3 + PlayerPrefs.GetInt("猿春夏秋冬並木",0) * 4 + PlayerPrefs.GetInt("羊春夏秋冬並木",0) * 5 + PlayerPrefs.GetInt("馬春夏秋冬並木",0) * 6 + PlayerPrefs.GetInt("蛇春夏秋冬並木",0) * 7 + PlayerPrefs.GetInt("龍春夏秋冬並木",0) * 8 + PlayerPrefs.GetInt("兎春夏秋冬並木",0) * 9 + PlayerPrefs.GetInt("虎春夏秋冬並木",0) * 10 + PlayerPrefs.GetInt("牛春夏秋冬並木",0) * 11 + PlayerPrefs.GetInt("鼠春夏秋冬並木",0) * 12 + PlayerPrefs.GetInt("達春夏秋冬並木",0) * 100 + PlayerPrefs.GetInt("Omikuji"));
+                altBonnoPoint = PlayerPrefs.GetInt("MugenToku", 0) + currentScore; //* (1 + PlayerPrefs.GetInt("猪春夏秋冬並木",0) + PlayerPrefs.GetInt("犬春夏秋冬並木",0) + PlayerPrefs.GetInt("鳥春夏秋冬並木",0) + PlayerPrefs.GetInt("猿春夏秋冬並木",0) + PlayerPrefs.GetInt("羊春夏秋冬並木",0) + PlayerPrefs.GetInt("馬春夏秋冬並木",0) + PlayerPrefs.GetInt("蛇春夏秋冬並木",0) + PlayerPrefs.GetInt("龍春夏秋冬並木",0) + PlayerPrefs.GetInt("兎春夏秋冬並木",0) + PlayerPrefs.GetInt("虎春夏秋冬並木",0) + PlayerPrefs.GetInt("牛春夏秋冬並木",0) + PlayerPrefs.GetInt("鼠春夏秋冬並木",0) + PlayerPrefs.GetInt("達のんびり草原",0) * 2 + PlayerPrefs.GetInt("達春夏秋冬並木",0) * 2　+ PlayerPrefs.GetInt("達桃源郷積乱雲",0) * 2);
+                getMoney = currentScore * (1 + PlayerPrefs.GetInt("猪春夏秋冬並木", 0) + PlayerPrefs.GetInt("犬春夏秋冬並木", 0) * 2 + PlayerPrefs.GetInt("鳥春夏秋冬並木", 0) * 3 + PlayerPrefs.GetInt("猿春夏秋冬並木", 0) * 4 + PlayerPrefs.GetInt("羊春夏秋冬並木", 0) * 5 + PlayerPrefs.GetInt("馬春夏秋冬並木", 0) * 6 + PlayerPrefs.GetInt("蛇春夏秋冬並木", 0) * 7 + PlayerPrefs.GetInt("龍春夏秋冬並木", 0) * 8 + PlayerPrefs.GetInt("兎春夏秋冬並木", 0) * 9 + PlayerPrefs.GetInt("虎春夏秋冬並木", 0) * 10 + PlayerPrefs.GetInt("牛春夏秋冬並木", 0) * 11 + PlayerPrefs.GetInt("鼠春夏秋冬並木", 0) * 12 + PlayerPrefs.GetInt("達春夏秋冬並木", 0) * 100 + PlayerPrefs.GetInt("Omikuji"));
                 PlayerPrefs.SetInt("MugenToku", altBonnoPoint);
                 // stageNameText.text = "春夏秋冬並木";
                 highScoreTextKanban.text = "最高徳：" + PlayerPrefs.GetInt(STATISTICS_NAME, 0);
@@ -936,13 +939,13 @@ public class GameSystemTrick : MonoBehaviour
                 resultGetTokuText.text = getMoney + "縁";
                 money = PlayerPrefs.GetInt("Money", 0) + getMoney;
                 PlayerPrefs.SetInt("Money", money);
-                resultMoney.text = "所持金："　+ money + "縁";
+                resultMoney.text = "所持金：" + money + "縁";
                 // PlayerPrefs.SetInt("LevelPoint", PlayerPrefs.GetInt("LevelPoint",0) + currentScore);
                 break;
 
             case "Trick1_1":
                 highScore = PlayerPrefs.GetInt("HS_Trick1_1", 0);
-                if(currentScore > highScore)
+                if (currentScore > highScore)
                 {
                     PlayerPrefs.SetInt("HS_Trick1_1", currentScore);
                     highScore = PlayerPrefs.GetInt("HS_Trick1_1");
@@ -952,7 +955,7 @@ public class GameSystemTrick : MonoBehaviour
 
             case "Trick1_2":
                 highScore = PlayerPrefs.GetInt("HS_Trick1_2", 0);
-                if(currentScore > highScore)
+                if (currentScore > highScore)
                 {
                     PlayerPrefs.SetInt("HS_Trick1_2", currentScore);
                     highScore = PlayerPrefs.GetInt("HS_Trick1_2");
@@ -962,7 +965,7 @@ public class GameSystemTrick : MonoBehaviour
 
             case "Trick1_3":
                 highScore = PlayerPrefs.GetInt("HS_Trick1_3", 0);
-                if(currentScore > highScore)
+                if (currentScore > highScore)
                 {
                     PlayerPrefs.SetInt("HS_Trick1_3", currentScore);
                     highScore = PlayerPrefs.GetInt("HS_Trick1_3");
@@ -972,7 +975,7 @@ public class GameSystemTrick : MonoBehaviour
 
             case "Trick2_1":
                 highScore = PlayerPrefs.GetInt("HS_Trick2_1", 0);
-                if(currentScore > highScore)
+                if (currentScore > highScore)
                 {
                     PlayerPrefs.SetInt("HS_Trick2_1", currentScore);
                     highScore = PlayerPrefs.GetInt("HS_Trick2_1");
@@ -982,7 +985,7 @@ public class GameSystemTrick : MonoBehaviour
 
             case "Trick2_2":
                 highScore = PlayerPrefs.GetInt("HS_Trick2_2", 0);
-                if(currentScore > highScore)
+                if (currentScore > highScore)
                 {
                     PlayerPrefs.SetInt("HS_Trick2_2", currentScore);
                     highScore = PlayerPrefs.GetInt("HS_Trick2_2");
@@ -992,7 +995,7 @@ public class GameSystemTrick : MonoBehaviour
 
             case "Trick2_3":
                 highScore = PlayerPrefs.GetInt("HS_Trick2_3", 0);
-                if(currentScore > highScore)
+                if (currentScore > highScore)
                 {
                     PlayerPrefs.SetInt("HS_Trick2_3", currentScore);
                     highScore = PlayerPrefs.GetInt("HS_Trick2_3");
@@ -1002,7 +1005,7 @@ public class GameSystemTrick : MonoBehaviour
 
             case "Trick3_1":
                 highScore = PlayerPrefs.GetInt("HS_Trick3_1", 0);
-                if(currentScore > highScore)
+                if (currentScore > highScore)
                 {
                     PlayerPrefs.SetInt("HS_Trick3_1", currentScore);
                     highScore = PlayerPrefs.GetInt("HS_Trick3_1");
@@ -1012,7 +1015,7 @@ public class GameSystemTrick : MonoBehaviour
 
             case "Trick3_2":
                 highScore = PlayerPrefs.GetInt("HS_Trick3_2", 0);
-                if(currentScore > highScore)
+                if (currentScore > highScore)
                 {
                     PlayerPrefs.SetInt("HS_Trick3_2", currentScore);
                     highScore = PlayerPrefs.GetInt("HS_Trick3_2");
@@ -1022,7 +1025,7 @@ public class GameSystemTrick : MonoBehaviour
 
             case "Trick3_3":
                 highScore = PlayerPrefs.GetInt("HS_Trick3_3", 0);
-                if(currentScore > highScore)
+                if (currentScore > highScore)
                 {
                     PlayerPrefs.SetInt("HS_Trick3_3", currentScore);
                     highScore = PlayerPrefs.GetInt("HS_Trick3_3");
@@ -1030,7 +1033,7 @@ public class GameSystemTrick : MonoBehaviour
                 }
                 break;
         }
-        for(int i = 0; i < 109; i++)
+        for (int i = 0; i < 109; i++)
         {
             /*
             if(i < 25)
@@ -1054,86 +1057,86 @@ public class GameSystemTrick : MonoBehaviour
                 levelPointMainus = 10000 * (i + 1);
             }
             */
-            if(i < 10)
+            if (i < 10)
             {
                 // 1000
                 levelPointMainus = 100 * (i + 1);
             }
-            if(i >= 10 && i < 20)
+            if (i >= 10 && i < 20)
             {
                 // 1000 + 2000 = 3000
                 levelPointMainus = 200 * (i + 1);
             }
-            if(i >= 20 && i < 30)
+            if (i >= 20 && i < 30)
             {
                 // 3000 + 4000 = 7000
                 levelPointMainus = 400 * (i + 1);
             }
-            if(i >= 30 && i < 40)
+            if (i >= 30 && i < 40)
             {
                 // 7000 + 8000 = 15000
                 levelPointMainus = 800 * (i + 1);
             }
-            if(i >= 40 && i < 50)
+            if (i >= 40 && i < 50)
             {
                 // 15000 + 16000 = 31000
                 levelPointMainus = 1600 * (i + 1);
             }
-            if(i >= 50 && i < 60)
+            if (i >= 50 && i < 60)
             {
                 // 31000 + 32000 = 63000
                 levelPointMainus = 3200 * (i + 1);
             }
-            if(i >= 60 && i < 70)
+            if (i >= 60 && i < 70)
             {
                 // 63000 + 64000 = 1270000
                 levelPointMainus = 6400 * (i + 1);
             }
-            if(i >= 70 && i < 80)
+            if (i >= 70 && i < 80)
             {
                 //127000 +128000 = 255000
                 levelPointMainus = 12800 * (i + 1);
             }
-            if(i >= 80 && i < 90)
+            if (i >= 80 && i < 90)
             {
                 // 255000 + 256000 = 511000
                 levelPointMainus = 25600 * (i + 1);
             }
-            if(i >= 90 && i < 100)
+            if (i >= 90 && i < 100)
             {
                 // 511000 + 512000 = 523000
                 levelPointMainus = 51200 * (i + 1);
             }
-            if(i >= 100 && i < 108)
+            if (i >= 100 && i < 108)
             {
                 // 523000 + 800000 = 1323000
                 levelPointMainus = 100000 * (i + 1);
             }
-            if(i == 108)
+            if (i == 108)
             {
-                
-                switch(stageName)
+
+                switch (stageName)
                 {
                     case "Nonbirisogen":
-                        if(PlayerPrefs.GetInt("悟のんびり草原", 0) == 1)
+                        if (PlayerPrefs.GetInt("悟のんびり草原", 0) == 1)
                         {
                             break;
                         }
-                        if(resultPattern != "一位")
+                        if (resultPattern != "一位")
                         {
                             resultPattern = "悟";
                         }
                         PlayerPrefs.SetInt("NonbirisogenLevel", i);
                         PlayerPrefs.SetInt("悟のんびり草原", 1);
-                        
+
                         break;
 
                     case "Mugen":
-                        if(PlayerPrefs.GetInt("悟春夏秋冬並木", 0) == 1)
+                        if (PlayerPrefs.GetInt("悟春夏秋冬並木", 0) == 1)
                         {
                             break;
                         }
-                        if(resultPattern != "一位")
+                        if (resultPattern != "一位")
                         {
                             resultPattern = "悟";
                         }
@@ -1142,11 +1145,11 @@ public class GameSystemTrick : MonoBehaviour
                         break;
 
                     case "Togenkyosekiranun":
-                        if(PlayerPrefs.GetInt("悟桃源郷積乱雲", 0) == 1)
+                        if (PlayerPrefs.GetInt("悟桃源郷積乱雲", 0) == 1)
                         {
                             break;
                         }
-                        if(resultPattern != "一位")
+                        if (resultPattern != "一位")
                         {
                             resultPattern = "悟";
                         }
@@ -1155,26 +1158,26 @@ public class GameSystemTrick : MonoBehaviour
                         break;
                 }
 
-                altLevel = 108 -i;
+                altLevel = 108 - i;
                 levelText.text = "残煩悩：" + altLevel;
                 jokyoPoint = levelPointMainus - levelPointTotal;
                 jokyoText.text = "解脱";
                 tokuSlider.maxValue = 1;
-                tokuSlider.value = 1;     
+                tokuSlider.value = 1;
                 break;
             }
-            if(levelPointTotal >= levelPointMainus)
+            if (levelPointTotal >= levelPointMainus)
             {
                 levelPointTotal -= levelPointMainus;
                 // Debug.Log(levelPointTotal);
             }
             else
             {
-                
-                
-                
+
+
+
                 jokyoPoint = levelPointMainus - levelPointTotal;
-                jokyoText.text = "次の克服まで："　+ jokyoPoint + "徳";
+                jokyoText.text = "次の克服まで：" + jokyoPoint + "徳";
                 tokuSlider.maxValue = levelPointMainus;
                 tokuSlider.value = levelPointTotal;
                 /*
@@ -1183,13 +1186,13 @@ public class GameSystemTrick : MonoBehaviour
                 Debug.Log(levelPointMainus);
                 Debug.Log(altLevel);      
                 */
-                switch(stageName)
+                switch (stageName)
                 {
                     case "Nonbirisogen":
-                        
-                        altLevel = 108 -i;
+
+                        altLevel = 108 - i;
                         beforeLevel = 108 - PlayerPrefs.GetInt("NonbirisogenLevel", 0);
-                        if(altLevel < beforeLevel)
+                        if (altLevel < beforeLevel)
                         {
                             levelText.text = "残煩悩：" + beforeLevel + "→" + altLevel;
                             levelUpFlg = true;
@@ -1218,14 +1221,14 @@ public class GameSystemTrick : MonoBehaviour
                         }
                         PlayerPrefs.SetInt("ShunkashutonamikiLevel", i);
                         */
-                        altLevel = 108 -i;
+                        altLevel = 108 - i;
                         levelText.text = "残煩悩：" + altLevel;
                         break;
 
                     case "Togenkyosekiranun":
-                        altLevel = 108 -i;
+                        altLevel = 108 - i;
                         beforeLevel = 108 - PlayerPrefs.GetInt("TogenkyosekiranunLevel", 0);
-                        if(altLevel < beforeLevel)
+                        if (altLevel < beforeLevel)
                         {
                             levelText.text = "残煩悩：" + beforeLevel + "→" + altLevel;
                             levelUpFlg = true;
@@ -1240,7 +1243,7 @@ public class GameSystemTrick : MonoBehaviour
                 }
                 break;
             }
-            
+
         }
         PlayerPrefs.SetInt("MugenLevel", altLevel);
         LevelUp();
@@ -1250,7 +1253,7 @@ public class GameSystemTrick : MonoBehaviour
         highScoreText3.text = "";
         // currentScoreText.text = "今回の得徳" + currentScore + "徳";
         // currentScoreText.text = currentScore + "徳" + "(基礎徳:" + Mathf.RoundToInt(player.transform.position.y) * 10 + bomPoint + "徳)";
-        
+
         // RequestLeaderBoard();
         /*
         snapbarManager.ShowSnapbar("テストだよ1", test, 3.0f);
@@ -1265,16 +1268,16 @@ public class GameSystemTrick : MonoBehaviour
     public void LevelUp()
     {
         afterLevel = PlayerPrefs.GetInt("MugenLevel", 108);
-        if(beforeLevel == 0)
+        if (beforeLevel == 0)
         {
             return;
         }
-        if(beforeLevel == afterLevel)
+        if (beforeLevel == afterLevel)
         {
             return;
         }
-        
-        if(afterLevel == 0)
+
+        if (afterLevel == 0)
         {
             message = "解脱完了、「悟」のご朱印獲得しました！\nここからが本当のえとばしり！！";
             snapbarManager.ShowSnapbar(message, satoruImage, 3);
@@ -1288,13 +1291,13 @@ public class GameSystemTrick : MonoBehaviour
             PlayerPrefs.SetInt("MugenLevel", afterLevel);
             beforeLevel = afterLevel;
         }
-        
+
     }
 
 
     public void Critical()
     {
-        
+
         // drawlineComponent.BokujuCountUp(1);
         //ChototsuGage(5);
         mCScript.BlowStart();
@@ -1322,7 +1325,7 @@ public class GameSystemTrick : MonoBehaviour
     public void GetPoint(int point)
     {
         bomPoint += point;
-        if(bomPoint > 1000 * toriCounter)
+        if (bomPoint > 1000 * toriCounter)
         {
             /*
             if(toriCounter == 1)
@@ -1336,9 +1339,9 @@ public class GameSystemTrick : MonoBehaviour
             toriCounter++;
         }
 
-        if(bomPoint > prismCounter * 10000)
+        if (bomPoint > prismCounter * 10000)
         {
-            if(prismCounter % 3 == 0)
+            if (prismCounter % 3 == 0)
             {
                 prismName = "Gold";
             }
@@ -1407,18 +1410,18 @@ public class GameSystemTrick : MonoBehaviour
             meter.GetComponent<Outline>().effectColor = new Color(0.5f,0,0.5f,1f);
         }
         */
-        if(point != 0)
+        if (point != 0)
         {
             plusPoint.Plus(point);
         }
-        
+
         meter.text = bomPoint + "徳";
         ps.SetCurrentPoint(bomPoint);
     }
 
     public void PrismCheck()
     {
-        
+
     }
 
     public void Goal()
@@ -1433,7 +1436,7 @@ public class GameSystemTrick : MonoBehaviour
     IEnumerator SubmitScore(int playerScore)
     {
         yield return new WaitForSeconds(0.1f);
-        SetPlayerDisplayName (PlayerPrefs.GetString("Name","お客さん"));
+        SetPlayerDisplayName(PlayerPrefs.GetString("Name", "お客さん"));
         PlayFabClientAPI.UpdatePlayerStatistics(
             new UpdatePlayerStatisticsRequest
             {
@@ -1451,7 +1454,7 @@ public class GameSystemTrick : MonoBehaviour
             result =>
             {
                 // Debug.Log("スコア送信");
-                Invoke("RequestLeaderBoard",0.5f);
+                Invoke("RequestLeaderBoard", 0.5f);
                 PlayFabClientAPI.UpdatePlayerStatistics(
                     new UpdatePlayerStatisticsRequest
                     {
@@ -1499,7 +1502,7 @@ public class GameSystemTrick : MonoBehaviour
             {
                 // Debug.Log(error.GenerateErrorReport());
                 loginTry++;
-                if(loginTry >= 10)
+                if (loginTry >= 10)
                 {
                     snapbarManager.ShowSnapbar("ログインができません。\nネット環境が良い状態で\n再ログインしてください。", loginErrorImage, 10);
                 }
@@ -1507,7 +1510,7 @@ public class GameSystemTrick : MonoBehaviour
                 {
                     StartCoroutine(SubmitScore(playerScore));
                 }
-                
+
             }
             );
 
@@ -1535,17 +1538,20 @@ public class GameSystemTrick : MonoBehaviour
             );
     }
 
-    public void SetPlayerDisplayName (string displayName) 
+    public void SetPlayerDisplayName(string displayName)
     {
 
         PlayFabClientAPI.UpdateUserTitleDisplayName(
-            new UpdateUserTitleDisplayNameRequest {
+            new UpdateUserTitleDisplayNameRequest
+            {
                 DisplayName = displayName
             },
-            result => {
+            result =>
+            {
                 Debug.Log("Set display name was succeeded.");
             },
-            error => {
+            error =>
+            {
                 Debug.LogError(error.GenerateErrorReport());
             }
         );
@@ -1553,16 +1559,16 @@ public class GameSystemTrick : MonoBehaviour
 
     public void Login()
     {
-        string id = PlayerPrefs.GetString("ID","No ID");
-        string currentName = PlayerPrefs.GetString("Name","お客さん");
+        string id = PlayerPrefs.GetString("ID", "No ID");
+        string currentName = PlayerPrefs.GetString("Name", "お客さん");
 
         PlayFabClientAPI.LoginWithCustomID(
-            new LoginWithCustomIDRequest { CustomId = id, CreateAccount = true},
-            result => 
+            new LoginWithCustomIDRequest { CustomId = id, CreateAccount = true },
+            result =>
             {
                 // Debug.Log("ログイン成功！");
             },
-            error => 
+            error =>
             {
                 // Debug.Log("ログイン失敗");
                 Login();
@@ -1577,7 +1583,7 @@ public class GameSystemTrick : MonoBehaviour
             {
                 // StatisticName = SceneManager.GetActiveScene().name,
                 StatisticName = STATISTICS_NAME,
-                MaxResultsCount = 21 
+                MaxResultsCount = 21
             },
             result =>
             {
@@ -1586,31 +1592,31 @@ public class GameSystemTrick : MonoBehaviour
                     //自分の子供をDestroyする
                     Destroy(child.gameObject);
                 }
-                int beforeStamp1 = PlayerPrefs.GetInt("猪春夏秋冬並木",0);
-                int beforeStamp2 = PlayerPrefs.GetInt("犬春夏秋冬並木",0);
-                int beforeStamp3 = PlayerPrefs.GetInt("鳥春夏秋冬並木",0);
-                int beforeStamp4 = PlayerPrefs.GetInt("猿春夏秋冬並木",0);
-                int beforeStamp5 = PlayerPrefs.GetInt("羊春夏秋冬並木",0);
-                int beforeStamp6 = PlayerPrefs.GetInt("馬春夏秋冬並木",0);
-                int beforeStamp7 = PlayerPrefs.GetInt("蛇春夏秋冬並木",0);
-                int beforeStamp8 = PlayerPrefs.GetInt("龍春夏秋冬並木",0);
-                int beforeStamp9 = PlayerPrefs.GetInt("兎春夏秋冬並木",0);
-                int beforeStamp10 = PlayerPrefs.GetInt("虎春夏秋冬並木",0);
-                int beforeStamp11 = PlayerPrefs.GetInt("牛春夏秋冬並木",0);
-                int beforeStamp12 = PlayerPrefs.GetInt("鼠春夏秋冬並木",0);
-                int beforeStamp13 = PlayerPrefs.GetInt("達春夏秋冬並木",0);
-                int beforeStamp14 = PlayerPrefs.GetInt("超春夏秋冬並木",0);
-                int beforeStamp15 = PlayerPrefs.GetInt("神春夏秋冬並木",0);
-                int beforeStamp16 = PlayerPrefs.GetInt("完春夏秋冬並木",0);
+                int beforeStamp1 = PlayerPrefs.GetInt("猪春夏秋冬並木", 0);
+                int beforeStamp2 = PlayerPrefs.GetInt("犬春夏秋冬並木", 0);
+                int beforeStamp3 = PlayerPrefs.GetInt("鳥春夏秋冬並木", 0);
+                int beforeStamp4 = PlayerPrefs.GetInt("猿春夏秋冬並木", 0);
+                int beforeStamp5 = PlayerPrefs.GetInt("羊春夏秋冬並木", 0);
+                int beforeStamp6 = PlayerPrefs.GetInt("馬春夏秋冬並木", 0);
+                int beforeStamp7 = PlayerPrefs.GetInt("蛇春夏秋冬並木", 0);
+                int beforeStamp8 = PlayerPrefs.GetInt("龍春夏秋冬並木", 0);
+                int beforeStamp9 = PlayerPrefs.GetInt("兎春夏秋冬並木", 0);
+                int beforeStamp10 = PlayerPrefs.GetInt("虎春夏秋冬並木", 0);
+                int beforeStamp11 = PlayerPrefs.GetInt("牛春夏秋冬並木", 0);
+                int beforeStamp12 = PlayerPrefs.GetInt("鼠春夏秋冬並木", 0);
+                int beforeStamp13 = PlayerPrefs.GetInt("達春夏秋冬並木", 0);
+                int beforeStamp14 = PlayerPrefs.GetInt("超春夏秋冬並木", 0);
+                int beforeStamp15 = PlayerPrefs.GetInt("神春夏秋冬並木", 0);
+                int beforeStamp16 = PlayerPrefs.GetInt("完春夏秋冬並木", 0);
 
                 // Text banduke2 = Instantiate(bandukeText,new Vector3(0,0,0), Quaternion.identity);
                 string comment = "";
-                if(currentScore < 500)
+                if (currentScore < 500)
                 {
                     resultPattern = "亥";
-                    
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    
+
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+
                     /*
                     comment = "亥";
                     stampMos.SetActive(true);
@@ -1620,11 +1626,11 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("猪春夏秋冬並木",1);
                     */
                 }
-                else if(currentScore < 1500 && currentScore >= 500)
+                else if (currentScore < 1500 && currentScore >= 500)
                 {
                     resultPattern = "戌";
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
                     /*
                     comment = "戌";
                     stampDog.SetActive(true);
@@ -1634,12 +1640,12 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("犬春夏秋冬並木",1);
                     */
                 }
-                else if(currentScore < 3000 && currentScore >= 1500)
+                else if (currentScore < 3000 && currentScore >= 1500)
                 {
                     resultPattern = "酉";
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
                     /*
                     comment = "酉";
                     stampBird.SetActive(true);
@@ -1649,13 +1655,13 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
                     */
                 }
-                else if(currentScore < 5000 && currentScore >= 3000)
+                else if (currentScore < 5000 && currentScore >= 3000)
                 {
                     resultPattern = "申";
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
                     /*
                     comment = "申";
                     stampMonkey.SetActive(true);
@@ -1665,14 +1671,14 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("猿春夏秋冬並木",1);
                     */
                 }
-                else if(currentScore < 7500 && currentScore >= 5000)
+                else if (currentScore < 7500 && currentScore >= 5000)
                 {
                     resultPattern = "未";
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
                     /*
                     comment = "未";
                     stampSheep.SetActive(true);
@@ -1682,15 +1688,15 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("羊春夏秋冬並木",1);
                     */
                 }
-                else if(currentScore < 10500 && currentScore >= 7500)
+                else if (currentScore < 10500 && currentScore >= 7500)
                 {
                     resultPattern = "午";
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
                     /*
                     comment = "午";
                     stampHorse.SetActive(true);
@@ -1700,16 +1706,16 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("馬春夏秋冬並木",1);
                     */
                 }
-                else if(currentScore < 14000 && currentScore >= 10500)
+                else if (currentScore < 14000 && currentScore >= 10500)
                 {
                     resultPattern = "巳";
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
                     /*
                     comment = "巳";
                     stampSnake.SetActive(true);
@@ -1719,17 +1725,17 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
                     */
                 }
-                else if(currentScore < 18000 && currentScore >= 14000)
+                else if (currentScore < 18000 && currentScore >= 14000)
                 {
                     resultPattern = "辰";
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("龍春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
                     /*
                     comment = "辰";
                     stampDragon.SetActive(true);
@@ -1739,18 +1745,18 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("龍春夏秋冬並木",1);
                     */
                 }
-                else if(currentScore < 22500 && currentScore >= 18000)
+                else if (currentScore < 22500 && currentScore >= 18000)
                 {
                     resultPattern = "卯";
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("兎春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
                     /*
                     comment = "卯";
                     stampRabbit.SetActive(true);
@@ -1760,19 +1766,19 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("兎春夏秋冬並木",1);
                     */
                 }
-                else if(currentScore < 27500 && currentScore >= 22500)
+                else if (currentScore < 27500 && currentScore >= 22500)
                 {
                     resultPattern = "寅";
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("兎春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("虎春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("虎春夏秋冬並木", 1);
                     /*
                     comment = "寅";
                     stampTiger.SetActive(true);
@@ -1782,20 +1788,20 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("虎春夏秋冬並木",1);
                     */
                 }
-                else if(currentScore < 33000 && currentScore >= 27500)
+                else if (currentScore < 33000 && currentScore >= 27500)
                 {
                     resultPattern = "丑";
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("兎春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("虎春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("牛春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("虎春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("牛春夏秋冬並木", 1);
                     /*
                     comment = "丑";
                     stampCaw.SetActive(true);
@@ -1805,21 +1811,21 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("牛春夏秋冬並木",1);
                     */
                 }
-                else if(currentScore >= 33000)
+                else if (currentScore >= 33000)
                 {
                     resultPattern = "子";
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("兎春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("虎春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("牛春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鼠春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("虎春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("牛春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鼠春夏秋冬並木", 1);
                     /*
                     comment = "子";
                     stampRat.SetActive(true);
@@ -1829,10 +1835,10 @@ public class GameSystemTrick : MonoBehaviour
                     PlayerPrefs.SetInt("鼠春夏秋冬並木",1);
                     */
                 }
-                if(kansoFlg)
+                if (kansoFlg)
                 {
                     resultPattern = "完";
-                    PlayerPrefs.SetInt("完春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("完春夏秋冬並木", 1);
                 }
                 /*
                 if(getHighScoreFlg)
@@ -1842,7 +1848,7 @@ public class GameSystemTrick : MonoBehaviour
                     message3 = "己のみ";
                 }
                 */
-                
+
 
                 // banduke2.text = "今回の階級　"　+ comment;
                 // banduke2.transform.parent = rankingSV.transform;
@@ -1897,12 +1903,12 @@ public class GameSystemTrick : MonoBehaviour
                         break;
                 }
                 */
-                Text banduke = Instantiate(bandukeText,new Vector3(0,0,0), Quaternion.identity);
+                Text banduke = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
                 // banduke.text = "全員番付";
                 banduke.text = "番付";
                 banduke.transform.parent = rankingSV.transform;
-                banduke.transform.localScale = new Vector3(1,1,1);
-                
+                banduke.transform.localScale = new Vector3(1, 1, 1);
+
                 for (int i = 0; i < result.Leaderboard.Count; i++)
                 {
                     string ranking = "";
@@ -1913,8 +1919,8 @@ public class GameSystemTrick : MonoBehaviour
                     ranking = string.Format("{0}位 {1}徳", x.Position + 1, x.StatValue);
                     ranking.ToUpper();
                     // rankingName = string.Format("{0}", x.DisplayName);
-                    
-                    
+
+
                     ngWordFilter.CheckNGWord(x.DisplayName, (isNG) =>
                     {
                         if (isNG)
@@ -1925,7 +1931,7 @@ public class GameSystemTrick : MonoBehaviour
                         else
                         {
                             Debug.Log("NGワードは含まれていません。");
-                            if(x.DisplayName != null)
+                            if (x.DisplayName != null)
                             {
                                 rankingName = string.Format("{0}", x.DisplayName);
                             }
@@ -1938,9 +1944,9 @@ public class GameSystemTrick : MonoBehaviour
                     rankingName.ToUpper();
                     //if(x.DisplayName == PlayerPrefs.GetString("Name","No Name") && currentScore == highScore)
                     // if((x.PlayFabId == PlayerPrefs.GetString("PlayFabId", "none")) && (currentScore == highScore) && (PlayerPrefs.GetString("PlayFabId", "none") != "none"))
-                    if(x.PlayFabId == PlayerPrefs.GetString("MasterID","") && currentScore == highScore)
+                    if (x.PlayFabId == PlayerPrefs.GetString("MasterID", "") && currentScore == highScore)
                     {
-                        if(x.StatValue != currentScore)
+                        if (x.StatValue != currentScore)
                         {
                             RequestLeaderBoard();
                             return;
@@ -1963,18 +1969,18 @@ public class GameSystemTrick : MonoBehaviour
                             ResultEffect();
                         }
                         */
-                        if(x.Position +1 <= 100 && x.Position +1 > 10)
+                        if (x.Position + 1 <= 100 && x.Position + 1 > 10)
                         {
                             resultPattern = "百位以内";
-                            PlayerPrefs.SetInt("達春夏秋冬並木",1);
+                            PlayerPrefs.SetInt("達春夏秋冬並木", 1);
                         }
-                        if(x.Position +1 > 1 && x.Position +1 < 10)
+                        if (x.Position + 1 > 1 && x.Position + 1 < 10)
                         {
                             resultPattern = "十位以内";
-                            PlayerPrefs.SetInt("超春夏秋冬並木",1);
-                            PlayerPrefs.SetInt("達春夏秋冬並木",1);
+                            PlayerPrefs.SetInt("超春夏秋冬並木", 1);
+                            PlayerPrefs.SetInt("達春夏秋冬並木", 1);
                         }
-                        if(x.Position +1 == 1)
+                        if (x.Position + 1 == 1)
                         {
                             /*
                             message = "千早ぶる";
@@ -1997,21 +2003,21 @@ public class GameSystemTrick : MonoBehaviour
                             ResultEffect();
                             */
                             resultPattern = "一位";
-                            PlayerPrefs.SetInt("神春夏秋冬並木",1);
-                            PlayerPrefs.SetInt("超春夏秋冬並木",1);
-                            PlayerPrefs.SetInt("達春夏秋冬並木",1);
+                            PlayerPrefs.SetInt("神春夏秋冬並木", 1);
+                            PlayerPrefs.SetInt("超春夏秋冬並木", 1);
+                            PlayerPrefs.SetInt("達春夏秋冬並木", 1);
                         }
                     }
                     // ranking.ToUpper();
-                    iremono = Instantiate(rankingText,new Vector3(0,0,0), Quaternion.identity);
-                    iremonoName = Instantiate(bandukeText,new Vector3(0,0,0), Quaternion.identity);
+                    iremono = Instantiate(rankingText, new Vector3(0, 0, 0), Quaternion.identity);
+                    iremonoName = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
                     iremono.text = ranking;
                     iremonoName.text = rankingName;
-                    iremono.transform.SetParent(rankingSV.transform,false);
-                    iremono.transform.localScale = new Vector3(1,1,1);
-                    iremonoName.transform.SetParent(rankingSV.transform,false);
-                    iremonoName.transform.localScale = new Vector3(1,1,1);
-                    if(result.Leaderboard[i].PlayFabId == PlayerPrefs.GetString("MasterID",""))
+                    iremono.transform.SetParent(rankingSV.transform, false);
+                    iremono.transform.localScale = new Vector3(1, 1, 1);
+                    iremonoName.transform.SetParent(rankingSV.transform, false);
+                    iremonoName.transform.localScale = new Vector3(1, 1, 1);
+                    if (result.Leaderboard[i].PlayFabId == PlayerPrefs.GetString("MasterID", ""))
                     {
                         iremono.GetComponent<BandukeText>().SetRedFlg();
                         iremonoName.GetComponent<BandukeText>().SetRedFlg();
@@ -2019,130 +2025,130 @@ public class GameSystemTrick : MonoBehaviour
                 };
 
                 ResultPattern();
-                int afterStamp1 = PlayerPrefs.GetInt("猪春夏秋冬並木",0);
-                int afterStamp2 = PlayerPrefs.GetInt("犬春夏秋冬並木",0);
-                int afterStamp3 = PlayerPrefs.GetInt("鳥春夏秋冬並木",0);
-                int afterStamp4 = PlayerPrefs.GetInt("猿春夏秋冬並木",0);
-                int afterStamp5 = PlayerPrefs.GetInt("羊春夏秋冬並木",0);
-                int afterStamp6 = PlayerPrefs.GetInt("馬春夏秋冬並木",0);
-                int afterStamp7 = PlayerPrefs.GetInt("蛇春夏秋冬並木",0);
-                int afterStamp8 = PlayerPrefs.GetInt("龍春夏秋冬並木",0);
-                int afterStamp9 = PlayerPrefs.GetInt("兎春夏秋冬並木",0);
-                int afterStamp10 = PlayerPrefs.GetInt("虎春夏秋冬並木",0);
-                int afterStamp11 = PlayerPrefs.GetInt("牛春夏秋冬並木",0);
-                int afterStamp12 = PlayerPrefs.GetInt("鼠春夏秋冬並木",0);
-                int afterStamp13 = PlayerPrefs.GetInt("達春夏秋冬並木",0);
-                int afterStamp14 = PlayerPrefs.GetInt("超春夏秋冬並木",0);
-                int afterStamp15 = PlayerPrefs.GetInt("神春夏秋冬並木",0);
-                int afterStamp16 = PlayerPrefs.GetInt("完春夏秋冬並木",0);
-                if(beforeStamp1 == 0)
+                int afterStamp1 = PlayerPrefs.GetInt("猪春夏秋冬並木", 0);
+                int afterStamp2 = PlayerPrefs.GetInt("犬春夏秋冬並木", 0);
+                int afterStamp3 = PlayerPrefs.GetInt("鳥春夏秋冬並木", 0);
+                int afterStamp4 = PlayerPrefs.GetInt("猿春夏秋冬並木", 0);
+                int afterStamp5 = PlayerPrefs.GetInt("羊春夏秋冬並木", 0);
+                int afterStamp6 = PlayerPrefs.GetInt("馬春夏秋冬並木", 0);
+                int afterStamp7 = PlayerPrefs.GetInt("蛇春夏秋冬並木", 0);
+                int afterStamp8 = PlayerPrefs.GetInt("龍春夏秋冬並木", 0);
+                int afterStamp9 = PlayerPrefs.GetInt("兎春夏秋冬並木", 0);
+                int afterStamp10 = PlayerPrefs.GetInt("虎春夏秋冬並木", 0);
+                int afterStamp11 = PlayerPrefs.GetInt("牛春夏秋冬並木", 0);
+                int afterStamp12 = PlayerPrefs.GetInt("鼠春夏秋冬並木", 0);
+                int afterStamp13 = PlayerPrefs.GetInt("達春夏秋冬並木", 0);
+                int afterStamp14 = PlayerPrefs.GetInt("超春夏秋冬並木", 0);
+                int afterStamp15 = PlayerPrefs.GetInt("神春夏秋冬並木", 0);
+                int afterStamp16 = PlayerPrefs.GetInt("完春夏秋冬並木", 0);
+                if (beforeStamp1 == 0)
                 {
-                    if(beforeStamp1 != afterStamp1)
+                    if (beforeStamp1 != afterStamp1)
                     {
                         snapbarManager.ShowSnapbar("「亥」のご朱印獲得、おめでとう！", stamp1Image, 3);
                     }
                 }
-                if(beforeStamp2 == 0)
+                if (beforeStamp2 == 0)
                 {
-                    if(beforeStamp2 != afterStamp2)
+                    if (beforeStamp2 != afterStamp2)
                     {
                         snapbarManager.ShowSnapbar("「戌」のご朱印獲得、おめでとう！", stamp2Image, 3);
                     }
                 }
-                if(beforeStamp3 == 0)
+                if (beforeStamp3 == 0)
                 {
-                    if(beforeStamp3 != afterStamp3)
+                    if (beforeStamp3 != afterStamp3)
                     {
                         snapbarManager.ShowSnapbar("「酉」のご朱印獲得、おめでとう！", stamp3Image, 3);
                     }
                 }
-                if(beforeStamp4 == 0)
+                if (beforeStamp4 == 0)
                 {
-                    if(beforeStamp4 != afterStamp4)
+                    if (beforeStamp4 != afterStamp4)
                     {
                         snapbarManager.ShowSnapbar("「申」のご朱印獲得、おめでとう！", stamp4Image, 3);
                     }
                 }
-                if(beforeStamp5 == 0)
+                if (beforeStamp5 == 0)
                 {
-                    if(beforeStamp5 != afterStamp5)
+                    if (beforeStamp5 != afterStamp5)
                     {
                         snapbarManager.ShowSnapbar("「未」のご朱印獲得、おめでとう！", stamp5Image, 3);
                     }
                 }
-                if(beforeStamp6 == 0)
+                if (beforeStamp6 == 0)
                 {
-                    if(beforeStamp6 != afterStamp6)
+                    if (beforeStamp6 != afterStamp6)
                     {
                         snapbarManager.ShowSnapbar("「午」のご朱印獲得、おめでとう！", stamp6Image, 3);
                     }
                 }
-                if(beforeStamp7 == 0)
+                if (beforeStamp7 == 0)
                 {
-                    if(beforeStamp7 != afterStamp7)
+                    if (beforeStamp7 != afterStamp7)
                     {
                         snapbarManager.ShowSnapbar("「巳」のご朱印獲得、おめでとう！", stamp7Image, 3);
                     }
                 }
-                if(beforeStamp8 == 0)
+                if (beforeStamp8 == 0)
                 {
-                    if(beforeStamp8 != afterStamp8)
+                    if (beforeStamp8 != afterStamp8)
                     {
                         snapbarManager.ShowSnapbar("「辰」のご朱印獲得、おめでとう！", stamp8Image, 3);
                     }
                 }
-                if(beforeStamp9 == 0)
+                if (beforeStamp9 == 0)
                 {
-                    if(beforeStamp9 != afterStamp9)
+                    if (beforeStamp9 != afterStamp9)
                     {
                         snapbarManager.ShowSnapbar("「卯」のご朱印獲得、おめでとう！", stamp9Image, 3);
                     }
                 }
-                if(beforeStamp10 == 0)
+                if (beforeStamp10 == 0)
                 {
-                    if(beforeStamp10 != afterStamp10)
+                    if (beforeStamp10 != afterStamp10)
                     {
                         snapbarManager.ShowSnapbar("「寅」のご朱印獲得、おめでとう！", stamp10Image, 3);
                     }
                 }
-                if(beforeStamp11 == 0)
+                if (beforeStamp11 == 0)
                 {
-                    if(beforeStamp11 != afterStamp12)
+                    if (beforeStamp11 != afterStamp12)
                     {
                         snapbarManager.ShowSnapbar("「丑」のご朱印獲得、おめでとう！", stamp11Image, 3);
                     }
                 }
-                if(beforeStamp12 == 0)
+                if (beforeStamp12 == 0)
                 {
-                    if(beforeStamp12 != afterStamp12)
+                    if (beforeStamp12 != afterStamp12)
                     {
                         snapbarManager.ShowSnapbar("「子」のご朱印獲得、おめでとう！", stamp12Image, 3);
                     }
                 }
-                if(beforeStamp13 == 0)
+                if (beforeStamp13 == 0)
                 {
-                    if(beforeStamp13 != afterStamp13)
+                    if (beforeStamp13 != afterStamp13)
                     {
                         snapbarManager.ShowSnapbar("「達」のご朱印獲得、おめでとう！", stamp13Image, 3);
                     }
                 }
-                if(beforeStamp14 == 0)
+                if (beforeStamp14 == 0)
                 {
-                    if(beforeStamp14 != afterStamp14)
+                    if (beforeStamp14 != afterStamp14)
                     {
                         snapbarManager.ShowSnapbar("「超」のご朱印獲得、おめでとう！", stamp14Image, 3);
                     }
                 }
-                if(beforeStamp15 == 0)
+                if (beforeStamp15 == 0)
                 {
-                    if(beforeStamp15 != afterStamp15)
+                    if (beforeStamp15 != afterStamp15)
                     {
                         snapbarManager.ShowSnapbar("「神」のご朱印獲得、おめでとう！", stamp15Image, 3);
                     }
                 }
-                if(beforeStamp16 == 0)
+                if (beforeStamp16 == 0)
                 {
-                    if(beforeStamp16 != afterStamp16)
+                    if (beforeStamp16 != afterStamp16)
                     {
                         snapbarManager.ShowSnapbar("「完」のご朱印獲得、おめでとう！", stamp16Image, 3);
                     }
@@ -2181,30 +2187,30 @@ public class GameSystemTrick : MonoBehaviour
                     x => Debug.Log(string.Format("{0}位:{1} スコア{2}", x.Position + 1, x.DisplayName, x.StatValue))
                     );
                 */
-                /*
-                ranking = "";
-                for (int i = 0; i < result.Leaderboard.Count; i++)
-                {
-                    var x = result.Leaderboard[i];
-                    ranking += string.Format("{0}位:{1}:{2}徳", x.Position + 1, x.DisplayName, x.StatValue) + "\n";
-                };
-                resultCanvas.GetComponent<Transform>().GetChild(8).gameObject.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = ranking;
-                // text.text = ranking;
-            },
-            error =>
-            {
-                Debug.Log(error.GenerateErrorReport());
-                RequestLeaderBoard();
-            }
-            );
-    }
-    */
+    /*
+    ranking = "";
+    for (int i = 0; i < result.Leaderboard.Count; i++)
+    {
+        var x = result.Leaderboard[i];
+        ranking += string.Format("{0}位:{1}:{2}徳", x.Position + 1, x.DisplayName, x.StatValue) + "\n";
+    };
+    resultCanvas.GetComponent<Transform>().GetChild(8).gameObject.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = ranking;
+    // text.text = ranking;
+},
+error =>
+{
+    Debug.Log(error.GenerateErrorReport());
+    RequestLeaderBoard();
+}
+);
+}
+*/
 
     IEnumerator Vibrate(int cnt)
     {
         for (int i = 0; i < cnt; i++)
         {
-            
+
             if (SystemInfo.supportsVibration)
             {
                 Handheld.Vibrate();
@@ -2212,7 +2218,7 @@ public class GameSystemTrick : MonoBehaviour
             yield return new WaitForSeconds(0.6f);
         }
     }
-    
+
     public void SetSCFlgFalse()
     {
         scFlg = false;
@@ -2236,7 +2242,7 @@ public class GameSystemTrick : MonoBehaviour
 
     public void ResultPattern()
     {
-        switch(resultPattern)
+        switch (resultPattern)
         {
             case "一位":
                 message = "千早ぶる";
@@ -2282,7 +2288,7 @@ public class GameSystemTrick : MonoBehaviour
                 message = "おめでとう";
                 message2 = "新たな道で";
                 message3 = "遊べるよ！";
-                PlayerPrefs.SetInt("合春夏秋冬並木",1);
+                PlayerPrefs.SetInt("合春夏秋冬並木", 1);
                 stampGokaku.SetActive(true);
                 ResultEffect();
                 break;
@@ -2291,146 +2297,146 @@ public class GameSystemTrick : MonoBehaviour
                 message = "最高点";
                 message2 = "次なる敵も";
                 message3 = "己のみ";
-                if(currentScore < 500)
+                if (currentScore < 500)
                 {
                     stampMos.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
                 }
-                else if(currentScore < 1500 && currentScore >= 500)
+                else if (currentScore < 1500 && currentScore >= 500)
                 {
                     stampDog.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
                 }
-                else if(currentScore < 3000 && currentScore >= 1500)
+                else if (currentScore < 3000 && currentScore >= 1500)
                 {
                     stampBird.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
                 }
-                else if(currentScore < 5000 && currentScore >= 3000)
+                else if (currentScore < 5000 && currentScore >= 3000)
                 {
                     stampMonkey.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
                 }
-                else if(currentScore < 7500 && currentScore >= 5000)
+                else if (currentScore < 7500 && currentScore >= 5000)
                 {
                     stampSheep.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
                 }
-                else if(currentScore < 10500 && currentScore >= 7500)
+                else if (currentScore < 10500 && currentScore >= 7500)
                 {
                     stampHorse.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
                 }
-                else if(currentScore < 14000 && currentScore >= 10500)
+                else if (currentScore < 14000 && currentScore >= 10500)
                 {
                     stampSnake.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
                 }
-                else if(currentScore < 18000 && currentScore >= 14000)
+                else if (currentScore < 18000 && currentScore >= 14000)
                 {
                     stampDragon.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("龍春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
                 }
-                else if(currentScore < 22500 && currentScore >= 18000)
+                else if (currentScore < 22500 && currentScore >= 18000)
                 {
                     stampRabbit.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("兎春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
                 }
-                else if(currentScore < 27500 && currentScore >= 22500)
+                else if (currentScore < 27500 && currentScore >= 22500)
                 {
                     stampTiger.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("兎春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("虎春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("虎春夏秋冬並木", 1);
                 }
-                else if(currentScore < 33000 && currentScore >= 27500)
+                else if (currentScore < 33000 && currentScore >= 27500)
                 {
                     stampCaw.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("兎春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("虎春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("牛春夏秋冬並木",1);
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("虎春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("牛春夏秋冬並木", 1);
                 }
-                else if(currentScore >= 33000)
+                else if (currentScore >= 33000)
                 {
                     stampRat.SetActive(true);
-                    PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("兎春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("虎春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("牛春夏秋冬並木",1);
-                    PlayerPrefs.SetInt("鼠春夏秋冬並木",1);
-                    
+                    PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("虎春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("牛春夏秋冬並木", 1);
+                    PlayerPrefs.SetInt("鼠春夏秋冬並木", 1);
+
                 }
                 ResultEffect();
                 break;
 
             case "子":
                 stampRat.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("鼠春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("鼠春夏秋冬並木", 0) == 0)
                 {
                     message = "これやこの";
                     message2 = "誰もが敬う";
                     message3 = "厄祓い";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("鼠春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("鼠春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2443,30 +2449,30 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "誰もが敬う";
                     message3 = "厄祓い";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                PlayerPrefs.SetInt("兎春夏秋冬並木",1);
-                PlayerPrefs.SetInt("虎春夏秋冬並木",1);
-                PlayerPrefs.SetInt("牛春夏秋冬並木",1);
-                PlayerPrefs.SetInt("鼠春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("虎春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("牛春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("鼠春夏秋冬並木", 1);
                 break;
 
             case "丑":
                 stampCaw.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("牛春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("牛春夏秋冬並木", 0) == 0)
                 {
                     message = "君がため";
                     message2 = "まだまだ足らぬ";
                     message3 = "技術力";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("牛春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("牛春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2479,29 +2485,29 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "まだまだ足らぬ";
                     message3 = "技術力";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                PlayerPrefs.SetInt("兎春夏秋冬並木",1);
-                PlayerPrefs.SetInt("虎春夏秋冬並木",1);
-                PlayerPrefs.SetInt("牛春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("虎春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("牛春夏秋冬並木", 1);
                 break;
 
             case "寅":
                 stampTiger.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("虎春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("虎春夏秋冬並木", 0) == 0)
                 {
                     message = "誇らしい";
                     message2 = "山どりの尾の";
                     message3 = "獣道";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("虎春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("虎春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2514,28 +2520,28 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "山どりの尾の";
                     message3 = "獣道";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                PlayerPrefs.SetInt("兎春夏秋冬並木",1);
-                PlayerPrefs.SetInt("虎春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("虎春夏秋冬並木", 1);
                 break;
 
             case "卯":
                 stampRabbit.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("兎春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("兎春夏秋冬並木", 0) == 0)
                 {
                     message = "おほけなく";
                     message2 = "";
                     message3 = "";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("兎春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("兎春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2548,27 +2554,27 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "ひょうかをすると";
                     message3 = "やんごとない";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                PlayerPrefs.SetInt("龍春夏秋冬並木",1);
-                PlayerPrefs.SetInt("兎春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("兎春夏秋冬並木", 1);
                 break;
 
             case "辰":
                 stampDragon.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("龍春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("龍春夏秋冬並木", 0) == 0)
                 {
                     message = "ほめるにも";
                     message2 = "なおあまりある";
                     message3 = "ゆびさばき";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("龍春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("龍春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2581,26 +2587,26 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "なおあまりある";
                     message3 = "ゆびさばき";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
-                PlayerPrefs.SetInt("龍春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("龍春夏秋冬並木", 1);
                 break;
 
             case "巳":
                 stampSnake.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("蛇春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("蛇春夏秋冬並木", 0) == 0)
                 {
                     message = "今はただ";
                     message2 = "ほめざるをえぬ";
                     message3 = "そのはしり";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("蛇春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("蛇春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2613,25 +2619,25 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "ほめざるをえぬ";
                     message3 = "そのはしり";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                PlayerPrefs.SetInt("馬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("蛇春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("蛇春夏秋冬並木", 1);
                 break;
 
             case "午":
                 stampHorse.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("馬春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("馬春夏秋冬並木", 0) == 0)
                 {
                     message = "がんばりの";
                     message2 = "しるしなりける";
                     message3 = "５０００てん";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("馬春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("馬春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2644,24 +2650,24 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "しるしなりける";
                     message3 = "５０００てん";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                PlayerPrefs.SetInt("羊春夏秋冬並木",1);
-                PlayerPrefs.SetInt("馬春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("馬春夏秋冬並木", 1);
                 break;
 
             case "未":
                 stampSheep.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("羊春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("羊春夏秋冬並木", 0) == 0)
                 {
                     message = "ごうかいに";
                     message2 = "たまぞちりける";
                     message3 = "はしりかた";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("羊春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("羊春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2674,23 +2680,23 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "たまぞちりける";
                     message3 = "はしりかた";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                PlayerPrefs.SetInt("猿春夏秋冬並木",1);
-                PlayerPrefs.SetInt("羊春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("羊春夏秋冬並木", 1);
                 break;
 
             case "申":
                 stampMonkey.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("猿春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("猿春夏秋冬並木", 0) == 0)
                 {
                     message = "あらしふく";
                     message2 = "きみのみちすじ";
                     message3 = "まだのびる";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("猿春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("猿春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2703,22 +2709,22 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "きみのみちすじ";
                     message3 = "まだのびる";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
-                PlayerPrefs.SetInt("猿春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("猿春夏秋冬並木", 1);
                 break;
 
             case "酉":
                 stampBird.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("鳥春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("鳥春夏秋冬並木", 0) == 0)
                 {
                     message = "ひとはいさ";
                     message2 = "こころもしらず";
                     message3 = "みこみあり";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("鳥春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("鳥春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2731,21 +2737,21 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "こころもしらず";
                     message3 = "みこみあり";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                PlayerPrefs.SetInt("犬春夏秋冬並木",1);
-                PlayerPrefs.SetInt("鳥春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("鳥春夏秋冬並木", 1);
                 break;
 
             case "戌":
                 stampDog.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("犬春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("犬春夏秋冬並木", 0) == 0)
                 {
                     message = "ひさかたの";
                     message2 = "ひかりのどけき";
                     message3 = "よいはしり";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("犬春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("犬春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2758,20 +2764,20 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "ひかりのどけき";
                     message3 = "よいはしり";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
-                PlayerPrefs.SetInt("犬春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
+                PlayerPrefs.SetInt("犬春夏秋冬並木", 1);
                 break;
 
             case "亥":
                 stampMos.SetActive(true);
-                if(getHighScoreFlg == true && PlayerPrefs.GetInt("猪春夏秋冬並木",0) == 0)
+                if (getHighScoreFlg == true && PlayerPrefs.GetInt("猪春夏秋冬並木", 0) == 0)
                 {
                     message = "しのぶれど";
                     message2 = "もうすこしだけ";
                     message3 = "がんばろう";
                     ResultEffect();
                 }
-                else if(getHighScoreFlg == true && PlayerPrefs.GetInt("猪春夏秋冬並木",0) == 1)
+                else if (getHighScoreFlg == true && PlayerPrefs.GetInt("猪春夏秋冬並木", 0) == 1)
                 {
                     message = "最高点";
                     message2 = "次なる敵も";
@@ -2784,13 +2790,13 @@ public class GameSystemTrick : MonoBehaviour
                     message2 = "もうすこしだけ";
                     message3 = "がんばろう";
                 }
-                PlayerPrefs.SetInt("猪春夏秋冬並木",1);
+                PlayerPrefs.SetInt("猪春夏秋冬並木", 1);
                 break;
         }
     }
 
     public void OpenManualCanvas()
-    {   
+    {
         manualCanvas.SetActive(true);
     }
 
@@ -2808,7 +2814,7 @@ public class GameSystemTrick : MonoBehaviour
             // NOTE: iOSでUIWebViewではなくWKWebViewを利用する(現在はほぼ必須な設定項目だと思ってもらえれば)
             enableWKWebView: true
         );
-            
+
         // URLを読み込みWebViewを表示する
         webViewObject.SetVisibility(true);
         webViewObject.LoadURL("https://youtu.be/vAbpxrB_EEs?si=7V6t-TiBniw7NmKF");
@@ -2833,7 +2839,7 @@ public class GameSystemTrick : MonoBehaviour
         vp.Stop();
         movie.SetActive(false);
         manual.SetActive(true);
-        
+
     }
 
     public void OpenVisualDictionally1()
@@ -2923,9 +2929,9 @@ public class GameSystemTrick : MonoBehaviour
     public void SetTweet()
     {
         string postMessage;
-        if(shareFlg)
+        if (shareFlg)
         {
-            postMessage = "共有は1走りにつき1回までです。" ;
+            postMessage = "共有は1走りにつき1回までです。";
             snapbarManager.ShowSnapbar(postMessage, enImage, 3);
             return;
         }
@@ -2939,9 +2945,9 @@ public class GameSystemTrick : MonoBehaviour
     public void SetLine()
     {
         string postMessage;
-        if(shareFlg)
+        if (shareFlg)
         {
-            postMessage = "共有は1走りにつき1回までです。" ;
+            postMessage = "共有は1走りにつき1回までです。";
             snapbarManager.ShowSnapbar(postMessage, enImage, 3);
             return;
         }
@@ -2960,7 +2966,7 @@ public class GameSystemTrick : MonoBehaviour
         snapbarManager.ShowSnapbar(postMessage, enImage, 15);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) + getMoney);
         money = PlayerPrefs.GetInt("Money", 0);
-        resultMoney.text = "所持金："　+ money + "縁";
+        resultMoney.text = "所持金：" + money + "縁";
         shareFlg = true;
     }
 
@@ -2986,24 +2992,25 @@ public class GameSystemTrick : MonoBehaviour
         illustratedBookView.SetActive(true);
     }
 
-    public int GetShiki(){
+    public int GetShiki()
+    {
         return shiki;
     }
 
 
 
 
-/*
-    public void BlackCanvasStart()
-    {
-        blackCanvas.GetComponent<BlackCanvas>().StartFlgTrue();
-    }
-    public void BlackCanvasEnd()
-    {
-        blackCanvas.SetActive(true);
-        blackCanvas.GetComponent<BlackCanvas>().EndFlgTrue();
-    }
-*/
+    /*
+        public void BlackCanvasStart()
+        {
+            blackCanvas.GetComponent<BlackCanvas>().StartFlgTrue();
+        }
+        public void BlackCanvasEnd()
+        {
+            blackCanvas.SetActive(true);
+            blackCanvas.GetComponent<BlackCanvas>().EndFlgTrue();
+        }
+    */
 
 }
 
