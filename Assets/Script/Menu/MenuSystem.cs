@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
 using System.IO;
+using TMPro;
+using UnityEngine.Localization.Settings;
 
 public class MenuSystem : MonoBehaviour
 {
@@ -63,14 +65,16 @@ public class MenuSystem : MonoBehaviour
     public Sprite satoruImage;
     public Sprite bonnoImage;
 
+    private string tableName = "TextTable"; // Localizationテーブル名を指定
+
 
     // Start is called before the first frame update
     void Start()
     {
-                        // PlayerPrefs.SetInt("MugenToku", 171166499);
-                        // PlayerPrefs.SetInt("Money", 10000);
+        // PlayerPrefs.SetInt("MugenToku", 171166499);
+        // PlayerPrefs.SetInt("Money", 10000);
         instance = this;
-        Application.targetFrameRate = 60; 
+        Application.targetFrameRate = 60;
         /*
         level = 1;
         nextLevelPoint = 2;
@@ -80,7 +84,7 @@ public class MenuSystem : MonoBehaviour
         */
         // Login();
         beforeLevel = PlayerPrefs.GetInt("MugenLevel", 108);
-        if(PlayerPrefs.GetInt(STATISTICS_NAME, 0) > PlayerPrefs.GetInt(STATISTICS_NAME, 0))
+        if (PlayerPrefs.GetInt(STATISTICS_NAME, 0) > PlayerPrefs.GetInt(STATISTICS_NAME, 0))
         {
             PlayerPrefs.SetInt(STATISTICS_NAME, PlayerPrefs.GetInt(STATISTICS_NAME, 0));
         }
@@ -89,7 +93,7 @@ public class MenuSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     /*
@@ -126,20 +130,22 @@ public class MenuSystem : MonoBehaviour
     public void Login()
     {
         ChangeStageInfo();
-        if(PlayerPrefs.GetString("OmikujiDay","") != DateTime.Today.ToString("d"))
+        /*
+        if (PlayerPrefs.GetString("OmikujiDay", "") != DateTime.Today.ToString("d"))
         {
             message = "ご縁神社で\n今日のおみくじが引けます。";
             snapbarManager.ShowSnapbar(message, omikujiImage, 3);
         }
-        loginBonus.CheckLogin();
+        */
+        // loginBonus.CheckLogin();
     }
 
     public void UpdateLevel(int num)
     {
         currentLevelPoint += num;
         playerprefsLevelPoint += num;
-        PlayerPrefs.SetInt("Level",playerprefsLevelPoint);
-        while(currentLevelPoint >= nextLevelPoint)
+        PlayerPrefs.SetInt("Level", playerprefsLevelPoint);
+        while (currentLevelPoint >= nextLevelPoint)
         {
             nextLevelPoint = level + level * level;
             currentLevelPoint -= nextLevelPoint;
@@ -158,7 +164,7 @@ public class MenuSystem : MonoBehaviour
     public void StageChangeNoPlus()
     {
         stageChangeNo++;
-        if(stageChangeNo == 4)
+        if (stageChangeNo == 4)
         {
             stageChangeNo = 1;
         }
@@ -168,7 +174,7 @@ public class MenuSystem : MonoBehaviour
     public void StageChangeNoMainus()
     {
         stageChangeNo--;
-        if(stageChangeNo == 0)
+        if (stageChangeNo == 0)
         {
             stageChangeNo = 3;
         }
@@ -178,12 +184,12 @@ public class MenuSystem : MonoBehaviour
     public void ChangeStageInfo()
     {
 
-        switch(stageChangeNo)
+        switch (stageChangeNo)
         {
             case 1:
                 stageNameText.text = "のんびり草原";
                 highScoreText.text = "最高徳：" + PlayerPrefs.GetInt("NonbirisogenHighScore", 0);
-                
+
                 levelPointTotal = PlayerPrefs.GetInt("NonbirisogenToku", 0);
                 nonbiriGate.SetActive(true);
                 shunkashutoGate.SetActive(false);
@@ -193,9 +199,8 @@ public class MenuSystem : MonoBehaviour
             case 2:
                 // stageNameText.text = "春夏秋冬並木";
                 // playCount.text = "遊んだ回数：" + PlayerPrefs.GetInt("PlayCount", 0) + "回";
-                moneyText.text = "所持縁：" + PlayerPrefs.GetInt("Money", 0);
-                
-                highScoreText.text = "最高徳：" + PlayerPrefs.GetInt(STATISTICS_NAME, 0);
+                moneyText.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "Yen", arguments: new object[] { PlayerPrefs.GetInt("Money", 0) });
+                highScoreText.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "HighScore", arguments: new object[] { PlayerPrefs.GetInt(STATISTICS_NAME, 0) });
                 levelPointTotal = PlayerPrefs.GetInt("MugenToku", 0);
 
                 nonbiriGate.SetActive(false);
@@ -204,7 +209,7 @@ public class MenuSystem : MonoBehaviour
                 break;
 
             case 3:
-                stageNameText.text = "桃源郷積乱雲";    
+                stageNameText.text = "桃源郷積乱雲";
                 highScoreText.text = "最高徳：" + PlayerPrefs.GetInt("TogenkyosekiranunHighScore", 0);
                 levelPointTotal = PlayerPrefs.GetInt("TogenkyosekiranunToku", 0);
                 nonbiriGate.SetActive(false);
@@ -213,7 +218,7 @@ public class MenuSystem : MonoBehaviour
                 break;
         }
 
-        for(int i = 0;i < 109; i++)
+        for (int i = 0; i < 109; i++)
         {
             /*
             if(i < 25)
@@ -237,53 +242,53 @@ public class MenuSystem : MonoBehaviour
                 levelPointMainus = 10000 * (i + 1);
             }
             */
-            if(i < 10)
+            if (i < 10)
             {
                 levelPointMainus = 100 * (i + 1);
             }
-            if(i >= 10 && i < 20)
+            if (i >= 10 && i < 20)
             {
                 levelPointMainus = 200 * (i + 1);
             }
-            if(i >= 20 && i < 30)
+            if (i >= 20 && i < 30)
             {
                 levelPointMainus = 400 * (i + 1);
             }
-            if(i >= 30 && i < 40)
+            if (i >= 30 && i < 40)
             {
                 levelPointMainus = 800 * (i + 1);
             }
-            if(i >= 40 && i < 50)
+            if (i >= 40 && i < 50)
             {
                 levelPointMainus = 1600 * (i + 1);
             }
-            if(i >= 50 && i < 60)
+            if (i >= 50 && i < 60)
             {
                 levelPointMainus = 3200 * (i + 1);
             }
-            if(i >= 60 && i < 70)
+            if (i >= 60 && i < 70)
             {
                 levelPointMainus = 6400 * (i + 1);
             }
-            if(i >= 70 && i < 80)
+            if (i >= 70 && i < 80)
             {
                 levelPointMainus = 12800 * (i + 1);
             }
-            if(i >= 80 && i < 90)
+            if (i >= 80 && i < 90)
             {
                 levelPointMainus = 25600 * (i + 1);
             }
-            if(i >= 90 && i < 100)
+            if (i >= 90 && i < 100)
             {
                 levelPointMainus = 51200 * (i + 1);
             }
-            if(i >= 100 && i < 108)
+            if (i >= 100 && i < 108)
             {
                 levelPointMainus = 100000 * (i + 1);
             }
-            if(i == 108)
+            if (i == 108)
             {
-                switch(stageChangeNo)
+                switch (stageChangeNo)
                 {
                     case 1:
                         PlayerPrefs.SetInt("NonbirisogenLevel", i);
@@ -297,21 +302,21 @@ public class MenuSystem : MonoBehaviour
                         PlayerPrefs.SetInt("TogenkyosekiranunLevel", i);
                         break;
                 }
-                altLevel = 108 -i;
+                altLevel = 108 - i;
                 levelText.text = "残煩悩：" + altLevel;
                 jokyoPoint = levelPointMainus - levelPointTotal;
                 jokyoText.text = "解脱";
                 tokuSlider.maxValue = 1;
-                tokuSlider.value = 1;   
+                tokuSlider.value = 1;
                 break;
             }
-            if(levelPointTotal >= levelPointMainus)
+            if (levelPointTotal >= levelPointMainus)
             {
                 levelPointTotal -= levelPointMainus;
             }
             else
             {
-                switch(stageChangeNo)
+                switch (stageChangeNo)
                 {
                     case 1:
                         PlayerPrefs.SetInt("NonbirisogenLevel", i);
@@ -325,10 +330,10 @@ public class MenuSystem : MonoBehaviour
                         PlayerPrefs.SetInt("TogenkyosekiranunLevel", i);
                         break;
                 }
-                altLevel = 108 -i;
+                altLevel = 108 - i;
                 levelText.text = "残煩悩：" + altLevel;
                 jokyoPoint = levelPointMainus - levelPointTotal;
-                jokyoText.text = "次の克服まで："　+ jokyoPoint + "徳";
+                jokyoText.text = "次の克服まで：" + jokyoPoint + "徳";
                 tokuSlider.maxValue = levelPointMainus;
                 tokuSlider.value = levelPointTotal;
                 break;
@@ -340,7 +345,7 @@ public class MenuSystem : MonoBehaviour
 
     public void GoStage()
     {
-        switch(stageChangeNo)
+        switch (stageChangeNo)
         {
             case 1:
                 sceneChanger.ChangeNonbirisogen();
@@ -354,7 +359,7 @@ public class MenuSystem : MonoBehaviour
                 sceneChanger.ChangeTogenkyosekiranun();
                 break;
         }
-        
+
     }
 
     public void LevelUp()
@@ -362,15 +367,15 @@ public class MenuSystem : MonoBehaviour
         afterLevel = PlayerPrefs.GetInt("MugenLevel", 108);
         // Debug.Log(beforeLevel);
         // Debug.Log(afterLevel);
-        if(beforeLevel == 0)
+        if (beforeLevel == 0)
         {
             return;
         }
-        if(beforeLevel == afterLevel)
+        if (beforeLevel == afterLevel)
         {
             return;
         }
-        if(afterLevel == 0)
+        if (afterLevel == 0)
         {
             message = "解脱完了、おめでとう！\n「悟」のご朱印獲得しました。";
             snapbarManager.ShowSnapbar(message, satoruImage, 3);
@@ -385,7 +390,7 @@ public class MenuSystem : MonoBehaviour
             PlayerPrefs.SetInt("MugenLevel", afterLevel);
             beforeLevel = afterLevel;
         }
-        
+
     }
 
     /*
@@ -490,47 +495,47 @@ public class MenuSystem : MonoBehaviour
     {
         shrineCanvas.SetActive(true);
         playCount.text = "遊んだ回数：" + PlayerPrefs.GetInt("PlayCount", 0) + "回";
-        if(3 <= PlayerPrefs.GetInt("PlayCount", 0))
+        if (3 <= PlayerPrefs.GetInt("PlayCount", 0))
         {
             shrineButton2.SetActive(true);
             shrineUnacquired2.SetActive(false);
         }
-        if(6 <= PlayerPrefs.GetInt("PlayCount", 0))
+        if (6 <= PlayerPrefs.GetInt("PlayCount", 0))
         {
             shrineButton3.SetActive(true);
             shrineUnacquired3.SetActive(false);
         }
-        if(10 <= PlayerPrefs.GetInt("PlayCount", 0))
+        if (10 <= PlayerPrefs.GetInt("PlayCount", 0))
         {
             shrineButton4.SetActive(true);
             shrineUnacquired4.SetActive(false);
         }
-        if(15 <= PlayerPrefs.GetInt("PlayCount", 0))
+        if (15 <= PlayerPrefs.GetInt("PlayCount", 0))
         {
             shrineButton5.SetActive(true);
             shrineUnacquired5.SetActive(false);
         }
-        if(21 <= PlayerPrefs.GetInt("PlayCount", 0))
+        if (21 <= PlayerPrefs.GetInt("PlayCount", 0))
         {
             shrineButton6.SetActive(true);
             shrineUnacquired6.SetActive(false);
         }
-        if(28 <= PlayerPrefs.GetInt("PlayCount", 0))
+        if (28 <= PlayerPrefs.GetInt("PlayCount", 0))
         {
             shrineButton7.SetActive(true);
             shrineUnacquired7.SetActive(false);
         }
-        if(36 <= PlayerPrefs.GetInt("PlayCount", 0))
+        if (36 <= PlayerPrefs.GetInt("PlayCount", 0))
         {
             shrineButton8.SetActive(true);
             shrineUnacquired8.SetActive(false);
         }
-        if(45 <= PlayerPrefs.GetInt("PlayCount", 0))
+        if (45 <= PlayerPrefs.GetInt("PlayCount", 0))
         {
             shrineButton9.SetActive(true);
             shrineUnacquired9.SetActive(false);
         }
-        if(55 <= PlayerPrefs.GetInt("PlayCount", 0))
+        if (55 <= PlayerPrefs.GetInt("PlayCount", 0))
         {
             shrineButton10.SetActive(true);
             shrineUnacquired10.SetActive(false);
@@ -541,7 +546,7 @@ public class MenuSystem : MonoBehaviour
     {
         shrineCanvas.SetActive(false);
     }
-    
+
     public void OpenStamp()
     {
         stampCanvas.SetActive(true);
@@ -555,7 +560,7 @@ public class MenuSystem : MonoBehaviour
     public void GoenShrine1()
     {
         int cost = 1000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -569,7 +574,7 @@ public class MenuSystem : MonoBehaviour
     public void GoenShrine2()
     {
         int cost = 2000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -583,7 +588,7 @@ public class MenuSystem : MonoBehaviour
     public void GoenShrine3()
     {
         int cost = 3000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -597,7 +602,7 @@ public class MenuSystem : MonoBehaviour
     public void GoenShrine4()
     {
         int cost = 4000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -611,7 +616,7 @@ public class MenuSystem : MonoBehaviour
     public void GoenShrine5()
     {
         int cost = 5000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -625,7 +630,7 @@ public class MenuSystem : MonoBehaviour
     public void GoenShrine6()
     {
         int cost = 6000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -639,7 +644,7 @@ public class MenuSystem : MonoBehaviour
     public void GoenShrine7()
     {
         int cost = 7000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -653,7 +658,7 @@ public class MenuSystem : MonoBehaviour
     public void GoenShrine8()
     {
         int cost = 8000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -667,7 +672,7 @@ public class MenuSystem : MonoBehaviour
     public void GoenShrine9()
     {
         int cost = 9000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -681,7 +686,7 @@ public class MenuSystem : MonoBehaviour
     public void GoenShrine10()
     {
         int cost = 10000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -695,7 +700,7 @@ public class MenuSystem : MonoBehaviour
     public void GoenShrine1ALL()
     {
         int cost = 1000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -703,7 +708,7 @@ public class MenuSystem : MonoBehaviour
         }
         PlayerPrefs.SetInt("MugenToku", PlayerPrefs.GetInt("MugenToku", 0) + cost * 1);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) - cost);
-        if(PlayerPrefs.GetInt("Money", 0) >= cost)
+        if (PlayerPrefs.GetInt("Money", 0) >= cost)
         {
             GoenShrine1ALL();
         }
@@ -711,13 +716,13 @@ public class MenuSystem : MonoBehaviour
         {
             ChangeStageInfo();
         }
-        
+
     }
 
     public void GoenShrine2ALL()
     {
         int cost = 2000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -725,7 +730,7 @@ public class MenuSystem : MonoBehaviour
         }
         PlayerPrefs.SetInt("MugenToku", PlayerPrefs.GetInt("MugenToku", 0) + cost * 2);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) - cost);
-        if(PlayerPrefs.GetInt("Money", 0) >= cost)
+        if (PlayerPrefs.GetInt("Money", 0) >= cost)
         {
             GoenShrine2ALL();
         }
@@ -733,13 +738,13 @@ public class MenuSystem : MonoBehaviour
         {
             ChangeStageInfo();
         }
-        
+
     }
 
     public void GoenShrine3ALL()
     {
         int cost = 3000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -747,7 +752,7 @@ public class MenuSystem : MonoBehaviour
         }
         PlayerPrefs.SetInt("MugenToku", PlayerPrefs.GetInt("MugenToku", 0) + cost * 3);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) - cost);
-        if(PlayerPrefs.GetInt("Money", 0) >= cost)
+        if (PlayerPrefs.GetInt("Money", 0) >= cost)
         {
             GoenShrine3ALL();
         }
@@ -755,13 +760,13 @@ public class MenuSystem : MonoBehaviour
         {
             ChangeStageInfo();
         }
-        
+
     }
 
     public void GoenShrine4ALL()
     {
         int cost = 4000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -769,7 +774,7 @@ public class MenuSystem : MonoBehaviour
         }
         PlayerPrefs.SetInt("MugenToku", PlayerPrefs.GetInt("MugenToku", 0) + cost * 4);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) - cost);
-        if(PlayerPrefs.GetInt("Money", 0) >= cost)
+        if (PlayerPrefs.GetInt("Money", 0) >= cost)
         {
             GoenShrine4ALL();
         }
@@ -777,13 +782,13 @@ public class MenuSystem : MonoBehaviour
         {
             ChangeStageInfo();
         }
-        
+
     }
 
     public void GoenShrine5ALL()
     {
         int cost = 5000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -791,7 +796,7 @@ public class MenuSystem : MonoBehaviour
         }
         PlayerPrefs.SetInt("MugenToku", PlayerPrefs.GetInt("MugenToku", 0) + cost * 5);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) - cost);
-        if(PlayerPrefs.GetInt("Money", 0) >= cost)
+        if (PlayerPrefs.GetInt("Money", 0) >= cost)
         {
             GoenShrine5ALL();
         }
@@ -799,13 +804,13 @@ public class MenuSystem : MonoBehaviour
         {
             ChangeStageInfo();
         }
-        
+
     }
 
     public void GoenShrine6ALL()
     {
         int cost = 6000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -813,7 +818,7 @@ public class MenuSystem : MonoBehaviour
         }
         PlayerPrefs.SetInt("MugenToku", PlayerPrefs.GetInt("MugenToku", 0) + cost * 6);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) - cost);
-        if(PlayerPrefs.GetInt("Money", 0) >= cost)
+        if (PlayerPrefs.GetInt("Money", 0) >= cost)
         {
             GoenShrine6ALL();
         }
@@ -821,13 +826,13 @@ public class MenuSystem : MonoBehaviour
         {
             ChangeStageInfo();
         }
-        
+
     }
 
     public void GoenShrine7ALL()
     {
         int cost = 7000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -835,7 +840,7 @@ public class MenuSystem : MonoBehaviour
         }
         PlayerPrefs.SetInt("MugenToku", PlayerPrefs.GetInt("MugenToku", 0) + cost * 7);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) - cost);
-        if(PlayerPrefs.GetInt("Money", 0) >= cost)
+        if (PlayerPrefs.GetInt("Money", 0) >= cost)
         {
             GoenShrine7ALL();
         }
@@ -843,13 +848,13 @@ public class MenuSystem : MonoBehaviour
         {
             ChangeStageInfo();
         }
-        
+
     }
 
     public void GoenShrine8ALL()
     {
         int cost = 8000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -857,7 +862,7 @@ public class MenuSystem : MonoBehaviour
         }
         PlayerPrefs.SetInt("MugenToku", PlayerPrefs.GetInt("MugenToku", 0) + cost * 8);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) - cost);
-        if(PlayerPrefs.GetInt("Money", 0) >= cost)
+        if (PlayerPrefs.GetInt("Money", 0) >= cost)
         {
             GoenShrine8ALL();
         }
@@ -865,13 +870,13 @@ public class MenuSystem : MonoBehaviour
         {
             ChangeStageInfo();
         }
-        
+
     }
 
     public void GoenShrine9ALL()
     {
         int cost = 9000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -879,7 +884,7 @@ public class MenuSystem : MonoBehaviour
         }
         PlayerPrefs.SetInt("MugenToku", PlayerPrefs.GetInt("MugenToku", 0) + cost * 9);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) - cost);
-        if(PlayerPrefs.GetInt("Money", 0) >= cost)
+        if (PlayerPrefs.GetInt("Money", 0) >= cost)
         {
             GoenShrine9ALL();
         }
@@ -887,13 +892,13 @@ public class MenuSystem : MonoBehaviour
         {
             ChangeStageInfo();
         }
-        
+
     }
 
     public void GoenShrine10ALL()
     {
         int cost = 10000;
-        if(cost > PlayerPrefs.GetInt("Money", 0))
+        if (cost > PlayerPrefs.GetInt("Money", 0))
         {
             message = "縁が足りません。";
             snapbarManager.ShowSnapbar(message, enImage, 3);
@@ -901,7 +906,7 @@ public class MenuSystem : MonoBehaviour
         }
         PlayerPrefs.SetInt("MugenToku", PlayerPrefs.GetInt("MugenToku", 0) + cost * 10);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) - cost);
-        if(PlayerPrefs.GetInt("Money", 0) >= cost)
+        if (PlayerPrefs.GetInt("Money", 0) >= cost)
         {
             GoenShrine10ALL();
         }
@@ -909,7 +914,7 @@ public class MenuSystem : MonoBehaviour
         {
             ChangeStageInfo();
         }
-        
+
     }
 
     public void GetEn(int num)
@@ -917,7 +922,7 @@ public class MenuSystem : MonoBehaviour
         message = "ログインボーナスとして" + num + "縁獲得\n明日は今日の倍もらえるよ！";
         snapbarManager.ShowSnapbar(message, enImage, 5);
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money", 0) + num);
-        
+
     }
 
 }

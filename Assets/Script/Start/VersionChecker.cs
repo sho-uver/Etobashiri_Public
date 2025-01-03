@@ -6,22 +6,32 @@ using PlayFab.ClientModels;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
+using UnityEngine.Localization.Settings;
 
 public class VersionChecker : MonoBehaviour
 {
     public PlayFabLogin playFabLogin;  // PlayFabLoginのインスタンスを設定
     public GameObject updateBtn;
     public GameObject continueBtn;
-    public Text message;
     private string latestVersionKey = "latestVersion";  // PlayFabのTitleDataに格納したキー
     public SceneChanger sceneChanger;
     public bool verCheckFlg;
+    public GameObject languagePanel;
+    [SerializeField] private TextMeshProUGUI message;
+    private string tableName = "TextTable"; // Localizationテーブル名を指定
 
     void Start()
     {
+        LanguageManager.Instance.SetLanguage("Ja");
+        if (PlayerPrefs.GetInt("FirstLogin", 1) == 1)
+        {
+            languagePanel.SetActive(true);
+        }
         // まずはPlayFabにログインしてからバージョンチェックを行う
         playFabLogin.CheckLoginStatusAndLogin(OnLoginSuccess, OnLoginFailure);
         StartCoroutine(ProceedToNextScreenAfterDelay());
+        message.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "VersionCheck");
     }
 
     private void OnLoginSuccess()
@@ -34,8 +44,7 @@ public class VersionChecker : MonoBehaviour
     private void OnLoginFailure(PlayFabError error)
     {
         Debug.LogError("ログインに失敗しました。バージョンチェックをスキップします。");
-        
-        
+
     }
 
     void CheckForUpdates()
@@ -72,7 +81,7 @@ public class VersionChecker : MonoBehaviour
     private void PromptUpdate()
     {
         // アップデートを促す処理
-        message.text = "アップデートがあります。";
+        message.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "NewerVersion");
         updateBtn.SetActive(true);
         continueBtn.SetActive(true);
     }
@@ -80,11 +89,11 @@ public class VersionChecker : MonoBehaviour
     public void GoToStore()
     {
         // ここで、App StoreやGoogle Playのアップデートページへのリンクを表示したりします。
-        #if UNITY_IOS
+#if UNITY_IOS
             Application.OpenURL("https://apps.apple.com/jp/app/えとばしり/id6470151998");
-        #elif UNITY_ANDROID
+#elif UNITY_ANDROID
             Application.OpenURL("https://play.google.com/store/apps/details?id=com.HishoCompany.Chototsumoshin&pcampaignid=web_share");
-        #endif
+#endif
     }
 
     private void OnError(PlayFabError error)
@@ -95,8 +104,9 @@ public class VersionChecker : MonoBehaviour
     private IEnumerator ProceedToNextScreenAfterDelay()
     {
         yield return new WaitForSeconds(3f);
-        if(!verCheckFlg){
-            message.text = "通信できません。\nこのままあそぶと\n不具合が出る可能性があります。";
+        if (!verCheckFlg)
+        {
+            message.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "UnableInternet");
             continueBtn.SetActive(true);
         }
     }

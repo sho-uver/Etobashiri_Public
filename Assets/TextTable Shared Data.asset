@@ -16,7 +16,179 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: e8e7a50019f3a470f8509d7f8c165e87
   m_Entries:
   - m_Id: 674313003008
-    m_Key: Start
+    m_Key: Ja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36236045044408320
+    m_Key: En
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36236959658532864
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36239422138605568
+    m_Key: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36247975570169856
+    m_Key: VersionCheck
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36248150145490944
+    m_Key: NewerVersion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36248806847668224
+    m_Key: UnableInternet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36249590284935168
+    m_Key: GoToStore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36250112362536960
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36251636392255488
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36252013636345856
+    m_Key: Stamp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36252752907591680
+    m_Key: Setting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36253027194101760
+    m_Key: Information
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36487158196854784
+    m_Key: HighScore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36488514676711424
+    m_Key: Yen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36497061879734272
+    m_Key: TermsTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36497709182476288
+    m_Key: Terms
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36502759464230912
+    m_Key: AgreeBtn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36505521614741504
+    m_Key: ContactBtn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36522644370087936
+    m_Key: NameChangeBtn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36533887105490944
+    m_Key: NameChangTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36534427688361984
+    m_Key: EnterName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36538571643936768
+    m_Key: NameChangeRule
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36567847822942208
+    m_Key: NameFailure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36567917188341760
+    m_Key: NameSuccess
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36577673659539456
+    m_Key: Stamp_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36581082743693312
+    m_Key: Stamp_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36581401766649856
+    m_Key: Stamp_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36581703970447360
+    m_Key: Stamp_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36581943456817152
+    m_Key: Stamp_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36582164509220864
+    m_Key: Stamp_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36582229139251200
+    m_Key: Stamp_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36582385821671424
+    m_Key: Stamp_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36582948760182784
+    m_Key: Stamp_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36583216130285568
+    m_Key: Stamp_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36583437686005760
+    m_Key: Stamp_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36583812870692864
+    m_Key: Stamp_12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36584046212407296
+    m_Key: Stamp_13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36584237950820352
+    m_Key: Stamp_14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36584530369306624
+    m_Key: Stamp_15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36584972516057088
+    m_Key: Stamp_16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36585149226278912
+    m_Key: Stamp_17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36593381088944128
+    m_Key: RankingTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36598803447406592
+    m_Key: Ranking
     m_Metadata:
       m_Items: []
   m_Metadata:
