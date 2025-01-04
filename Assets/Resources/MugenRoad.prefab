@@ -83,7 +83,7 @@ MonoBehaviour:
   snowBall: {fileID: 1460261697672872318, guid: 13a9a74aa741441d4bb7106b6266a234,
     type: 3}
   ice: {fileID: 7796346238485129996, guid: 31ed6ad5f78d84d719249fa3f2a3a8b3, type: 3}
-  wind: {fileID: 6662082346329619843, guid: 1e34f3a21320449648bb07f24e4b0afb, type: 3}
+  wind: {fileID: 2574798041430100025, guid: 5abca41837c6047e5a83d3112d24313d, type: 3}
   tori: {fileID: 5979570441526668843, guid: 830a6ce0e9f7741e4a5f69ee4101c0e3, type: 3}
   human: {fileID: 0}
   mure: {fileID: 2936828546744304445, guid: 9702afea58dea4dfebebe8a90ba62486, type: 3}

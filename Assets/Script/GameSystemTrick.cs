@@ -880,6 +880,7 @@ switch(liberationPatten)
     public void Result()
     {
         //gad.ShowAd();
+        gad.ShowInterstitial();
         // Time.timeScale = 0f;
         lineAudio.Stop();
         PlayerPrefs.SetInt("PlayCount", PlayerPrefs.GetInt("PlayCount", 0) + 1);

@@ -74,7 +74,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 36487158196854784
-    m_Localized: HighScore:{0}
+    m_Localized: HighScore:P{0}
     m_Metadata:
       m_Items: []
   - m_Id: 36488514676711424
@@ -338,6 +338,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 36598803447406592
     m_Localized: "R{0}\u3000P{1}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36605046002016256
+    m_Localized: Rule
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36605409568481280
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36605634748080128
+    m_Localized: Eto Change
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37264974211440640
+    m_Localized: Eto Dash
     m_Metadata:
       m_Items: []
   references:

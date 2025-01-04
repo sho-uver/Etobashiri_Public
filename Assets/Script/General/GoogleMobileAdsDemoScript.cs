@@ -13,14 +13,14 @@ using Unity.Advertisement.IosSupport;
 public class GoogleMobileAdsDemoScript : MonoBehaviour
 {
     BannerView bannerView;
-        // These ad units are configured to always serve test ads.
-    #if UNITY_ANDROID
+    // These ad units are configured to always serve test ads.
+#if UNITY_ANDROID
     private string adUnitIdInterstitial = "ca-app-pub-9162858272254492/4968114042";
-    #elif UNITY_IPHONE
+#elif UNITY_IPHONE
     private string adUnitIdInterstitial = "ca-app-pub-9162858272254492/6538452913";
-    #else
+#else
     private string adUnitIdInterstitial = "unused";
-    #endif
+#endif
 
     private InterstitialAd interstitialAd;
     public GameObject blackCanvas;
@@ -31,7 +31,7 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
 
     public void Awake()
     {
-        
+
         /*
         string idfa = Device.advertisingIdentifier;
         Debug.Log("IDFA: " + idfa);
@@ -59,13 +59,13 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
 
         RequestBanner();
 
-        if(SceneManager.GetActiveScene().name == "Menu")
+        if (SceneManager.GetActiveScene().name == "Menu")
         {
-            
+
             return;
         }
         LoadInterstitialAd();
-        int adCounter = PlayerPrefs.GetInt("AdCounter",0);
+
         /*
         if(PlayerPrefs.GetInt("FirstManual",0) == 0)
         {
@@ -75,74 +75,18 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
             return;
         }
         */
-        
-        if(PlayerPrefs.GetInt("神春夏秋冬並木",0) != 1)
-        {
-            if(adCounter == 30)
-            {
-                #if UNITY_ANDROID
-                ShowAd();
-                #elif UNITY_IPHONE
-                UnityEngine.iOS.Device.RequestStoreReview();
-                #else
-                ShowAd();
-                #endif
-                
-                PlayerPrefs.SetInt("AdCounter", 0); //Androidの時に直す
-                blackCanvas.GetComponent<BlackCanvas>().SetAdFlgTrue();
-                blackCanvas.GetComponent<BlackCanvas>().StartFlgTrue();
-            }
-            else
-            {
-                ShowAd();
-                adCounter++;
-                PlayerPrefs.SetInt("AdCounter", adCounter);
-            }
-            /*
-            if(PlayerPrefs.GetInt("Beginner",0) > 10)
-            {
-                if(adCounter == 30)
-                {
-                    #if UNITY_ANDROID
-                    ShowAd();
-                    #elif UNITY_IPHONE
-                    UnityEngine.iOS.Device.RequestStoreReview();
-                    #else
-                    ShowAd();
-                    #endif
-                    
-                    PlayerPrefs.SetInt("AdCounter", 0); //Androidの時に直す
-                    blackCanvas.GetComponent<BlackCanvas>().SetAdFlgTrue();
-                    blackCanvas.GetComponent<BlackCanvas>().StartFlgTrue();
-                }
-                else
-                {
-                    ShowAd();
-                    adCounter++;
-                    PlayerPrefs.SetInt("AdCounter", adCounter);
-                }
-            }
-            else
-            {
-                blackCanvas.GetComponent<BlackCanvas>().SetAdFlgTrue();
-                blackCanvas.GetComponent<BlackCanvas>().StartFlgTrue();
-                PlayerPrefs.SetInt("Beginner",PlayerPrefs.GetInt("Beginner",0) + 1);
-            }
-            */
-        }
-        else
-        {
-            blackCanvas.GetComponent<BlackCanvas>().SetAdFlgTrue();
-            blackCanvas.GetComponent<BlackCanvas>().StartFlgTrue();
-        }
-        
+
+        blackCanvas.GetComponent<BlackCanvas>().SetAdFlgTrue();
+        blackCanvas.GetComponent<BlackCanvas>().StartFlgTrue();
+
+
         // ここ変えてるShowAd();
         /*
         RegisterEventHandlers(interstitialAd);
         interstitialAd.Destroy();
         RegisterReloadHandler(interstitialAd);
         */
-        
+
     }
 
     /*
@@ -194,17 +138,42 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
         muteTime = 3;
     }
 
+    public void ShowInterstitial()
+    {
+        int adCounter = PlayerPrefs.GetInt("AdCounter", 0);
+        if (PlayerPrefs.GetInt("神春夏秋冬並木", 0) != 1)
+        {
+            if (adCounter == 30)
+            {
+#if UNITY_ANDROID
+                ShowAd();
+#elif UNITY_IPHONE
+                UnityEngine.iOS.Device.RequestStoreReview();
+#else
+                ShowAd();
+#endif
+
+                PlayerPrefs.SetInt("AdCounter", 0); //Androidの時に直す
+            }
+            else
+            {
+                ShowAd();
+                adCounter++;
+                PlayerPrefs.SetInt("AdCounter", adCounter);
+            }
+        }
+    }
 
 
     private void RequestBanner()
     {
-        #if UNITY_ANDROID
+#if UNITY_ANDROID
             string adUnitIdBanner = "ca-app-pub-9162858272254492/6734862910";
-        #elif UNITY_IPHONE
+#elif UNITY_IPHONE
             string adUnitIdBanner = "ca-app-pub-9162858272254492/4255038535";
-        #else
-            string adUnitIdBanner = "unexpected_platform";
-        #endif
+#else
+        string adUnitIdBanner = "unexpected_platform";
+#endif
         // MobileAds.SetApplicationVolume(1.0f); // 音量を最大に設定
         // MobileAds.SetApplicationMuted(false); // ミュートを無効化
         // AudioListener.pause = false;
@@ -219,16 +188,16 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
     }
 
 
-  /// <summary>
-  /// Loads the interstitial ad.
-  /// </summary>
+    /// <summary>
+    /// Loads the interstitial ad.
+    /// </summary>
     public void LoadInterstitialAd()
     {
         // Clean up the old ad before loading a new one.
         if (interstitialAd != null)
         {
-                interstitialAd.Destroy();
-                interstitialAd = null;
+            interstitialAd.Destroy();
+            interstitialAd = null;
         }
 
         Debug.Log("Loading the interstitial ad.");
@@ -274,7 +243,7 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
             Debug.LogError("Interstitial ad is not ready yet.");
             blackCanvas.GetComponent<BlackCanvas>().StartFlgFalse();
             adTime += 0.01f;
-            if(adTime > 7)
+            if (adTime > 7)
             {
                 // UnityEngine.iOS.Device.RequestStoreReview();
                 blackCanvas.GetComponent<BlackCanvas>().SetAdFlgTrue();
@@ -282,10 +251,10 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
             }
             else
             {
-                Invoke("ShowAd",0.01f);
+                Invoke("ShowAd", 0.01f);
             }
-            
-            
+
+
         }
     }
 

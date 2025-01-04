@@ -191,6 +191,22 @@ MonoBehaviour:
     m_Key: Ranking
     m_Metadata:
       m_Items: []
+  - m_Id: 36605046002016256
+    m_Key: Rule
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36605409568481280
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36605634748080128
+    m_Key: EtoChange
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37264974211440640
+    m_Key: Title
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
