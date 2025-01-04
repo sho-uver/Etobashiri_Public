@@ -80,18 +80,18 @@ MonoBehaviour:
       data:
         m_ShortName:
           m_TableReference:
-            m_TableCollectionName: 
+            m_TableCollectionName: GUID:e8e7a50019f3a470f8509d7f8c165e87
           m_TableEntryReference:
-            m_KeyId: 0
+            m_KeyId: 37264974211440640
             m_Key: 
           m_FallbackState: 0
           m_WaitForCompletion: 0
           m_LocalVariables: []
         m_DisplayName:
           m_TableReference:
-            m_TableCollectionName: 
+            m_TableCollectionName: GUID:e8e7a50019f3a470f8509d7f8c165e87
           m_TableEntryReference:
-            m_KeyId: 0
+            m_KeyId: 37264974211440640
             m_Key: 
           m_FallbackState: 0
           m_WaitForCompletion: 0
@@ -137,9 +137,9 @@ MonoBehaviour:
       data:
         m_DisplayName:
           m_TableReference:
-            m_TableCollectionName: 
+            m_TableCollectionName: GUID:e8e7a50019f3a470f8509d7f8c165e87
           m_TableEntryReference:
-            m_KeyId: 0
+            m_KeyId: 37264974211440640
             m_Key: 
           m_FallbackState: 0
           m_WaitForCompletion: 0

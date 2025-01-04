@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+
+using System;
 // using UnityEngine.iOS;
 using System.Collections.Generic;
 
@@ -46,7 +48,7 @@ public class DrawLine : MonoBehaviour
     public float demoTime;
     public int lineCount;
     public float scaleUp;
-    public GameObject[] objs; 
+    public GameObject[] objs;
     public Vector3 lineStartPos;
     public float scalePlus;
     public float scaleMulti;
@@ -59,44 +61,44 @@ public class DrawLine : MonoBehaviour
     void Start()
     {
         // Debug.unityLogger.logEnabled = true;
-        lineStartPos = new Vector3(0,-100,0);
+        lineStartPos = new Vector3(0, -100, 0);
         layerNumber = 200;
-        if (Input.touchSupported) 
+        if (Input.touchSupported)
         {
             // Debug.Log("タッチ入力に対応している");
         }
         else
         {
-            
+
             // Debug.Log("タッチ入力に対応していない");
         }
         objs = new GameObject[100];
-        for(int i = 0; i < objs.Length ; i++)
+        for (int i = 0; i < objs.Length; i++)
         {
-            if(i % 2 == 0)
+            if (i % 2 == 0)
             {
-                objs[i] =  Instantiate(linePrefabFirst, lineStartPos, transform.rotation) as GameObject;
+                objs[i] = Instantiate(linePrefabFirst, lineStartPos, transform.rotation) as GameObject;
             }
             else
             {
-                objs[i] =  Instantiate(linePrefabLast, lineStartPos, transform.rotation) as GameObject;
-            }   
+                objs[i] = Instantiate(linePrefabLast, lineStartPos, transform.rotation) as GameObject;
+            }
             objs[i].transform.parent = this.transform;
             layerNumber--;
             objs[i].GetComponent<Renderer>().sortingOrder = layerNumber;
             // objs[i].SetActive(false);
         }
-    
+
     }
 
     void Update()
     {
 
 
-        if(!startFlg)   
+        if (!startFlg)
         {
             demoTime += Time.deltaTime;
-            
+
             return;
         }
 
@@ -116,7 +118,7 @@ public class DrawLine : MonoBehaviour
             {
                 // drawLine1(Input.GetTouch(i));
             }
-            
+
         }
         if (!Input.touchSupported)
         {
@@ -155,7 +157,7 @@ public class DrawLine : MonoBehaviour
         {
             MoveDraw(Input.mousePosition);
         }
-        
+
 
         if (Input.GetMouseButtonUp(0))
         {
@@ -169,7 +171,7 @@ public class DrawLine : MonoBehaviour
         touchPos = Camera.main.ScreenToWorldPoint(inputPos);
         touchPos.z = 0;
         fude.SetActive(true);
-        fude.transform.position = new Vector3(touchPos.x+1f, touchPos.y, -4);
+        fude.transform.position = new Vector3(touchPos.x + 1f, touchPos.y, -4);
         // VibrationMng.ShortVibration();
     }
 
@@ -178,7 +180,7 @@ public class DrawLine : MonoBehaviour
         startPos = touchPos;
         endPos = Camera.main.ScreenToWorldPoint(inputPos);
         endPos.z = 0;
-        fude.transform.position = new Vector3(endPos.x+1f, endPos.y, -4);
+        fude.transform.position = new Vector3(endPos.x + 1f, endPos.y, -4);
         if (startPos.y > endPos.y)
         {
             return;
@@ -186,22 +188,29 @@ public class DrawLine : MonoBehaviour
 
         if ((endPos - startPos).magnitude > lineLength)
         {
-            // scaleMulti = (endPos - startPos).sqrMagnitude / lineLength;
-            objs[lineCount].transform.position = (startPos + endPos) / 2;
-            objs[lineCount].transform.right = (endPos - startPos).normalized;
-            objs[lineCount].transform.localScale = new Vector3(((endPos - startPos).magnitude + scalePlus) * scaleMulti ,  lineWidth, lineWidth);
-            // objs[lineCount].transform.localScale = new Vector3(lineLength * scaleMulti ,  lineWidth, lineWidth);
-            objs[lineCount].GetComponent<Line>().SetLineCount(lineCount);
+            Debug.Log(Mathf.Floor((endPos - startPos).magnitude / lineLength));
+            float need = Mathf.Floor((endPos - startPos).magnitude / lineLength);
+            for (int n = 0; n < need; n++)
+            {
+                // scaleMulti = (endPos - startPos).sqrMagnitude / lineLength;
+                float posPer = (n + 1) / need;
+                objs[lineCount].transform.position = startPos + (endPos - startPos) * posPer;
+
+                // objs[lineCount].transform.right = (endPos - startPos).normalized;
+                // objs[lineCount].transform.localScale = new Vector3(((endPos - startPos).magnitude + scalePlus) * scaleMulti, lineWidth, lineWidth);
+                // objs[lineCount].transform.localScale = new Vector3(lineLength * scaleMulti ,  lineWidth, lineWidth);
+                objs[lineCount].GetComponent<Line>().SetLineCount(lineCount);
+
+                if (lineCount >= objs.Length - 1)
+                {
+                    lineCount = 0;
+                }
+                else
+                {
+                    lineCount++;
+                }
+            }
             touchPos = endPos;
-            if(lineCount >= objs.Length - 1)
-            {
-                lineCount = 0;
-            }
-            else
-            {
-                lineCount++;
-            }
-            
         }
         // VibrationMng.ShortVibration();
     }
@@ -250,7 +259,7 @@ public class DrawLine : MonoBehaviour
         switch (touch.phase)
         {
             case TouchPhase.Began:
-                lineCount ++;
+                lineCount++;
                 obj = null;
                 // audioSource.Play();
                 StartCoroutine("AudioFadeIn");
@@ -258,7 +267,7 @@ public class DrawLine : MonoBehaviour
                 touchPos.z = 0;
                 fude.SetActive(true);
                 endPos = touchPos;
-                fude.transform.position = new Vector3(endPos.x+1f, endPos.y, -4);
+                fude.transform.position = new Vector3(endPos.x + 1f, endPos.y, -4);
                 layerNumber = 100;
                 /*
                 obj = Instantiate(linePrefabFirst, transform.position, transform.rotation) as GameObject;
@@ -274,13 +283,13 @@ public class DrawLine : MonoBehaviour
             obj.transform.parent = this.transform;
             obj.GetComponent<Line>().SetLineCount(lineCount + 10);
             */
-            lineCount ++;
+                lineCount++;
 
-                
+
                 break;
 
             case TouchPhase.Moved:
-                
+
                 // powerTime += Time.deltaTime;
                 /*
                 if(powerTime > 1f && !dashFlg)
@@ -289,10 +298,10 @@ public class DrawLine : MonoBehaviour
                     dashFlg = true;
                 }
                 */
-                
+
                 startPos = touchPos;
                 endPos = Camera.main.ScreenToWorldPoint(touch.position);
-                fude.transform.position = new Vector3(endPos.x+1f, endPos.y, -4);
+                fude.transform.position = new Vector3(endPos.x + 1f, endPos.y, -4);
                 endPos.z = 0;
                 // ここ1
                 if (startPos.y > endPos.y && hogekiCount > 0 && !hogekiFlg)
@@ -305,9 +314,9 @@ public class DrawLine : MonoBehaviour
                 {
                     return;
                 }
-                
+
                 // Debug.Log(layerNumber);
-                
+
                 if (layerNumber < 50)
                 {
                     // Debug.Log("a");
@@ -323,24 +332,24 @@ public class DrawLine : MonoBehaviour
                     obj = null;
 
 
-                    switch(lineNumber)
+                    switch (lineNumber)
                     {
                         case 0:
-                        obj = Instantiate(linePrefab, transform.position, transform.rotation) as GameObject;
-                        lineNumber = 1;
-                        break;
+                            obj = Instantiate(linePrefab, transform.position, transform.rotation) as GameObject;
+                            lineNumber = 1;
+                            break;
 
                         case 1:
-                        obj = Instantiate(linePrefabLast, transform.position, transform.rotation) as GameObject;
-                        lineNumber = 0;
-                        break;
+                            obj = Instantiate(linePrefabLast, transform.position, transform.rotation) as GameObject;
+                            lineNumber = 0;
+                            break;
                     }
-                    
+
                     obj.transform.position = (startPos + endPos) / 2;
                     obj.transform.right = (endPos - startPos).normalized;
 
                     // obj.transform.localScale = new Vector3(1, lineWidth, lineWidth);
-                    obj.transform.localScale = new Vector3((endPos - startPos).magnitude + 0.2f,  lineWidth, lineWidth);
+                    obj.transform.localScale = new Vector3((endPos - startPos).magnitude + 0.2f, lineWidth, lineWidth);
                     obj.GetComponent<Renderer>().sortingOrder = layerNumber;
 
                     obj.transform.parent = this.transform;
@@ -348,9 +357,9 @@ public class DrawLine : MonoBehaviour
 
 
                     touchPos = endPos;
-                    layerNumber --;
+                    layerNumber--;
                 }
-                
+
                 break;
 
             case TouchPhase.Ended:
@@ -363,27 +372,27 @@ public class DrawLine : MonoBehaviour
                     return;
                 }
                 obj = null;
-                switch(lineNumber)
+                switch (lineNumber)
                 {
                     case 0:
-                    obj = Instantiate(linePrefab, transform.position, transform.rotation) as GameObject;
-                    lineNumber = 1;
-                    break;
+                        obj = Instantiate(linePrefab, transform.position, transform.rotation) as GameObject;
+                        lineNumber = 1;
+                        break;
 
                     case 1:
-                    obj = Instantiate(linePrefabLast, transform.position, transform.rotation) as GameObject;
-                    lineNumber = 0;
-                    break;
+                        obj = Instantiate(linePrefabLast, transform.position, transform.rotation) as GameObject;
+                        lineNumber = 0;
+                        break;
                 }
                 obj.transform.position = (startPos + endPos) / 2;
                 obj.transform.right = (endPos - startPos).normalized;
-                obj.transform.localScale = new Vector3((endPos - startPos).magnitude + 0.2f,  lineWidth, lineWidth);
+                obj.transform.localScale = new Vector3((endPos - startPos).magnitude + 0.2f, lineWidth, lineWidth);
                 obj.GetComponent<Renderer>().sortingOrder = layerNumber;
                 obj.transform.parent = this.transform;
                 obj.GetComponent<Line>().SetLineCount(lineCount);
 
-                
-            
+
+
                 obj.SetActive(false);
                 powerTime = 0;
                 fude.SetActive(false);
@@ -415,11 +424,11 @@ public class DrawLine : MonoBehaviour
                 hogekiObj.transform.right = (hogekiStartPos - hogekiEndPos).normalized;
                 // obj.transform.localScale = new Vector3((endPos - startPos).magnitude, lineWidth, lineWidth);
                 // obj.GetComponent<Hogeki>().Shot(new Vector3((endPos - startPos).magnitude, lineWidth, lineWidth));
-                if((hogekiStartPos - hogekiEndPos).magnitude > 3)
+                if ((hogekiStartPos - hogekiEndPos).magnitude > 3)
                 {
                     hogekiObj.GetComponent<Hogeki>().Shot((hogekiStartPos - hogekiEndPos).normalized * 3f * 0.1f, hogekiCount);
                 }
-                else 
+                else
                 {
                     hogekiObj.GetComponent<Hogeki>().Shot((hogekiStartPos - hogekiEndPos).normalized * (hogekiStartPos - hogekiEndPos).magnitude * 0.1f, hogekiCount);
                 }
@@ -427,111 +436,111 @@ public class DrawLine : MonoBehaviour
                 // BokujuCountDown();
                 break;
         }
-        
+
     }
 
-/*
-    void drawLine1(Touch touch)
-    {
-        switch (touch.phase)
+    /*
+        void drawLine1(Touch touch)
         {
-            case TouchPhase.Began:
-                touchPos1 = Camera.main.ScreenToWorldPoint(touch.position);
-                touchPos1.z = 0;
-                // layerNumber = 100;
-                break;
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    touchPos1 = Camera.main.ScreenToWorldPoint(touch.position);
+                    touchPos1.z = 0;
+                    // layerNumber = 100;
+                    break;
 
-            case TouchPhase.Moved:
-                startPos1 = touchPos1;
-                endPos1 = Camera.main.ScreenToWorldPoint(touch.position);
-                endPos1.z = 0;
-                // ここ3
-                if (startPos1.y > endPos1.y && hogekiCount > 0  && !hogekiFlg1)
-                {
-                    hogekiStartPos1 = touch.position;
-                    hogekiFlg1 = true;
-                    return;
-                }
-                else if (startPos1.y > endPos1.y)
-                {
-                    return;
-                }
-                if ((endPos1 - startPos1).magnitude > lineLength)
-                {
-
-                
-                    GameObject obj = null;
-
-
-                    switch(lineNumber)
+                case TouchPhase.Moved:
+                    startPos1 = touchPos1;
+                    endPos1 = Camera.main.ScreenToWorldPoint(touch.position);
+                    endPos1.z = 0;
+                    // ここ3
+                    if (startPos1.y > endPos1.y && hogekiCount > 0  && !hogekiFlg1)
                     {
-                        case 0:
-                        obj = Instantiate(linePrefab, transform.position, transform.rotation) as GameObject;
-                        lineNumber = 1;
-
-                        break;
-
-                        case 1:
-                        obj = Instantiate(linePrefabLast, transform.position, transform.rotation) as GameObject;
-                        lineNumber = 0;
-                        break;
+                        hogekiStartPos1 = touch.position;
+                        hogekiFlg1 = true;
+                        return;
                     }
-                    
-                    obj.transform.position = (startPos1 + endPos1) / 2;
-                    obj.transform.right = (endPos1 - startPos1).normalized;
-
-                    // obj.transform.localScale = new Vector3(1, lineWidth, lineWidth);
-                    obj.transform.localScale = new Vector3((endPos1 - startPos1).magnitude, (endPos1 - startPos1).magnitude, lineWidth);
-                    obj.GetComponent<Renderer>().sortingOrder = layerNumber;
-                    obj.transform.parent = this.transform;
+                    else if (startPos1.y > endPos1.y)
+                    {
+                        return;
+                    }
+                    if ((endPos1 - startPos1).magnitude > lineLength)
+                    {
 
 
-                    touchPos1 = endPos1;
-                    // layerNumber --;
-                }
-                break;
+                        GameObject obj = null;
 
-            case TouchPhase.Ended:
-            // ここ4
-                // BokujuCountDown();
 
-                if (hogekiCount <= 0 || !hogekiFlg1)
-                {
-                    return;
-                }
-                // startPos = touchPos;
-                hogekiStartPos1 = Camera.main.ScreenToWorldPoint(hogekiStartPos1);
-                hogekiStartPos1.z = 0;
-                hogekiEndPos1 = Camera.main.ScreenToWorldPoint(touch.position);
-                hogekiEndPos1.z = 0;
-                /*
-                if ((endPos - startPos).magnitude < 1)
-                {
-                    return;
-                }
-                */
-                /*
-                GameObject hogekiObj1 = null;
-                hogekiObj1 = Instantiate(hogeki, transform.position, transform.rotation);
-                hogekiObj1.transform.position = hogekiEndPos1;
-                hogekiObj1.transform.right = (hogekiStartPos1 - hogekiEndPos1).normalized;
-                // obj.transform.localScale = new Vector3((endPos - startPos).magnitude, lineWidth, lineWidth);
-                // obj.GetComponent<Hogeki>().Shot(new Vector3((endPos - startPos).magnitude, lineWidth, lineWidth));
-                if((hogekiStartPos1 - hogekiEndPos1).magnitude > 3f)
-                {
-                    hogekiObj1.GetComponent<Hogeki>().Shot((hogekiStartPos1 - hogekiEndPos1).normalized * 3f * 0.1f, hogekiCount);
-                }
-                else 
-                {
-                    hogekiObj1.GetComponent<Hogeki>().Shot((hogekiStartPos1 - hogekiEndPos1).normalized * (hogekiStartPos1 - hogekiEndPos1).magnitude * 0.1f, hogekiCount);
-                }
-                hogekiFlg1 = false;
-                // BokujuCountDown();
-                break;
-                    
-        }
-        
+                        switch(lineNumber)
+                        {
+                            case 0:
+                            obj = Instantiate(linePrefab, transform.position, transform.rotation) as GameObject;
+                            lineNumber = 1;
+
+                            break;
+
+                            case 1:
+                            obj = Instantiate(linePrefabLast, transform.position, transform.rotation) as GameObject;
+                            lineNumber = 0;
+                            break;
+                        }
+
+                        obj.transform.position = (startPos1 + endPos1) / 2;
+                        obj.transform.right = (endPos1 - startPos1).normalized;
+
+                        // obj.transform.localScale = new Vector3(1, lineWidth, lineWidth);
+                        obj.transform.localScale = new Vector3((endPos1 - startPos1).magnitude, (endPos1 - startPos1).magnitude, lineWidth);
+                        obj.GetComponent<Renderer>().sortingOrder = layerNumber;
+                        obj.transform.parent = this.transform;
+
+
+                        touchPos1 = endPos1;
+                        // layerNumber --;
+                    }
+                    break;
+
+                case TouchPhase.Ended:
+                // ここ4
+                    // BokujuCountDown();
+
+                    if (hogekiCount <= 0 || !hogekiFlg1)
+                    {
+                        return;
+                    }
+                    // startPos = touchPos;
+                    hogekiStartPos1 = Camera.main.ScreenToWorldPoint(hogekiStartPos1);
+                    hogekiStartPos1.z = 0;
+                    hogekiEndPos1 = Camera.main.ScreenToWorldPoint(touch.position);
+                    hogekiEndPos1.z = 0;
+                    /*
+                    if ((endPos - startPos).magnitude < 1)
+                    {
+                        return;
+                    }
+                    */
+    /*
+    GameObject hogekiObj1 = null;
+    hogekiObj1 = Instantiate(hogeki, transform.position, transform.rotation);
+    hogekiObj1.transform.position = hogekiEndPos1;
+    hogekiObj1.transform.right = (hogekiStartPos1 - hogekiEndPos1).normalized;
+    // obj.transform.localScale = new Vector3((endPos - startPos).magnitude, lineWidth, lineWidth);
+    // obj.GetComponent<Hogeki>().Shot(new Vector3((endPos - startPos).magnitude, lineWidth, lineWidth));
+    if((hogekiStartPos1 - hogekiEndPos1).magnitude > 3f)
+    {
+        hogekiObj1.GetComponent<Hogeki>().Shot((hogekiStartPos1 - hogekiEndPos1).normalized * 3f * 0.1f, hogekiCount);
     }
+    else 
+    {
+        hogekiObj1.GetComponent<Hogeki>().Shot((hogekiStartPos1 - hogekiEndPos1).normalized * (hogekiStartPos1 - hogekiEndPos1).magnitude * 0.1f, hogekiCount);
+    }
+    hogekiFlg1 = false;
+    // BokujuCountDown();
+    break;
+
+}
+
+}
 */
 
     public void drawLine2()
@@ -568,9 +577,9 @@ public class DrawLine : MonoBehaviour
             fude.SetActive(true);
             //ここ endPos = touchPos;
             startPos = touchPos;
-            fude.transform.position = new Vector3(endPos.x+1f, endPos.y, -4);
+            fude.transform.position = new Vector3(endPos.x + 1f, endPos.y, -4);
             layerNumber = 100;
-            lineCount ++;
+            lineCount++;
             /*
             obj = Instantiate(linePrefabFirst, transform.position, transform.rotation) as GameObject;
             
@@ -585,10 +594,10 @@ public class DrawLine : MonoBehaviour
             obj.transform.parent = this.transform;
             obj.GetComponent<Line>().SetLineCount(lineCount + 10);
             */
-            lineCount ++;
+            lineCount++;
 
 
-            
+
             // obj.transform.position = touchPos;
             // firstFinger = true;
             /*
@@ -602,8 +611,8 @@ public class DrawLine : MonoBehaviour
             obj.transform.parent = this.transform;
             touchPos = endPos;
             */
-            
-            
+
+
         }
 
         if (Input.GetMouseButton(0))
@@ -624,7 +633,7 @@ public class DrawLine : MonoBehaviour
                 return;
             }
             */
-            
+
             // powerTime += Time.deltaTime;
             /*
             if(powerTime > 1f && !dashFlg)
@@ -634,7 +643,7 @@ public class DrawLine : MonoBehaviour
                 dashFlg = true;
             }
             */
-            
+
             powerTime += Time.deltaTime;
             startPos = touchPos;
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -663,28 +672,28 @@ public class DrawLine : MonoBehaviour
             if ((endPos - startPos).magnitude > lineLength)
             {
 
-            
+
                 obj = null;
 
 
 
 
-                switch(lineNumber)
+                switch (lineNumber)
                 {
                     case 0:
-                    obj = Instantiate(linePrefab, transform.position, transform.rotation) as GameObject;
-                    lineNumber = 1;
-                    break;
+                        obj = Instantiate(linePrefab, transform.position, transform.rotation) as GameObject;
+                        lineNumber = 1;
+                        break;
 
                     case 1:
-                    obj = Instantiate(linePrefabLast, transform.position, transform.rotation) as GameObject;
-                    lineNumber = 0;
-                    break;
+                        obj = Instantiate(linePrefabLast, transform.position, transform.rotation) as GameObject;
+                        lineNumber = 0;
+                        break;
                 }
-                
+
                 obj.transform.position = (startPos + endPos) / 2;
                 obj.transform.right = (endPos - startPos).normalized;
-                
+
 
                 // obj.transform.localScale = new Vector3(1, lineWidth, lineWidth);
                 // obj.transform.localScale = new Vector3((endPos - startPos).magnitude * 1.5f, lineWidth * 0.8f, lineWidth);
@@ -695,43 +704,43 @@ public class DrawLine : MonoBehaviour
 
 
                 touchPos = endPos;
-                layerNumber --;
+                layerNumber--;
 
             }
 
         }
-        
+
 
         if (Input.GetMouseButtonUp(0))
         {
             startPos = touchPos;
-                endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                endPos.z = 0;
-                StartCoroutine("AudioFadeOut");
-                if (startPos.y > endPos.y)
-                {
-                    return;
-                }
-                obj = null;
-                switch(lineNumber)
-                {
-                    case 0:
+            endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            endPos.z = 0;
+            StartCoroutine("AudioFadeOut");
+            if (startPos.y > endPos.y)
+            {
+                return;
+            }
+            obj = null;
+            switch (lineNumber)
+            {
+                case 0:
                     obj = Instantiate(linePrefab, transform.position, transform.rotation) as GameObject;
                     lineNumber = 1;
                     break;
 
-                    case 1:
+                case 1:
                     obj = Instantiate(linePrefabLast, transform.position, transform.rotation) as GameObject;
                     lineNumber = 0;
                     break;
-                }
-                obj.transform.position = (startPos + endPos) / 2;
-                obj.transform.right = (endPos - startPos).normalized;
-                obj.transform.localScale = new Vector3((endPos - startPos).magnitude + 0.2f,  lineWidth, lineWidth);
-                obj.GetComponent<Renderer>().sortingOrder = layerNumber;
-                obj.transform.parent = this.transform;
-                obj.GetComponent<Line>().SetLineCount(lineCount);
-                
+            }
+            obj.transform.position = (startPos + endPos) / 2;
+            obj.transform.right = (endPos - startPos).normalized;
+            obj.transform.localScale = new Vector3((endPos - startPos).magnitude + 0.2f, lineWidth, lineWidth);
+            obj.GetComponent<Renderer>().sortingOrder = layerNumber;
+            obj.transform.parent = this.transform;
+            obj.GetComponent<Line>().SetLineCount(lineCount);
+
             /*
             obj = Instantiate(linePrefabFirst, transform.position, transform.rotation) as GameObject;
             
@@ -780,11 +789,11 @@ public class DrawLine : MonoBehaviour
             // obj.transform.localScale = new Vector3((endPos - startPos).magnitude, lineWidth, lineWidth);
             // obj.GetComponent<Hogeki>().Shot(new Vector3((endPos - startPos).magnitude, lineWidth, lineWidth));
 
-            if((hogekiStartPos - hogekiEndPos).magnitude > 3f)
+            if ((hogekiStartPos - hogekiEndPos).magnitude > 3f)
             {
                 hogekiObj.GetComponent<Hogeki>().Shot((hogekiStartPos - hogekiEndPos).normalized * 3f * 0.1f, hogekiCount);
             }
-            else 
+            else
             {
                 hogekiObj.GetComponent<Hogeki>().Shot((hogekiStartPos - hogekiEndPos).normalized * (hogekiStartPos - hogekiEndPos).magnitude * 0.1f, hogekiCount);
             }
@@ -850,8 +859,8 @@ public class DrawLine : MonoBehaviour
             obj.transform.parent = this.transform;
             touchPos = endPos;
             */
-            
-            
+
+
         }
 
         if (Input.GetMouseButton(0))
@@ -872,7 +881,7 @@ public class DrawLine : MonoBehaviour
                 return;
             }
             */
-            
+
             // powerTime += Time.deltaTime;
             /*
             if(powerTime > 1f && !dashFlg)
@@ -939,7 +948,7 @@ public class DrawLine : MonoBehaviour
                 layerNumber --;
             }
             ここだよ*/
-            
+
 
             obj.transform.position = (touchPos + endPos) / 2;
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -949,7 +958,7 @@ public class DrawLine : MonoBehaviour
             obj.GetComponent<Renderer>().sortingOrder = layerNumber;
             obj.transform.parent = this.transform;
         }
-        
+
 
         if (Input.GetMouseButtonUp(0))
         {
@@ -989,11 +998,11 @@ public class DrawLine : MonoBehaviour
             // obj.transform.localScale = new Vector3((endPos - startPos).magnitude, lineWidth, lineWidth);
             // obj.GetComponent<Hogeki>().Shot(new Vector3((endPos - startPos).magnitude, lineWidth, lineWidth));
 
-            if((hogekiStartPos - hogekiEndPos).magnitude > 3f)
+            if ((hogekiStartPos - hogekiEndPos).magnitude > 3f)
             {
                 hogekiObj.GetComponent<Hogeki>().Shot((hogekiStartPos - hogekiEndPos).normalized * 3f * 0.1f, hogekiCount);
             }
-            else 
+            else
             {
                 hogekiObj.GetComponent<Hogeki>().Shot((hogekiStartPos - hogekiEndPos).normalized * (hogekiStartPos - hogekiEndPos).magnitude * 0.1f, hogekiCount);
             }
@@ -1177,8 +1186,8 @@ public class DrawLine : MonoBehaviour
         {
             GameSystemTrick.instance.SetBokujuCount(bokujuCount);
         }
-        
-        
+
+
     }
 
     public void BokujuCountDown()
@@ -1210,25 +1219,25 @@ public class DrawLine : MonoBehaviour
     {
         // audioSource.Play();
         audioSource.volume += 0.005f;
-        if(audioSource.volume >= 0.02f)
+        if (audioSource.volume >= 0.02f)
         {
             audioSource.volume = 0.02f;
         }
         yield return new WaitForSeconds(0.1f);
         audioSource.volume += 0.005f;
-        if(audioSource.volume >= 0.02f)
+        if (audioSource.volume >= 0.02f)
         {
             audioSource.volume = 0.02f;
         }
         yield return new WaitForSeconds(0.1f);
         audioSource.volume += 0.005f;
-        if(audioSource.volume >= 0.02f)
+        if (audioSource.volume >= 0.02f)
         {
             audioSource.volume = 0.02f;
         }
         yield return new WaitForSeconds(0.1f);
         audioSource.volume += 0.005f;
-        if(audioSource.volume >= 0.02f)
+        if (audioSource.volume >= 0.02f)
         {
             audioSource.volume = 0.02f;
         }
