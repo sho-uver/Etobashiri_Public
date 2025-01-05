@@ -207,6 +207,46 @@ MonoBehaviour:
     m_Key: Title
     m_Metadata:
       m_Items: []
+  - m_Id: 37356289221713920
+    m_Key: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37357359582928896
+    m_Key: PlusPoint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37357379925303296
+    m_Key: TotalPoint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37359343157370880
+    m_Key: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37359714139365376
+    m_Key: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37360367247024128
+    m_Key: CurrentYen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37362222660313088
+    m_Key: CurrentScore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37363116026093568
+    m_Key: Result
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37363828667703296
+    m_Key: Retry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37364787686924288
+    m_Key: Share
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

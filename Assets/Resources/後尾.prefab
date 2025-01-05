@@ -212,7 +212,8 @@ MonoBehaviour:
   scaleY: 0
   scaleUp: 3
   startPos: {x: 0, y: 0, z: 0}
-  returnTime: 0.8
+  returnTime: 2.2
+  dir: {x: 0, y: 0}
 --- !u!61 &-7969062217859109382
 BoxCollider2D:
   m_ObjectHideFlags: 0

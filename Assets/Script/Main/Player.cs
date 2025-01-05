@@ -73,7 +73,6 @@ public class Player : MonoBehaviour
     public float defaultGravityScale;
     public bool lineCollisionFlg;
     public float lineCollisionTime;
-    public float lineCollisionSpeed;
     private Coroutine vibrationCoroutine;
     public Animator animator;
     void Start()
@@ -103,11 +102,6 @@ public class Player : MonoBehaviour
         }
         if (lineCollisionFlg)
         {
-            lineCollisionSpeed += 0.1f * Time.deltaTime;
-            if (lineCollisionSpeed > 2)
-            {
-                lineCollisionSpeed = 2;
-            }
             lineCollisionTime += Time.deltaTime;
             if (lineCollisionTime > 0.1f) ResetGravity();
             rb.angularVelocity = 0f;
@@ -163,7 +157,7 @@ public class Player : MonoBehaviour
         }
         */
 
-        transform.Translate(Vector2.up * (speed * gear * Time.deltaTime + ordinarySpeed * Time.deltaTime + lineCollisionSpeed));
+        transform.Translate(Vector2.up * (speed * gear * Time.deltaTime + ordinarySpeed * Time.deltaTime));
         // vector =         Vector2.up * ((baseSpeed * Time.deltaTime + speed * gear * Time.deltaTime + levelSpeedUp * Time.deltaTime) * levelSpeedDown);
         // Debug.Log("speeed");
         /*
@@ -425,7 +419,6 @@ public class Player : MonoBehaviour
         rb.gravityScale = 0;
         lineCollisionFlg = false;
         lineCollisionTime = 0;
-        lineCollisionSpeed = 0;
         animator.SetBool("LineFlg", false);
         StopVibration();
     }
@@ -999,15 +992,29 @@ public class Player : MonoBehaviour
 
                 // ここでPlayerの角度を調整
                 AdjustPlayerAngle(collision);
+
+                // SetDirection(lineScript.GetDir());
             }
             // rb.gravityScale = defaultGravityScale;
             lineCollisionFlg = true;
             lineCollisionTime = 0;
             animator.SetBool("LineFlg", true);
-            StartVibration();
+            // StartVibration();
         }
 
     }
+
+    public void SetDirection(Vector2 direction)
+    {
+        // ベクトルの向きを取得
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        // 回転を設定（Z軸回り）
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+        Debug.Log(angle);
+        Debug.Log(transform.rotation);
+    }
+
 
 
 
@@ -1017,7 +1024,7 @@ public class Player : MonoBehaviour
         if(collision.gameObject.tag == "Line")
         {
             baseSpeed += 5f * Time.deltaTime;
-            
+
         }
         */
     }
@@ -1107,7 +1114,7 @@ public class Player : MonoBehaviour
     public Vector2 PlayerVector()
     {
         // Vector2 vector = Vector2.up * (speed * gear * Time.deltaTime + ordinarySpeed * Time.deltaTime + pointSpeed * Time.deltaTime);
-        Vector2 vector = Vector2.up * (speed * gear * Time.deltaTime + ordinarySpeed * Time.deltaTime + lineCollisionSpeed);
+        Vector2 vector = Vector2.up * (speed * gear * Time.deltaTime + ordinarySpeed * Time.deltaTime);
         // Vector2 vector = Vector2.up * ((baseSpeed * Time.deltaTime + speed * gear * Time.deltaTime + levelSpeedUp * Time.deltaTime) * levelSpeedDown);
         return vector;
     }
@@ -1289,7 +1296,7 @@ public class Player : MonoBehaviour
         }
         /*
         int count;
-        
+
         if(toriCounter >= 10)
         {
             count = 10;
