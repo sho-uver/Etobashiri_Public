@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 using PlayFab;
 using PlayFab.ClientModels;
 using System.IO;
+using TMPro;
+using UnityEngine.Localization.Settings;
 
 public class GameSystemTrick : MonoBehaviour
 {
@@ -211,6 +213,8 @@ public class GameSystemTrick : MonoBehaviour
     public bool shareFlg;
     public bool kansoFlg;
     public NGWordFilter ngWordFilter;
+
+    private string tableName = "TextTable"; // Localizationテーブル名を指定
 
     public void Awake()
     {
@@ -934,13 +938,14 @@ switch(liberationPatten)
                 getMoney = currentScore * (1 + PlayerPrefs.GetInt("猪春夏秋冬並木", 0) + PlayerPrefs.GetInt("犬春夏秋冬並木", 0) * 2 + PlayerPrefs.GetInt("鳥春夏秋冬並木", 0) * 3 + PlayerPrefs.GetInt("猿春夏秋冬並木", 0) * 4 + PlayerPrefs.GetInt("羊春夏秋冬並木", 0) * 5 + PlayerPrefs.GetInt("馬春夏秋冬並木", 0) * 6 + PlayerPrefs.GetInt("蛇春夏秋冬並木", 0) * 7 + PlayerPrefs.GetInt("龍春夏秋冬並木", 0) * 8 + PlayerPrefs.GetInt("兎春夏秋冬並木", 0) * 9 + PlayerPrefs.GetInt("虎春夏秋冬並木", 0) * 10 + PlayerPrefs.GetInt("牛春夏秋冬並木", 0) * 11 + PlayerPrefs.GetInt("鼠春夏秋冬並木", 0) * 12 + PlayerPrefs.GetInt("達春夏秋冬並木", 0) * 100 + PlayerPrefs.GetInt("Omikuji"));
                 PlayerPrefs.SetInt("MugenToku", altBonnoPoint);
                 // stageNameText.text = "春夏秋冬並木";
-                highScoreTextKanban.text = "最高徳：" + PlayerPrefs.GetInt(STATISTICS_NAME, 0);
                 levelPointTotal = PlayerPrefs.GetInt("MugenToku", 0);
-                resultGetPointText.text = currentScore + "徳";
-                resultGetTokuText.text = getMoney + "縁";
+                resultGetPointText.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "CurrentScore", arguments: new object[] { currentScore });
+                resultGetTokuText.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "CurrentYen", arguments: new object[] { getMoney });
                 money = PlayerPrefs.GetInt("Money", 0) + getMoney;
                 PlayerPrefs.SetInt("Money", money);
-                resultMoney.text = "所持金：" + money + "縁";
+
+                resultMoney.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "Yen", arguments: new object[] { money });
+                highScoreTextKanban.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "HighScore", arguments: new object[] { PlayerPrefs.GetInt(STATISTICS_NAME, 0) });
                 // PlayerPrefs.SetInt("LevelPoint", PlayerPrefs.GetInt("LevelPoint",0) + currentScore);
                 break;
 
@@ -1416,7 +1421,7 @@ switch(liberationPatten)
             plusPoint.Plus(point);
         }
 
-        meter.text = bomPoint + "徳";
+        meter.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "TotalPoint", arguments: new object[] { bomPoint });
         ps.SetCurrentPoint(bomPoint);
     }
 
@@ -1906,7 +1911,7 @@ switch(liberationPatten)
                 */
                 Text banduke = Instantiate(bandukeText, new Vector3(0, 0, 0), Quaternion.identity);
                 // banduke.text = "全員番付";
-                banduke.text = "番付";
+                banduke.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "RankingTitle");
                 banduke.transform.parent = rankingSV.transform;
                 banduke.transform.localScale = new Vector3(1, 1, 1);
 
@@ -1917,7 +1922,8 @@ switch(liberationPatten)
                     Text iremono;
                     Text iremonoName;
                     var x = result.Leaderboard[i];
-                    ranking = string.Format("{0}位 {1}徳", x.Position + 1, x.StatValue);
+                    // ranking = string.Format("{0}位 {1}徳", x.Position + 1, x.StatValue);
+                    ranking = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "Ranking", arguments: new object[] { x.Position + 1, x.StatValue });
                     ranking.ToUpper();
                     // rankingName = string.Format("{0}", x.DisplayName);
 
@@ -2929,17 +2935,10 @@ error =>
 
     public void SetTweet()
     {
-        string postMessage;
-        if (shareFlg)
-        {
-            postMessage = "共有は1走りにつき1回までです。";
-            snapbarManager.ShowSnapbar(postMessage, enImage, 3);
-            return;
-        }
         string tweet = currentScore + "の徳を積みました！\n\n#えとばしり！\niOS\nhttps://apps.apple.com/jp/app/%E3%81%88%E3%81%A8%E3%81%B0%E3%81%97%E3%82%8A/id6470151998\nAndroid\nhttps://play.google.com/store/apps/details?id=com.HishoCompany.Chototsumoshin&pcampaignid=web_share";
         twitterShare.SetTweetText(tweet);
         twitterShare.Tweet();
-        GetEn();
+        // GetEn();
 
     }
 

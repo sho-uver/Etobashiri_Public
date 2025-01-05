@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+using TMPro;
+using UnityEngine.Localization.Settings;
 public class PlusPoint : MonoBehaviour
 {
     public Text plusPoint;
@@ -11,6 +13,9 @@ public class PlusPoint : MonoBehaviour
     public Vector3 startPos;
     // public Canvas canvas;
     public RectTransform pos;
+
+
+    private string tableName = "TextTable"; // Localizationテーブル名を指定
     // Start is called before the first frame update
     void Start()
     {
@@ -21,25 +26,25 @@ public class PlusPoint : MonoBehaviour
     void Update()
     {
         lifeTime -= Time.deltaTime;
-        if(lifeTime < 1 && lifeTime > 0)
+        if (lifeTime < 1 && lifeTime > 0)
         {
-            plusPoint.color -= new Color(0,0,0,1f * Time.deltaTime);
-            outLine.effectColor -= new Color(0,0,0,1f * Time.deltaTime);
+            plusPoint.color -= new Color(0, 0, 0, 1f * Time.deltaTime);
+            outLine.effectColor -= new Color(0, 0, 0, 1f * Time.deltaTime);
         }
-        if(lifeTime > 2.75f)
+        if (lifeTime > 2.75f)
         {
             pos.position = new Vector2(pos.position.x, pos.position.y - 200 * Time.deltaTime);
         }
-        
-        
+
+
     }
 
     public void Plus(int num)
     {
         lifeTime = 3;
-        plusPoint.color =  new Color(0.7f,0.95f,0.7f,1f);
-        outLine.effectColor = new Color(0f,0f,0f,1f);
-        plusPoint.text = "+" + num + "徳";
+        plusPoint.color = new Color(0.7f, 0.95f, 0.7f, 1f);
+        outLine.effectColor = new Color(0f, 0f, 0f, 1f);
+        plusPoint.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "PlusPoint", arguments: new object[] { num });
         // pos.anchoredPosition = new Vector2(400,-60);
         pos.anchoredPosition = startPos;
     }

@@ -179,6 +179,7 @@ public class DrawLine : MonoBehaviour
     {
         startPos = touchPos;
         endPos = Camera.main.ScreenToWorldPoint(inputPos);
+        Debug.Log("aa" + Camera.main.ScreenToWorldPoint(inputPos));
         endPos.z = 0;
         fude.transform.position = new Vector3(endPos.x + 1f, endPos.y, -4);
         if (startPos.y > endPos.y)
@@ -200,6 +201,7 @@ public class DrawLine : MonoBehaviour
                 // objs[lineCount].transform.localScale = new Vector3(((endPos - startPos).magnitude + scalePlus) * scaleMulti, lineWidth, lineWidth);
                 // objs[lineCount].transform.localScale = new Vector3(lineLength * scaleMulti ,  lineWidth, lineWidth);
                 objs[lineCount].GetComponent<Line>().SetLineCount(lineCount);
+                objs[lineCount].GetComponent<Line>().SetDir((endPos - startPos).normalized);
 
                 if (lineCount >= objs.Length - 1)
                 {

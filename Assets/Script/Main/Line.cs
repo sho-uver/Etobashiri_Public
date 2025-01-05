@@ -19,6 +19,7 @@ public class Line : MonoBehaviour
     public float scaleUp;
     public Vector3 startPos;
     public float returnTime;
+    public Vector2 dir;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,13 +30,13 @@ public class Line : MonoBehaviour
         // lB.SetRandomNum(randomNum);
         sR = this.GetComponent<SpriteRenderer>();
         // transform.localScale = new Vector3(transform.localScale.x * scaleUp, transform.localScale.y , transform.localScale.x);
-        startPos = new Vector3(0,-100,0);
+        startPos = new Vector3(0, -100, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.position == startPos)
+        if (transform.position == startPos)
         {
             liveTime = 0;
             return;
@@ -105,36 +106,36 @@ public class Line : MonoBehaviour
             transform.localScale = new Vector2(transform.localScale.x, transform.localScale.y + scaleY);
         }
         2024/02/28*/
-        if (liveTime >= returnTime && liveTime <= 1.2f )
+        if (liveTime >= returnTime)
         {
             // gameObject.SetActive(false);
             transform.position = startPos;
-            
+
         }
-        
+
     }
 
-/*
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Debug.Log("a");
-        if(collision.gameObject.tag == "lineBack")
+    /*
+        public void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.gameObject.GetComponent<LineBack>().GetRandomNum() == randomNum)
+            //Debug.Log("a");
+            if(collision.gameObject.tag == "lineBack")
             {
-                return;
+                if(collision.gameObject.GetComponent<LineBack>().GetRandomNum() == randomNum)
+                {
+                    return;
+                }
+                tOSSRFlg = true;
+                // tOSSR.color = new Color(0,0,0,1);
+                tOSSR.color = new Color(1,1,1,1);
+                Debug.Log("b");
             }
-            tOSSRFlg = true;
-            // tOSSR.color = new Color(0,0,0,1);
-            tOSSR.color = new Color(1,1,1,1);
-            Debug.Log("b");
+
         }
-        
-    }
-*/
+    */
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        switch(collision.gameObject.tag)
+        switch (collision.gameObject.tag)
         {
             case "Ice":
                 // gameObject.SetActive(false);
@@ -147,20 +148,19 @@ public class Line : MonoBehaviour
         }
     }
 
-    public void OnCollisionStay2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        switch(collision.gameObject.tag)
+        switch (collision.gameObject.tag)
         {
             case "Player":
-                /*
-                closedTime += Time.deltaTime;
-                if(closedTime > 0.3f)
-                {
-                    liveTime = 2f;
-                }
-                */
+                Invoke("Remove", 0.2f);
                 break;
         }
+    }
+
+    public void Remove()
+    {
+        liveTime = returnTime;
     }
 
     public void SetLineCount(int num)
@@ -171,6 +171,16 @@ public class Line : MonoBehaviour
     public int GetLineCount()
     {
         return lineCount;
+    }
+
+    public void SetDir(Vector2 vec)
+    {
+        dir = vec;
+    }
+
+    public Vector2 GetDir()
+    {
+        return dir;
     }
 
 
