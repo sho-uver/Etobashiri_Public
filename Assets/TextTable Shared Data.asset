@@ -247,13 +247,86 @@ MonoBehaviour:
     m_Key: Share
     m_Metadata:
       m_Items: []
+  - m_Id: 42335066305585152
+    m_Key: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42440185940533248
+    m_Key: Step1_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42440247269646336
+    m_Key: Step1_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42448450527158272
+    m_Key: Step2_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42448566201868288
+    m_Key: Step2_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42448782556651520
+    m_Key: Step2_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42711394771001344
+    m_Key: Step3_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42711493458780160
+    m_Key: Step3_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42711639340867584
+    m_Key: Step3_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42712097346281472
+    m_Key: Step3_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42712399323586560
+    m_Key: Step3_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42712513937137664
+    m_Key: Step3_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42712778601914368
+    m_Key: Step3_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42739099449155584
+    m_Key: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43474805318475776
+    m_Key: StartMessage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43479360995319808
+    m_Key: "\u6587\u5B57\u5316\u3088\u3046"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43481795184812032
+    m_Key: Tracking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44888901947482112
+    m_Key: WebSite
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    id: 0
+    rid: 0
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 0
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
         asm: Unity.Localization}
       data:

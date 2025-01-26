@@ -43,7 +43,10 @@ public static class VibrationMng
 #endif
         if (milliseconds >= 1000)
         {
-            Handheld.Vibrate();
+#if UNITY_ANDROID || UNITY_IOS
+Handheld.Vibrate(); // Android/iOS のみの場合
+#endif
+
         }
     }
 }

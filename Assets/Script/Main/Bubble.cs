@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Bubble : MonoBehaviour
 {
-    public List<Collider2D> colList; 
-    public Vector3 distance; 
+    public List<Collider2D> colList;
+    public Vector3 distance;
+    private Rigidbody2D rb;
+    private Vector2 newVelocity;
     public bool moveFlg;
     public bool rightMoveFlg;
     public bool leftMoveFlg;
@@ -16,7 +18,7 @@ public class Bubble : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(Random.Range(0,2) == 0)
+        if (Random.Range(0, 2) == 0)
         {
             moveFlg = true;
         }
@@ -24,7 +26,7 @@ public class Bubble : MonoBehaviour
         {
             moveFlg = false;
         }
-        if(Random.Range(0,2) == 0)
+        if (Random.Range(0, 2) == 0)
         {
             rightMoveFlg = true;
         }
@@ -46,23 +48,23 @@ public class Bubble : MonoBehaviour
         {
             return;
         }
-        if(rightMoveFlg)
+        if (rightMoveFlg)
         {
-            transform.position += new Vector3(1.5f, 0, 0)  * Time.deltaTime;
+            transform.position += new Vector3(1.5f, 0, 0) * Time.deltaTime;
         }
 
-        if(leftMoveFlg)
+        if (leftMoveFlg)
         {
-            transform.position += new Vector3(-1.5f, 0, 0)  * Time.deltaTime;
+            transform.position += new Vector3(-1.5f, 0, 0) * Time.deltaTime;
         }
 
-        if(transform.position.x > 2.2f)
+        if (transform.position.x > 2.2f)
         {
             rightMoveFlg = false;
             leftMoveFlg = true;
         }
 
-        if(transform.position.x < -2.2f)
+        if (transform.position.x < -2.2f)
         {
             rightMoveFlg = true;
             leftMoveFlg = false;
@@ -72,13 +74,13 @@ public class Bubble : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(burstFlg)
+        if (burstFlg)
         {
             return;
         }
-        
+
         // colList.Add(collision);
-        switch(collision.gameObject.tag)
+        switch (collision.gameObject.tag)
         {
             case "Player":
                 burstFlg = true;
@@ -86,7 +88,9 @@ public class Bubble : MonoBehaviour
                 // distance.x = distance.x * -1;
                 // distance.y = distance.y * -1;
                 // collision.transform.Translate(distance * Time.deltaTime * 100);
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(distance.normalized * 30000);
+                rb = collision.gameObject.GetComponent<Rigidbody2D>();
+                newVelocity = distance.normalized * 3000;
+                rb.linearVelocity = newVelocity;
                 // collision.gameObject.transform.position += distance.normalized * 3f;
                 // collision.gameObject.GetComponent<Player>().InvokeResetBubble();
                 StartCoroutine("Momentum");
@@ -100,30 +104,32 @@ public class Bubble : MonoBehaviour
                 // distance.x = distance.x * -1;
                 // distance.y = distance.y * -1;
                 // collision.transform.Translate(distance * Time.deltaTime * 100);
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(distance.normalized * 30000);
+                rb = collision.gameObject.GetComponent<Rigidbody2D>();
+                newVelocity = distance.normalized * 3000;
+                rb.linearVelocity = newVelocity;
                 // collision.gameObject.transform.position += distance.normalized * 3f;
                 // collision.gameObject.GetComponent<Player>().InvokeResetBubble();
                 StartCoroutine("Momentum");
                 StartCoroutine(Bound(collision.gameObject));
                 // Debug.Log(collision.gameObject);
                 break;
-            
-            
+
+
         }
-        
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(burstFlg)
+        if (burstFlg)
         {
             return;
         }
 
-        switch(collision.gameObject.tag)
+        switch (collision.gameObject.tag)
         {
             case "Player":
-                if(collision.gameObject.GetComponent<Player>().GetChototsuFlg())
+                if (collision.gameObject.GetComponent<Player>().GetChototsuFlg())
                 {
                     return;
                 }
@@ -132,7 +138,9 @@ public class Bubble : MonoBehaviour
                 // distance.x = distance.x * -1;
                 // distance.y = distance.y * -1;
                 // collision.transform.Translate(distance * Time.deltaTime * 100);
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(distance.normalized * 30000);
+                rb = collision.gameObject.GetComponent<Rigidbody2D>();
+                newVelocity = distance.normalized * 30;
+                rb.linearVelocity = newVelocity;
                 // collision.gameObject.transform.position += distance.normalized * 3f;
                 // collision.gameObject.GetComponent<Player>().InvokeResetBubble();
                 // StartCoroutine("Momentum");
@@ -156,20 +164,22 @@ public class Bubble : MonoBehaviour
             case "Mure":
                 burstFlg = true;
                 distance = collision.gameObject.transform.position - transform.position;
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(distance.normalized * 30000);
+                rb = collision.gameObject.GetComponent<Rigidbody2D>();
+                newVelocity = distance.normalized * 3000;
+                rb.linearVelocity = newVelocity;
                 // StartCoroutine("Momentum");
                 collision.gameObject.GetComponent<Mure>().BubbleReset();
                 StartCoroutine(Bound(collision.gameObject));
                 break;
-            
+
         }
-        
+
     }
 
-    IEnumerator　Momentum()
+    IEnumerator Momentum()
     {
         audioSource.Play();
-        anim.SetBool("burst",true);
+        anim.SetBool("burst", true);
         yield return new WaitForSeconds(1f);
         /*
         transform.localScale = transform.localScale * 1.5f;
@@ -193,10 +203,10 @@ public class Bubble : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    IEnumerator　Bound(GameObject collision)
+    IEnumerator Bound(GameObject collision)
     {
         audioSource.Play();
-        anim.SetBool("burst",true);
+        anim.SetBool("burst", true);
         yield return new WaitForSeconds(0.2f);
         // collision.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         // collision.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -207,10 +217,10 @@ public class Bubble : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    IEnumerator　Bound2(GameObject collision)
+    IEnumerator Bound2(GameObject collision)
     {
         yield return new WaitForSeconds(0.1f);
-        collision.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        collision.GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero;
         collision.transform.rotation = Quaternion.Euler(0, 0, 0);
         collision.GetComponent<Rigidbody2D>().angularVelocity = 0;
     }

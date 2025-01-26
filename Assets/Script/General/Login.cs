@@ -7,6 +7,8 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
+using UnityEngine.SceneManagement;
+
 using TMPro;
 using UnityEngine.Localization.Settings;
 
@@ -59,10 +61,10 @@ public class Login : MonoBehaviour
     void Start()
     {
         id = PlayerPrefs.GetString("ID", "No ID");
-        currentName = PlayerPrefs.GetString("Name", "お客さん");
+        currentName = PlayerPrefs.GetString("Name", "");
         // Debug.Log(id);
         // Debug.Log(currentName);
-        // if(id == "No ID" || currentName == "お客さん")
+        // if(id == "No ID" || currentName == "")
         if (PlayerPrefs.GetInt("FirstLogin", 1) == 1)
         {
             FirstTimeLogin();
@@ -125,7 +127,7 @@ public class Login : MonoBehaviour
 
     public void SubmitScore(int playerScore)
     {
-        SetPlayerDisplayName(PlayerPrefs.GetString("Name", "お客さん"));
+        SetPlayerDisplayName(PlayerPrefs.GetString("Name", ""));
         PlayFabClientAPI.UpdatePlayerStatistics(
             new UpdatePlayerStatisticsRequest
             {
@@ -283,7 +285,8 @@ error =>
                     rankText.transform.localScale = new Vector3(1, 1, 1);
                     nameText.transform.SetParent(rankingSV.transform, false);
                     nameText.transform.localScale = new Vector3(1, 1, 1);
-                };
+                }
+                ;
             },
             error =>
             {
@@ -461,7 +464,8 @@ error =>
                         iremono.transform.localScale = new Vector3(1, 1, 1);
                         iremonoName.transform.SetParent(rankingSV.transform, false);
                         iremonoName.transform.localScale = new Vector3(1, 1, 1);
-                    };
+                    }
+                    ;
                 }
                 else
                 {
@@ -509,7 +513,8 @@ error =>
                         iremono.transform.localScale = new Vector3(1, 1, 1);
                         iremonoName.transform.SetParent(rankingSV.transform, false);
                         iremonoName.transform.localScale = new Vector3(1, 1, 1);
-                    };
+                    }
+                    ;
                 }
 
             },
@@ -610,7 +615,8 @@ error =>
                     rankText.transform.localScale = new Vector3(1, 1, 1);
                     nameText.transform.SetParent(rankingSV.transform, false);
                     nameText.transform.localScale = new Vector3(1, 1, 1);
-                };
+                }
+                ;
             },
             error =>
             {
@@ -756,7 +762,8 @@ error =>
                     iremono.transform.localScale = new Vector3(1, 1, 1);
                     iremonoName.transform.SetParent(rankingSV.transform, false);
                     iremonoName.transform.localScale = new Vector3(1, 1, 1);
-                };
+                }
+                ;
             },
             error =>
             {
@@ -904,6 +911,7 @@ error =>
             {
                 menuSystem.Login();
                 PlayerPrefs.SetInt("FirstLogin", 0);
+                SceneManager.LoadScene("Demo");
             }
         },
         error =>
@@ -968,6 +976,20 @@ error =>
         string localizationKey = "NameSuccess";
         nameChangeMessage.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, localizationKey);
         nameChangeMessage.color = Color.black;
+        Debug.Log("Set display name was succeeded.");
+        currentName = name.text;
+        PlayerPrefs.SetString("Name", currentName);
+        nameCheckFlg = false;
+        nameChangeCanvas.SetActive(false);
+        homeCanvas.SetActive(true);
+        // RequestLeaderBoard();
+        RequestLeaderBoardAroundPlayer();
+        if (firstLoginFlg)
+        {
+            menuSystem.Login();
+            PlayerPrefs.SetInt("FirstLogin", 0);
+            SceneManager.LoadScene("Demo");
+        }
     }
 
     private void OnNameSendFailure(PlayFabError error)
@@ -999,8 +1021,8 @@ error =>
         // PlayerPrefs.SetString("ID",GenerateCustomID());
         PlayerPrefs.SetString("ID", SystemInfo.deviceUniqueIdentifier);
         id = PlayerPrefs.GetString("ID", "No ID");
-        PlayerPrefs.SetString("Name", "お客さん");
-        currentName = PlayerPrefs.GetString("Name", "お客さん");
+        PlayerPrefs.SetString("Name", "");
+        currentName = PlayerPrefs.GetString("Name", "");
         PlayerPrefs.SetInt("AdCounter", 24);
     }
 

@@ -20,6 +20,7 @@ public class Line : MonoBehaviour
     public Vector3 startPos;
     public float returnTime;
     public Vector2 dir;
+    public Vector3 currentPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class Line : MonoBehaviour
         sR = this.GetComponent<SpriteRenderer>();
         // transform.localScale = new Vector3(transform.localScale.x * scaleUp, transform.localScale.y , transform.localScale.x);
         startPos = new Vector3(0, -100, 0);
+        currentPos = startPos;
     }
 
     // Update is called once per frame
@@ -40,6 +42,10 @@ public class Line : MonoBehaviour
         {
             liveTime = 0;
             return;
+        }
+        if (currentPos == transform.position)
+        {
+            liveTime = 0;
         }
         liveTime += Time.deltaTime;
         /*
@@ -142,7 +148,7 @@ public class Line : MonoBehaviour
                 break;
 
             case "Player":
-                liveTime = 1f;
+                //liveTime = 1f;
                 break;
 
         }
@@ -153,7 +159,7 @@ public class Line : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Player":
-                Invoke("Remove", 0.2f);
+                // Invoke("Remove", 0.2f);
                 break;
         }
     }

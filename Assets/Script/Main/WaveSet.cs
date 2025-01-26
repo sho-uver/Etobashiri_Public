@@ -10,7 +10,7 @@ public class WaveSet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        switch(Random.Range(0,2))
+        switch (Random.Range(0, 2))
         {
             case 0:
                 SetMoveFlgTrueL();
@@ -25,7 +25,13 @@ public class WaveSet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void SetYear(int year)
+    {
+        waveL.SetYear(year);
+        waveR.SetYear(year);
     }
 
     public void SetMoveFlgTrueL()

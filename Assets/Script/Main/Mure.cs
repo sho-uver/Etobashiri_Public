@@ -254,7 +254,7 @@ public class Mure : MonoBehaviour
 
     public void BubbleResetNext()
     {
-        rb.velocity = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
         transform.rotation = Quaternion.Euler(0, 0, 0);
         rb.angularVelocity = 0;
     }

@@ -396,5 +396,76 @@ MonoBehaviour:
     m_Localized: '{0}'
     m_Metadata:
       m_Items: []
+  - m_Id: 42335066305585152
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42440185940533248
+    m_Localized: "\u904A\u3073\u65B9\u3092\u8AAC\u660E\u3059\u308B\u306D\uFF01\n\u307E\u305A\u306F\u7DDA\u3092\u9577\u304F\u5F15\u3044\u3066\u307F\u3088\u3046"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42440247269646336
+    m_Localized: "\u3044\u3044\u306D\uFF01\n\u7DDA\u3092\u5F15\u3044\u305F\u3089\u7AF9\u306E\u58C1\u304C\u51FA\u3066\u304F\u308B\u3088"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42448450527158272
+    m_Localized: "\u4ECA\u8D70\u3063\u3066\u3044\u308B\u306E\u306F\n\u3048\u3068\u3060\u3088"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42448566201868288
+    m_Localized: "\u3048\u3068\u304C\u7AF9\u306E\u58C1\u306B\u3076\u3064\u304B\u308B\u3088\u3046\u306B\u7DDA\u3092\u5F15\u3044\u3066\u307F\u3088\u3046"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42448782556651520
+    m_Localized: "\u305D\u3046\u305D\u3046\uFF01\n\u3048\u3068\u306F\u7AF9\u306E\u58C1\u306B\u3076\u3064\u304B\u308B\u3068\n\u58C1\u3092\u8D70\u3063\u3066\u65B9\u5411\u3092\u5909\u3048\u308B\u3088"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42711394771001344
+    m_Localized: "\u4ECA\u51FA\u3066\u304D\u305F\u306E\u306F\u6575\u3060\u3088"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42711493458780160
+    m_Localized: "\u3046\u307E\u304F\u7AF9\u306E\u58C1\u3092\u4F5C\u3063\u3066\u6575\u306B\u3048\u3068\u3092\u3076\u3064\u3051\u3066\u307F\u3088\u3046\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42711639340867584
+    m_Localized: "\u3046\u307E\u3044\uFF01\n\u3048\u3068\u3092\u3076\u3064\u3051\u308B\u3068\u6575\u3092\u5012\u305B\u308B\u3088\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42712097346281472
+    m_Localized: "\u672C\u756A\u3067\u306F\u6575\u3092\u5012\u3057\u306A\u304C\u3089\n12\u5E74\u9593\u8D70\u308A\u629C\u3051\u308B\u3068\u30B2\u30FC\u30E0\u30AF\u30EA\u30A2\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42712399323586560
+    m_Localized: "\u4ECA\u51FA\u3066\u304D\u305F\u306E\u306F\u5FDC\u63F4\u56E3\uFF01\n\u5F7C\u3089\u306E\u5FDC\u63F4\u306E\u304A\u304B\u3052\u3067\n\u3048\u3068\u306F\u8D70\u308B\u3053\u3068\u304C\u3067\u304D\u308B\u3088"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42712513937137664
+    m_Localized: "\u6575\u3092\u5012\u3057\u640D\u306D\u3066\u3057\u307E\u3046\u3068\n\u5FDC\u63F4\u56E3\u304C\u4E00\u4EBA\u5E30\u3063\u3066\u3057\u307E\u3046\u3088\n\u5168\u54E1\u3044\u306A\u304F\u306A\u3063\u305F\u3089\u30B2\u30FC\u30E0\u30AA\u30FC\u30D0\u30FC\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42712778601914368
+    m_Localized: "\u305D\u308C\u3058\u3083\u3042\u3001\u5B8C\u8D70\u76EE\u6307\u3057\u3066\u9811\u5F35\u3063\u3066\u306D\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42739099449155584
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43474805318475776
+    m_Localized: "If you keep running for 12 years, \nyou'll reach the goal!\nClick
+      Button to Play"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43481795184812032
+    m_Localized: "By selecting \u201CAllow,\u201D we can display the most suitable
+      ads based on your device information."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44888901947482112
+    m_Localized: To the game summary site of developer Hisho!
+    m_Metadata:
+      m_Items: []
   references:
-    version: 1
+    version: 2
+    RefIds: []

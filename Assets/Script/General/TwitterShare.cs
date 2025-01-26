@@ -5,10 +5,10 @@ using System.IO;
 
 public class TwitterShare : MonoBehaviour
 {
-// https://dropoutc.com/creation/social/　このサイト見て作った
+    // https://dropoutc.com/creation/social/　このサイト見て作った
     public string tweetText;
     public string tweetURL;
-    public bool ssStopFlg; 
+    public bool ssStopFlg;
 
     void start()
     {
@@ -22,7 +22,7 @@ public class TwitterShare : MonoBehaviour
 
     public IEnumerator _Tweet()
     {
-        if(!ssStopFlg)
+        if (!ssStopFlg)
         {
             string imagePass = Application.persistentDataPath + "/image.png";
             //前回の画像を消す
@@ -37,27 +37,27 @@ public class TwitterShare : MonoBehaviour
                     break; yield return null;
             }
             //投稿
-            // SocialConnector.PostMessage(SocialConnector.ServiceType.Twitter,tweetText, tweetURL, imagePass);
-            
+            // // SocialConnector.PostMessage(// SocialConnector.ServiceType.Twitter,tweetText, tweetURL, imagePass);
+
             try
             {
-                SocialConnector.PostMessage(SocialConnector.ServiceType.Twitter, tweetText, tweetURL, imagePass);
-                // SocialConnector.Share(tweetText, tweetURL,imagePass);
+                // SocialConnector.PostMessage(// SocialConnector.ServiceType.Twitter, tweetText, tweetURL, imagePass);
+                // // SocialConnector.Share(tweetText, tweetURL,imagePass);
             }
             catch (System.Exception e)
             {
                 Debug.LogError("Failed to post the tweet: " + e.Message);
             }
-            
+
         }
         else
         {
-            SocialConnector.PostMessage(SocialConnector.ServiceType.Twitter,tweetText, tweetURL);
-            // SocialConnector.Share(tweetText, tweetURL);
+            // SocialConnector.PostMessage(// SocialConnector.ServiceType.Twitter,tweetText, tweetURL);
+            // // SocialConnector.Share(tweetText, tweetURL);
             /*
             try
             {
-                SocialConnector.PostMessage(SocialConnector.ServiceType.Twitter, tweetText, tweetURL);
+                // SocialConnector.PostMessage(// SocialConnector.ServiceType.Twitter, tweetText, tweetURL);
             }
             catch (System.Exception e)
             {

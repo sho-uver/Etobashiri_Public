@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DemoSytem : MonoBehaviour
 {
+    /*
     public int step;
     private string tableName = "TextTable"; // Localizationテーブル名を指定
 
@@ -50,7 +51,6 @@ public class DemoSytem : MonoBehaviour
     {
         return step;
     }
-
     public IEnumerator Step0()
     {
         // 線を引くと壁を作れるよ！日本線を引いてみよう
@@ -73,6 +73,7 @@ public class DemoSytem : MonoBehaviour
     {
         // 上手！
         if (Input.GetMouseButtonUp(0))
+
         {
             TypewriterText.Instance.DisplayInterruptibleText(LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "step3"));
         }
@@ -111,7 +112,7 @@ public class DemoSytem : MonoBehaviour
         step++;
         yield return new WaitForSeconds(1);
         // えとを動かし1秒したら敵を出す
-        Step7()
+        Step7();
     }
 
     public IEnumerator Step7()
@@ -155,7 +156,7 @@ public class DemoSytem : MonoBehaviour
         TypewriterText.Instance.DisplayInterruptibleText(LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "step4"));
         step++;
         yield return new WaitForSeconds(1);
-        Step13()
+        Step13();
     }
 
     public IEnumerator Step13()
@@ -175,6 +176,6 @@ public class DemoSytem : MonoBehaviour
     }
 
 
-
+*/
 
 }

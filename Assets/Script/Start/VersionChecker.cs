@@ -20,10 +20,11 @@ public class VersionChecker : MonoBehaviour
     public GameObject languagePanel;
     [SerializeField] private TextMeshProUGUI message;
     private string tableName = "TextTable"; // Localizationテーブル名を指定
+    public bool notNeedUpdateFlg;
 
     void Start()
     {
-        LanguageManager.Instance.SetLanguage("Ja");
+
         if (PlayerPrefs.GetInt("FirstLogin", 1) == 1)
         {
             languagePanel.SetActive(true);
@@ -67,6 +68,11 @@ public class VersionChecker : MonoBehaviour
             }
             else
             {
+                notNeedUpdateFlg = true;
+                if (PlayerPrefs.GetInt("FirstLogin", 1) == 1)
+                {
+                    return;
+                }
                 sceneChanger.ChangeMenu();
             }
         }
@@ -108,6 +114,14 @@ public class VersionChecker : MonoBehaviour
         {
             message.text = LocalizationSettings.StringDatabase.GetLocalizedString(tableName, "UnableInternet");
             continueBtn.SetActive(true);
+        }
+    }
+
+    public void CheckAndGoMenu()
+    {
+        if (notNeedUpdateFlg)
+        {
+            sceneChanger.ChangeMenu();
         }
     }
 }

@@ -1,0 +1,75 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m2754D18B4DE64A876BF8296E8CF5D6EEF2C6E75F (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mBBD64A032899A7568E720E6E0D2A7F5B056876F9 (void);
+extern void PreloadingScreen_OnEnable_m7D3FB76CD35DC8C7647EDABD402658B609138529 (void);
+extern void PreloadingScreen_OnDisable_m64FA2585D6F6026DB0731DC30823593B8B4CEAC6 (void);
+extern void PreloadingScreen_SelectedLocaleChanged_m646F8572CFC0EEF548497A0DCEDA5AD1F6A673A0 (void);
+extern void PreloadingScreen_Preload_mC2BC071F989215B5DD4975AF9D426741F5F9A6AE (void);
+extern void PreloadingScreen__ctor_m317AAC6103B13F24869CC5A98E99225244904629 (void);
+extern void U3CPreloadU3Ed__8__ctor_mC14628C37F506618A7D78484ABFDFFFA4284B2AE (void);
+extern void U3CPreloadU3Ed__8_System_IDisposable_Dispose_m1B97678D4DB1D0617E973E6FD784AC2F3EDAFF70 (void);
+extern void U3CPreloadU3Ed__8_MoveNext_m73005AD1C9A3A1AF7F2A7B95790A47643A737F6E (void);
+extern void U3CPreloadU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD77CA31A1A698817BB10801E7D9A0AEADDF5C03F (void);
+extern void U3CPreloadU3Ed__8_System_Collections_IEnumerator_Reset_m8AE82BFE4EE423EE4A612092C94BF65C8F5B1C8B (void);
+extern void U3CPreloadU3Ed__8_System_Collections_IEnumerator_get_Current_mDC64312D47DD4D83D2B913BBA452B77771EB3BFB (void);
+static Il2CppMethodPointer s_methodPointers[13] = 
+{
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m2754D18B4DE64A876BF8296E8CF5D6EEF2C6E75F,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mBBD64A032899A7568E720E6E0D2A7F5B056876F9,
+	PreloadingScreen_OnEnable_m7D3FB76CD35DC8C7647EDABD402658B609138529,
+	PreloadingScreen_OnDisable_m64FA2585D6F6026DB0731DC30823593B8B4CEAC6,
+	PreloadingScreen_SelectedLocaleChanged_m646F8572CFC0EEF548497A0DCEDA5AD1F6A673A0,
+	PreloadingScreen_Preload_mC2BC071F989215B5DD4975AF9D426741F5F9A6AE,
+	PreloadingScreen__ctor_m317AAC6103B13F24869CC5A98E99225244904629,
+	U3CPreloadU3Ed__8__ctor_mC14628C37F506618A7D78484ABFDFFFA4284B2AE,
+	U3CPreloadU3Ed__8_System_IDisposable_Dispose_m1B97678D4DB1D0617E973E6FD784AC2F3EDAFF70,
+	U3CPreloadU3Ed__8_MoveNext_m73005AD1C9A3A1AF7F2A7B95790A47643A737F6E,
+	U3CPreloadU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD77CA31A1A698817BB10801E7D9A0AEADDF5C03F,
+	U3CPreloadU3Ed__8_System_Collections_IEnumerator_Reset_m8AE82BFE4EE423EE4A612092C94BF65C8F5B1C8B,
+	U3CPreloadU3Ed__8_System_Collections_IEnumerator_get_Current_mDC64312D47DD4D83D2B913BBA452B77771EB3BFB,
+};
+static const int32_t s_InvokerIndices[13] = 
+{
+	14762,
+	9991,
+	9991,
+	9991,
+	8026,
+	6989,
+	9991,
+	7974,
+	9991,
+	9690,
+	9832,
+	9991,
+	9832,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Localization_Samples_Preloading_CodeGenModule;
+const Il2CppCodeGenModule g_Unity_Localization_Samples_Preloading_CodeGenModule = 
+{
+	"Unity.Localization.Samples.Preloading.dll",
+	13,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

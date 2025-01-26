@@ -476,6 +476,7 @@ public class GameSystemTrick : MonoBehaviour
             // ps.SetToriCounter(toriCounter);
             // toriCounter ++;
             toriFlg = false;
+            toriCounter++;
             // Instantiate(tori,new Vector3(Random.Range(-2.5f,2.5f), road.transform.position.y,1), Quaternion.identity);
             // toriFlg = true;
         }
@@ -1331,19 +1332,14 @@ switch(liberationPatten)
     public void GetPoint(int point)
     {
         bomPoint += point;
+        /*
         if (bomPoint > 1000 * toriCounter)
         {
-            /*
-            if(toriCounter == 1)
-            {
-                toriMeter -= 1000;
-            }
-            */
             ps.SetToriCounter(toriCounter);
-            // toriTime -= 10;
             toriMeter -= 100;
             toriCounter++;
         }
+        */
 
         if (bomPoint > prismCounter * 10000)
         {
@@ -2029,7 +2025,8 @@ switch(liberationPatten)
                         iremono.GetComponent<BandukeText>().SetRedFlg();
                         iremonoName.GetComponent<BandukeText>().SetRedFlg();
                     }
-                };
+                }
+                ;
 
                 ResultPattern();
                 int afterStamp1 = PlayerPrefs.GetInt("猪春夏秋冬並木", 0);
@@ -2220,7 +2217,10 @@ error =>
 
             if (SystemInfo.supportsVibration)
             {
-                Handheld.Vibrate();
+#if UNITY_ANDROID || UNITY_IOS
+                Handheld.Vibrate(); // Android/iOS のみの場合
+#endif
+
             }
             yield return new WaitForSeconds(0.6f);
         }
@@ -3011,6 +3011,10 @@ error =>
             blackCanvas.GetComponent<BlackCanvas>().EndFlgTrue();
         }
     */
+    public void GotoDemo()
+    {
+        SceneManager.LoadScene("Demo");
+    }
 
 }
 

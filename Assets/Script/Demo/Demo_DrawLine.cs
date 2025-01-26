@@ -3,20 +3,52 @@ using System.Collections;
 
 public class Demo_DrawLine : MonoBehaviour
 {
-    public GameObject linePrefab;
-    public GameObject linePrefabFirst;
-    public GameObject linePrefabLast;
     public float lineLength;
     public float lineWidth;
     public GameObject fude;
     public GameObject[] objs;
     public int lineCount;
     public Vector3 lineStartPos;
+    public GameObject linePrefab;
 
     private Vector3 touchPos;
     private Vector3 startPos;
     private Vector3 endPos;
 
+    // シングルトンインスタンス
+    private static Demo_DrawLine instance;
+
+    // インスタンスを取得するためのプロパティ
+    public static Demo_DrawLine Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<Demo_DrawLine>();
+                if (instance == null)
+                {
+                    GameObject singletonObject = new GameObject();
+                    instance = singletonObject.AddComponent<Demo_DrawLine>();
+                    singletonObject.name = typeof(Demo_DrawLine).ToString() + " (Singleton)";
+                }
+            }
+            return instance;
+        }
+    }
+
+    // Awakeメソッドでインスタンスを設定
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject); // 既にインスタンスが存在する場合は破棄
+        }
+    }
 
     void Start()
     {
@@ -24,7 +56,7 @@ public class Demo_DrawLine : MonoBehaviour
         objs = new GameObject[100];
         for (int i = 0; i < objs.Length; i++)
         {
-            objs[i] = (i % 2 == 0) ? Instantiate(linePrefabFirst, lineStartPos, transform.rotation) : Instantiate(linePrefabLast, lineStartPos, transform.rotation);
+            objs[i] = (i % 2 == 0) ? Instantiate(linePrefab, lineStartPos, transform.rotation) : Instantiate(linePrefab, lineStartPos, transform.rotation);
             objs[i].transform.parent = this.transform;
             objs[i].GetComponent<Renderer>().sortingOrder = 200 - i; // レイヤー順序を設定
         }
@@ -32,20 +64,7 @@ public class Demo_DrawLine : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchSupported)
-        {
-            for (int i = 0; i < Input.touchCount; i++)
-            {
-                if (Input.touches[i].fingerId == 0)
-                {
-                    SPDraw(Input.GetTouch(i));
-                }
-            }
-        }
-        else
-        {
-            PCDraw();
-        }
+
     }
 
     public void SPDraw(Touch touch)
@@ -55,9 +74,11 @@ public class Demo_DrawLine : MonoBehaviour
             case TouchPhase.Began:
                 BeganDraw(touch.position);
                 break;
+
             case TouchPhase.Moved:
                 MoveDraw(touch.position);
                 break;
+
             case TouchPhase.Ended:
                 EndDraw(touch.position);
                 break;
@@ -105,8 +126,8 @@ public class Demo_DrawLine : MonoBehaviour
                 float posPer = (n + 1) / segments;
                 objs[lineCount].transform.position = startPos + (endPos - startPos) * posPer;
 
-                objs[lineCount].GetComponent<Line>().SetLineCount(lineCount);
-                objs[lineCount].GetComponent<Line>().SetDir((endPos - startPos).normalized);
+                objs[lineCount].GetComponent<Demo_Line>().SetLineCount(lineCount);
+                objs[lineCount].GetComponent<Demo_Line>().SetDir((endPos - startPos).normalized);
 
                 lineCount = (lineCount >= objs.Length - 1) ? 0 : lineCount + 1;
             }
