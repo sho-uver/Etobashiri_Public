@@ -15,7 +15,7 @@ public class LanguageManager : MonoBehaviour
 
     void Start()
     {
-
+        StartCoroutine(SetLanguage(PlayerPrefs.GetString("Language", "ja")));
     }
 
     // Update is called once per frame
@@ -28,14 +28,17 @@ public class LanguageManager : MonoBehaviour
     {
         yield return LocalizationSettings.InitializationOperation; // 初期化を待つ
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.GetLocale(lang);
+        PlayerPrefs.GetString("Language", lang);
     }
     public void Ja()
     {
         StartCoroutine(SetLanguage("ja"));
+        PlayerPrefs.SetString("Language", "ja");
     }
 
     public void En()
     {
         StartCoroutine(SetLanguage("en"));
+        PlayerPrefs.SetString("Language", "en");
     }
 }

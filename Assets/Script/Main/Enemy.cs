@@ -108,7 +108,7 @@ public class Enemy : MonoBehaviour
 
         // rankingFlg = DrawLine.instance.GetRankingFlg();
         rankingFlg = false;
-        Invoke(nameof(SetStartFlgTrue),Random.Range(0,1.5f));
+        Invoke(nameof(SetStartFlgTrue), Random.Range(0, 1.5f));
         // levelPoint = Mathf.FloorToInt(PlayerPrefs.GetInt("levelPoint", 0));
         /*
         int levelPointMainus = 0;
@@ -146,14 +146,15 @@ public class Enemy : MonoBehaviour
             
         }
         */
-        switch(SceneManager.GetActiveScene().name)
+        switch (SceneManager.GetActiveScene().name)
         {
             case "Nonbirisogen":
                 levelPoint = PlayerPrefs.GetInt("NonbirisogenLevel", 0) + PlayerPrefs.GetInt("悟のんびり草原", 0) * 12;
                 break;
 
             case "Mugen":
-                levelPoint = PlayerPrefs.GetInt("ShunkashutonamikiLevel", 0) + PlayerPrefs.GetInt("悟春夏秋冬並木", 0) * 12;
+                // levelPoint = PlayerPrefs.GetInt("ShunkashutonamikiLevel", 0) + PlayerPrefs.GetInt("悟春夏秋冬並木", 0) * 12;
+                levelPoint = 0;
                 // Debug.Log(levelPoint);
                 break;
 
@@ -174,30 +175,30 @@ public class Enemy : MonoBehaviour
             controller = GameSystemTrick.instance;
         }
         */
-        flgJudgeNum = Random.Range(0,2);
-        if(flgJudgeNum == 0)
+        flgJudgeNum = Random.Range(0, 2);
+        if (flgJudgeNum == 0)
         {
             rightMoveFlg = true;
             leftMoveFlg = false;
             // frontMoveFlg = false;
             // backMoveFlg = true;
-            
+
             // transform.localScale = new Vector3(-1, 2, 1);
-            
+
             kingSpeed = kingSpeed * -1;
         }
-        else if(flgJudgeNum == 1)
+        else if (flgJudgeNum == 1)
         {
             rightMoveFlg = false;
             leftMoveFlg = true;
             // frontMoveFlg = false;
             // backMoveFlg = true;
-            
+
             // transform.localScale = new Vector3(1, 2, 1);
         }
-        if(name == "KingBomber")
+        if (name == "KingBomber")
         {
-            switch(Random.Range(0,2))
+            switch (Random.Range(0, 2))
             {
                 case 0:
                     transform.position = new Vector3(1.5f, transform.position.y, transform.position.z);
@@ -209,25 +210,26 @@ public class Enemy : MonoBehaviour
             }
         }
         startPosition = transform.position;
-        if(name == "ShoteBomber"){
+        if (name == "ShoteBomber")
+        {
             shiki = GameSystemTrick.instance.GetShiki() * 0.2f;
-            initialScale = new Vector3(transform.localScale.x - shiki,transform.localScale.y - shiki,transform.localScale.z);
+            initialScale = new Vector3(transform.localScale.x - shiki, transform.localScale.y - shiki, transform.localScale.z);
         }
         player = GameObject.FindGameObjectWithTag("Player");
         playerClass = player.GetComponent<Player>();
         // lifeTime = 0.3f + PlayerPrefs.GetInt("BlowLifeTime",0) * 0.1f;
         // lifeTime = 1f + GameSystemTrick.instance.GetTotalPoint() * 0.00001f;
         lifeTime = 1.5f;
-        if(name == "GoldenBomber")
+        if (name == "GoldenBomber")
         {
             lifeTime = 5f;
         }
-        if(name == "KingBomber")
+        if (name == "KingBomber")
         {
             lifeTime = 5f;
         }
 
-        if(name == "FireBomber")
+        if (name == "FireBomber")
         {
             lifeTime = 5f;
         }
@@ -248,7 +250,7 @@ public class Enemy : MonoBehaviour
             return;
         }
         */
-        if(sweetSpotFlg)
+        if (sweetSpotFlg)
         {
             /*
             Debug.Log(player.transform.rotation.z);
@@ -273,41 +275,41 @@ public class Enemy : MonoBehaviour
             etopDir = center.transform.position - player.transform.position;
             playerDir = playerClass.GetDir();
             playerRot = player.transform.rotation;
-            plusAngle = Vector3.SignedAngle (etopDir, playerDir, Vector3.forward);
-            
-            if(plusAngle > 90f)
+            plusAngle = Vector3.SignedAngle(etopDir, playerDir, Vector3.forward);
+
+            if (plusAngle > 90f)
             {
                 plusAngle = 90;
             }
-            else if(plusAngle < -90f)
+            else if (plusAngle < -90f)
             {
                 plusAngle = -90;
             }
-            else if(plusAngle <= 90f && plusAngle >= -90f)
+            else if (plusAngle <= 90f && plusAngle >= -90f)
             {
                 plusAngle = plusAngle * -4f;
             }
-            
+
 
             // Debug.Log(plusAngle);
 
 
             windArrow.transform.rotation = playerRot * Quaternion.AngleAxis(0 * sweetSpotRange + plusAngle, Vector3.forward);
-            if(1.2f < windArrow.transform.localScale.x)
+            if (1.2f < windArrow.transform.localScale.x)
             {
                 windArrowScaleFlg = false;
             }
-            if(1f > windArrow.transform.localScale.x)
+            if (1f > windArrow.transform.localScale.x)
             {
                 windArrowScaleFlg = true;
             }
-            if(windArrowScaleFlg)
+            if (windArrowScaleFlg)
             {
-                windArrow.transform.localScale += new Vector3(2,2,0) * Time.deltaTime;
+                windArrow.transform.localScale += new Vector3(2, 2, 0) * Time.deltaTime;
             }
             else
             {
-                windArrow.transform.localScale -= new Vector3(2,2,0) * Time.deltaTime;
+                windArrow.transform.localScale -= new Vector3(2, 2, 0) * Time.deltaTime;
             }
 
             sweetSpot.transform.rotation = playerRot * Quaternion.AngleAxis(0 * sweetSpotRange + plusAngle, Vector3.forward);
@@ -370,11 +372,11 @@ public class Enemy : MonoBehaviour
         }
         //transform.Translate(Vector2.up * Time.deltaTime);
         // transform.position += new Vector3(1, 0, 0)  * Time.deltaTime;
-        if(blowFlg)
+        if (blowFlg)
         {
-            if(hitEffectFlg)
+            if (hitEffectFlg)
             {
-                transform.position = new Vector3(hitPos.x + Random.Range(-0.2f,0.2f), hitPos.y , hitPos.z);
+                transform.position = new Vector3(hitPos.x + Random.Range(-0.2f, 0.2f), hitPos.y, hitPos.z);
                 /*
                 transform.position = hitPos + blowingDir.normalized * Time.deltaTime * 5;
                 hitPos = transform.position;
@@ -383,7 +385,7 @@ public class Enemy : MonoBehaviour
 
                 return;
             }
-            switch(name)
+            switch (name)
             {
                 case "ShoteBomber":
                     transform.position += blowingDir.normalized * Time.deltaTime * 25;
@@ -434,7 +436,7 @@ public class Enemy : MonoBehaviour
                     break;
 
                 case "FireBomber":
-                    
+
                     transform.position += blowingDir.normalized * Time.deltaTime * 25;
                     /*
                     fireTime += Time.deltaTime;
@@ -461,19 +463,19 @@ public class Enemy : MonoBehaviour
                     break;
 
             }
-            
-            
+
+
             return;
         }
 
-        switch(name)
+        switch (name)
         {
             case "RollingBomber":
-            
-                if(rightMoveFlg)
+
+                if (rightMoveFlg)
                 {
                     // transform.Translate(new Vector2(0.5f, transform.position.y));
-                    transform.position += new Vector3(2, 0, 0)  * Time.deltaTime;
+                    transform.position += new Vector3(2, 0, 0) * Time.deltaTime;
                     // transform.rotation = Quaternion.Euler(0, 180, 0);
                     bomberAnim.SetInteger("RollingIdle", 2);
                     // transform.RotateAround(new Vector3(transform.position.x, transform.position.y - 2, 0), Vector3.forward , -5f);
@@ -500,16 +502,16 @@ public class Enemy : MonoBehaviour
                     */
                 }
 
-                if(leftMoveFlg)
+                if (leftMoveFlg)
                 {
-                    transform.position += new Vector3(-2, 0, 0)  * Time.deltaTime;
+                    transform.position += new Vector3(-2, 0, 0) * Time.deltaTime;
                     // transform.rotation = Quaternion.Euler(0, 0, 0);
                     bomberAnim.SetInteger("RollingIdle", 1);
                     //transform.Translate(new Vector2(-0.5f, transform.position.y));
                     // transform.rotation = Quaternion.AngleAxis(360, new Vector3(transform.position.x, transform.position.y - 2, 0));
                 }
 
-                if(transform.position.x > 2.1f)
+                if (transform.position.x > 2.1f)
                 {
                     rightMoveFlg = false;
                     leftMoveFlg = true;
@@ -519,7 +521,7 @@ public class Enemy : MonoBehaviour
                     // transform.rotation = transform.rotation * Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
                 }
 
-                if(transform.position.x < -2.1f)
+                if (transform.position.x < -2.1f)
                 {
                     rightMoveFlg = true;
                     leftMoveFlg = false;
@@ -531,11 +533,11 @@ public class Enemy : MonoBehaviour
                 break;
 
             case "PitchBomber":
-                if(frontMoveFlg)
+                if (frontMoveFlg)
                 {
 
                     // transform.Translate(new Vector2(0.5f, transform.position.y));
-                    transform.position -= new Vector3(0, 3f, 0)  * Time.deltaTime;
+                    transform.position -= new Vector3(0, 3f, 0) * Time.deltaTime;
                     // Debug.Log("move");
                     // transform.RotateAround(new Vector3(transform.position.x, transform.position.y - 2, 0), Vector3.forward , -5f);
                     // transform.rotation = Quaternion.AngleAxis(360 / 2 * Time.deltaTime, new Vector3(transform.position.x, transform.position.y - 2, 0));
@@ -561,7 +563,7 @@ public class Enemy : MonoBehaviour
                 break;
 
             case "KingBomber":
-                
+
 
                 KingMove();
                 break;
@@ -586,7 +588,8 @@ public class Enemy : MonoBehaviour
     void LateUpdate()
     {
         // アニメーションが適用された後に、相対的なスケールを再適用
-        if(name == "ShoteBomber"){
+        if (name == "ShoteBomber")
+        {
             transform.localScale = Vector3.Scale(initialScale, transform.localScale);
         }
     }
@@ -642,22 +645,22 @@ public class Enemy : MonoBehaviour
     public void KingMove()
     {
         transform.RotateAround(new Vector3(0, startPosition.y, startPosition.z), Vector3.forward, kingSpeed * Time.deltaTime);
-        if(kingSpeed > 0 && transform.position.y > startPosition.y)
+        if (kingSpeed > 0 && transform.position.y > startPosition.y)
         {
             bomberAnim.SetInteger("KingIdle", 1);
         }
 
-        if(kingSpeed > 0 && transform.position.y < startPosition.y)
+        if (kingSpeed > 0 && transform.position.y < startPosition.y)
         {
             bomberAnim.SetInteger("KingIdle", 0);
         }
 
-        if(kingSpeed < 0 && transform.position.y > startPosition.y)
+        if (kingSpeed < 0 && transform.position.y > startPosition.y)
         {
             bomberAnim.SetInteger("KingIdle", 0);
         }
 
-        if(kingSpeed < 0 && transform.position.y < startPosition.y)
+        if (kingSpeed < 0 && transform.position.y < startPosition.y)
         {
             bomberAnim.SetInteger("KingIdle", 1);
         }
@@ -677,7 +680,7 @@ public class Enemy : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         // Instantiate(hitEffect,(collision.gameObject.transform.position + transform.position)/2 + (transform.position - collision.gameObject.transform.position).normalized * 3, Quaternion.FromToRotation(Vector3.up,(transform.position - collision.gameObject.transform.position )));
-        switch(collision.gameObject.tag)
+        switch (collision.gameObject.tag)
         {
             case "Player":
                 /*
@@ -691,7 +694,7 @@ public class Enemy : MonoBehaviour
                 break;
 
             case "Enemy":
-                Invoke("Bom",lifeTime);
+                Invoke("Bom", lifeTime);
                 break;
 
             case "Mure":
@@ -707,18 +710,18 @@ public class Enemy : MonoBehaviour
                 {
 
                     blowingDir = ((center.transform.position - collision.gameObject.transform.position) + blowingDir);
-                    
+
                     return;
                 }
-                if(name == "FireBomber")
+                if (name == "FireBomber")
                 {
                     justFlg = true;
                 }
-                if(name == "KingBomber")
+                if (name == "KingBomber")
                 {
                     justFlg = true;
                 }
-                if(name == "PitchBomber")
+                if (name == "PitchBomber")
                 {
                     particle.Stop();
                 }
@@ -731,8 +734,8 @@ public class Enemy : MonoBehaviour
                 // GetComponent<Rigidbody2D>().AddForce(blowingDir * 3);
                 Invoke(nameof(Bom), lifeTime);
                 */
-                
-                if(rankingFlg)
+
+                if (rankingFlg)
                 {
                     GameSystem.instance.Critical();
                 }
@@ -748,7 +751,7 @@ public class Enemy : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(bomFlg)
+        if (bomFlg)
         {
             return;
         }
@@ -766,7 +769,7 @@ public class Enemy : MonoBehaviour
             
         }
         */
-        switch(collision.gameObject.tag)
+        switch (collision.gameObject.tag)
         {
             case "Mure":
                 if (bomFlg || blowFlg)
@@ -777,7 +780,7 @@ public class Enemy : MonoBehaviour
                     GetPoint(10);
                     return;
                 }
-                if(sweetSpotFlg)
+                if (sweetSpotFlg)
                 {
                     sweetSpotFlg = false;
                     windArrow.SetActive(false);
@@ -785,72 +788,72 @@ public class Enemy : MonoBehaviour
                 }
 
                 audioSource.PlayOneShot(blowSE);
-                if(name == "FireBomber")
+                if (name == "FireBomber")
                 {
                     fireFlg = false;
                     justFlg = true;
                 }
-                if(name == "KingBomber")
+                if (name == "KingBomber")
                 {
                     fireFlg = false;
                     justFlg = true;
                 }
-                if(name == "PitchBomber")
+                if (name == "PitchBomber")
                 {
                     particle.Stop();
                 }
                 blowFlg = true;
                 justFlg = true;
                 blowingDir = center.transform.position - collision.gameObject.transform.position;
-                Invoke("Bom",lifeTime);
+                Invoke("Bom", lifeTime);
 
-                switch(name)
+                switch (name)
                 {
                     case "ShoteBomber":
-                    murePoint = 10;
-                    break;
+                        murePoint = 100;
+                        break;
 
                     case "Bomber":
-                    murePoint = 10;
-                    break;
+                        murePoint = 100;
+                        break;
 
                     case "RollingBomber":
-                    murePoint = 20;
-                    break;
+                        murePoint = 100;
+                        break;
 
                     case "PitchBomber":
-                    murePoint = 20;
-                    break;
+                        murePoint = 100;
+                        break;
 
                     case "SmallBomber":
-                    murePoint = 20;
-                    break;
+                        murePoint = 100;
+                        break;
 
                     case "FireBomber":
-                    murePoint = 20;
-                    break;
+                        murePoint = 100;
+                        break;
 
                     case "GoldenBomber":
-                    murePoint = 100;
-                    break;
+                        murePoint = 1000;
+                        break;
 
                     case "KingBomber":
-                    murePoint = 100;
-                    break;
+                        murePoint = 100;
+                        break;
                 }
-                GetPoint(murePoint * 5);
-                Instantiate(hitEffectS,(collision.gameObject.transform.position + transform.position)/2, Quaternion.FromToRotation(Vector3.up,(transform.position - collision.gameObject.transform.position )));
-                Instantiate(sonicMove,transform.position, Quaternion.identity);
+                GetPoint(murePoint);
+                Instantiate(hitEffectS, (collision.gameObject.transform.position + transform.position) / 2, Quaternion.FromToRotation(Vector3.up, (transform.position - collision.gameObject.transform.position)));
+                Instantiate(sonicMove, transform.position, Quaternion.identity);
                 break;
 
             case "Enemy":
-                if(!startFlg)
+                if (!startFlg)
                 {
                     gameObject.SetActive(false);
                 }
                 Enemy cge = collision.gameObject.GetComponent<Enemy>();
 
-                if(!cge.GetStartFlg())
+                if (!cge.GetStartFlg())
                 {
                     return;
                 }
@@ -869,14 +872,14 @@ public class Enemy : MonoBehaviour
                     return;
                 }
                 */
-                if(sweetSpotFlg)
+                if (sweetSpotFlg)
                 {
                     sweetSpotFlg = false;
                     windArrow.SetActive(false);
                     sweetSpot.SetActive(false);
                 }
 
-                if(name == "PitchBomber")
+                if (name == "PitchBomber")
                 {
                     particle.Stop();
                 }
@@ -900,9 +903,9 @@ public class Enemy : MonoBehaviour
                         GameSystemTrick.instance.Critical();
                     }
                 }
-                */　
+                */
 
-                if(blowFlg && !cge.GetBlowFlg())
+                if (blowFlg && !cge.GetBlowFlg())
                 {
                     /*
                     if(cge.GetName() == "GoldenBomber")
@@ -916,84 +919,84 @@ public class Enemy : MonoBehaviour
                     rensaPoint++;
                     int num = 0;
                     int eneNum = 0;
-                    switch(name)
+                    switch (name)
                     {
                         case "ShoteBomber":
-                        num = 10;
-                        break;
+                            num = 10;
+                            break;
 
                         case "Bomber":
-                        num = 10;
-                        break;
+                            num = 10;
+                            break;
 
                         case "RollingBomber":
-                        num = 20;
-                        break;
+                            num = 20;
+                            break;
 
                         case "PitchBomber":
-                        num = 20;
-                        break;
+                            num = 20;
+                            break;
 
                         case "SmallBomber":
-                        num = 20;
-                        break;
+                            num = 20;
+                            break;
 
                         case "FireBomber":
-                        num = 20;
-                        break;
+                            num = 20;
+                            break;
 
                         case "GoldenBomber":
-                        num = 100;
-                        break;
+                            num = 1000;
+                            break;
 
                         case "KingBomber":
-                        num = 100;
-                        break;
+                            num = 100;
+                            break;
                     }
-                    switch(cge.GetName())
+                    switch (cge.GetName())
                     {
                         case "ShoteBomber":
-                        eneNum = 10;
-                        break;
+                            eneNum = 10;
+                            break;
 
                         case "Bomber":
-                        eneNum = 10;
-                        break;
+                            eneNum = 10;
+                            break;
 
                         case "RollingBomber":
-                        eneNum = 20;
-                        break;
+                            eneNum = 20;
+                            break;
 
                         case "PitchBomber":
-                        eneNum = 20;
-                        break;
+                            eneNum = 20;
+                            break;
 
                         case "SmallBomber":
-                        eneNum = 20;
-                        break;
+                            eneNum = 20;
+                            break;
 
                         case "FireBomber":
-                        eneNum = 20;
-                        break;
+                            eneNum = 20;
+                            break;
 
                         case "GoldenBomber":
-                        eneNum = 100;
-                        break;
+                            eneNum = 1000;
+                            break;
 
                         case "KingBomber":
-                        eneNum = 100;
-                        break;
+                            eneNum = 100;
+                            break;
                     }
                     GetPoint(num * rensaPoint + eneNum);
                 }
-                else if(blowFlg && cge.GetBlowFlg())
+                else if (blowFlg && cge.GetBlowFlg())
                 {
                     blowingDir = ((center.transform.position - cge.center.transform.position) + blowingDir);
                 }
 
 
 
-                if(!blowFlg)
+                if (!blowFlg)
                 {
                     /*
                     if(name == "GoldenBomber")
@@ -1004,7 +1007,7 @@ public class Enemy : MonoBehaviour
                     bomFlg = false;
                     // gameObject.SetActive(false);
                     Bom();
-                    if(rankingFlg)
+                    if (rankingFlg)
                     {
                         GameSystem.instance.Critical();
                     }
@@ -1017,7 +1020,7 @@ public class Enemy : MonoBehaviour
                 }
                 // blowFlg = true;
                 // GetPoint(5 * GameObject.FindWithTag("Player").GetComponent<Player>().GetGear()); ここ
-                
+
                 // gameObject.transform.localScale = gameObject.transform.localScale * 2f;
 
                 break;
@@ -1040,7 +1043,7 @@ public class Enemy : MonoBehaviour
 
 
             case "Chinowa":
-                if(!blowFlg)
+                if (!blowFlg)
                 {
                     return;
                 }
@@ -1049,7 +1052,7 @@ public class Enemy : MonoBehaviour
                 break;
 
             case "ChinowaPart":
-                if(!blowFlg)
+                if (!blowFlg)
                 {
                     return;
                 }
@@ -1059,10 +1062,10 @@ public class Enemy : MonoBehaviour
                 break;
 
             case "LifeThread":
-            // gameObject.SetActive(false);
-                if(justFlg)
+                // gameObject.SetActive(false);
+                if (justFlg)
                 {
-                    if(rankingFlg)
+                    if (rankingFlg)
                     {
                         GameSystem.instance.Critical();
                         GameSystem.instance.GetLifeThread();
@@ -1080,24 +1083,24 @@ public class Enemy : MonoBehaviour
                 break;
 
             case "Tori":
-                    blowingDir = ((center.transform.position - collision.gameObject.transform.position) + blowingDir);
-                    // GameObject.FindWithTag("Player").GetComponent<Player>().CollisionTori(collision.gameObject);
-                    break;
+                blowingDir = ((center.transform.position - collision.gameObject.transform.position) + blowingDir);
+                // GameObject.FindWithTag("Player").GetComponent<Player>().CollisionTori(collision.gameObject);
+                break;
 
             case "MureSymbol":
-                    blowingDir = ((center.transform.position - collision.gameObject.transform.position) + blowingDir);
-                    // GameObject.FindWithTag("Player").GetComponent<Player>().CollisionMureSymbol(collision.gameObject);
-                    break;
+                blowingDir = ((center.transform.position - collision.gameObject.transform.position) + blowingDir);
+                // GameObject.FindWithTag("Player").GetComponent<Player>().CollisionMureSymbol(collision.gameObject);
+                break;
 
             case "AmaterasuSymbol":
-                    blowingDir = ((center.transform.position - collision.gameObject.transform.position) + blowingDir);
-                    // GameObject.FindWithTag("Player").GetComponent<Player>().CollisionAmaterasuSymbol(collision.gameObject);
-                    break;
+                blowingDir = ((center.transform.position - collision.gameObject.transform.position) + blowingDir);
+                // GameObject.FindWithTag("Player").GetComponent<Player>().CollisionAmaterasuSymbol(collision.gameObject);
+                break;
 
             case "ShiroTori":
-                if(justFlg)
+                if (justFlg)
                 {
-                    if(rankingFlg)
+                    if (rankingFlg)
                     {
                         GameSystem.instance.Critical();
                         GameSystem.instance.GetTori("ShiroTori");
@@ -1116,7 +1119,7 @@ public class Enemy : MonoBehaviour
                 break;
 
             case "Obstacle":
-            // gameObject.SetActive(false);
+                // gameObject.SetActive(false);
                 /*
                 if(justFlg)
                 {
@@ -1134,17 +1137,17 @@ public class Enemy : MonoBehaviour
                 }
                 Bom();
                 */
-                if(blowFlg)
+                if (blowFlg)
                 {
                     // GetPoint(1);
                     blowingDir = ((center.transform.position - collision.gameObject.transform.position) + blowingDir);
                 }
-                
+
                 // collision.gameObject.SetActive(false);
                 break;
 
             case "Bubble":
-                if(blowFlg)
+                if (blowFlg)
                 {
                     // GetPoint(1);
                     lifeTime += 0.5f;
@@ -1153,51 +1156,51 @@ public class Enemy : MonoBehaviour
                 break;
 
             case "Amaterasu":
-                if(!blowFlg)
+                if (!blowFlg)
                 {
                     return;
                 }
-                if(amaterasuFlg)
+                if (amaterasuFlg)
                 {
                     return;
                 }
                 amaterasuFlg = true;
                 blowingDir = ((center.transform.position - collision.gameObject.transform.position) + blowingDir);
                 rensaPoint++;
-                
-                switch(name)
+
+                switch (name)
                 {
                     case "ShoteBomber":
-                    amaterasuPoint = 10;
-                    break;
+                        amaterasuPoint = 10;
+                        break;
 
                     case "Bomber":
-                    amaterasuPoint = 10;
-                    break;
+                        amaterasuPoint = 10;
+                        break;
 
                     case "RollingBomber":
-                    amaterasuPoint = 20;
-                    break;
+                        amaterasuPoint = 20;
+                        break;
 
                     case "PitchBomber":
-                    amaterasuPoint = 20;
-                    break;
+                        amaterasuPoint = 20;
+                        break;
 
                     case "SmallBomber":
-                    amaterasuPoint = 20;
-                    break;
+                        amaterasuPoint = 20;
+                        break;
 
                     case "FireBomber":
-                    amaterasuPoint = 20;
-                    break;
+                        amaterasuPoint = 20;
+                        break;
 
                     case "GoldenBomber":
-                    amaterasuPoint = 100;
-                    break;
+                        amaterasuPoint = 1000;
+                        break;
 
                     case "KingBomber":
-                    amaterasuPoint = 100;
-                    break;
+                        amaterasuPoint = 100;
+                        break;
                 }
                 GetPoint(1000 * rensaPoint + amaterasuPoint);
                 collision.gameObject.GetComponent<Amaterasu>().Flare();
@@ -1205,14 +1208,14 @@ public class Enemy : MonoBehaviour
 
             case "Wall":
 
-                if(blowFlg)
+                if (blowFlg)
                 {
                     blowingDir = new Vector3(blowingDir.x * -1, blowingDir.y, blowingDir.z);
                     // GetPoint(1);
                     return;
-                    
+
                 }
-                
+
                 Bom();
                 break;
 
@@ -1225,7 +1228,7 @@ public class Enemy : MonoBehaviour
                     return;
                 }
                 Instantiate(blast, transform.position, transform.rotation);
-                if(rankingFlg)
+                if (rankingFlg)
                 {
                     GameSystem.instance.LostLife(attackPoint);
                     gameObject.SetActive(false);
@@ -1240,43 +1243,43 @@ public class Enemy : MonoBehaviour
 
             case "BoundWall":
                 Vector3 boundDir = collision.gameObject.transform.position - transform.position;
-                if(name == "FireBomber" && fireFlg && boundDir.y > 0)
+                if (name == "FireBomber" && fireFlg && boundDir.y > 0)
                 {
-                    Instantiate(fire,transform.position,transform.rotation);
+                    Instantiate(fire, transform.position, transform.rotation);
                     fireFlg = false;
                     return;
                 }
-                if(name == "KingBomber" && fireFlg && boundDir.y > 0)
+                if (name == "KingBomber" && fireFlg && boundDir.y > 0)
                 {
-                    Instantiate(fire,transform.position,transform.rotation);
+                    Instantiate(fire, transform.position, transform.rotation);
                     fireFlg = false;
                     return;
                 }
-                if(boundDir.y > 0){Bom();}
-                if(blowFlg)
+                if (boundDir.y > 0) { Bom(); }
+                if (blowFlg)
                 {
-                    if((boundDir.y < 0 && blowingDir.y < 0) || (boundDir.y > 0 && blowingDir.y > 0))
+                    if ((boundDir.y < 0 && blowingDir.y < 0) || (boundDir.y > 0 && blowingDir.y > 0))
                     {
-                        blowingDir = new Vector3(blowingDir.x , blowingDir.y * -1, blowingDir.z);
+                        blowingDir = new Vector3(blowingDir.x, blowingDir.y * -1, blowingDir.z);
                     }
 
                     // Instantiate(fire,transform.position,transform.rotation);
 
-                    
-                    
+
+
 
                     // GetPoint(1);
                     // gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, gameObject.GetComponent<Rigidbody2D>().velocity.y * -1);
                     //return;
                 }
-                if(name == "FireBomber" && fireFlg && boundDir.y > 0)
+                if (name == "FireBomber" && fireFlg && boundDir.y > 0)
                 {
-                    Instantiate(fire,transform.position,transform.rotation);
+                    Instantiate(fire, transform.position, transform.rotation);
                     fireFlg = false;
                 }
-                if(name == "KingBomber" && fireFlg && boundDir.y > 0)
+                if (name == "KingBomber" && fireFlg && boundDir.y > 0)
                 {
-                    Instantiate(fire,transform.position,transform.rotation);
+                    Instantiate(fire, transform.position, transform.rotation);
                     fireFlg = false;
                 }
                 break;
@@ -1303,11 +1306,11 @@ public class Enemy : MonoBehaviour
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if(blowFlg)
+        if (blowFlg)
         {
             return;
         }
-        if(bomFlg)
+        if (bomFlg)
         {
             return;
         }
@@ -1348,21 +1351,21 @@ public class Enemy : MonoBehaviour
             Bom();
         }
         */
-        switch(collision.gameObject.tag)
+        switch (collision.gameObject.tag)
         {
 
             case "Wall":
-                if(player.transform.position.x > transform.position.x)
+                if (player.transform.position.x > transform.position.x)
                 {
-                    if(blowingDir.x < 0)
+                    if (blowingDir.x < 0)
                     {
                         // blowingDir = new Vector3(blowingDir.x * -1, blowingDir.y, blowingDir.z);
                         blowingDir = new Vector3(0.3f, blowingDir.y, blowingDir.z);
                     }
                 }
-                if(player.transform.position.x < transform.position.x)
+                if (player.transform.position.x < transform.position.x)
                 {
-                    if(blowingDir.x > 0)
+                    if (blowingDir.x > 0)
                     {
                         // blowingDir = new Vector3(blowingDir.x * -1, blowingDir.y, blowingDir.z);
                         blowingDir = new Vector3(-0.3f, blowingDir.y, blowingDir.z);
@@ -1371,17 +1374,17 @@ public class Enemy : MonoBehaviour
                 break;
 
             case "BoundWall":
-                if(player.transform.position.y > transform.position.y)
+                if (player.transform.position.y > transform.position.y)
                 {
-                    if(blowingDir.y < 0)
+                    if (blowingDir.y < 0)
                     {
                         // blowingDir = new Vector3(blowingDir.x * -1, blowingDir.y, blowingDir.z);
                         blowingDir = new Vector3(blowingDir.y, 0.5f, blowingDir.z);
                     }
                 }
-                if(player.transform.position.y < transform.position.y)
+                if (player.transform.position.y < transform.position.y)
                 {
-                    if(blowingDir.y > 0)
+                    if (blowingDir.y > 0)
                     {
                         // blowingDir = new Vector3(blowingDir.x * -1, blowingDir.y, blowingDir.z);
                         blowingDir = new Vector3(blowingDir.y, -0.5f, blowingDir.z);
@@ -1390,7 +1393,7 @@ public class Enemy : MonoBehaviour
                 break;
 
             case "Wave":
-                switch(waveLR)
+                switch (waveLR)
                 {
                     case "Left":
                         LWaveMove();
@@ -1407,49 +1410,49 @@ public class Enemy : MonoBehaviour
 
     public void LWaveMove()
     {
-        if(blowFlg)
+        if (blowFlg)
         {
             return;
         }
-        if(name == "KingBomber")
+        if (name == "KingBomber")
         {
             return;
         }
         waveVector -= 0.01f;
         waveMove = new Vector3(waveVector, 0, 0) * Time.deltaTime;
         transform.Translate(waveMove * 0.1f, Space.World);
-        if(transform.position.x < -1.7f)
+        if (transform.position.x < -1.7f)
         {
-            transform.position = new Vector3(-1.7f,transform.position.y,transform.position.z);
+            transform.position = new Vector3(-1.7f, transform.position.y, transform.position.z);
             return;
         }
     }
 
     public void RWaveMove()
     {
-        if(blowFlg)
+        if (blowFlg)
         {
             return;
         }
-        if(name == "KingBomber")
+        if (name == "KingBomber")
         {
             return;
         }
         waveVector += 0.01f;
         waveMove = new Vector3(waveVector, 0, 0) * Time.deltaTime;
         transform.Translate(waveMove * 0.1f, Space.World);
-        if(transform.position.x > 1.7f)
+        if (transform.position.x > 1.7f)
         {
-            transform.position = new Vector3(1.7f,transform.position.y,transform.position.z);
+            transform.position = new Vector3(1.7f, transform.position.y, transform.position.z);
             return;
         }
     }
 
     public void OnWave(float vec, string lr)
     {
-        
+
         waveLR = lr;
-        switch(waveLR)
+        switch (waveLR)
         {
             case "Left":
                 waveVector = vec;
@@ -1467,7 +1470,7 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
-        if(blowFlg)
+        if (blowFlg)
         {
             return;
         }
@@ -1513,12 +1516,12 @@ public class Enemy : MonoBehaviour
             
         }
         */
-        if(name == "PitchBomber")
+        if (name == "PitchBomber")
         {
             particle.Stop();
         }
         // if(b.x - 0.15f <= a.x && a.x <= b.x + 0.15f)
-        if(justFlg)
+        if (justFlg)
         {
             // Debug.Log("Just");
             // justFlg = true;
@@ -1542,8 +1545,8 @@ public class Enemy : MonoBehaviour
             }
             */
             Invoke(nameof(Bom), lifeTime);
-            
-            if(rankingFlg)
+
+            if (rankingFlg)
             {
                 GameSystem.instance.Critical();
             }
@@ -1551,48 +1554,48 @@ public class Enemy : MonoBehaviour
             {
                 GameSystemTrick.instance.Critical();
             }
-            
-            switch(name)
+
+            switch (name)
             {
                 case "ShoteBomber":
-                num = 10;
-                break;
+                    num = 10;
+                    break;
 
                 case "Bomber":
-                num = 10;
-                break;
+                    num = 10;
+                    break;
 
                 case "RollingBomber":
-                num = 20;
-                break;
+                    num = 20;
+                    break;
 
                 case "PitchBomber":
-                num = 20;
-                break;
+                    num = 20;
+                    break;
 
                 case "SmallBomber":
-                num = 20;
-                break;
+                    num = 20;
+                    break;
 
                 case "FireBomber":
-                num = 20;
-                break;
+                    num = 20;
+                    break;
 
                 case "GoldenBomber":
-                num = 100;
-                break;
+                    num = 1000;
+                    break;
 
                 case "KingBomber":
-                num = 100;
-                break;
+                    num = 100;
+                    break;
             }
             // Instantiate(hitEffect,(playerPos + transform.position)/2 + (transform.position - playerPos).normalized * 3, Quaternion.FromToRotation(Vector3.up,(transform.position - playerPos)));
-            Instantiate(hitEffectS,(playerPos + transform.position)/2, Quaternion.FromToRotation(Vector3.up,(transform.position - playerPos)));
-            Instantiate(sonicMove,transform.position, Quaternion.identity);
+            Instantiate(hitEffectS, (playerPos + transform.position) / 2, Quaternion.FromToRotation(Vector3.up, (transform.position - playerPos)));
+            Instantiate(sonicMove, transform.position, Quaternion.identity);
             hitPos = transform.position + blowingDir.normalized;
             hitEffectFlg = true;
             blowParticle.Play();
-            Invoke(nameof(SetHitEffectFlgFalse),0.1f);
+            Invoke(nameof(SetHitEffectFlgFalse), 0.1f);
             StartCoroutine(HitStop());
         }
         else
@@ -1651,7 +1654,7 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
-        if(blowFlg)
+        if (blowFlg)
         {
             return;
         }
@@ -1660,8 +1663,8 @@ public class Enemy : MonoBehaviour
         blowFlg = true;
         justFlg = true;
         // Invoke(nameof(Bom), lifeTime);
-        
-        if(rankingFlg)
+
+        if (rankingFlg)
         {
             GameSystem.instance.Critical();
         }
@@ -1670,44 +1673,44 @@ public class Enemy : MonoBehaviour
             GameSystemTrick.instance.Critical();
         }
 
-        switch(name)
+        switch (name)
         {
             case "ShoteBomber":
-            chototsuPoint = 10;
-            break;
+                chototsuPoint = 10;
+                break;
 
             case "Bomber":
-            chototsuPoint = 10;
-            break;
+                chototsuPoint = 10;
+                break;
 
             case "RollingBomber":
-            chototsuPoint = 20;
-            break;
+                chototsuPoint = 20;
+                break;
 
             case "PitchBomber":
-            chototsuPoint = 20;
-            break;
+                chototsuPoint = 20;
+                break;
 
             case "SmallBomber":
-            chototsuPoint = 20;
-            break;
+                chototsuPoint = 20;
+                break;
 
             case "FireBomber":
-            chototsuPoint = 20;
-            break;
+                chototsuPoint = 20;
+                break;
 
             case "GoldenBomber":
-            chototsuPoint = 100;
-            break;
+                chototsuPoint = 1000;
+                break;
 
             case "KingBomber":
-            chototsuPoint = 100;
-            break;
+                chototsuPoint = 100;
+                break;
         }
         GetPoint(chototsuPoint * 5);
         // Instantiate(hitEffect,(playerPos + transform.position)/2 + (transform.position - playerPos).normalized * 3, Quaternion.FromToRotation(Vector3.up,(transform.position - playerPos)));
-        Instantiate(hitEffectS,(playerPos + transform.position)/2, Quaternion.FromToRotation(Vector3.up,(transform.position - playerPos)));
-        Instantiate(sonicMove,transform.position, Quaternion.identity);
+        Instantiate(hitEffectS, (playerPos + transform.position) / 2, Quaternion.FromToRotation(Vector3.up, (transform.position - playerPos)));
+        Instantiate(sonicMove, transform.position, Quaternion.identity);
         StartCoroutine(HitStop());
         Bom();
     }
@@ -1718,7 +1721,7 @@ public class Enemy : MonoBehaviour
         // bomSE.Play();
         audioSource.PlayOneShot(bomSE);
         tokuParticle.Play();
-        if(name == "PitchBomber")
+        if (name == "PitchBomber")
         {
             particle.Stop();
         }
@@ -1730,40 +1733,40 @@ public class Enemy : MonoBehaviour
         */
         blowingDir = new Vector3(0, 0, 0);
         // bomberAnim.SetTrigger("Bom");
-        switch(name)
+        switch (name)
         {
             case "ShoteBomber":
-            bomberAnim.SetBool("BomFlg", true);
-            break;
+                bomberAnim.SetBool("BomFlg", true);
+                break;
 
             case "Bomber":
-            bomberAnim.SetBool("BomFlg", true);
-            break;
+                bomberAnim.SetBool("BomFlg", true);
+                break;
 
             case "RollingBomber":
-            bomberAnim.SetBool("RollingBomFlg", true);
-            break;
+                bomberAnim.SetBool("RollingBomFlg", true);
+                break;
 
             case "PitchBomber":
-            bomberAnim.SetBool("PitchBomFlg", true);
-            break;
+                bomberAnim.SetBool("PitchBomFlg", true);
+                break;
 
             case "SmallBomber":
-            bomberAnim.SetBool("SmallBomFlg", true);
-            break;
+                bomberAnim.SetBool("SmallBomFlg", true);
+                break;
 
             case "FireBomber":
-            fireFlg = false;
-            bomberAnim.SetBool("FireBomFlg", true);
-            break;
+                fireFlg = false;
+                bomberAnim.SetBool("FireBomFlg", true);
+                break;
 
             case "GoldenBomber":
-            bomberAnim.SetBool("GoldenBomFlg", true);
-            break;
+                bomberAnim.SetBool("GoldenBomFlg", true);
+                break;
 
             case "KingBomber":
-            bomberAnim.SetBool("KingBomberFlg", true);
-            break;
+                bomberAnim.SetBool("KingBomberFlg", true);
+                break;
         }
         // StartCoroutine(ResetTime());
         // Time.timeScale = 0;
@@ -1776,15 +1779,15 @@ public class Enemy : MonoBehaviour
     {
         // yield return new WaitForSeconds(0.5f);
         // bomberAnim.SetBool("BomFlg", false);
-        if(rankingFlg)
+        if (rankingFlg)
         {
 
         }
         else
         {
-            if(justFlg)
+            if (justFlg)
             {
-                if((name == "KingBomber" && fireFlg) || (name == "FireBomber" && fireFlg))
+                if ((name == "KingBomber" && fireFlg) || (name == "FireBomber" && fireFlg))
                 {
                     GameSystemTrick.instance.GetPoint(5);
                 }
@@ -1807,46 +1810,46 @@ public class Enemy : MonoBehaviour
         */
 
         point = 0;
-        switch(name)
+        switch (name)
         {
             case "ShoteBomber":
-            bomberAnim.SetBool("BomFlg", false);
-            break;
+                bomberAnim.SetBool("BomFlg", false);
+                break;
 
             case "Bomber":
-            bomberAnim.SetBool("BomFlg", false);
-            break;
+                bomberAnim.SetBool("BomFlg", false);
+                break;
 
             case "RollingBomber":
-            bomberAnim.SetBool("RollingBomFlg", false);
-            break;
+                bomberAnim.SetBool("RollingBomFlg", false);
+                break;
 
             case "PitchBomber":
-            bomberAnim.SetBool("PitchBomFlg", false);
-            break;
-        }
-        if(chinowaFlg)
-        {
-            switch(name)
-            {
-                case "Bomber":
-                Instantiate(weapon, transform.position, transform.rotation);
-                break;
-
-                case "RollingBomber":
-                Instantiate(mure, transform.position, transform.rotation);
-                break;
-
-                case "PitchBomber":
                 bomberAnim.SetBool("PitchBomFlg", false);
                 break;
+        }
+        if (chinowaFlg)
+        {
+            switch (name)
+            {
+                case "Bomber":
+                    Instantiate(weapon, transform.position, transform.rotation);
+                    break;
+
+                case "RollingBomber":
+                    Instantiate(mure, transform.position, transform.rotation);
+                    break;
+
+                case "PitchBomber":
+                    bomberAnim.SetBool("PitchBomFlg", false);
+                    break;
             }
             chinowaFlg = false;
-            
+
         }
 
         // Destroy(getPoint);
-        
+
         blowFlg = false;
         justFlg = false;
         bomFlg = false;
@@ -1855,7 +1858,7 @@ public class Enemy : MonoBehaviour
         sr.DOFade(1f, 0.5f);
         shadow.DOFade(0.3f, 0.5f);
         */
-        
+
     }
 
     /*
@@ -1880,20 +1883,20 @@ public class Enemy : MonoBehaviour
     }
     */
 
-    IEnumerator ResetTime() 
+    IEnumerator ResetTime()
     {
         yield return new WaitForSecondsRealtime(0.1f);
         Time.timeScale = 1f;
     }
 
-    IEnumerator HitStop() 
+    IEnumerator HitStop()
     {
         // Debug.Log("HitStop");
         hitsStopX = transform.position.x;
         hitStopFlg = true;
         yield return new WaitForSecondsRealtime(0.3f);
         hitStopFlg = false;
-    }        
+    }
 
     public void GetPoint(int num)
     {
@@ -1939,7 +1942,7 @@ public class Enemy : MonoBehaviour
                 break;
         }
         */
-        
+
         /*
         if(getPointIns == null)
         {
@@ -2019,8 +2022,8 @@ public class Enemy : MonoBehaviour
             canvas.GetComponent<Transform>().GetChild(0).GetComponent<Outline>().effectColor = new Color(0.5f,0,0.5f,1f);
         }
         */
-        
-        if(rankingFlg)
+
+        if (rankingFlg)
         {
 
         }
@@ -2042,7 +2045,7 @@ public class Enemy : MonoBehaviour
 
     public void SetJustFlg()
     {
-        if(bomFlg)
+        if (bomFlg)
         {
             return;
         }
@@ -2062,40 +2065,40 @@ public class Enemy : MonoBehaviour
     public void SweetSpotON(float speed)
     {
         // playerRot = player.transform.rotation;
-        if(blowFlg || bomFlg)
+        if (blowFlg || bomFlg)
         {
             return;
         }
         baseSpeed = speed;
-        if(gear3 < baseSpeed)
+        if (gear3 < baseSpeed)
         {
             sweetSpot3.SetActive(true);
             sweetSpot = sweetSpot3;
             // lifeTime = 2f;
             // levelPoint = 20;
         }
-        else if(gear3 >= baseSpeed && gear2 < baseSpeed)
+        else if (gear3 >= baseSpeed && gear2 < baseSpeed)
         {
             sweetSpot2.SetActive(true);
             sweetSpot = sweetSpot2;
             // lifeTime = 1.5f;
             // levelPoint = 15;
         }
-        else if(gear2 >= baseSpeed && gear1 < baseSpeed)
+        else if (gear2 >= baseSpeed && gear1 < baseSpeed)
         {
             sweetSpot1.SetActive(true);
             sweetSpot = sweetSpot1;
             // lifeTime = 1f;
             // levelPoint = 5;
         }
-        else if(gear1 >= baseSpeed)
+        else if (gear1 >= baseSpeed)
         {
             sweetSpot4.SetActive(true);
             sweetSpot = sweetSpot4;
             // lifeTime = 0.5f;
             // levelPoint = 1;
         }
-        
+
         /*
         sweetSpot1.SetActive(true);
         sweetSpot2.SetActive(true);
@@ -2121,7 +2124,7 @@ public class Enemy : MonoBehaviour
 
     public void SweetSpotOFF()
     {
-        if(sweetSpot == null)
+        if (sweetSpot == null)
         {
             return;
         }
@@ -2150,7 +2153,7 @@ public class Enemy : MonoBehaviour
 
     public void MoveFlgOn()
     {
-        if(name != "PitchBomber")
+        if (name != "PitchBomber")
         {
             return;
         }
@@ -2178,6 +2181,6 @@ public class Enemy : MonoBehaviour
     // {
     //     return life;
     // }
-    
+
 
 }

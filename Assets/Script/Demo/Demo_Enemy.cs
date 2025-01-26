@@ -25,11 +25,12 @@ public class Demo_Enemy : MonoBehaviour
         Invoke(nameof(SetActiveFalse), 0.5f);
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("きた");
+            Demo_Step3.Instance.PlayerCollisionEnemy();
             Bom();
         }
 

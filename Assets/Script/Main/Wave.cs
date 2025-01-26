@@ -10,40 +10,46 @@ public class Wave : MonoBehaviour
     public int pattern;
     public WaveSet waveSet;
     public bool moveFlg;
+    public int year;
     // Start is called before the first frame update
     void Start()
     {
-        pattern = Random.Range(1,4);
+        pattern = Random.Range(1, 4);
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch(LR)
+        switch (LR)
         {
             case "Left":
                 LWaveMove();
-                if(transform.position.x < -10)
+                if (transform.position.x < -10f)
                 {
                     ChangeMoveFlg();
                     return;
                 }
                 break;
-            
+
             case "Right":
                 RWaveMove();
-                if(transform.position.x > 10)
+                if (transform.position.x > 10f)
                 {
                     ChangeMoveFlg();
                     return;
                 }
                 break;
         }
-        if(!moveFlg)
+        if (!moveFlg)
         {
             return;
         }
         transform.Translate(waveMove);
+    }
+
+    public void SetYear(int num)
+    {
+        year = num;
     }
 
     public void LWaveMove()
@@ -66,9 +72,10 @@ public class Wave : MonoBehaviour
             pattern = Random.Range(1,4);
         }
         */
-        if(transform.position.x <= -10f)
+        if (transform.position.x <= -10f)
         {
-            waveVector = 4f;
+            // waveVector = 4f;
+            waveVector = 2.8f + 0.1f * year;
         }
         waveMove = new Vector3(waveVector, 0, 0) * Time.deltaTime;
     }
@@ -93,9 +100,10 @@ public class Wave : MonoBehaviour
             pattern = Random.Range(1,4);
         }
         */
-        if(transform.position.x >= 10f)
+        if (transform.position.x >= 10f)
         {
-            waveVector = -4f;
+            // waveVector = -4f;
+            waveVector = -2.8f - 0.1f * year;
         }
         waveMove = new Vector3(waveVector, 0, 0) * Time.deltaTime;
         /*
@@ -114,25 +122,25 @@ public class Wave : MonoBehaviour
     public void ChangeMoveFlg()
     {
         moveFlg = false;
-        switch(LR)
+        switch (LR)
         {
             case "Left":
-                transform.position = new Vector3(-10, transform.position.y, transform.position.z);
+                transform.position = new Vector3(-9.5f, transform.position.y, transform.position.z);
                 waveSet.SetMoveFlgTrueR();
                 break;
 
             case "Right":
-                transform.position = new Vector3(10, transform.position.y, transform.position.z);
+                transform.position = new Vector3(9.5f, transform.position.y, transform.position.z);
                 waveSet.SetMoveFlgTrueL();
                 break;
         }
-        
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-                        
-        switch(collision.gameObject.tag)
+
+        switch (collision.gameObject.tag)
         {
             case "Enemy":
                 /*
@@ -146,16 +154,16 @@ public class Wave : MonoBehaviour
                 }
                 collision.transform.Translate(waveMove * 0.1f, Space.World);
                 */
-                collision.gameObject.GetComponent<Enemy>().OnWave(waveVector,LR);
-            // Debug.Log("a");
+                collision.gameObject.GetComponent<Enemy>().OnWave(waveVector, LR);
+                // Debug.Log("a");
                 break;
 
             case "Obstacle":
-                if(collision.transform.position.x >= 2f && waveMove.x >= 0)
+                if (collision.transform.position.x >= 2f && waveMove.x >= 0)
                 {
                     return;
                 }
-                if(collision.transform.position.x <= -2f && waveMove.x <= 0)
+                if (collision.transform.position.x <= -2f && waveMove.x <= 0)
                 {
                     return;
                 }
@@ -166,8 +174,8 @@ public class Wave : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-                        
-        switch(collision.gameObject.tag)
+
+        switch (collision.gameObject.tag)
         {
             /*
             case "Enemy":
@@ -184,11 +192,11 @@ public class Wave : MonoBehaviour
                 break;
             */
             case "Obstacle":
-                if(collision.transform.position.x >= 2f && waveMove.x >= 0)
+                if (collision.transform.position.x >= 2f && waveMove.x >= 0)
                 {
                     return;
                 }
-                if(collision.transform.position.x <= -2f && waveMove.x <= 0)
+                if (collision.transform.position.x <= -2f && waveMove.x <= 0)
                 {
                     return;
                 }
@@ -199,10 +207,10 @@ public class Wave : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-                        
-        switch(collision.gameObject.tag)
+
+        switch (collision.gameObject.tag)
         {
-            
+
             case "Enemy":
                 /*
                 if(collision.transform.position.x >= 2f && waveMove.x >= 0)
@@ -216,15 +224,15 @@ public class Wave : MonoBehaviour
                 collision.transform.Translate(waveMove * 0.1f, Space.World);
             // Debug.Log("a");
                 */
-                collision.gameObject.GetComponent<Enemy>().OnWave(0,"");
+                collision.gameObject.GetComponent<Enemy>().OnWave(0, "");
                 break;
 
             case "Obstacle":
-                if(collision.transform.position.x >= 2f && waveMove.x >= 0)
+                if (collision.transform.position.x >= 2f && waveMove.x >= 0)
                 {
                     return;
                 }
-                if(collision.transform.position.x <= -2f && waveMove.x <= 0)
+                if (collision.transform.position.x <= -2f && waveMove.x <= 0)
                 {
                     return;
                 }

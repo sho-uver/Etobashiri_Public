@@ -71,6 +71,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
 # Additional files to ignore
 libil2cpp.dbg.so
 libil2cpp.sym.so
@@ -84,3 +85,10 @@ arm64-v8a.zip
 # Google Services desktop config
 Assets/StreamingAssets/google-services-desktop.json
 
+# iOS specific files to ignore
+iOS_app_BackUpThisFolder_ButDontShipItWithYourGame/GameAssembly.dSYM/Contents/Resources/DWARF/GameAssembly.dylib
+iOS_app_BackUpThisFolder_ButDontShipItWithYourGame/GameAssembly.dSYM/Contents/Resources/Relocations/aarch64/GameAssembly.dylib.yml
+iOS_app_BackUpThisFolder_ButDontShipItWithYourGame/GameAssembly.dSYM/Contents/Resources/Relocations/x86_64/GameAssembly.dylib.yml
+iOS_app_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericMethodPointerTable.c
+iOS_app_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppInvokerTable.cpp
+iOS_app_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppTypeDefinitions.c

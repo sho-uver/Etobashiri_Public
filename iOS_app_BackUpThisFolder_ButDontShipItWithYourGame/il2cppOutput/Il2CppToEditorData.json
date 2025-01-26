@@ -1,0 +1,121 @@
+{
+  "Messages": [
+    {
+      "Type": 0,
+      "Text": "[UnityEngine.TextCoreTextEngineModule] - System.Void UnityEngine.TextCore.Text.TextGeneratorUtilities::.cctor() - Method was given it\u0027s own cpp file because it is large and costly to compile"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.TextMeshPro] - System.Void TMPro.TextMeshPro::GenerateTextMesh() - Method was given it\u0027s own cpp file because it is large and costly to compile"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.TextMeshPro] - System.Void TMPro.TextMeshProUGUI::GenerateTextMesh() - Method was given it\u0027s own cpp file because it is large and costly to compile"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.TextMeshPro] - System.Void TMPro.TMP_TextParsingUtilities::.cctor() - Method was given it\u0027s own cpp file because it is large and costly to compile"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - Method was given it\u0027s own cpp file because it is large and costly to compile"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - Method was given it\u0027s own cpp file because it is large and costly to compile"
+    },
+    {
+      "Type": 0,
+      "Text": "[mscorlib] - System.Void System.Security.Cryptography.RIPEMD160Managed::MDTransform(System.UInt32*,System.UInt32*,System.Byte*) - High Instruction Count of 5579"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High Variable Count of 718"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High Instruction Count of 24975"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High CodeSize of 49943"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - High Instruction Count of 10752"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - High CodeSize of 40854"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.TextMeshPro] - System.Void TMPro.TextMeshPro::GenerateTextMesh() - High Variable Count of 216"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.TextMeshPro] - System.Void TMPro.TextMeshPro::GenerateTextMesh() - High Instruction Count of 9682"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.TextMeshPro] - System.Void TMPro.TextMeshPro::GenerateTextMesh() - High CodeSize of 29729"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.TextMeshPro] - System.Void TMPro.TextMeshProUGUI::GenerateTextMesh() - High Variable Count of 221"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.TextMeshPro] - System.Void TMPro.TextMeshProUGUI::GenerateTextMesh() - High Instruction Count of 9773"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.TextMeshPro] - System.Void TMPro.TextMeshProUGUI::GenerateTextMesh() - High CodeSize of 30008"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.TextMeshPro] - System.Void TMPro.TMP_TextParsingUtilities::.cctor() - High Instruction Count of 10579"
+    },
+    {
+      "Type": 0,
+      "Text": "[Unity.TextMeshPro] - System.Void TMPro.TMP_TextParsingUtilities::.cctor() - High CodeSize of 31711"
+    },
+    {
+      "Type": 0,
+      "Text": "[UnityEngine.TextCoreTextEngineModule] - System.Boolean UnityEngine.TextCore.Text.TextGenerator::ValidateHtmlTag(UnityEngine.TextCore.Text.TextProcessingElement[],System.Int32,System.Int32\u0026,UnityEngine.TextCore.Text.TextGenerationSettings,UnityEngine.TextCore.Text.TextInfo,System.Boolean\u0026) - High Variable Count of 242"
+    },
+    {
+      "Type": 0,
+      "Text": "[UnityEngine.TextCoreTextEngineModule] - System.Boolean UnityEngine.TextCore.Text.TextGenerator::ValidateHtmlTag(UnityEngine.TextCore.Text.TextProcessingElement[],System.Int32,System.Int32\u0026,UnityEngine.TextCore.Text.TextGenerationSettings,UnityEngine.TextCore.Text.TextInfo,System.Boolean\u0026) - High Instruction Count of 6342"
+    },
+    {
+      "Type": 0,
+      "Text": "[UnityEngine.TextCoreTextEngineModule] - System.Boolean UnityEngine.TextCore.Text.TextGenerator::ValidateHtmlTag(UnityEngine.TextCore.Text.TextProcessingElement[],System.Int32,System.Int32\u0026,UnityEngine.TextCore.Text.TextGenerationSettings,UnityEngine.TextCore.Text.TextInfo,System.Boolean\u0026) - High CodeSize of 18047"
+    },
+    {
+      "Type": 0,
+      "Text": "[UnityEngine.TextCoreTextEngineModule] - System.Void UnityEngine.TextCore.Text.TextGenerator::ParsingPhase(UnityEngine.TextCore.Text.TextInfo,UnityEngine.TextCore.Text.TextGenerationSettings,System.UInt32\u0026,System.Single\u0026) - High Variable Count of 310"
+    },
+    {
+      "Type": 0,
+      "Text": "[UnityEngine.TextCoreTextEngineModule] - System.Void UnityEngine.TextCore.Text.TextGenerator::ParsingPhase(UnityEngine.TextCore.Text.TextInfo,UnityEngine.TextCore.Text.TextGenerationSettings,System.UInt32\u0026,System.Single\u0026) - High Instruction Count of 6675"
+    },
+    {
+      "Type": 0,
+      "Text": "[UnityEngine.TextCoreTextEngineModule] - System.Void UnityEngine.TextCore.Text.TextGenerator::ParsingPhase(UnityEngine.TextCore.Text.TextInfo,UnityEngine.TextCore.Text.TextGenerationSettings,System.UInt32\u0026,System.Single\u0026) - High CodeSize of 17381"
+    },
+    {
+      "Type": 0,
+      "Text": "[UnityEngine.TextCoreTextEngineModule] - UnityEngine.Vector2 UnityEngine.TextCore.Text.TextGenerator::CalculatePreferredValues(System.Single\u0026,UnityEngine.Vector2,System.Boolean,UnityEngine.TextCore.Text.TextGenerationSettings,UnityEngine.TextCore.Text.TextInfo) - High Variable Count of 207"
+    },
+    {
+      "Type": 0,
+      "Text": "[UnityEngine.TextCoreTextEngineModule] - System.Void UnityEngine.TextCore.Text.TextGeneratorUtilities::.cctor() - High Instruction Count of 10585"
+    },
+    {
+      "Type": 0,
+      "Text": "[UnityEngine.TextCoreTextEngineModule] - System.Void UnityEngine.TextCore.Text.TextGeneratorUtilities::.cctor() - High CodeSize of 31741"
+    }
+  ],
+  "CommandLine": "--convert-to-cpp --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Assembly-CSharp-firstpass.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Assembly-CSharp.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/DOTween.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/GoogleMobileAds.Common.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/GoogleMobileAds.Core.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/GoogleMobileAds.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Mono.Security.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/mscorlib.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Newtonsoft.Json.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/PlayFab.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/System.Configuration.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/System.Core.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/System.Data.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/System.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/System.Drawing.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/System.Numerics.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/System.Runtime.Serialization.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/System.Xml.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/System.Xml.Linq.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/unity-webview.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.2D.Animation.Runtime.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.2D.PixelPerfect.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Addressables.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Burst.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Burst.Unsafe.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Cinemachine.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Collections.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.InternalAPIEngineBridge.001.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Localization.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Localization.Samples.LocaleMenuUGUI.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Localization.Samples.PersistentVariables.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Localization.Samples.Preloading.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Mathematics.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Profiling.Core.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.ResourceManager.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Splines.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.TextMeshPro.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/Unity.Timeline.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.AccessibilityModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.AIModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.AndroidJNIModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.AnimationModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.AssetBundleModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.AudioModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.CoreModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.DirectorModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.GameCenterModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.GridModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.HierarchyCoreModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.ImageConversionModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.IMGUIModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.InputForUIModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.InputLegacyModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.InputModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.JSONSerializeModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.ParticleSystemModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.Physics2DModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.PhysicsModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.PropertiesModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.ScreenCaptureModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.SharedInternalsModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.SpriteShapeModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.SubsystemsModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.TerrainModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.TextCoreFontEngineModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.TextCoreTextEngineModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.TextRenderingModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.TilemapModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.UI.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.UIElementsModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.UIModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.UnityAnalyticsCommonModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.UnityAnalyticsModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.UnityWebRequestAssetBundleModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.UnityWebRequestModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.VFXModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.VideoModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.VRModule.dll --assembly=Library/Bee/artifacts/MacStandalonePlayerBuildProgram/ManagedStripped/UnityEngine.XRModule.dll --generatedcppdir=/Users/shogo/unity/Etobashiri_Public/Library/Bee/artifacts/MacStandalonePlayerBuildProgram/il2cppOutput/cpp --symbols-folder=/Users/shogo/unity/Etobashiri_Public/Library/Bee/artifacts/MacStandalonePlayerBuildProgram/il2cppOutput/cpp/Symbols --additional-cpp=/Users/shogo/Downloads/com.unity.ads.ios-support-master/com.unity.ads.ios-support/Runtime/Plugins/iOS/SkAdNetworkManager.h --additional-cpp=/Users/shogo/Downloads/com.unity.ads.ios-support-master/com.unity.ads.ios-support/Runtime/Plugins/iOS/Categories/NSInvocation/NSInvocation\u002BConvenience.h --additional-cpp=/Users/shogo/Downloads/com.unity.ads.ios-support-master/com.unity.ads.ios-support/Runtime/Plugins/iOS/TrackingAuthorizationManager.h --additional-cpp=/Users/shogo/unity/Etobashiri_Public/Assets/Plugins/iOS/GADUAdNetworkExtras.h --additional-cpp=/Users/shogo/Downloads/com.unity.ads.ios-support-master/com.unity.ads.ios-support/Runtime/Plugins/iOS/Categories/NSInvocation/NSEnumWrapper/UASupportPrimitivesBox.h --additional-cpp=/Users/shogo/Downloads/com.unity.ads.ios-support-master/com.unity.ads.ios-support/Runtime/Plugins/iOS/Categories/UASupportTools.h --enable-analytics --emit-null-checks --enable-array-bounds-check --dotnetprofile=unityaot-macos --usymtool-path=/Users/shogo/Downloads/6000.0.22f1/Unity.app/Contents/Tools/macosx/usymtool --profiler-report --profiler-output-file=/Users/shogo/unity/Etobashiri_Public/Library/Bee/artifacts/il2cpp_conv_y3ug.traceevents --print-command-line --static-lib-il2-cpp --data-folder=/Users/shogo/unity/Etobashiri_Public/Library/Bee/artifacts/MacStandalonePlayerBuildProgram/il2cppOutput/data"
+}

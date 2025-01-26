@@ -95,7 +95,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (!runFlg)
         {
             return;
@@ -104,8 +103,8 @@ public class Player : MonoBehaviour
         {
             lineCollisionTime += Time.deltaTime;
             if (lineCollisionTime > 0.1f) ResetGravity();
-            rb.angularVelocity = 0f;
-            rb.velocity = new Vector2(0, 0);
+            // rb.angularVelocity = 0f;
+            // rb.linearVelocity = new Vector2(0, 0);
         }
         if (resetPosFlg)
         {
@@ -242,9 +241,18 @@ public class Player : MonoBehaviour
                 // tsumuzikazeParticleContinue.Stop();
             }
         }
+        // プレイヤーの上方向ベクトルを取得（ワールド座標）
+        Vector2 playerUpDir = transform.up;
 
+        // ワールドのY軸（上方向）からの角度を計算
+        float angleFromWorldUp = Vector2.SignedAngle(Vector2.up, playerUpDir);
 
-
+        // -45度から45度の範囲をチェック
+        if (angleFromWorldUp < -90f || angleFromWorldUp > 90f)
+        {
+            // 範囲外の場合は0度（真上）に戻す
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 
 
@@ -399,10 +407,6 @@ public class Player : MonoBehaviour
         sr.color = new Color(0, 0, 0, 0);
         yield return new WaitForSecondsRealtime(0.1f);
         sr.color = new Color(0.8f, 0.8f, 0.8f, 1f);
-        yield return new WaitForSecondsRealtime(0.1f);
-        sr.color = new Color(0, 0, 0, 0);
-        yield return new WaitForSecondsRealtime(0.1f);
-        sr.color = new Color(0.8f, 0.8f, 0.8f, 1f);
         mutekiFlg = false;
         df.DeleteFiledInactivate();
         resetPosFlg = false;
@@ -416,7 +420,7 @@ public class Player : MonoBehaviour
 
     public void ResetGravity()
     {
-        rb.gravityScale = 0;
+        // rb.gravityScale = 0;
         lineCollisionFlg = false;
         lineCollisionTime = 0;
         animator.SetBool("LineFlg", false);
@@ -580,10 +584,6 @@ public class Player : MonoBehaviour
                     break;
 
                 case "Warp":
-                    Instantiate(firework, collision.gameObject.transform.position + new Vector3(0, 3, 0), transform.rotation);
-                    break;
-
-                case "Hole":
                     Instantiate(firework, collision.gameObject.transform.position + new Vector3(0, 3, 0), transform.rotation);
                     break;
 
@@ -926,7 +926,10 @@ public class Player : MonoBehaviour
         {
             if (SystemInfo.supportsVibration)
             {
-                Handheld.Vibrate();
+#if UNITY_ANDROID || UNITY_IOS
+                Handheld.Vibrate(); // Android/iOS のみの場合
+#endif
+
             }
             yield return new WaitForSeconds(0.6f);
         }
@@ -984,7 +987,7 @@ public class Player : MonoBehaviour
 
             int newLineCount = lineScript.GetLineCount();
             // 「現在反応中のLineCount」と比較して、新しい方が大きければ更新
-            // （50以上差があれば小さい方が“実質大きい” という仕様を考慮）
+            // （50以上差があれば小さい方が"実質大きい" という仕様を考慮）
             if (IsNewLineCountBigger(newLineCount, currentBestLineCount))
             {
                 currentBestLineCount = newLineCount;
@@ -1045,7 +1048,7 @@ public class Player : MonoBehaviour
     /// <summary>
     /// LineCount を比較するときに、
     /// ・1～100 の循環
-    /// ・差が50超なら小さい方を“大きい”とみなす
+    /// ・差が50超なら小さい方を"大きい"とみなす
     /// という仕様に対応した判定関数
     /// </summary>
     private bool IsNewLineCountBigger(int newCount, int currentCount)
@@ -1062,7 +1065,7 @@ public class Player : MonoBehaviour
         if (diff < 0) diff += 100;
         // diff が 1～99 の範囲になる
 
-        // 差が50以下なら“newCountの方が大きい”、50超なら“currentCountの方が大きい”
+        // 差が50以下なら"newCountの方が大きい"、50超なら"currentCountの方が大きい"
         // 例）diff = 10 → newCountの方が大きい
         //     diff = 90 → 90>50 なので currentCountの方が実質大きい
         if (diff == 0) return false;  // 同値
@@ -1075,39 +1078,25 @@ public class Player : MonoBehaviour
     /// </summary>
     private void AdjustPlayerAngle(Collision2D collision)
     {
-        // 衝突点を拾い、Playerの中心 X との大小比較で「左 or 右」を判定
+        // 衝突点を取得
         ContactPoint2D contact = collision.GetContact(0);
-        Vector3 contactPos = contact.point; // ワールド座標の衝突点
+        Vector3 contactPos = contact.point;
         Vector3 playerPos = transform.position;
 
-        // ラインの中心
-        Vector3 lineCenter = collision.transform.position;
+        // 現在の進行方向を取得
+        Vector2 currentDir = (Vector2)(Quaternion.Euler(0, 0, transform.eulerAngles.z) * Vector2.up);
 
-        // プレイヤー中心→ライン中心ベクトル
-        Vector3 dir = lineCenter - playerPos;
+        // プレイヤーから衝突点へのベクトル
+        Vector2 dirToCollision = (contactPos - playerPos).normalized;
 
-        // 左半分 vs 右半分
-        bool isLeftHit = (contactPos.x < playerPos.x);
+        // 衝突が左右どちらで起きたかを判定
+        float cross = currentDir.x * dirToCollision.y - currentDir.y * dirToCollision.x;
+        float rotationSign = Mathf.Sign(cross); // 1なら左から衝突、-1なら右から衝突
 
-        // 「Playerの中心線と垂直になるように」
-        // → transform.right を (player→line)方向に合わせる
-        //    ただし左から当たったときは -dir にする等、好みで調整
-        if (isLeftHit)
-        {
-            // 左半分なら逆方向
-            // transform.right = -dir;
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x) * -1; // Y軸反転
-            transform.localScale = scale;
-        }
-        else
-        {
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x); // Y軸反転
-            transform.localScale = scale;
-            // 右半分ならそのまま
-            // transform.right = dir;
-        }
+        // スプライトの向きを設定（衝突の反対側を向く）
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * (-rotationSign); // 左からの衝突なら右向き、右からの衝突なら左向き
+        transform.localScale = scale;
     }
 
 
@@ -1132,7 +1121,7 @@ public class Player : MonoBehaviour
 
     public void ResetVelocity()
     {
-        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero;
     }
 
     public void ResetRotation()
@@ -1351,7 +1340,7 @@ public class Player : MonoBehaviour
 
     public void BubbleResetNext()
     {
-        rb.velocity = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
         transform.rotation = Quaternion.Euler(0, 0, 0);
         rb.angularVelocity = 0;
     }

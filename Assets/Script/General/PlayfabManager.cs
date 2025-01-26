@@ -169,5 +169,27 @@ public class PlayfabManager : MonoBehaviour
         });
     }
 
+    public void SendCount_WebSite(int count)
+    {
+        var request = new UpdatePlayerStatisticsRequest
+        {
+            Statistics = new List<StatisticUpdate>
+            {
+                new StatisticUpdate
+                {
+                    StatisticName = "WebSite",
+                    Value = count
+                }
+            }
+        };
+        PlayFabClientAPI.UpdatePlayerStatistics(request, result =>
+                {
+                    Debug.Log("スコアの送信に成功しました。");
+                },
+                error =>
+                {
+                    Debug.LogError("スコアの送信に失敗しました: " + error.GenerateErrorReport());
+                });
+    }
 
 }
