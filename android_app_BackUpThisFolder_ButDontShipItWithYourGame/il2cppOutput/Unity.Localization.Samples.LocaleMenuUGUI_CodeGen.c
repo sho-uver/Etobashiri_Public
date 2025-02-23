@@ -1,0 +1,75 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m6E21DB9C5BFB580FA024AEB1A5B393582336C92D (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m8A5D3D1B00CAB7A90DCFD1BCFF26F3786A6C124B (void);
+extern void LanguageSelectionMenuUGUIDropdown_Start_m30F95F3640DD6E21C7EA3EF88EE64468D27ABB2A (void);
+extern void LanguageSelectionMenuUGUIDropdown_InitializeCompleted_mD021CC6B1CA46D71F5A200ACD6805246DAD670A2 (void);
+extern void LanguageSelectionMenuUGUIDropdown_OnSelectionChanged_mF7F5CCE9B198B1DE98BC83EC9D2AC634C690BDD2 (void);
+extern void LanguageSelectionMenuUGUIDropdown_LocalizationSettings_SelectedLocaleChanged_mD13A958B3C9DE3B3D95BBE94598BF3645C4A733C (void);
+extern void LanguageSelectionMenuUGUIDropdown__ctor_mE9990CB0ED749C85D8E456EB1A9B5F9DB6A98698 (void);
+extern void LanguageSelectionMenuUGUIToggleList_Start_m66F69AF2FFAE3EEAB866CC37F4D1D9FD247FB4D9 (void);
+extern void LanguageSelectionMenuUGUIToggleList_InitializeCompleted_m0A21D2FD493D3FCA43244E236191458C55BC8279 (void);
+extern void LanguageSelectionMenuUGUIToggleList_LocalizationSettings_SelectedLocaleChanged_m0E3C70F5068FF5E9A1B6C81CC8353596679FE6C5 (void);
+extern void LanguageSelectionMenuUGUIToggleList__ctor_m0A916F0F7355C5320A28036CF848CFA9A7E974F6 (void);
+extern void U3CU3Ec__DisplayClass6_0__ctor_m6A8560FD976A7C7D32D9458606753A4CAD58FB1D (void);
+extern void U3CU3Ec__DisplayClass6_0_U3CInitializeCompletedU3Eb__0_m247691BF966AA408EFA756546FF4B2569F75A8B1 (void);
+static Il2CppMethodPointer s_methodPointers[13] = 
+{
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m6E21DB9C5BFB580FA024AEB1A5B393582336C92D,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m8A5D3D1B00CAB7A90DCFD1BCFF26F3786A6C124B,
+	LanguageSelectionMenuUGUIDropdown_Start_m30F95F3640DD6E21C7EA3EF88EE64468D27ABB2A,
+	LanguageSelectionMenuUGUIDropdown_InitializeCompleted_mD021CC6B1CA46D71F5A200ACD6805246DAD670A2,
+	LanguageSelectionMenuUGUIDropdown_OnSelectionChanged_mF7F5CCE9B198B1DE98BC83EC9D2AC634C690BDD2,
+	LanguageSelectionMenuUGUIDropdown_LocalizationSettings_SelectedLocaleChanged_mD13A958B3C9DE3B3D95BBE94598BF3645C4A733C,
+	LanguageSelectionMenuUGUIDropdown__ctor_mE9990CB0ED749C85D8E456EB1A9B5F9DB6A98698,
+	LanguageSelectionMenuUGUIToggleList_Start_m66F69AF2FFAE3EEAB866CC37F4D1D9FD247FB4D9,
+	LanguageSelectionMenuUGUIToggleList_InitializeCompleted_m0A21D2FD493D3FCA43244E236191458C55BC8279,
+	LanguageSelectionMenuUGUIToggleList_LocalizationSettings_SelectedLocaleChanged_m0E3C70F5068FF5E9A1B6C81CC8353596679FE6C5,
+	LanguageSelectionMenuUGUIToggleList__ctor_m0A916F0F7355C5320A28036CF848CFA9A7E974F6,
+	U3CU3Ec__DisplayClass6_0__ctor_m6A8560FD976A7C7D32D9458606753A4CAD58FB1D,
+	U3CU3Ec__DisplayClass6_0_U3CInitializeCompletedU3Eb__0_m247691BF966AA408EFA756546FF4B2569F75A8B1,
+};
+static const int32_t s_InvokerIndices[13] = 
+{
+	14657,
+	9889,
+	9889,
+	7792,
+	7896,
+	7948,
+	9889,
+	9889,
+	7792,
+	7948,
+	9889,
+	9889,
+	7811,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Localization_Samples_LocaleMenuUGUI_CodeGenModule;
+const Il2CppCodeGenModule g_Unity_Localization_Samples_LocaleMenuUGUI_CodeGenModule = 
+{
+	"Unity.Localization.Samples.LocaleMenuUGUI.dll",
+	13,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

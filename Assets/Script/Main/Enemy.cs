@@ -777,7 +777,19 @@ public class Enemy : MonoBehaviour
                     blowingDir = ((center.transform.position - collision.gameObject.transform.position) + blowingDir);
                     // Instantiate(hitEffectS,(collision.gameObject.transform.position + transform.position)/2, Quaternion.FromToRotation(Vector3.up,(transform.position - collision.gameObject.transform.position )));
                     // tokuParticle.Play();
-                    GetPoint(10);
+                    rensaPoint++;
+                    if (rensaPoint == 1 && GetName() == "GoldenBomber")
+                    {
+                        GetPoint(100 * 2 - 1000);
+                    }
+                    else if (rensaPoint == 1 && GetName() != "GoldenBomber")
+                    {
+                        GetPoint(100 * 2 - 10);
+                    }
+                    else
+                    {
+                        GetPoint(100);
+                    }
                     return;
                 }
                 if (sweetSpotFlg)
@@ -930,19 +942,19 @@ public class Enemy : MonoBehaviour
                             break;
 
                         case "RollingBomber":
-                            num = 20;
+                            num = 10;
                             break;
 
                         case "PitchBomber":
-                            num = 20;
+                            num = 10;
                             break;
 
                         case "SmallBomber":
-                            num = 20;
+                            num = 10;
                             break;
 
                         case "FireBomber":
-                            num = 20;
+                            num = 10;
                             break;
 
                         case "GoldenBomber":
@@ -950,33 +962,33 @@ public class Enemy : MonoBehaviour
                             break;
 
                         case "KingBomber":
-                            num = 100;
+                            num = 10;
                             break;
                     }
                     switch (cge.GetName())
                     {
                         case "ShoteBomber":
-                            eneNum = 10;
+                            eneNum = 100;
                             break;
 
                         case "Bomber":
-                            eneNum = 10;
+                            eneNum = 100;
                             break;
 
                         case "RollingBomber":
-                            eneNum = 20;
+                            eneNum = 100;
                             break;
 
                         case "PitchBomber":
-                            eneNum = 20;
+                            eneNum = 100;
                             break;
 
                         case "SmallBomber":
-                            eneNum = 20;
+                            eneNum = 100;
                             break;
 
                         case "FireBomber":
-                            eneNum = 20;
+                            eneNum = 100;
                             break;
 
                         case "GoldenBomber":
@@ -987,7 +999,19 @@ public class Enemy : MonoBehaviour
                             eneNum = 100;
                             break;
                     }
-                    GetPoint(num * rensaPoint + eneNum);
+                    if (rensaPoint == 1 && num == 1000)
+                    {
+                        GetPoint(eneNum);
+                    }
+                    else if (rensaPoint == 1 && num != 1000)
+                    {
+                        GetPoint(eneNum * 2 - num);
+                    }
+                    else
+                    {
+                        GetPoint(eneNum);
+                    }
+
                 }
                 else if (blowFlg && cge.GetBlowFlg())
                 {
@@ -1171,27 +1195,27 @@ public class Enemy : MonoBehaviour
                 switch (name)
                 {
                     case "ShoteBomber":
-                        amaterasuPoint = 10;
+                        amaterasuPoint = 100;
                         break;
 
                     case "Bomber":
-                        amaterasuPoint = 10;
+                        amaterasuPoint = 100;
                         break;
 
                     case "RollingBomber":
-                        amaterasuPoint = 20;
+                        amaterasuPoint = 100;
                         break;
 
                     case "PitchBomber":
-                        amaterasuPoint = 20;
+                        amaterasuPoint = 100;
                         break;
 
                     case "SmallBomber":
-                        amaterasuPoint = 20;
+                        amaterasuPoint = 100;
                         break;
 
                     case "FireBomber":
-                        amaterasuPoint = 20;
+                        amaterasuPoint = 100;
                         break;
 
                     case "GoldenBomber":
@@ -1202,7 +1226,7 @@ public class Enemy : MonoBehaviour
                         amaterasuPoint = 100;
                         break;
                 }
-                GetPoint(1000 * rensaPoint + amaterasuPoint);
+                GetPoint(1000 * rensaPoint);
                 collision.gameObject.GetComponent<Amaterasu>().Flare();
                 break;
 
@@ -1566,19 +1590,19 @@ public class Enemy : MonoBehaviour
                     break;
 
                 case "RollingBomber":
-                    num = 20;
+                    num = 10;
                     break;
 
                 case "PitchBomber":
-                    num = 20;
+                    num = 10;
                     break;
 
                 case "SmallBomber":
-                    num = 20;
+                    num = 10;
                     break;
 
                 case "FireBomber":
-                    num = 20;
+                    num = 10;
                     break;
 
                 case "GoldenBomber":
@@ -1586,7 +1610,7 @@ public class Enemy : MonoBehaviour
                     break;
 
                 case "KingBomber":
-                    num = 100;
+                    num = 10;
                     break;
             }
             // Instantiate(hitEffect,(playerPos + transform.position)/2 + (transform.position - playerPos).normalized * 3, Quaternion.FromToRotation(Vector3.up,(transform.position - playerPos)));
@@ -1676,27 +1700,27 @@ public class Enemy : MonoBehaviour
         switch (name)
         {
             case "ShoteBomber":
-                chototsuPoint = 10;
+                chototsuPoint = 100;
                 break;
 
             case "Bomber":
-                chototsuPoint = 10;
+                chototsuPoint = 100;
                 break;
 
             case "RollingBomber":
-                chototsuPoint = 20;
+                chototsuPoint = 100;
                 break;
 
             case "PitchBomber":
-                chototsuPoint = 20;
+                chototsuPoint = 100;
                 break;
 
             case "SmallBomber":
-                chototsuPoint = 20;
+                chototsuPoint = 100;
                 break;
 
             case "FireBomber":
-                chototsuPoint = 20;
+                chototsuPoint = 100;
                 break;
 
             case "GoldenBomber":
@@ -1707,7 +1731,7 @@ public class Enemy : MonoBehaviour
                 chototsuPoint = 100;
                 break;
         }
-        GetPoint(chototsuPoint * 5);
+        GetPoint(chototsuPoint);
         // Instantiate(hitEffect,(playerPos + transform.position)/2 + (transform.position - playerPos).normalized * 3, Quaternion.FromToRotation(Vector3.up,(transform.position - playerPos)));
         Instantiate(hitEffectS, (playerPos + transform.position) / 2, Quaternion.FromToRotation(Vector3.up, (transform.position - playerPos)));
         Instantiate(sonicMove, transform.position, Quaternion.identity);

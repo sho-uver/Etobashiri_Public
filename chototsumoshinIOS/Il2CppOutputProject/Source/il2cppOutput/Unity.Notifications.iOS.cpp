@@ -1,0 +1,6963 @@
+﻿#include "pch-cpp.hpp"
+
+
+
+
+
+struct VirtualActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename R>
+struct VirtualFuncInvoker0
+{
+	typedef R (*Func)(void*, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+struct GenericVirtualActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (const RuntimeMethod* method, RuntimeObject* obj)
+	{
+		VirtualInvokeData invokeData;
+		il2cpp_codegen_get_generic_virtual_invoke_data(method, obj, &invokeData);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+struct InterfaceActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename R>
+struct InterfaceFuncInvoker0
+{
+	typedef R (*Func)(void*, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+struct GenericInterfaceActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (const RuntimeMethod* method, RuntimeObject* obj)
+	{
+		VirtualInvokeData invokeData;
+		il2cpp_codegen_get_generic_interface_invoke_data(method, obj, &invokeData);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+
+struct Dictionary_2_t5D4200B1CAF7A8402001B3F57BDCA6F0E0BED387;
+struct Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA;
+struct Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9;
+struct Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83;
+struct IEnumerable_1_t690156ADFB7DA3B6FFCBA7786B7F9E63BE340211;
+struct IEnumerator_1_t7D43D204798B36A9A7FDE86EB3DEA6B375F1A977;
+struct IEqualityComparer_1_tAE94C8F24AD5B94D4EE85CA9FC59E3409D41CAF7;
+struct KeyCollection_tA4CB626FB15AAEA0195E38C04F316029E9421C02;
+struct KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342;
+struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
+struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD;
+struct List_1_tC1CA64216E385BF5F13004E02F90F6B326BEA8F3;
+struct List_1_tC74F654247ABF5958BE119A0484FED155A4FA129;
+struct ValueCollection_t997957307BE09392279100859BF77AEA78F2D9CF;
+struct ValueCollection_t238D0D2427C6B841A01F522A41540165A2C4AE76;
+struct EntryU5BU5D_t73B7253D577D1B5BC6ACF6AF4ADECEBB1F2A71C0;
+struct EntryU5BU5D_t1AF33AD0B7330843448956EC4277517081658AE7;
+struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
+struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
+struct iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757;
+struct iOSNotificationAttachmentU5BU5D_t609D3C4CF05546E716C096241B03644FD9A9F908;
+struct iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09;
+struct ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263;
+struct AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6;
+struct Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235;
+struct CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B;
+struct Delegate_t;
+struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
+struct Exception_t;
+struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
+struct InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB;
+struct MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553;
+struct MethodInfo_t;
+struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71;
+struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+struct String_t;
+struct Type_t;
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+struct iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC;
+struct iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327;
+struct iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319;
+struct iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F;
+struct iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED;
+struct iOSNotificationTrigger_tC158EA08A8FCFBF7CF13CAF3A98EF0B1285C4AB1;
+struct iOSNotificationsWrapper_t03E2DC53BCC5038CF3B2643C4C2EB105AFB28975;
+struct U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE;
+struct NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1;
+struct AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD;
+struct NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2;
+struct ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4;
+struct ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E;
+
+IL2CPP_EXTERN_C RuntimeClass* ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerable_1_t690156ADFB7DA3B6FFCBA7786B7F9E63BE340211_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerator_1_t7D43D204798B36A9A7FDE86EB3DEA6B375F1A977_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* List_1_tC74F654247ABF5958BE119A0484FED155A4FA129_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* iOSNotificationTriggerType_t191C42E4D4E634B4694FB50559A1451AEFF6A19D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* iOSNotificationTrigger_tC158EA08A8FCFBF7CF13CAF3A98EF0B1285C4AB1_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeField* iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C____U3CYearU3Ek__BackingField_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5____userInfo_FieldInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteral14ECD5B329440AEF4A1AA1B6D967DAECF5BEC86F;
+IL2CPP_EXTERN_C String_t* _stringLiteral3445424CCE31FF31906AAE9ADB0236D08C87E42B;
+IL2CPP_EXTERN_C String_t* _stringLiteral4EBC86E0EACFCA522AEB82874860D0E248D782A5;
+IL2CPP_EXTERN_C String_t* _stringLiteral639F01DFEB0CC71DC57E14265FC5642D13533AEF;
+IL2CPP_EXTERN_C String_t* _stringLiteral7471FC92FC1AA570D64A46C83CB352615E0781C2;
+IL2CPP_EXTERN_C String_t* _stringLiteral7FC8D6A046F1C98C7C41C53A755D310105555A8C;
+IL2CPP_EXTERN_C String_t* _stringLiteral88B697A2C9C4DE6D613594AF141EACF167383C3E;
+IL2CPP_EXTERN_C String_t* _stringLiteralA44A39671D4B7FA8FBE50D795EAB52248D5C5469;
+IL2CPP_EXTERN_C String_t* _stringLiteralC2D955B52CE2A9A7D166E809868D6DAC459EF687;
+IL2CPP_EXTERN_C String_t* _stringLiteralD8F50872454B1DDA643F3A29398B40D5880A7DDA;
+IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+IL2CPP_EXTERN_C String_t* _stringLiteralE91FE173F59B063D620A934CE1A010F2B114C1F3;
+IL2CPP_EXTERN_C String_t* _stringLiteralF095BC29C39D74DCA3923E99C34901B64AF08344;
+IL2CPP_EXTERN_C String_t* _stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024;
+IL2CPP_EXTERN_C String_t* _stringLiteralFCA8707FE0861CE909C71CAD2EB86B6143B5E8D7;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_ContainsKey_mE0C48AA68D5546E0616D5D05E689FA0D00036203_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_GetEnumerator_m41265919586D29EB9B9463CA58C718650069662E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_GetEnumerator_m46EC45F42CA2279D83568CD3F216AAABA8E749F6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_m4ABDF05BA4B194A57967F3B53D7422F6439255F1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_get_Item_m800AA5B33449643DC97AC1FF1F653A3B9D15CFE8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_set_Item_mA3778483431364C6C54E792CD1AC43576F137AB4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m068DDFF5CAFBB15C8A0602DEADA7F10C5BB7ADCD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m3DBCD92FD0C9A216ADA0B3A7125D18F23AB20C44_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m95922EA1AC2DAA1D6A62F9CEDB8B2E71B49214BA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m5AF13D1DDEFE6AC1F317C3F1861616F12D72E441_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m827F25AFA853D56D738631CA3CCFB0DABDE9C260_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mA93491D9B55547D066053F3BC0A69C635F877438_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m49070E88C2E34AB46E6292A3FB1C227576B8506E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m8C61C8C66929068D7ED0AACA335678BF2551F90C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mF15CFF294BE6EAD4E0D494A943C48290FDE615CF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GCHandle_get_Target_m481F9508DA5E384D33CD1F4450060DC56BBD4CD5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* KeyValuePair_2_get_Key_m654BCCAE2F20CB11D8E8C2D2C886A0C8A13EB1C4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* KeyValuePair_2_get_Value_m4F01AB5E5AD186F63C33C6326B4020B0D76465D5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* KeyValuePair_2_get_Value_m7345512A32CB4DCAA0643050B18DC8DCD71B927A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m5AA65AE0FA98A54B451AF71C63369111FF50A855_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m85DC382BDB220A86D7F10CD22CD1EADCBA5D6C29_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_ToArray_m2C402D882AA60FC1D5C7C09A129BE7779F833B4A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_ToArray_m8FE3E081900C426C6F1CC9B83DEA764301795167_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mCA6A82D2347A66651ABA4216D8CAF21CBC97B06B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m3CB4D035F9ED8FB5E637FFC298A063FD58C0FC06_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1__ctor_m560689C7326F028C51F97F2CB36CB9CDCF15935C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_HasValue_mC149B1C717AF506BBE8932F2C1DC86C378D17EA8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_Value_mE3B978271FFA8D9DEE17BFB34320A3C67BE148EA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3C_cctorU3Eb__38_0_m199A8E36941FC6A81CB2C019BF06CA2F3E0D51FC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3C_cctorU3Eb__38_1_m4F8AE0FFC91B6C9E8C6C8619C5FD682F22A7C474_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* iOSNotificationTimeIntervalTrigger_set_TimeInterval_m8DDE94D778C187DAC0F82E324AF795E64E005130_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* iOSNotification_set_Trigger_m87A4F53B6CB98FE11AD98A5952F0CB2E95BCF52F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* iOSNotificationsWrapper_AuthorizationRequestReceived_m4A6C75E5BFEA2C3E529F2F8CEEA8A813F428B3CD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* iOSNotificationsWrapper_CsAttachmentsToObjc_m8EF0E9BAFFCCEE6A5EEC8C7D371C4BA1C5E15BF2_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* iOSNotificationsWrapper_NotificationReceived_mB7F4859AF321D5AF115D70F4BD8AB131543D7524_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* iOSNotificationsWrapper_ReceiveNSDictionaryKeyValue_m57E371B7275602846E05E0770BFA78C6641BC856_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* iOSNotificationsWrapper_ReceiveUNNotificationAttachment_mF8194BDA3434E46D10AF292C61D4F3E00B654652_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* iOSNotificationsWrapper_RemoteNotificationReceived_mBF44180FD060AC5811C9979FE6E771650AA35212_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* iOSNotificationsWrapper_SetNotificationCategories_m9874163A141115A2CAC03E821E582B70A48A4AEA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeType* iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_0_0_0_var;
+IL2CPP_EXTERN_C const RuntimeType* iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_0_0_0_var;
+struct Delegate_t_marshaled_com;
+struct Delegate_t_marshaled_pinvoke;
+struct Exception_t_marshaled_com;
+struct Exception_t_marshaled_pinvoke;
+struct iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC;;
+struct iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke;
+struct iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke;;
+struct iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED;;
+struct iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_com;
+struct iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_com;;
+struct iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke;
+struct iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke;;
+
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+struct iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757;
+struct iOSNotificationAttachmentU5BU5D_t609D3C4CF05546E716C096241B03644FD9A9F908;
+struct iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09;
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+struct U3CModuleU3E_tF1B6286AA18FA15088F8200A5DB0118F53B4A5F5 
+{
+};
+struct Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	EntryU5BU5D_t73B7253D577D1B5BC6ACF6AF4ADECEBB1F2A71C0* ____entries;
+	int32_t ____count;
+	int32_t ____freeList;
+	int32_t ____freeCount;
+	int32_t ____version;
+	RuntimeObject* ____comparer;
+	KeyCollection_tA4CB626FB15AAEA0195E38C04F316029E9421C02* ____keys;
+	ValueCollection_t997957307BE09392279100859BF77AEA78F2D9CF* ____values;
+	RuntimeObject* ____syncRoot;
+};
+struct Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	EntryU5BU5D_t1AF33AD0B7330843448956EC4277517081658AE7* ____entries;
+	int32_t ____count;
+	int32_t ____freeList;
+	int32_t ____freeCount;
+	int32_t ____version;
+	RuntimeObject* ____comparer;
+	KeyCollection_t2EDD317F5771E575ACB63527B5AFB71291040342* ____keys;
+	ValueCollection_t238D0D2427C6B841A01F522A41540165A2C4AE76* ____values;
+	RuntimeObject* ____syncRoot;
+};
+struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD  : public RuntimeObject
+{
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct List_1_tC1CA64216E385BF5F13004E02F90F6B326BEA8F3  : public RuntimeObject
+{
+	iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct List_1_tC74F654247ABF5958BE119A0484FED155A4FA129  : public RuntimeObject
+{
+	iOSNotificationAttachmentU5BU5D_t609D3C4CF05546E716C096241B03644FD9A9F908* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6  : public RuntimeObject
+{
+	bool ___m_IsFinished;
+	bool ___m_Granted;
+	String_t* ___m_Error;
+	String_t* ___m_DeviceToken;
+};
+struct MemberInfo_t  : public RuntimeObject
+{
+};
+struct String_t  : public RuntimeObject
+{
+	int32_t ____stringLength;
+	Il2CppChar ____firstChar;
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
+{
+};
+struct iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53  : public RuntimeObject
+{
+};
+struct U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE  : public RuntimeObject
+{
+};
+struct KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 
+{
+	RuntimeObject* ___key;
+	RuntimeObject* ___value;
+};
+struct KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A 
+{
+	String_t* ___key;
+	String_t* ___value;
+};
+struct Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 
+{
+	bool ___hasValue;
+	int32_t ___value;
+};
+struct Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 
+{
+	bool ___hasValue;
+	float ___value;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22 
+{
+	bool ___m_value;
+};
+struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3 
+{
+	uint8_t ___m_value;
+};
+struct CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23 
+{
+	int32_t ___year;
+	int32_t ___month;
+	int32_t ___day;
+	int32_t ___hour;
+	int32_t ___minute;
+	int32_t ___second;
+	uint8_t ___repeats;
+};
+struct DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D 
+{
+	uint64_t ____dateData;
+};
+struct Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F 
+{
+	double ___m_value;
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2  : public ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_pinvoke
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_com
+{
+};
+struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
+{
+	int32_t ___m_value;
+};
+struct IntPtr_t 
+{
+	void* ___m_value;
+};
+struct LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC 
+{
+	double ___latitude;
+	double ___longitude;
+	float ___radius;
+	uint8_t ___notifyOnEntry;
+	uint8_t ___notifyOnExit;
+	uint8_t ___repeats;
+};
+struct Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C 
+{
+	float ___m_value;
+};
+struct TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A 
+{
+	int64_t ____ticks;
+};
+struct TimeTriggerData_t110F07D01BDEC0F8D7C1E625A581638C9AEE6823 
+{
+	int32_t ___interval;
+	uint8_t ___repeats;
+};
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
+	};
+};
+struct iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC 
+{
+	int32_t ___granted;
+	String_t* ___error;
+	String_t* ___deviceToken;
+};
+struct iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke
+{
+	int32_t ___granted;
+	char* ___error;
+	char* ___deviceToken;
+};
+struct iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_com
+{
+	int32_t ___granted;
+	Il2CppChar* ___error;
+	Il2CppChar* ___deviceToken;
+};
+struct iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 
+{
+	String_t* ___U3CIdU3Ek__BackingField;
+	String_t* ___U3CUrlU3Ek__BackingField;
+};
+struct iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshaled_pinvoke
+{
+	char* ___U3CIdU3Ek__BackingField;
+	char* ___U3CUrlU3Ek__BackingField;
+};
+struct iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshaled_com
+{
+	Il2CppChar* ___U3CIdU3Ek__BackingField;
+	Il2CppChar* ___U3CUrlU3Ek__BackingField;
+};
+struct iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48 
+{
+	double ___U3CLatitudeU3Ek__BackingField;
+	double ___U3CLongitudeU3Ek__BackingField;
+	float ___U3CRadiusU3Ek__BackingField;
+	bool ___U3CNotifyOnEntryU3Ek__BackingField;
+	bool ___U3CNotifyOnExitU3Ek__BackingField;
+	bool ___U3CRepeatsU3Ek__BackingField;
+};
+struct iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshaled_pinvoke
+{
+	double ___U3CLatitudeU3Ek__BackingField;
+	double ___U3CLongitudeU3Ek__BackingField;
+	float ___U3CRadiusU3Ek__BackingField;
+	int32_t ___U3CNotifyOnEntryU3Ek__BackingField;
+	int32_t ___U3CNotifyOnExitU3Ek__BackingField;
+	int32_t ___U3CRepeatsU3Ek__BackingField;
+};
+struct iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshaled_com
+{
+	double ___U3CLatitudeU3Ek__BackingField;
+	double ___U3CLongitudeU3Ek__BackingField;
+	float ___U3CRadiusU3Ek__BackingField;
+	int32_t ___U3CNotifyOnEntryU3Ek__BackingField;
+	int32_t ___U3CNotifyOnExitU3Ek__BackingField;
+	int32_t ___U3CRepeatsU3Ek__BackingField;
+};
+struct iOSNotificationSettings_tBDCE6AE27851787C044FEBC52ED202D4BBD24B21 
+{
+	int32_t ___authorizationStatus;
+	int32_t ___notificationCenterSetting;
+	int32_t ___lockScreenSetting;
+	int32_t ___carPlaySetting;
+	int32_t ___alertSetting;
+	int32_t ___badgeSetting;
+	int32_t ___soundSetting;
+	int32_t ___alertStyle;
+	int32_t ___showPreviewsSetting;
+};
+struct iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649 
+{
+	int32_t ___timeInterval;
+	bool ___U3CRepeatsU3Ek__BackingField;
+};
+struct iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshaled_pinvoke
+{
+	int32_t ___timeInterval;
+	int32_t ___U3CRepeatsU3Ek__BackingField;
+};
+struct iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshaled_com
+{
+	int32_t ___timeInterval;
+	int32_t ___U3CRepeatsU3Ek__BackingField;
+};
+struct Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2 
+{
+	List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 ____current;
+};
+struct Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9 
+{
+	Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* ____dictionary;
+	int32_t ____version;
+	int32_t ____index;
+	KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 ____current;
+	int32_t ____getEnumeratorRetType;
+};
+struct Enumerator_t173E7BE1F35CA448C7E0EE77345C9E0EC0206562 
+{
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ____dictionary;
+	int32_t ____version;
+	int32_t ____index;
+	KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A ____current;
+	int32_t ____getEnumeratorRetType;
+};
+struct KeyValuePair_2_tFC4FF02B97026C0CCC439FD7ED3DEFA306C098CE 
+{
+	RuntimeObject* ___key;
+	intptr_t ___value;
+};
+struct KeyValuePair_2_t3FA9D502CC27B123E99A6A0DED92BFC1A6D755C6 
+{
+	String_t* ___key;
+	intptr_t ___value;
+};
+struct Delegate_t  : public RuntimeObject
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	RuntimeObject* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	bool ___method_is_virtual;
+};
+struct Delegate_t_marshaled_pinvoke
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Delegate_t_marshaled_com
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Exception_t  : public RuntimeObject
+{
+	String_t* ____className;
+	String_t* ____message;
+	RuntimeObject* ____data;
+	Exception_t* ____innerException;
+	String_t* ____helpURL;
+	RuntimeObject* ____stackTrace;
+	String_t* ____stackTraceString;
+	String_t* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	RuntimeObject* ____dynamicMethods;
+	int32_t ____HResult;
+	String_t* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_pinvoke
+{
+	char* ____className;
+	char* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_pinvoke* ____innerException;
+	char* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	char* ____stackTraceString;
+	char* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	char* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_com
+{
+	Il2CppChar* ____className;
+	Il2CppChar* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_com* ____innerException;
+	Il2CppChar* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	Il2CppChar* ____stackTraceString;
+	Il2CppChar* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	Il2CppChar* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC 
+{
+	intptr_t ___handle;
+};
+struct NotificationInterruptionLevel_t84C4E1D3AE59DE1C1FE747467CC34F6DB980DCF5 
+{
+	int32_t ___value__;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C  : public RuntimeObject
+{
+	intptr_t ___m_CachedPtr;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_pinvoke
+{
+	intptr_t ___m_CachedPtr;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
+{
+	intptr_t ___m_CachedPtr;
+};
+struct PresentationOption_tE86873E6F3F82F6D0F649FB16C28D502B439C8EC 
+{
+	int32_t ___value__;
+};
+struct RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B 
+{
+	intptr_t ___value;
+};
+struct TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E 
+{
+	union
+	{
+		#pragma pack(push, tp, 1)
+		struct
+		{
+			TimeTriggerData_t110F07D01BDEC0F8D7C1E625A581638C9AEE6823 ___timeInterval;
+		};
+		#pragma pack(pop, tp)
+		struct
+		{
+			TimeTriggerData_t110F07D01BDEC0F8D7C1E625A581638C9AEE6823 ___timeInterval_forAlignmentOnly;
+		};
+		#pragma pack(push, tp, 1)
+		struct
+		{
+			CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23 ___calendar;
+		};
+		#pragma pack(pop, tp)
+		struct
+		{
+			CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23 ___calendar_forAlignmentOnly;
+		};
+		#pragma pack(push, tp, 1)
+		struct
+		{
+			LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC ___location;
+		};
+		#pragma pack(pop, tp)
+		struct
+		{
+			LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC ___location_forAlignmentOnly;
+		};
+	};
+};
+struct iOSNotificationActionIconType_t4AD9613025501CC151B77F8BE2029E5278DCCFCE 
+{
+	int32_t ___value__;
+};
+struct iOSNotificationActionOptions_t8ACBB1AC8D9F369AB6A7E3B9DC1EE88C99E1EC64 
+{
+	int32_t ___value__;
+};
+struct iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C 
+{
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CYearU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CMonthU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CDayU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CHourU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CMinuteU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CSecondU3Ek__BackingField;
+	bool ___U3CUtcTimeU3Ek__BackingField;
+	bool ___U3CRepeatsU3Ek__BackingField;
+};
+struct iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshaled_pinvoke
+{
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CYearU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CMonthU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CDayU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CHourU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CMinuteU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CSecondU3Ek__BackingField;
+	int32_t ___U3CUtcTimeU3Ek__BackingField;
+	int32_t ___U3CRepeatsU3Ek__BackingField;
+};
+struct iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshaled_com
+{
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CYearU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CMonthU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CDayU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CHourU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CMinuteU3Ek__BackingField;
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___U3CSecondU3Ek__BackingField;
+	int32_t ___U3CUtcTimeU3Ek__BackingField;
+	int32_t ___U3CRepeatsU3Ek__BackingField;
+};
+struct iOSNotificationCategoryOptions_t744C27E573FB13C8205F6D82E139D4DFD7F5641B 
+{
+	int32_t ___value__;
+};
+struct iOSNotificationTriggerType_t191C42E4D4E634B4694FB50559A1451AEFF6A19D 
+{
+	int32_t ___value__;
+};
+struct Enumerator_tA7EC39CE1B8A2482A44DEE4E5F736BB3945E048C 
+{
+	Dictionary_2_t5D4200B1CAF7A8402001B3F57BDCA6F0E0BED387* ____dictionary;
+	int32_t ____version;
+	int32_t ____index;
+	KeyValuePair_2_tFC4FF02B97026C0CCC439FD7ED3DEFA306C098CE ____current;
+	int32_t ____getEnumeratorRetType;
+};
+struct Enumerator_t4576E9828A5C7D89C43F2AD1D83855944862B6C8 
+{
+	Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* ____dictionary;
+	int32_t ____version;
+	int32_t ____index;
+	KeyValuePair_2_t3FA9D502CC27B123E99A6A0DED92BFC1A6D755C6 ____current;
+	int32_t ____getEnumeratorRetType;
+};
+struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct MulticastDelegate_t  : public Delegate_t
+{
+	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* ___delegates;
+};
+struct MulticastDelegate_t_marshaled_pinvoke : public Delegate_t_marshaled_pinvoke
+{
+	Delegate_t_marshaled_pinvoke** ___delegates;
+};
+struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
+{
+	Delegate_t_marshaled_com** ___delegates;
+};
+struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
+{
+};
+struct Type_t  : public MemberInfo_t
+{
+	RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ____impl;
+};
+struct iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319  : public RuntimeObject
+{
+	int32_t ____imageType;
+	String_t* ____image;
+	String_t* ___U3CIdU3Ek__BackingField;
+	String_t* ___U3CTitleU3Ek__BackingField;
+	int32_t ___U3COptionsU3Ek__BackingField;
+};
+struct iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F  : public RuntimeObject
+{
+	List_1_tC1CA64216E385BF5F13004E02F90F6B326BEA8F3* ___m_Actions;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___m_IntentIdentifiers;
+	String_t* ___U3CIdU3Ek__BackingField;
+	String_t* ___U3CHiddenPreviewsBodyPlaceholderU3Ek__BackingField;
+	String_t* ___U3CSummaryFormatU3Ek__BackingField;
+	int32_t ___U3COptionsU3Ek__BackingField;
+};
+struct iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED 
+{
+	String_t* ___identifier;
+	String_t* ___title;
+	String_t* ___body;
+	int32_t ___badge;
+	String_t* ___subtitle;
+	String_t* ___categoryIdentifier;
+	String_t* ___threadIdentifier;
+	int32_t ___soundType;
+	float ___soundVolume;
+	String_t* ___soundName;
+	int32_t ___interruptionLevel;
+	double ___relevanceScore;
+	intptr_t ___userInfo;
+	intptr_t ___attachments;
+	int32_t ___triggerType;
+	TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E ___trigger;
+};
+struct iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke
+{
+	char* ___identifier;
+	char* ___title;
+	char* ___body;
+	int32_t ___badge;
+	char* ___subtitle;
+	char* ___categoryIdentifier;
+	char* ___threadIdentifier;
+	int32_t ___soundType;
+	float ___soundVolume;
+	char* ___soundName;
+	int32_t ___interruptionLevel;
+	double ___relevanceScore;
+	intptr_t ___userInfo;
+	intptr_t ___attachments;
+	int32_t ___triggerType;
+	TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E ___trigger;
+};
+struct iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_com
+{
+	Il2CppChar* ___identifier;
+	Il2CppChar* ___title;
+	Il2CppChar* ___body;
+	int32_t ___badge;
+	Il2CppChar* ___subtitle;
+	Il2CppChar* ___categoryIdentifier;
+	Il2CppChar* ___threadIdentifier;
+	int32_t ___soundType;
+	float ___soundVolume;
+	Il2CppChar* ___soundName;
+	int32_t ___interruptionLevel;
+	double ___relevanceScore;
+	intptr_t ___userInfo;
+	intptr_t ___attachments;
+	int32_t ___triggerType;
+	TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E ___trigger;
+};
+struct ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+	String_t* ____paramName;
+};
+struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
+{
+};
+struct InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+};
+struct iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327  : public RuntimeObject
+{
+	Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 ___U3CSoundVolumeU3Ek__BackingField;
+	List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* ___U3CAttachmentsU3Ek__BackingField;
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___data;
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___userInfo;
+};
+struct iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 
+{
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___data;
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___userInfo;
+	List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* ___attachments;
+};
+struct iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshaled_pinvoke
+{
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke ___data;
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___userInfo;
+	List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* ___attachments;
+};
+struct iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshaled_com
+{
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_com ___data;
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___userInfo;
+	List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* ___attachments;
+};
+struct NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1  : public MulticastDelegate_t
+{
+};
+struct AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD  : public MulticastDelegate_t
+{
+};
+struct NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2  : public MulticastDelegate_t
+{
+};
+struct ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4  : public MulticastDelegate_t
+{
+};
+struct ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E  : public MulticastDelegate_t
+{
+};
+struct Nullable_1_tE7C41C3C4F3877D5835C9E9568BDAADAD8FA67A8 
+{
+	bool ___hasValue;
+	iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___value;
+};
+struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+	CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B* ___m_CancellationTokenSource;
+};
+struct iOSNotificationsWrapper_t03E2DC53BCC5038CF3B2643C4C2EB105AFB28975  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+};
+struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_StaticFields
+{
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___s_emptyArray;
+};
+struct List_1_tC1CA64216E385BF5F13004E02F90F6B326BEA8F3_StaticFields
+{
+	iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* ___s_emptyArray;
+};
+struct List_1_tC74F654247ABF5958BE119A0484FED155A4FA129_StaticFields
+{
+	iOSNotificationAttachmentU5BU5D_t609D3C4CF05546E716C096241B03644FD9A9F908* ___s_emptyArray;
+};
+struct String_t_StaticFields
+{
+	String_t* ___Empty;
+};
+struct iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_StaticFields
+{
+	bool ___s_Initialized;
+	NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* ___s_OnNotificationReceived;
+	NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* ___s_OnRemoteNotificationReceived;
+};
+struct U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_StaticFields
+{
+	U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE* ___U3CU3E9;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
+{
+	String_t* ___TrueString;
+	String_t* ___FalseString;
+};
+struct DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_StaticFields
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___s_daysToMonth365;
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___s_daysToMonth366;
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___MinValue;
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___MaxValue;
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___UnixEpoch;
+};
+struct IntPtr_t_StaticFields
+{
+	intptr_t ___Zero;
+};
+struct TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields
+{
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___Zero;
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___MaxValue;
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___MinValue;
+};
+struct Exception_t_StaticFields
+{
+	RuntimeObject* ___s_EDILock;
+};
+struct Type_t_StaticFields
+{
+	Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235* ___s_defaultBinder;
+	Il2CppChar ___Delimiter;
+	TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___EmptyTypes;
+	RuntimeObject* ___Missing;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterAttribute;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterName;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterNameIgnoreCase;
+};
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+struct iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757  : public RuntimeArray
+{
+	ALIGN_FIELD (8) iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* m_Items[1];
+
+	inline iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeArray
+{
+	ALIGN_FIELD (8) String_t* m_Items[1];
+
+	inline String_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, String_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline String_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, String_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Delegate_t* m_Items[1];
+
+	inline Delegate_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline Delegate_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09  : public RuntimeArray
+{
+	ALIGN_FIELD (8) iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 m_Items[1];
+
+	inline iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___identifier), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___title), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___body), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___subtitle), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___categoryIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___threadIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___soundName), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___userInfo), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___attachments), (void*)NULL);
+		#endif
+	}
+	inline iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___identifier), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___title), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___body), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___subtitle), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___categoryIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___threadIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((m_Items + index)->___data))->___soundName), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___userInfo), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___attachments), (void*)NULL);
+		#endif
+	}
+};
+struct iOSNotificationAttachmentU5BU5D_t609D3C4CF05546E716C096241B03644FD9A9F908  : public RuntimeArray
+{
+	ALIGN_FIELD (8) iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 m_Items[1];
+
+	inline iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CIdU3Ek__BackingField), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CUrlU3Ek__BackingField), (void*)NULL);
+		#endif
+	}
+	inline iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CIdU3Ek__BackingField), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((m_Items + index)->___U3CUrlU3Ek__BackingField), (void*)NULL);
+		#endif
+	}
+};
+
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke(const iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED& unmarshaled, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke& marshaled);
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke_back(const iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke& marshaled, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED& unmarshaled);
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke_cleanup(iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke& marshaled);
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_com(const iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED& unmarshaled, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_com& marshaled);
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_com_back(const iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_com& marshaled, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED& unmarshaled);
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_com_cleanup(iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_com& marshaled);
+IL2CPP_EXTERN_C void iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_pinvoke(const iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC& unmarshaled, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke& marshaled);
+IL2CPP_EXTERN_C void iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_pinvoke_back(const iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke& marshaled, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC& unmarshaled);
+IL2CPP_EXTERN_C void iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_pinvoke_cleanup(iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke& marshaled);
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___0_key, RuntimeObject* ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_gshared (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mC149B1C717AF506BBE8932F2C1DC86C378D17EA8_gshared_inline (Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Nullable_1_get_Value_mE3B978271FFA8D9DEE17BFB34320A3C67BE148EA_gshared (Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* List_1_ToArray_mD7E4F8E7C11C3C67CB5739FCC0A6E86106A6291F_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m5AA65AE0FA98A54B451AF71C63369111FF50A855_gshared_inline (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9 Dictionary_2_GetEnumerator_m52AB12790B0B9B46B1DFB1F861C9DBEAB07C1FDA_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mEA5E01B81EB943B7003D87CEC1B6040524F0402C_gshared (Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_gshared_inline (Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mCD4950A75FFADD54AF354D48C6C0DB0B5A22A5F4_gshared (Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m3CB4D035F9ED8FB5E637FFC298A063FD58C0FC06_gshared_inline (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2 List_1_GetEnumerator_m85DC382BDB220A86D7F10CD22CD1EADCBA5D6C29_gshared (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_m95922EA1AC2DAA1D6A62F9CEDB8B2E71B49214BA_gshared (Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 Enumerator_get_Current_m8C61C8C66929068D7ED0AACA335678BF2551F90C_gshared_inline (Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m5AF13D1DDEFE6AC1F317C3F1861616F12D72E441_gshared (Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_mCA6A82D2347A66651ABA4216D8CAF21CBC97B06B_gshared (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m560689C7326F028C51F97F2CB36CB9CDCF15935C_gshared (Nullable_1_tE7C41C3C4F3877D5835C9E9568BDAADAD8FA67A8* __this, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m1191D06A22AB56CAEB33EB3C842940C1FDB9B77C_gshared (Dictionary_2_t5D4200B1CAF7A8402001B3F57BDCA6F0E0BED387* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_mD7169108C4AD240C979A858B7985A20E1F21FFCF_gshared (Dictionary_2_t5D4200B1CAF7A8402001B3F57BDCA6F0E0BED387* __this, RuntimeObject* ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_mAAEF80C45B5DFFF50AF342166E34A5AE35E46349_gshared (Dictionary_2_t5D4200B1CAF7A8402001B3F57BDCA6F0E0BED387* __this, RuntimeObject* ___0_key, intptr_t ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t Dictionary_2_get_Item_mD2C69EEF36D11090873931986EDE898163A0824C_gshared (Dictionary_2_t5D4200B1CAF7A8402001B3F57BDCA6F0E0BED387* __this, RuntimeObject* ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_tA7EC39CE1B8A2482A44DEE4E5F736BB3945E048C Dictionary_2_GetEnumerator_m14943B04CF9F3275383FD9A602776571CA736339_gshared (Dictionary_2_t5D4200B1CAF7A8402001B3F57BDCA6F0E0BED387* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_m5A0E1306BBC4B0F1118D05CD084D7E60B13DD376_gshared (Enumerator_tA7EC39CE1B8A2482A44DEE4E5F736BB3945E048C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC4FF02B97026C0CCC439FD7ED3DEFA306C098CE Enumerator_get_Current_m9424B04BBD0560732E1913809F3725C44401977C_gshared_inline (Enumerator_tA7EC39CE1B8A2482A44DEE4E5F736BB3945E048C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t KeyValuePair_2_get_Value_mD9B8955E1A15CC8D0F45A0938E0AD24926071553_gshared_inline (KeyValuePair_2_tFC4FF02B97026C0CCC439FD7ED3DEFA306C098CE* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m7BB28F194F5C57BC3C671D140718EAB7C8A7D43C_gshared (Enumerator_tA7EC39CE1B8A2482A44DEE4E5F736BB3945E048C* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m7EE54C381A95D31D447DDC6350E39CE5C247A3A3_gshared (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 ___0_item, const RuntimeMethod* method) ;
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_RegisterAuthorizationRequestCallback_mCA40A1376B88E5CB45368F1814B8E29C82E16502 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Monitor_Exit_m05B2CF037E2214B3208198C282490A2A475653FA (RuntimeObject* ___0_obj, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149 (RuntimeObject* ___0_obj, bool* ___1_lockTaken, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthorizationRequest_set_IsFinished_m9AF9F366ABC34678151252ECFC3B4FF6959E6ED9_inline (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthorizationRequest_set_Granted_mFC66547317A168FF388E5AFA19A4A1F31AAF7033_inline (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthorizationRequest_set_Error_m0310B101EB0CDE8DEF8FAA58E69513A810AF5F41_inline (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthorizationRequest_set_DeviceToken_mDF3A4418B4B1D213AE14E590BCB36BD3C5FADAE3_inline (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC GCHandle_FromIntPtr_mA7848A4285D007CADC52B6272DB243C8FDFD5FAC (intptr_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GCHandle_get_Target_m481F9508DA5E384D33CD1F4450060DC56BBD4CD5_inline (GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GCHandle_Free_m1320A260E487EB1EA6D95F9E54BFFCB5A4EF83A3 (GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequest_OnAuthorizationRequestCompleted_m9A40CB3464048A5E0EE673AC50FF9AB462B7CD3E (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ___0_requestData, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogException_mAB3F4DC7297ED8FBB49DAA718B70E59A6B0171B0 (Exception_t* ___0_exception, const RuntimeMethod* method) ;
+inline void Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, String_t* ___0_key, String_t* ___1_value, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, String_t*, String_t*, const RuntimeMethod*))Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_gshared)(__this, ___0_key, ___1_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5 (int32_t* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationTimeIntervalTrigger_get_Repeats_mFE259880B9E33257AC4D52608430BE18906C7EBD_inline (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentException__ctor_m026938A67AF9D36BB7ED27F80425D7194B514465 (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* __this, String_t* ___0_message, const RuntimeMethod* method) ;
+inline void Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationCalendarTrigger_get_UtcTime_m5AA0A42A0D637AEC93FEE561A327E1910AE88E90_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Year_m374E19995A7D455F538AD624B45038314F67A552_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) ;
+inline bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*, const RuntimeMethod*))Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline)(__this, method);
+}
+inline int32_t Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*, const RuntimeMethod*))Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_gshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Month_mDB1FF22A26190D324FA2E318A568DADD8052B880_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Day_mC4F7971F8793F44ABC30D0EF92ACB3E48764E0AB_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Hour_mCD81C83676F017602B51D1F20874004DCA39FF6F_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Minute_m97CA25E0086BCBCA95CFE75393756A0831B32124_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Second_m676B6BFE09F0C90AFF8CF222D4C8D859C9DA184F_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationCalendarTrigger_get_Repeats_m9F42C284F442180685A54C0108DFF7C3DBEC909E_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double iOSNotificationLocationTrigger_get_Latitude_m4DE69E4FEA40E9BEECBE69F3B4087929B9D097C7_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double iOSNotificationLocationTrigger_get_Longitude_mA6F70FD2BDD9797246165AC7FE98447E5AD4DF00_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationLocationTrigger_get_NotifyOnEntry_m1CAB623B32CC86E1D88991D5D8D6610524C5F010_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationLocationTrigger_get_NotifyOnExit_m8D0AAD323FAF46CA0DFCCE6FFE6C496A398E3FD6_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float iOSNotificationLocationTrigger_get_Radius_m0C88F4129F152878B4992FBCC5F74209168C6065_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationLocationTrigger_get_Repeats_m8C0B2F1321CE19C7BEC39F45685502FE66D7A9D5_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8 (String_t* ___0_format, RuntimeObject* ___1_arg0, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F (Exception_t* __this, String_t* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DateTime_ToString_m6963A84785C320DA776C9FCFFEDAF26C8F1A8D78 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, String_t* ___0_format, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotification_GenerateUniqueID_mD6A35B90F34C752248B213A19EDCDC720EBF9C45 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification__ctor_m1EC6737F4C8ACFEA13E12E9F5F51C2F808AFEC58 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, String_t* ___0_identifier, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_Data_mDDEDDFDC4DA023124B7CC8D0AA882F3EFD6C334A (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_ShowInForeground_mB8363BB4B0C40234B565A24F6A979641DBA5A8D8 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_ForegroundPresentationOption_mE95C0D442FB78AC8ED3137CA19BF4C12963D2D57 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_InterruptionLevel_m5002199C8A5587D57D03283520AB5F19FCACBD10 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_RelevanceScore_mD639A6AE30BFA773E4205FD8ACB6376316EB9DD6 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, double ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotification_set_Attachments_m93E8FB777A55F4C6AB38922DBD0A0C8E9890D15C_inline (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 iOSNotification_get_SoundVolume_m78AE382CC86FF14B9F75B8AF12490A6724DF1DA0_inline (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, const RuntimeMethod* method) ;
+inline bool Nullable_1_get_HasValue_mC149B1C717AF506BBE8932F2C1DC86C378D17EA8_inline (Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75*, const RuntimeMethod*))Nullable_1_get_HasValue_mC149B1C717AF506BBE8932F2C1DC86C378D17EA8_gshared_inline)(__this, method);
+}
+inline float Nullable_1_get_Value_mE3B978271FFA8D9DEE17BFB34320A3C67BE148EA (Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75* __this, const RuntimeMethod* method)
+{
+	return ((  float (*) (Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75*, const RuntimeMethod*))Nullable_1_get_Value_mE3B978271FFA8D9DEE17BFB34320A3C67BE148EA_gshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* iOSNotification_get_Attachments_m54CA2BC5B43417D01136FE5A72B0A0BD2636549D_inline (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationAction_get_Id_m2EDC9A71F4912737711EAE8C9B09D8D496A3E3FA_inline (iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationAction_get_Title_m44DF5E056FD6A12373E6AA43A2841BE2DB3EE012_inline (iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t iOSNotificationAction_get_Options_mEEDBE525091EDE4B06F7638293682C1AB9DFC65D_inline (iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__CreateUNNotificationAction_m04EA43D32BFCCC435B32F9313DAD1708A5E1EAA2 (String_t* ___0_id, String_t* ___1_title, int32_t ___2_options, int32_t ___3_iconType, String_t* ___4_icon, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationAttachment_get_Id_m8A551CB233C83D05BDDACF9688CBECAAF9846C15_inline (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationAttachment_set_Id_m7401F5705B3B4ADDC0DA5B372FE4579418891E7E_inline (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationAttachment_get_Url_mE0C69FB858552B293B9C0BDDFF2894FC6EBE9BF0_inline (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationAttachment_set_Url_m4F0B407457097EC2DEFDCD296E07CDDF624DE202_inline (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+inline iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* List_1_ToArray_m8FE3E081900C426C6F1CC9B83DEA764301795167 (List_1_tC1CA64216E385BF5F13004E02F90F6B326BEA8F3* __this, const RuntimeMethod* method)
+{
+	return ((  iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* (*) (List_1_tC1CA64216E385BF5F13004E02F90F6B326BEA8F3*, const RuntimeMethod*))List_1_ToArray_mD7E4F8E7C11C3C67CB5739FCC0A6E86106A6291F_gshared)(__this, method);
+}
+inline StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* List_1_ToArray_m2C402D882AA60FC1D5C7C09A129BE7779F833B4A (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* __this, const RuntimeMethod* method)
+{
+	return ((  StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* (*) (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*, const RuntimeMethod*))List_1_ToArray_mD7E4F8E7C11C3C67CB5739FCC0A6E86106A6291F_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_SetApplicationBadge_m340452ADA2F0E0C35F2E034B97AAE8F86827893B (int32_t ___0_badge, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_RegisterOnReceivedCallback_m44AE9926E98242E6F356EBA0281584623627B436 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationCenter_Initialize_m3ABD98E821A5025EDC2B8D97F5851194A336DA5F (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 iOSNotification_GetDataForSending_m389ADA195D034D80F017CE145C149AFD66996B69 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_ScheduleLocalNotification_m2C66F2E8B8E6A438424896D297650C6AF4228361 (iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_data, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__RemoveAllScheduledNotifications_m9B342D2C0E7C7824E1B2A386D16C1E8C306C9607 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__RemoveAllDeliveredNotifications_m23751F2136004EBC7AF50B4E95988D203FD520B5 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification__ctor_m480637048FB144A8C2E4014549FFEE9D4299F6E8 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_data, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_inline (NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationReceivedCallback__ctor_mF2B904C1330647023D5E7ECE08EDA8266BE8F55E (NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m4E1D6DB8C20ABB34DA458F6F8EAAEACD25B2208B (U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_AuthorizationRequestReceived_m4A6C75E5BFEA2C3E529F2F8CEEA8A813F428B3CD (intptr_t ___0_request, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ___1_data, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_RemoteNotificationReceived_mBF44180FD060AC5811C9979FE6E771650AA35212 (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_data, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_NotificationReceived_mB7F4859AF321D5AF115D70F4BD8AB131543D7524 (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_data, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_ReceiveNSDictionaryKeyValue_m57E371B7275602846E05E0770BFA78C6641BC856 (intptr_t ___0_dict, String_t* ___1_key, String_t* ___2_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_ReceiveUNNotificationAttachment_mF8194BDA3434E46D10AF292C61D4F3E00B654652 (intptr_t ___0_array, String_t* ___1_id, String_t* ___2_url, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequestCallback__ctor_mE709FAE919D090ACC25038070BD2145F520DA0FE (AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__SetAuthorizationRequestReceivedDelegate_m88B1999865C9603B8A628DC185980C62A11E1731 (AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD* ___0_callback, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationReceivedCallback__ctor_m3448352ED953E95C4E5BAAE13D4C576B7161B772 (NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__SetRemoteNotificationReceivedDelegate_mABF9B547DD1F0D569E1E8B202FC8312DA876EBA1 (NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* ___0_callback, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__SetNotificationReceivedDelegate_m7EF790D86C1B8E585CFBD1872FABA96171D07A3A (NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* ___0_callback, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequest_OnAuthorizationRequestCompleted_m0F1A24F99EF966055A145B95406B0DE10ACF92A8 (intptr_t ___0_request, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ___1_requestData, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 iOSNotificationsWrapper_NotificationDataToDataWithUserInfo_mF4B498474102C537FAE4B24B8B1AE8613285A797 (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_data, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCenter_OnReceivedRemoteNotification_mC510FFDD28917371EB9312D7F6E2F63CDE03FC22 (iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_data, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCenter_OnSentNotification_m544D0B4C4887048904106DE1C463663A6DC3A906 (iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_data, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* iOSNotificationsWrapper_NSDictionaryToCs_m5A2FBC09A16627FC083C2EC31150C87ED4112D79 (intptr_t ___0_dict, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* iOSNotificationsWrapper_AttachmentsNSArrayToCs_mC89DB0002C5D4E8E443C2353E2FDB80190784128 (intptr_t ___0_array, const RuntimeMethod* method) ;
+inline void List_1_Add_m5AA65AE0FA98A54B451AF71C63369111FF50A855_inline (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129*, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933, const RuntimeMethod*))List_1_Add_m5AA65AE0FA98A54B451AF71C63369111FF50A855_gshared_inline)(__this, ___0_item, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__RequestAuthorization_mEA8CA44C7AA697DB3EA9D2C460924997CC075315 (intptr_t ___0_request, int32_t ___1_options, bool ___2_registerForRemote, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationsWrapper__RegisteredForRemoteNotifications_m7074DD3AC9D6067AA3181B38DE45A5A88888D6D7 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__UnregisterForRemoteNotifications_m44C6C0542E80A9B534E9443A56E679EA44CCDEC4 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationSettings_tBDCE6AE27851787C044FEBC52ED202D4BBD24B21 iOSNotificationsWrapper__GetNotificationSettings_m8DF3328D33595477ADD49C37CC36DA7553BF1077 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper_CsDictionaryToObjC_mB8AE5486D42735F580154E24CFB8A024A8E47CE9 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___0_userInfo, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper_CsAttachmentsToObjc_m8EF0E9BAFFCCEE6A5EEC8C7D371C4BA1C5E15BF2 (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* ___0_attachments, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__ScheduleLocalNotification_mD2CC306854403F4BBE98648D761A41726BC75F7C (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_data, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__GetDeliveredNotificationDataArray_m9416BEB875EA2D48C0927E85288E603D38AD92C0 (int32_t* ___0_count, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* iOSNotificationsWrapper_MarshalAndFreeNotificationDataArray_m99000C4908D655F245E2EC76029B2B9718D7E491 (intptr_t ___0_ptr, int32_t ___1_count, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationsWrapper__GetLastRespondedNotificationAction_mB6983CAFA2D834C868567F605F55CB844702BFF1 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationsWrapper__GetLastRespondedNotificationUserText_m39B79F2BDFA59A8780D852E5C8BBB4086E3A609B (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__GetScheduledNotificationDataArray_m17748B95E93D87E25DF727C4A77348CAF8686457 (int32_t* ___0_count, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57 (RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ___0_handle, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Marshal_SizeOf_mED64846722033D6F60C2973CA604B7C2D7D4A1B7 (Type_t* ___0_t, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Marshal_PtrToStructure_m235E141E21BFB69A01B07DDDF1702BA7D5723AC3 (intptr_t ___0_ptr, Type_t* ___1_structureType, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t IntPtr_op_Addition_m6887593F991D01CEB382C914B7FDFA29CB900E2A (intptr_t ___0_pointer, int32_t ___1_offset, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__FreeUnmanagediOSNotificationDataArray_m9BBE43390A00107B926480FA5C2062B81A8F1B1A (intptr_t ___0_ptr, int32_t ___1_count, const RuntimeMethod* method) ;
+inline Enumerator_t173E7BE1F35CA448C7E0EE77345C9E0EC0206562 Dictionary_2_GetEnumerator_m46EC45F42CA2279D83568CD3F216AAABA8E749F6 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, const RuntimeMethod* method)
+{
+	return ((  Enumerator_t173E7BE1F35CA448C7E0EE77345C9E0EC0206562 (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, const RuntimeMethod*))Dictionary_2_GetEnumerator_m52AB12790B0B9B46B1DFB1F861C9DBEAB07C1FDA_gshared)(__this, method);
+}
+inline void Enumerator_Dispose_m068DDFF5CAFBB15C8A0602DEADA7F10C5BB7ADCD (Enumerator_t173E7BE1F35CA448C7E0EE77345C9E0EC0206562* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_t173E7BE1F35CA448C7E0EE77345C9E0EC0206562*, const RuntimeMethod*))Enumerator_Dispose_mEA5E01B81EB943B7003D87CEC1B6040524F0402C_gshared)(__this, method);
+}
+inline KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A Enumerator_get_Current_m49070E88C2E34AB46E6292A3FB1C227576B8506E_inline (Enumerator_t173E7BE1F35CA448C7E0EE77345C9E0EC0206562* __this, const RuntimeMethod* method)
+{
+	return ((  KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A (*) (Enumerator_t173E7BE1F35CA448C7E0EE77345C9E0EC0206562*, const RuntimeMethod*))Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_gshared_inline)(__this, method);
+}
+inline String_t* KeyValuePair_2_get_Key_m654BCCAE2F20CB11D8E8C2D2C886A0C8A13EB1C4_inline (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A* __this, const RuntimeMethod* method)
+{
+	return ((  String_t* (*) (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A*, const RuntimeMethod*))KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline)(__this, method);
+}
+inline String_t* KeyValuePair_2_get_Value_m7345512A32CB4DCAA0643050B18DC8DCD71B927A_inline (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A* __this, const RuntimeMethod* method)
+{
+	return ((  String_t* (*) (KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A*, const RuntimeMethod*))KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__AddItemToNSDictionary_m3798785725CBF97127669F924EE9E35B336D41A5 (intptr_t ___0_dict, String_t* ___1_key, String_t* ___2_value, const RuntimeMethod* method) ;
+inline bool Enumerator_MoveNext_mA93491D9B55547D066053F3BC0A69C635F877438 (Enumerator_t173E7BE1F35CA448C7E0EE77345C9E0EC0206562* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_t173E7BE1F35CA448C7E0EE77345C9E0EC0206562*, const RuntimeMethod*))Enumerator_MoveNext_mCD4950A75FFADD54AF354D48C6C0DB0B5A22A5F4_gshared)(__this, method);
+}
+inline int32_t List_1_get_Count_m3CB4D035F9ED8FB5E637FFC298A063FD58C0FC06_inline (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129*, const RuntimeMethod*))List_1_get_Count_m3CB4D035F9ED8FB5E637FFC298A063FD58C0FC06_gshared_inline)(__this, method);
+}
+inline Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2 List_1_GetEnumerator_m85DC382BDB220A86D7F10CD22CD1EADCBA5D6C29 (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, const RuntimeMethod* method)
+{
+	return ((  Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2 (*) (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129*, const RuntimeMethod*))List_1_GetEnumerator_m85DC382BDB220A86D7F10CD22CD1EADCBA5D6C29_gshared)(__this, method);
+}
+inline void Enumerator_Dispose_m95922EA1AC2DAA1D6A62F9CEDB8B2E71B49214BA (Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2*, const RuntimeMethod*))Enumerator_Dispose_m95922EA1AC2DAA1D6A62F9CEDB8B2E71B49214BA_gshared)(__this, method);
+}
+inline iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 Enumerator_get_Current_m8C61C8C66929068D7ED0AACA335678BF2551F90C_inline (Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2* __this, const RuntimeMethod* method)
+{
+	return ((  iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 (*) (Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2*, const RuntimeMethod*))Enumerator_get_Current_m8C61C8C66929068D7ED0AACA335678BF2551F90C_gshared_inline)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__AddAttachmentToNSArray_m84054FBACB7477A05721E119B028523ACA016F16 (intptr_t ___0_atts, String_t* ___1_id, String_t* ___2_url, intptr_t* ___3_error, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Inequality_m90EFC9C4CAD9A33E309F2DDF98EE4E1DD253637B_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__ReleaseNSObject_mFFAD0F85055C706E8A5479A81B66A663831368FE (intptr_t ___0_obj, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationsWrapper__NSErrorToMessage_m621C81B674107D57D52569733B5F7FAD29869C69 (intptr_t ___0_error, const RuntimeMethod* method) ;
+inline bool Enumerator_MoveNext_m5AF13D1DDEFE6AC1F317C3F1861616F12D72E441 (Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2*, const RuntimeMethod*))Enumerator_MoveNext_m5AF13D1DDEFE6AC1F317C3F1861616F12D72E441_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC GCHandle_Alloc_m845AB5ED62859B099C023F34C05BEAEDB4AFE27D (RuntimeObject* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GCHandle_ToIntPtr_m45294AA913461A070BD555F81103A8BF2E5ED976 (GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReceiveNSDictionaryKeyValueCallback__ctor_m7E31544BB059836C992783780D71576AA277A22D (ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__ReadNSDictionary_m1C436D4473181385D91702AAF13FB7D28A70F714 (intptr_t ___0_handle, intptr_t ___1_nsDict, ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4* ___2_callback, const RuntimeMethod* method) ;
+inline void List_1__ctor_mCA6A82D2347A66651ABA4216D8CAF21CBC97B06B (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129*, const RuntimeMethod*))List_1__ctor_mCA6A82D2347A66651ABA4216D8CAF21CBC97B06B_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReceiveUNNotificationAttachmentCallback__ctor_m205C4D08A16088C9897995C35D865C64EDC016FC (ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__ReadAttachmentsNSArray_m493603B5A3AC41CA7E9366B21F3A11F3E0F2DED4 (intptr_t ___0_handle, intptr_t ___1_nsArray, ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E* ___2_callback, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__SetApplicationBadge_m425633D16CA2A2A7AB652ADC723F37D499B64FF7 (int32_t ___0_badge, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationsWrapper__GetApplicationBadge_m53F1F38D3652F65C75E4ED7AE669F23B9D9628BC (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationsWrapper__GetAppOpenedUsingNotification_m6EDB04FD2C23285C778D51EC2F8D3E329AD73B31 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__GetLastNotificationData_mBDAFB058A017C90FFD50DE741698BE38F832A4D6 (const RuntimeMethod* method) ;
+inline void Nullable_1__ctor_m560689C7326F028C51F97F2CB36CB9CDCF15935C (Nullable_1_tE7C41C3C4F3877D5835C9E9568BDAADAD8FA67A8* __this, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_value, const RuntimeMethod* method)
+{
+	((  void (*) (Nullable_1_tE7C41C3C4F3877D5835C9E9568BDAADAD8FA67A8*, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5, const RuntimeMethod*))Nullable_1__ctor_m560689C7326F028C51F97F2CB36CB9CDCF15935C_gshared)(__this, ___0_value, method);
+}
+inline void Dictionary_2__ctor_m4ABDF05BA4B194A57967F3B53D7422F6439255F1 (Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9*, const RuntimeMethod*))Dictionary_2__ctor_m1191D06A22AB56CAEB33EB3C842940C1FDB9B77C_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* iOSNotificationCategory_get_Actions_m9958D87CD035EA242CEAB3BAC116C43B0CD8F895 (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478 (String_t* ___0_value, const RuntimeMethod* method) ;
+inline bool Dictionary_2_ContainsKey_mE0C48AA68D5546E0616D5D05E689FA0D00036203 (Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* __this, String_t* ___0_key, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9*, String_t*, const RuntimeMethod*))Dictionary_2_ContainsKey_mD7169108C4AD240C979A858B7985A20E1F21FFCF_gshared)(__this, ___0_key, method);
+}
+inline void Dictionary_2_set_Item_mA3778483431364C6C54E792CD1AC43576F137AB4 (Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* __this, String_t* ___0_key, intptr_t ___1_value, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9*, String_t*, intptr_t, const RuntimeMethod*))Dictionary_2_set_Item_mAAEF80C45B5DFFF50AF342166E34A5AE35E46349_gshared)(__this, ___0_key, ___1_value, method);
+}
+inline intptr_t Dictionary_2_get_Item_m800AA5B33449643DC97AC1FF1F653A3B9D15CFE8 (Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* __this, String_t* ___0_key, const RuntimeMethod* method)
+{
+	return ((  intptr_t (*) (Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9*, String_t*, const RuntimeMethod*))Dictionary_2_get_Item_mD2C69EEF36D11090873931986EDE898163A0824C_gshared)(__this, ___0_key, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__AddActionToNSArray_m686DFC012EFD29CFFD1BD4BF119F800C2FD29BCD (intptr_t ___0_actions, intptr_t ___1_action, int32_t ___2_capacity, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* iOSNotificationCategory_get_IntentIdentifiers_m91CA55C622A693C0AAF6C5CE75322E3084B50FAC (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__AddStringToNSArray_m0BAB7C567291148EBE50227723B436D2066988AC (intptr_t ___0_array, String_t* ___1_str, int32_t ___2_capacity, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationCategory_get_Id_m6A4071B537F6E5B51DA11DCB43613BBD691CFBA9_inline (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationCategory_get_HiddenPreviewsBodyPlaceholder_mCC5DF780F51E1AC578873FE372067DF14800A1C2_inline (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationCategory_get_SummaryFormat_m6835C27643601AFBCD4F51CA3E28C72E850164CB_inline (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t iOSNotificationCategory_get_Options_m93741379CF2DF82295080957832C1D37D3DFC961_inline (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__CreateUNNotificationCategory_m11D21B22ED4FDF28B5F08E37EFC108A10D1415CE (String_t* ___0_id, String_t* ___1_hiddenPreviewsBodyPlaceholder, String_t* ___2_summaryFormat, int32_t ___3_options, intptr_t ___4_actions, intptr_t ___5_intentIdentifiers, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__AddCategoryToCategorySet_m358D50AFD799BB064CD2F079A7F2B89E04C1AEE4 (intptr_t ___0_categorySet, intptr_t ___1_category, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__SetNotificationCategories_mD43856530598B70C8E32AF49A3D75E646484B46A (intptr_t ___0_categorySet, const RuntimeMethod* method) ;
+inline Enumerator_t4576E9828A5C7D89C43F2AD1D83855944862B6C8 Dictionary_2_GetEnumerator_m41265919586D29EB9B9463CA58C718650069662E (Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* __this, const RuntimeMethod* method)
+{
+	return ((  Enumerator_t4576E9828A5C7D89C43F2AD1D83855944862B6C8 (*) (Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9*, const RuntimeMethod*))Dictionary_2_GetEnumerator_m14943B04CF9F3275383FD9A602776571CA736339_gshared)(__this, method);
+}
+inline void Enumerator_Dispose_m3DBCD92FD0C9A216ADA0B3A7125D18F23AB20C44 (Enumerator_t4576E9828A5C7D89C43F2AD1D83855944862B6C8* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_t4576E9828A5C7D89C43F2AD1D83855944862B6C8*, const RuntimeMethod*))Enumerator_Dispose_m5A0E1306BBC4B0F1118D05CD084D7E60B13DD376_gshared)(__this, method);
+}
+inline KeyValuePair_2_t3FA9D502CC27B123E99A6A0DED92BFC1A6D755C6 Enumerator_get_Current_mF15CFF294BE6EAD4E0D494A943C48290FDE615CF_inline (Enumerator_t4576E9828A5C7D89C43F2AD1D83855944862B6C8* __this, const RuntimeMethod* method)
+{
+	return ((  KeyValuePair_2_t3FA9D502CC27B123E99A6A0DED92BFC1A6D755C6 (*) (Enumerator_t4576E9828A5C7D89C43F2AD1D83855944862B6C8*, const RuntimeMethod*))Enumerator_get_Current_m9424B04BBD0560732E1913809F3725C44401977C_gshared_inline)(__this, method);
+}
+inline intptr_t KeyValuePair_2_get_Value_m4F01AB5E5AD186F63C33C6326B4020B0D76465D5_inline (KeyValuePair_2_t3FA9D502CC27B123E99A6A0DED92BFC1A6D755C6* __this, const RuntimeMethod* method)
+{
+	return ((  intptr_t (*) (KeyValuePair_2_t3FA9D502CC27B123E99A6A0DED92BFC1A6D755C6*, const RuntimeMethod*))KeyValuePair_2_get_Value_mD9B8955E1A15CC8D0F45A0938E0AD24926071553_gshared_inline)(__this, method);
+}
+inline bool Enumerator_MoveNext_m827F25AFA853D56D738631CA3CCFB0DABDE9C260 (Enumerator_t4576E9828A5C7D89C43F2AD1D83855944862B6C8* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_t4576E9828A5C7D89C43F2AD1D83855944862B6C8*, const RuntimeMethod*))Enumerator_MoveNext_m7BB28F194F5C57BC3C671D140718EAB7C8A7D43C_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationLocationTrigger_get_Type_m95AD5724B07112816285A5B3F9D72025C31D7B73 (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationTimeIntervalTrigger_get_Type_mC688FDD7770A276C2FE0862FB3208D07CA1A6849 (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double TimeSpan_get_TotalSeconds_mED686E7CECE6A76A7DC38518698B9199DB8CDEA8 (TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationTimeIntervalTrigger_set_TimeInterval_m8DDE94D778C187DAC0F82E324AF795E64E005130 (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationTimeIntervalTrigger_set_Repeats_m7A9109F22E610DF25D696DD1CDEED9B311FBE5B9_inline (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationCalendarTrigger_get_Type_mB3B8E3E49566CDA04FD16B12BDDD8F53CDEB0EBA (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Month_m6A0717CC00C5710782F55B6E8F235A8CCA783FCC_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Day_m8FB648F44C32FF032448CA475F56AF12FC7E760B_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Hour_m3322D5351F9E8EFC284E552E55BF145355F8CF60_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Minute_mF59941F1A7D0B027AACDAB8445DAC99DAE9AEE82_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Second_m2347F668195B9C4773D4B0B3B297221FF8561F7D_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Repeats_m61C090AF21271FBAEB5E30E8A37F349BE822AE07_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool GCHandle_get_IsAllocated_m241908103D8D867E11CCAB73C918729825E86843_inline (GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162 (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* __this, String_t* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool GCHandle_CanDereferenceHandle_mAAAC42D1268CEF3FDD040A3D1574773D08140579_inline (intptr_t ___0_handle, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GCHandle_GetRef_mAC7E58E62417209DC41C99F66BA70F0C3AA18DA8_inline (intptr_t ___0_handle, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GCHandle_GetTarget_mE0AF851834410E2AEA6285B2497751570236C794 (intptr_t ___0_handle, const RuntimeMethod* method) ;
+inline void List_1_AddWithResize_m7EE54C381A95D31D447DDC6350E39CE5C247A3A3 (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129*, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933, const RuntimeMethod*))List_1_AddWithResize_m7EE54C381A95D31D447DDC6350E39CE5C247A3A3_gshared)(__this, ___0_item, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void* IntPtr_op_Explicit_m2728CBA081E79B97DDCF1D4FAD77B309CA1E94BF (intptr_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C void DEFAULT_CALL _RequestAuthorization(intptr_t, int32_t, int32_t);
+IL2CPP_EXTERN_C int32_t DEFAULT_CALL _RegisteredForRemoteNotifications();
+IL2CPP_EXTERN_C void DEFAULT_CALL _UnregisterForRemoteNotifications();
+IL2CPP_EXTERN_C void DEFAULT_CALL _ScheduleLocalNotification(iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke);
+IL2CPP_EXTERN_C void DEFAULT_CALL _SetNotificationReceivedDelegate(Il2CppMethodPointer);
+IL2CPP_EXTERN_C void DEFAULT_CALL _SetRemoteNotificationReceivedDelegate(Il2CppMethodPointer);
+IL2CPP_EXTERN_C void DEFAULT_CALL _SetAuthorizationRequestReceivedDelegate(Il2CppMethodPointer);
+IL2CPP_EXTERN_C iOSNotificationSettings_tBDCE6AE27851787C044FEBC52ED202D4BBD24B21 DEFAULT_CALL _GetNotificationSettings();
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _GetScheduledNotificationDataArray(int32_t*);
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _GetDeliveredNotificationDataArray(int32_t*);
+IL2CPP_EXTERN_C void DEFAULT_CALL _RemoveScheduledNotification(char*);
+IL2CPP_EXTERN_C void DEFAULT_CALL _RemoveAllScheduledNotifications();
+IL2CPP_EXTERN_C void DEFAULT_CALL _RemoveDeliveredNotification(char*);
+IL2CPP_EXTERN_C void DEFAULT_CALL _SetApplicationBadge(int32_t);
+IL2CPP_EXTERN_C int32_t DEFAULT_CALL _GetApplicationBadge();
+IL2CPP_EXTERN_C int32_t DEFAULT_CALL _GetAppOpenedUsingNotification();
+IL2CPP_EXTERN_C void DEFAULT_CALL _RemoveAllDeliveredNotifications();
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _GetLastNotificationData();
+IL2CPP_EXTERN_C char* DEFAULT_CALL _GetLastRespondedNotificationAction();
+IL2CPP_EXTERN_C char* DEFAULT_CALL _GetLastRespondedNotificationUserText();
+IL2CPP_EXTERN_C void DEFAULT_CALL _FreeUnmanagediOSNotificationDataArray(intptr_t, int32_t);
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _AddItemToNSDictionary(intptr_t, char*, char*);
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _AddAttachmentToNSArray(intptr_t, char*, char*, intptr_t*);
+IL2CPP_EXTERN_C void DEFAULT_CALL _ReadNSDictionary(intptr_t, intptr_t, Il2CppMethodPointer);
+IL2CPP_EXTERN_C void DEFAULT_CALL _ReadAttachmentsNSArray(intptr_t, intptr_t, Il2CppMethodPointer);
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _CreateUNNotificationAction(char*, char*, int32_t, int32_t, char*);
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _CreateUNTextInputNotificationAction(char*, char*, int32_t, int32_t, char*, char*, char*);
+IL2CPP_EXTERN_C void DEFAULT_CALL _ReleaseNSObject(intptr_t);
+IL2CPP_EXTERN_C char* DEFAULT_CALL _NSErrorToMessage(intptr_t);
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _AddActionToNSArray(intptr_t, intptr_t, int32_t);
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _CreateUNNotificationCategory(char*, char*, char*, int32_t, intptr_t, intptr_t);
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _AddCategoryToCategorySet(intptr_t, intptr_t);
+IL2CPP_EXTERN_C void DEFAULT_CALL _SetNotificationCategories(intptr_t);
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL _AddStringToNSArray(intptr_t, char*, int32_t);
+IL2CPP_EXTERN_C void DEFAULT_CALL _OpenNotificationSettings();
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_pinvoke(const iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC& unmarshaled, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke& marshaled)
+{
+	marshaled.___granted = unmarshaled.___granted;
+	marshaled.___error = il2cpp_codegen_marshal_string(unmarshaled.___error);
+	marshaled.___deviceToken = il2cpp_codegen_marshal_string(unmarshaled.___deviceToken);
+}
+IL2CPP_EXTERN_C void iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_pinvoke_back(const iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke& marshaled, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC& unmarshaled)
+{
+	int32_t unmarshaledgranted_temp_0 = 0;
+	unmarshaledgranted_temp_0 = marshaled.___granted;
+	unmarshaled.___granted = unmarshaledgranted_temp_0;
+	unmarshaled.___error = il2cpp_codegen_marshal_string_result(marshaled.___error);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___error), (void*)il2cpp_codegen_marshal_string_result(marshaled.___error));
+	unmarshaled.___deviceToken = il2cpp_codegen_marshal_string_result(marshaled.___deviceToken);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___deviceToken), (void*)il2cpp_codegen_marshal_string_result(marshaled.___deviceToken));
+}
+IL2CPP_EXTERN_C void iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_pinvoke_cleanup(iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke& marshaled)
+{
+	il2cpp_codegen_marshal_free(marshaled.___error);
+	marshaled.___error = NULL;
+	il2cpp_codegen_marshal_free(marshaled.___deviceToken);
+	marshaled.___deviceToken = NULL;
+}
+IL2CPP_EXTERN_C void iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_com(const iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC& unmarshaled, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_com& marshaled)
+{
+	marshaled.___granted = unmarshaled.___granted;
+	marshaled.___error = il2cpp_codegen_marshal_bstring(unmarshaled.___error);
+	marshaled.___deviceToken = il2cpp_codegen_marshal_bstring(unmarshaled.___deviceToken);
+}
+IL2CPP_EXTERN_C void iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_com_back(const iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_com& marshaled, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC& unmarshaled)
+{
+	int32_t unmarshaledgranted_temp_0 = 0;
+	unmarshaledgranted_temp_0 = marshaled.___granted;
+	unmarshaled.___granted = unmarshaledgranted_temp_0;
+	unmarshaled.___error = il2cpp_codegen_marshal_bstring_result(marshaled.___error);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___error), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___error));
+	unmarshaled.___deviceToken = il2cpp_codegen_marshal_bstring_result(marshaled.___deviceToken);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___deviceToken), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___deviceToken));
+}
+IL2CPP_EXTERN_C void iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_com_cleanup(iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_com& marshaled)
+{
+	il2cpp_codegen_marshal_free_bstring(marshaled.___error);
+	marshaled.___error = NULL;
+	il2cpp_codegen_marshal_free_bstring(marshaled.___deviceToken);
+	marshaled.___deviceToken = NULL;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequest_set_IsFinished_m9AF9F366ABC34678151252ECFC3B4FF6959E6ED9 (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = ___0_value;
+		__this->___m_IsFinished = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequest_set_Granted_mFC66547317A168FF388E5AFA19A4A1F31AAF7033 (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = ___0_value;
+		__this->___m_Granted = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequest_set_Error_m0310B101EB0CDE8DEF8FAA58E69513A810AF5F41 (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___0_value;
+		__this->___m_Error = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Error), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequest_set_DeviceToken_mDF3A4418B4B1D213AE14E590BCB36BD3C5FADAE3 (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___0_value;
+		__this->___m_DeviceToken = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DeviceToken), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequest__cctor_m79A3F9A51C73D573D6140DECD00F26458A13B6EA (const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationsWrapper_RegisterAuthorizationRequestCallback_mCA40A1376B88E5CB45368F1814B8E29C82E16502(NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequest_OnAuthorizationRequestCompleted_m9A40CB3464048A5E0EE673AC50FF9AB462B7CD3E (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ___0_requestData, const RuntimeMethod* method) 
+{
+	AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* V_0 = NULL;
+	bool V_1 = false;
+	{
+		V_0 = __this;
+		V_1 = (bool)0;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_003c:
+			{
+				{
+					bool L_0 = V_1;
+					if (!L_0)
+					{
+						goto IL_0045;
+					}
+				}
+				{
+					AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* L_1 = V_0;
+					Monitor_Exit_m05B2CF037E2214B3208198C282490A2A475653FA(L_1, NULL);
+				}
+
+IL_0045:
+				{
+					return;
+				}
+			}
+		});
+		try
+		{
+			AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* L_2 = V_0;
+			Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149(L_2, (&V_1), NULL);
+			AuthorizationRequest_set_IsFinished_m9AF9F366ABC34678151252ECFC3B4FF6959E6ED9_inline(__this, (bool)1, NULL);
+			iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC L_3 = ___0_requestData;
+			int32_t L_4 = L_3.___granted;
+			AuthorizationRequest_set_Granted_mFC66547317A168FF388E5AFA19A4A1F31AAF7033_inline(__this, (bool)((!(((uint32_t)L_4) <= ((uint32_t)0)))? 1 : 0), NULL);
+			iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC L_5 = ___0_requestData;
+			String_t* L_6 = L_5.___error;
+			AuthorizationRequest_set_Error_m0310B101EB0CDE8DEF8FAA58E69513A810AF5F41_inline(__this, L_6, NULL);
+			iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC L_7 = ___0_requestData;
+			String_t* L_8 = L_7.___deviceToken;
+			AuthorizationRequest_set_DeviceToken_mDF3A4418B4B1D213AE14E590BCB36BD3C5FADAE3_inline(__this, L_8, NULL);
+			goto IL_0046;
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0046:
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequest_OnAuthorizationRequestCompleted_m0F1A24F99EF966055A145B95406B0DE10ACF92A8 (intptr_t ___0_request, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ___1_requestData, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	try
+	{
+		intptr_t L_0 = ___0_request;
+		GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC L_1;
+		L_1 = GCHandle_FromIntPtr_mA7848A4285D007CADC52B6272DB243C8FDFD5FAC(L_0, NULL);
+		V_0 = L_1;
+		RuntimeObject* L_2;
+		L_2 = GCHandle_get_Target_m481F9508DA5E384D33CD1F4450060DC56BBD4CD5_inline((&V_0), NULL);
+		GCHandle_Free_m1320A260E487EB1EA6D95F9E54BFFCB5A4EF83A3((&V_0), NULL);
+		iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC L_3 = ___1_requestData;
+		NullCheck(((AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6*)IsInstClass((RuntimeObject*)L_2, AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6_il2cpp_TypeInfo_var)));
+		AuthorizationRequest_OnAuthorizationRequestCompleted_m9A40CB3464048A5E0EE673AC50FF9AB462B7CD3E(((AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6*)IsInstClass((RuntimeObject*)L_2, AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6_il2cpp_TypeInfo_var)), L_3, NULL);
+		goto IL_0029;
+	}
+	catch(Il2CppExceptionWrapper& e)
+	{
+		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
+		{
+			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+			goto CATCH_0022;
+		}
+		throw e;
+	}
+
+CATCH_0022:
+	{
+		Exception_t* L_4 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
+		Debug_LogException_mAB3F4DC7297ED8FBB49DAA718B70E59A6B0171B0(L_4, NULL);
+		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
+		goto IL_0029;
+	}
+
+IL_0029:
+	{
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke(const iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED& unmarshaled, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke& marshaled)
+{
+	marshaled.___identifier = il2cpp_codegen_marshal_string(unmarshaled.___identifier);
+	marshaled.___title = il2cpp_codegen_marshal_string(unmarshaled.___title);
+	marshaled.___body = il2cpp_codegen_marshal_string(unmarshaled.___body);
+	marshaled.___badge = unmarshaled.___badge;
+	marshaled.___subtitle = il2cpp_codegen_marshal_string(unmarshaled.___subtitle);
+	marshaled.___categoryIdentifier = il2cpp_codegen_marshal_string(unmarshaled.___categoryIdentifier);
+	marshaled.___threadIdentifier = il2cpp_codegen_marshal_string(unmarshaled.___threadIdentifier);
+	marshaled.___soundType = unmarshaled.___soundType;
+	marshaled.___soundVolume = unmarshaled.___soundVolume;
+	marshaled.___soundName = il2cpp_codegen_marshal_string(unmarshaled.___soundName);
+	marshaled.___interruptionLevel = unmarshaled.___interruptionLevel;
+	marshaled.___relevanceScore = unmarshaled.___relevanceScore;
+	marshaled.___userInfo = unmarshaled.___userInfo;
+	marshaled.___attachments = unmarshaled.___attachments;
+	marshaled.___triggerType = unmarshaled.___triggerType;
+	marshaled.___trigger = unmarshaled.___trigger;
+}
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke_back(const iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke& marshaled, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED& unmarshaled)
+{
+	unmarshaled.___identifier = il2cpp_codegen_marshal_string_result(marshaled.___identifier);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___identifier), (void*)il2cpp_codegen_marshal_string_result(marshaled.___identifier));
+	unmarshaled.___title = il2cpp_codegen_marshal_string_result(marshaled.___title);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___title), (void*)il2cpp_codegen_marshal_string_result(marshaled.___title));
+	unmarshaled.___body = il2cpp_codegen_marshal_string_result(marshaled.___body);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___body), (void*)il2cpp_codegen_marshal_string_result(marshaled.___body));
+	int32_t unmarshaledbadge_temp_3 = 0;
+	unmarshaledbadge_temp_3 = marshaled.___badge;
+	unmarshaled.___badge = unmarshaledbadge_temp_3;
+	unmarshaled.___subtitle = il2cpp_codegen_marshal_string_result(marshaled.___subtitle);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___subtitle), (void*)il2cpp_codegen_marshal_string_result(marshaled.___subtitle));
+	unmarshaled.___categoryIdentifier = il2cpp_codegen_marshal_string_result(marshaled.___categoryIdentifier);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___categoryIdentifier), (void*)il2cpp_codegen_marshal_string_result(marshaled.___categoryIdentifier));
+	unmarshaled.___threadIdentifier = il2cpp_codegen_marshal_string_result(marshaled.___threadIdentifier);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___threadIdentifier), (void*)il2cpp_codegen_marshal_string_result(marshaled.___threadIdentifier));
+	int32_t unmarshaledsoundType_temp_7 = 0;
+	unmarshaledsoundType_temp_7 = marshaled.___soundType;
+	unmarshaled.___soundType = unmarshaledsoundType_temp_7;
+	float unmarshaledsoundVolume_temp_8 = 0.0f;
+	unmarshaledsoundVolume_temp_8 = marshaled.___soundVolume;
+	unmarshaled.___soundVolume = unmarshaledsoundVolume_temp_8;
+	unmarshaled.___soundName = il2cpp_codegen_marshal_string_result(marshaled.___soundName);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___soundName), (void*)il2cpp_codegen_marshal_string_result(marshaled.___soundName));
+	int32_t unmarshaledinterruptionLevel_temp_10 = 0;
+	unmarshaledinterruptionLevel_temp_10 = marshaled.___interruptionLevel;
+	unmarshaled.___interruptionLevel = unmarshaledinterruptionLevel_temp_10;
+	double unmarshaledrelevanceScore_temp_11 = 0.0;
+	unmarshaledrelevanceScore_temp_11 = marshaled.___relevanceScore;
+	unmarshaled.___relevanceScore = unmarshaledrelevanceScore_temp_11;
+	intptr_t unmarshaleduserInfo_temp_12;
+	memset((&unmarshaleduserInfo_temp_12), 0, sizeof(unmarshaleduserInfo_temp_12));
+	unmarshaleduserInfo_temp_12 = marshaled.___userInfo;
+	unmarshaled.___userInfo = unmarshaleduserInfo_temp_12;
+	intptr_t unmarshaledattachments_temp_13;
+	memset((&unmarshaledattachments_temp_13), 0, sizeof(unmarshaledattachments_temp_13));
+	unmarshaledattachments_temp_13 = marshaled.___attachments;
+	unmarshaled.___attachments = unmarshaledattachments_temp_13;
+	int32_t unmarshaledtriggerType_temp_14 = 0;
+	unmarshaledtriggerType_temp_14 = marshaled.___triggerType;
+	unmarshaled.___triggerType = unmarshaledtriggerType_temp_14;
+	TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E unmarshaledtrigger_temp_15;
+	memset((&unmarshaledtrigger_temp_15), 0, sizeof(unmarshaledtrigger_temp_15));
+	unmarshaledtrigger_temp_15 = marshaled.___trigger;
+	unmarshaled.___trigger = unmarshaledtrigger_temp_15;
+}
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke_cleanup(iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke& marshaled)
+{
+	il2cpp_codegen_marshal_free(marshaled.___identifier);
+	marshaled.___identifier = NULL;
+	il2cpp_codegen_marshal_free(marshaled.___title);
+	marshaled.___title = NULL;
+	il2cpp_codegen_marshal_free(marshaled.___body);
+	marshaled.___body = NULL;
+	il2cpp_codegen_marshal_free(marshaled.___subtitle);
+	marshaled.___subtitle = NULL;
+	il2cpp_codegen_marshal_free(marshaled.___categoryIdentifier);
+	marshaled.___categoryIdentifier = NULL;
+	il2cpp_codegen_marshal_free(marshaled.___threadIdentifier);
+	marshaled.___threadIdentifier = NULL;
+	il2cpp_codegen_marshal_free(marshaled.___soundName);
+	marshaled.___soundName = NULL;
+}
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_com(const iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED& unmarshaled, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_com& marshaled)
+{
+	marshaled.___identifier = il2cpp_codegen_marshal_bstring(unmarshaled.___identifier);
+	marshaled.___title = il2cpp_codegen_marshal_bstring(unmarshaled.___title);
+	marshaled.___body = il2cpp_codegen_marshal_bstring(unmarshaled.___body);
+	marshaled.___badge = unmarshaled.___badge;
+	marshaled.___subtitle = il2cpp_codegen_marshal_bstring(unmarshaled.___subtitle);
+	marshaled.___categoryIdentifier = il2cpp_codegen_marshal_bstring(unmarshaled.___categoryIdentifier);
+	marshaled.___threadIdentifier = il2cpp_codegen_marshal_bstring(unmarshaled.___threadIdentifier);
+	marshaled.___soundType = unmarshaled.___soundType;
+	marshaled.___soundVolume = unmarshaled.___soundVolume;
+	marshaled.___soundName = il2cpp_codegen_marshal_bstring(unmarshaled.___soundName);
+	marshaled.___interruptionLevel = unmarshaled.___interruptionLevel;
+	marshaled.___relevanceScore = unmarshaled.___relevanceScore;
+	marshaled.___userInfo = unmarshaled.___userInfo;
+	marshaled.___attachments = unmarshaled.___attachments;
+	marshaled.___triggerType = unmarshaled.___triggerType;
+	marshaled.___trigger = unmarshaled.___trigger;
+}
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_com_back(const iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_com& marshaled, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED& unmarshaled)
+{
+	unmarshaled.___identifier = il2cpp_codegen_marshal_bstring_result(marshaled.___identifier);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___identifier), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___identifier));
+	unmarshaled.___title = il2cpp_codegen_marshal_bstring_result(marshaled.___title);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___title), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___title));
+	unmarshaled.___body = il2cpp_codegen_marshal_bstring_result(marshaled.___body);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___body), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___body));
+	int32_t unmarshaledbadge_temp_3 = 0;
+	unmarshaledbadge_temp_3 = marshaled.___badge;
+	unmarshaled.___badge = unmarshaledbadge_temp_3;
+	unmarshaled.___subtitle = il2cpp_codegen_marshal_bstring_result(marshaled.___subtitle);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___subtitle), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___subtitle));
+	unmarshaled.___categoryIdentifier = il2cpp_codegen_marshal_bstring_result(marshaled.___categoryIdentifier);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___categoryIdentifier), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___categoryIdentifier));
+	unmarshaled.___threadIdentifier = il2cpp_codegen_marshal_bstring_result(marshaled.___threadIdentifier);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___threadIdentifier), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___threadIdentifier));
+	int32_t unmarshaledsoundType_temp_7 = 0;
+	unmarshaledsoundType_temp_7 = marshaled.___soundType;
+	unmarshaled.___soundType = unmarshaledsoundType_temp_7;
+	float unmarshaledsoundVolume_temp_8 = 0.0f;
+	unmarshaledsoundVolume_temp_8 = marshaled.___soundVolume;
+	unmarshaled.___soundVolume = unmarshaledsoundVolume_temp_8;
+	unmarshaled.___soundName = il2cpp_codegen_marshal_bstring_result(marshaled.___soundName);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___soundName), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___soundName));
+	int32_t unmarshaledinterruptionLevel_temp_10 = 0;
+	unmarshaledinterruptionLevel_temp_10 = marshaled.___interruptionLevel;
+	unmarshaled.___interruptionLevel = unmarshaledinterruptionLevel_temp_10;
+	double unmarshaledrelevanceScore_temp_11 = 0.0;
+	unmarshaledrelevanceScore_temp_11 = marshaled.___relevanceScore;
+	unmarshaled.___relevanceScore = unmarshaledrelevanceScore_temp_11;
+	intptr_t unmarshaleduserInfo_temp_12;
+	memset((&unmarshaleduserInfo_temp_12), 0, sizeof(unmarshaleduserInfo_temp_12));
+	unmarshaleduserInfo_temp_12 = marshaled.___userInfo;
+	unmarshaled.___userInfo = unmarshaleduserInfo_temp_12;
+	intptr_t unmarshaledattachments_temp_13;
+	memset((&unmarshaledattachments_temp_13), 0, sizeof(unmarshaledattachments_temp_13));
+	unmarshaledattachments_temp_13 = marshaled.___attachments;
+	unmarshaled.___attachments = unmarshaledattachments_temp_13;
+	int32_t unmarshaledtriggerType_temp_14 = 0;
+	unmarshaledtriggerType_temp_14 = marshaled.___triggerType;
+	unmarshaled.___triggerType = unmarshaledtriggerType_temp_14;
+	TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E unmarshaledtrigger_temp_15;
+	memset((&unmarshaledtrigger_temp_15), 0, sizeof(unmarshaledtrigger_temp_15));
+	unmarshaledtrigger_temp_15 = marshaled.___trigger;
+	unmarshaled.___trigger = unmarshaledtrigger_temp_15;
+}
+IL2CPP_EXTERN_C void iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_com_cleanup(iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_com& marshaled)
+{
+	il2cpp_codegen_marshal_free_bstring(marshaled.___identifier);
+	marshaled.___identifier = NULL;
+	il2cpp_codegen_marshal_free_bstring(marshaled.___title);
+	marshaled.___title = NULL;
+	il2cpp_codegen_marshal_free_bstring(marshaled.___body);
+	marshaled.___body = NULL;
+	il2cpp_codegen_marshal_free_bstring(marshaled.___subtitle);
+	marshaled.___subtitle = NULL;
+	il2cpp_codegen_marshal_free_bstring(marshaled.___categoryIdentifier);
+	marshaled.___categoryIdentifier = NULL;
+	il2cpp_codegen_marshal_free_bstring(marshaled.___threadIdentifier);
+	marshaled.___threadIdentifier = NULL;
+	il2cpp_codegen_marshal_free_bstring(marshaled.___soundName);
+	marshaled.___soundName = NULL;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_Identifier_mE3145BABCFC0000F3C9AB6AD49DE7D784570635D (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_0 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		String_t* L_1 = ___0_value;
+		L_0->___identifier = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&L_0->___identifier), (void*)L_1);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_CategoryIdentifier_mE805009CDA125BD6038146FB774B1AAD213E7283 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_0 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		String_t* L_1 = ___0_value;
+		L_0->___categoryIdentifier = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&L_0->___categoryIdentifier), (void*)L_1);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_ThreadIdentifier_m1DB3535D83AC1CD4EBD5E0C84A40AB43D311E303 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_0 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		String_t* L_1 = ___0_value;
+		L_0->___threadIdentifier = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&L_0->___threadIdentifier), (void*)L_1);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_Title_mAAB437F0A9964DB9ACC46E386CB158E554287832 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_0 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		String_t* L_1 = ___0_value;
+		L_0->___title = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&L_0->___title), (void*)L_1);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_Body_m5AE05A830B4B0D56C09DE9BEDC210C5F1316DB92 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_0 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		String_t* L_1 = ___0_value;
+		L_0->___body = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&L_0->___body), (void*)L_1);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_ShowInForeground_mB8363BB4B0C40234B565A24F6A979641DBA5A8D8 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral14ECD5B329440AEF4A1AA1B6D967DAECF5BEC86F);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7471FC92FC1AA570D64A46C83CB352615E0781C2);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD8F50872454B1DDA643F3A29398B40D5880A7DDA);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* G_B2_0 = NULL;
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* G_B2_1 = NULL;
+	String_t* G_B1_0 = NULL;
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* G_B1_1 = NULL;
+	String_t* G_B3_0 = NULL;
+	String_t* G_B3_1 = NULL;
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* G_B3_2 = NULL;
+	{
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_0 = __this->___userInfo;
+		bool L_1 = ___0_value;
+		if (L_1)
+		{
+			G_B2_0 = _stringLiteral14ECD5B329440AEF4A1AA1B6D967DAECF5BEC86F;
+			G_B2_1 = L_0;
+			goto IL_0015;
+		}
+		G_B1_0 = _stringLiteral14ECD5B329440AEF4A1AA1B6D967DAECF5BEC86F;
+		G_B1_1 = L_0;
+	}
+	{
+		G_B3_0 = _stringLiteral7471FC92FC1AA570D64A46C83CB352615E0781C2;
+		G_B3_1 = G_B1_0;
+		G_B3_2 = G_B1_1;
+		goto IL_001a;
+	}
+
+IL_0015:
+	{
+		G_B3_0 = _stringLiteralD8F50872454B1DDA643F3A29398B40D5880A7DDA;
+		G_B3_1 = G_B2_0;
+		G_B3_2 = G_B2_1;
+	}
+
+IL_001a:
+	{
+		NullCheck(G_B3_2);
+		Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2(G_B3_2, G_B3_1, G_B3_0, Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_ForegroundPresentationOption_mE95C0D442FB78AC8ED3137CA19BF4C12963D2D57 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC2D955B52CE2A9A7D166E809868D6DAC459EF687);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_0 = __this->___userInfo;
+		int32_t L_1 = ___0_value;
+		V_0 = L_1;
+		String_t* L_2;
+		L_2 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_0), NULL);
+		NullCheck(L_0);
+		Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2(L_0, _stringLiteralC2D955B52CE2A9A7D166E809868D6DAC459EF687, L_2, Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_Badge_m91BE817449342EA5AAA3B0616B60363FFF39DCDD (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_0 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		int32_t L_1 = ___0_value;
+		L_0->___badge = L_1;
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 iOSNotification_get_SoundVolume_m78AE382CC86FF14B9F75B8AF12490A6724DF1DA0 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 L_0 = __this->___U3CSoundVolumeU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_InterruptionLevel_m5002199C8A5587D57D03283520AB5F19FCACBD10 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_0 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		int32_t L_1 = ___0_value;
+		L_0->___interruptionLevel = L_1;
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_RelevanceScore_mD639A6AE30BFA773E4205FD8ACB6376316EB9DD6 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, double ___0_value, const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_0 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		double L_1 = ___0_value;
+		L_0->___relevanceScore = L_1;
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_Data_mDDEDDFDC4DA023124B7CC8D0AA882F3EFD6C334A (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA44A39671D4B7FA8FBE50D795EAB52248D5C5469);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_0 = __this->___userInfo;
+		String_t* L_1 = ___0_value;
+		NullCheck(L_0);
+		Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2(L_0, _stringLiteralA44A39671D4B7FA8FBE50D795EAB52248D5C5469, L_1, Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* iOSNotification_get_Attachments_m54CA2BC5B43417D01136FE5A72B0A0BD2636549D (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, const RuntimeMethod* method) 
+{
+	{
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_0 = __this->___U3CAttachmentsU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_Attachments_m93E8FB777A55F4C6AB38922DBD0A0C8E9890D15C (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_0 = ___0_value;
+		__this->___U3CAttachmentsU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAttachmentsU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification_set_Trigger_m87A4F53B6CB98FE11AD98A5952F0CB2E95BCF52F (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7FC8D6A046F1C98C7C41C53A755D310105555A8C);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE91FE173F59B063D620A934CE1A010F2B114C1F3);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationTrigger_tC158EA08A8FCFBF7CF13CAF3A98EF0B1285C4AB1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48 V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	TimeTriggerData_t110F07D01BDEC0F8D7C1E625A581638C9AEE6823* G_B12_0 = NULL;
+	TimeTriggerData_t110F07D01BDEC0F8D7C1E625A581638C9AEE6823* G_B11_0 = NULL;
+	int32_t G_B13_0 = 0;
+	TimeTriggerData_t110F07D01BDEC0F8D7C1E625A581638C9AEE6823* G_B13_1 = NULL;
+	String_t* G_B18_0 = NULL;
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* G_B18_1 = NULL;
+	String_t* G_B17_0 = NULL;
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* G_B17_1 = NULL;
+	String_t* G_B19_0 = NULL;
+	String_t* G_B19_1 = NULL;
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* G_B19_2 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B21_0 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B20_0 = NULL;
+	int32_t G_B22_0 = 0;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B22_1 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B24_0 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B23_0 = NULL;
+	int32_t G_B25_0 = 0;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B25_1 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B27_0 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B26_0 = NULL;
+	int32_t G_B28_0 = 0;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B28_1 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B30_0 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B29_0 = NULL;
+	int32_t G_B31_0 = 0;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B31_1 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B33_0 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B32_0 = NULL;
+	int32_t G_B34_0 = 0;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B34_1 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B36_0 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B35_0 = NULL;
+	int32_t G_B37_0 = 0;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B37_1 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B39_0 = NULL;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B38_0 = NULL;
+	int32_t G_B40_0 = 0;
+	CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* G_B40_1 = NULL;
+	LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* G_B43_0 = NULL;
+	LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* G_B42_0 = NULL;
+	int32_t G_B44_0 = 0;
+	LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* G_B44_1 = NULL;
+	LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* G_B46_0 = NULL;
+	LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* G_B45_0 = NULL;
+	int32_t G_B47_0 = 0;
+	LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* G_B47_1 = NULL;
+	LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* G_B49_0 = NULL;
+	LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* G_B48_0 = NULL;
+	int32_t G_B50_0 = 0;
+	LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* G_B50_1 = NULL;
+	{
+		RuntimeObject* L_0 = ___0_value;
+		NullCheck(L_0);
+		int32_t L_1;
+		L_1 = InterfaceFuncInvoker0< int32_t >::Invoke(0, iOSNotificationTrigger_tC158EA08A8FCFBF7CF13CAF3A98EF0B1285C4AB1_il2cpp_TypeInfo_var, L_0);
+		V_0 = L_1;
+		int32_t L_2 = V_0;
+		if ((((int32_t)L_2) > ((int32_t)3)))
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		int32_t L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		int32_t L_4 = V_0;
+		if ((((int32_t)L_4) == ((int32_t)3)))
+		{
+			goto IL_032d;
+		}
+	}
+	{
+		goto IL_0312;
+	}
+
+IL_001a:
+	{
+		int32_t L_5 = V_0;
+		if ((((int32_t)L_5) == ((int32_t)((int32_t)10))))
+		{
+			goto IL_0094;
+		}
+	}
+	{
+		int32_t L_6 = V_0;
+		if ((((int32_t)L_6) == ((int32_t)((int32_t)20))))
+		{
+			goto IL_024b;
+		}
+	}
+	{
+		goto IL_0312;
+	}
+
+IL_002c:
+	{
+		RuntimeObject* L_7 = ___0_value;
+		V_1 = ((*(iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649*)UnBox(L_7, iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_il2cpp_TypeInfo_var)));
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_8 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_9 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_8->___trigger);
+		TimeTriggerData_t110F07D01BDEC0F8D7C1E625A581638C9AEE6823* L_10 = (TimeTriggerData_t110F07D01BDEC0F8D7C1E625A581638C9AEE6823*)(&L_9->___timeInterval);
+		iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649 L_11 = V_1;
+		int32_t L_12 = L_11.___timeInterval;
+		L_10->___interval = L_12;
+		bool L_13;
+		L_13 = iOSNotificationTimeIntervalTrigger_get_Repeats_mFE259880B9E33257AC4D52608430BE18906C7EBD_inline((&V_1), NULL);
+		if (!L_13)
+		{
+			goto IL_006c;
+		}
+	}
+	{
+		iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649 L_14 = V_1;
+		int32_t L_15 = L_14.___timeInterval;
+		if ((((int32_t)L_15) >= ((int32_t)((int32_t)60))))
+		{
+			goto IL_006c;
+		}
+	}
+	{
+		ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* L_16 = (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var)));
+		ArgumentException__ctor_m026938A67AF9D36BB7ED27F80425D7194B514465(L_16, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralF095BC29C39D74DCA3923E99C34901B64AF08344)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_16, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&iOSNotification_set_Trigger_m87A4F53B6CB98FE11AD98A5952F0CB2E95BCF52F_RuntimeMethod_var)));
+	}
+
+IL_006c:
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_17 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_18 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_17->___trigger);
+		TimeTriggerData_t110F07D01BDEC0F8D7C1E625A581638C9AEE6823* L_19 = (TimeTriggerData_t110F07D01BDEC0F8D7C1E625A581638C9AEE6823*)(&L_18->___timeInterval);
+		bool L_20;
+		L_20 = iOSNotificationTimeIntervalTrigger_get_Repeats_mFE259880B9E33257AC4D52608430BE18906C7EBD_inline((&V_1), NULL);
+		if (L_20)
+		{
+			G_B12_0 = L_19;
+			goto IL_0088;
+		}
+		G_B11_0 = L_19;
+	}
+	{
+		G_B13_0 = 0;
+		G_B13_1 = G_B11_0;
+		goto IL_0089;
+	}
+
+IL_0088:
+	{
+		G_B13_0 = 1;
+		G_B13_1 = G_B12_0;
+	}
+
+IL_0089:
+	{
+		G_B13_1->___repeats = (uint8_t)((int32_t)(uint8_t)G_B13_0);
+		goto IL_032d;
+	}
+
+IL_0094:
+	{
+		RuntimeObject* L_21 = ___0_value;
+		V_2 = ((*(iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*)UnBox(L_21, iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_il2cpp_TypeInfo_var)));
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_22 = __this->___userInfo;
+		if (L_22)
+		{
+			goto IL_00ae;
+		}
+	}
+	{
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_23 = (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*)il2cpp_codegen_object_new(Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052(L_23, Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052_RuntimeMethod_var);
+		__this->___userInfo = L_23;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___userInfo), (void*)L_23);
+	}
+
+IL_00ae:
+	{
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_24 = __this->___userInfo;
+		bool L_25;
+		L_25 = iOSNotificationCalendarTrigger_get_UtcTime_m5AA0A42A0D637AEC93FEE561A327E1910AE88E90_inline((&V_2), NULL);
+		if (L_25)
+		{
+			G_B18_0 = _stringLiteral7FC8D6A046F1C98C7C41C53A755D310105555A8C;
+			G_B18_1 = L_24;
+			goto IL_00c9;
+		}
+		G_B17_0 = _stringLiteral7FC8D6A046F1C98C7C41C53A755D310105555A8C;
+		G_B17_1 = L_24;
+	}
+	{
+		G_B19_0 = _stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024;
+		G_B19_1 = G_B17_0;
+		G_B19_2 = G_B17_1;
+		goto IL_00ce;
+	}
+
+IL_00c9:
+	{
+		G_B19_0 = _stringLiteralE91FE173F59B063D620A934CE1A010F2B114C1F3;
+		G_B19_1 = G_B18_0;
+		G_B19_2 = G_B18_1;
+	}
+
+IL_00ce:
+	{
+		NullCheck(G_B19_2);
+		Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2(G_B19_2, G_B19_1, G_B19_0, Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_26 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_27 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_26->___trigger);
+		CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* L_28 = (CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23*)(&L_27->___calendar);
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_29;
+		L_29 = iOSNotificationCalendarTrigger_get_Year_m374E19995A7D455F538AD624B45038314F67A552_inline((&V_2), NULL);
+		V_3 = L_29;
+		bool L_30;
+		L_30 = Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline((&V_3), Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		if (L_30)
+		{
+			G_B21_0 = L_28;
+			goto IL_00f7;
+		}
+		G_B20_0 = L_28;
+	}
+	{
+		G_B22_0 = (-1);
+		G_B22_1 = G_B20_0;
+		goto IL_0106;
+	}
+
+IL_00f7:
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_31;
+		L_31 = iOSNotificationCalendarTrigger_get_Year_m374E19995A7D455F538AD624B45038314F67A552_inline((&V_2), NULL);
+		V_3 = L_31;
+		int32_t L_32;
+		L_32 = Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA((&V_3), Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);
+		G_B22_0 = L_32;
+		G_B22_1 = G_B21_0;
+	}
+
+IL_0106:
+	{
+		G_B22_1->___year = G_B22_0;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_33 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_34 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_33->___trigger);
+		CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* L_35 = (CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23*)(&L_34->___calendar);
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_36;
+		L_36 = iOSNotificationCalendarTrigger_get_Month_mDB1FF22A26190D324FA2E318A568DADD8052B880_inline((&V_2), NULL);
+		V_3 = L_36;
+		bool L_37;
+		L_37 = Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline((&V_3), Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		if (L_37)
+		{
+			G_B24_0 = L_35;
+			goto IL_012f;
+		}
+		G_B23_0 = L_35;
+	}
+	{
+		G_B25_0 = (-1);
+		G_B25_1 = G_B23_0;
+		goto IL_013e;
+	}
+
+IL_012f:
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_38;
+		L_38 = iOSNotificationCalendarTrigger_get_Month_mDB1FF22A26190D324FA2E318A568DADD8052B880_inline((&V_2), NULL);
+		V_3 = L_38;
+		int32_t L_39;
+		L_39 = Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA((&V_3), Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);
+		G_B25_0 = L_39;
+		G_B25_1 = G_B24_0;
+	}
+
+IL_013e:
+	{
+		G_B25_1->___month = G_B25_0;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_40 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_41 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_40->___trigger);
+		CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* L_42 = (CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23*)(&L_41->___calendar);
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_43;
+		L_43 = iOSNotificationCalendarTrigger_get_Day_mC4F7971F8793F44ABC30D0EF92ACB3E48764E0AB_inline((&V_2), NULL);
+		V_3 = L_43;
+		bool L_44;
+		L_44 = Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline((&V_3), Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		if (L_44)
+		{
+			G_B27_0 = L_42;
+			goto IL_0167;
+		}
+		G_B26_0 = L_42;
+	}
+	{
+		G_B28_0 = (-1);
+		G_B28_1 = G_B26_0;
+		goto IL_0176;
+	}
+
+IL_0167:
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_45;
+		L_45 = iOSNotificationCalendarTrigger_get_Day_mC4F7971F8793F44ABC30D0EF92ACB3E48764E0AB_inline((&V_2), NULL);
+		V_3 = L_45;
+		int32_t L_46;
+		L_46 = Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA((&V_3), Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);
+		G_B28_0 = L_46;
+		G_B28_1 = G_B27_0;
+	}
+
+IL_0176:
+	{
+		G_B28_1->___day = G_B28_0;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_47 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_48 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_47->___trigger);
+		CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* L_49 = (CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23*)(&L_48->___calendar);
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_50;
+		L_50 = iOSNotificationCalendarTrigger_get_Hour_mCD81C83676F017602B51D1F20874004DCA39FF6F_inline((&V_2), NULL);
+		V_3 = L_50;
+		bool L_51;
+		L_51 = Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline((&V_3), Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		if (L_51)
+		{
+			G_B30_0 = L_49;
+			goto IL_019f;
+		}
+		G_B29_0 = L_49;
+	}
+	{
+		G_B31_0 = (-1);
+		G_B31_1 = G_B29_0;
+		goto IL_01ae;
+	}
+
+IL_019f:
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_52;
+		L_52 = iOSNotificationCalendarTrigger_get_Hour_mCD81C83676F017602B51D1F20874004DCA39FF6F_inline((&V_2), NULL);
+		V_3 = L_52;
+		int32_t L_53;
+		L_53 = Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA((&V_3), Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);
+		G_B31_0 = L_53;
+		G_B31_1 = G_B30_0;
+	}
+
+IL_01ae:
+	{
+		G_B31_1->___hour = G_B31_0;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_54 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_55 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_54->___trigger);
+		CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* L_56 = (CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23*)(&L_55->___calendar);
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_57;
+		L_57 = iOSNotificationCalendarTrigger_get_Minute_m97CA25E0086BCBCA95CFE75393756A0831B32124_inline((&V_2), NULL);
+		V_3 = L_57;
+		bool L_58;
+		L_58 = Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline((&V_3), Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		if (L_58)
+		{
+			G_B33_0 = L_56;
+			goto IL_01d7;
+		}
+		G_B32_0 = L_56;
+	}
+	{
+		G_B34_0 = (-1);
+		G_B34_1 = G_B32_0;
+		goto IL_01e6;
+	}
+
+IL_01d7:
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_59;
+		L_59 = iOSNotificationCalendarTrigger_get_Minute_m97CA25E0086BCBCA95CFE75393756A0831B32124_inline((&V_2), NULL);
+		V_3 = L_59;
+		int32_t L_60;
+		L_60 = Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA((&V_3), Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);
+		G_B34_0 = L_60;
+		G_B34_1 = G_B33_0;
+	}
+
+IL_01e6:
+	{
+		G_B34_1->___minute = G_B34_0;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_61 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_62 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_61->___trigger);
+		CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* L_63 = (CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23*)(&L_62->___calendar);
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_64;
+		L_64 = iOSNotificationCalendarTrigger_get_Second_m676B6BFE09F0C90AFF8CF222D4C8D859C9DA184F_inline((&V_2), NULL);
+		V_3 = L_64;
+		bool L_65;
+		L_65 = Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline((&V_3), Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		if (L_65)
+		{
+			G_B36_0 = L_63;
+			goto IL_020f;
+		}
+		G_B35_0 = L_63;
+	}
+	{
+		G_B37_0 = (-1);
+		G_B37_1 = G_B35_0;
+		goto IL_021e;
+	}
+
+IL_020f:
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_66;
+		L_66 = iOSNotificationCalendarTrigger_get_Second_m676B6BFE09F0C90AFF8CF222D4C8D859C9DA184F_inline((&V_2), NULL);
+		V_3 = L_66;
+		int32_t L_67;
+		L_67 = Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA((&V_3), Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);
+		G_B37_0 = L_67;
+		G_B37_1 = G_B36_0;
+	}
+
+IL_021e:
+	{
+		G_B37_1->___second = G_B37_0;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_68 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_69 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_68->___trigger);
+		CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23* L_70 = (CalendarTriggerData_t95CDF224E7B6165CE42899A54B3BADAE1B4BBB23*)(&L_69->___calendar);
+		bool L_71;
+		L_71 = iOSNotificationCalendarTrigger_get_Repeats_m9F42C284F442180685A54C0108DFF7C3DBEC909E_inline((&V_2), NULL);
+		if (L_71)
+		{
+			G_B39_0 = L_70;
+			goto IL_023f;
+		}
+		G_B38_0 = L_70;
+	}
+	{
+		G_B40_0 = 0;
+		G_B40_1 = G_B38_0;
+		goto IL_0240;
+	}
+
+IL_023f:
+	{
+		G_B40_0 = 1;
+		G_B40_1 = G_B39_0;
+	}
+
+IL_0240:
+	{
+		G_B40_1->___repeats = (uint8_t)((int32_t)(uint8_t)G_B40_0);
+		goto IL_032d;
+	}
+
+IL_024b:
+	{
+		RuntimeObject* L_72 = ___0_value;
+		V_4 = ((*(iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48*)UnBox(L_72, iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_il2cpp_TypeInfo_var)));
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_73 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_74 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_73->___trigger);
+		LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* L_75 = (LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC*)(&L_74->___location);
+		double L_76;
+		L_76 = iOSNotificationLocationTrigger_get_Latitude_m4DE69E4FEA40E9BEECBE69F3B4087929B9D097C7_inline((&V_4), NULL);
+		L_75->___latitude = L_76;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_77 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_78 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_77->___trigger);
+		LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* L_79 = (LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC*)(&L_78->___location);
+		double L_80;
+		L_80 = iOSNotificationLocationTrigger_get_Longitude_mA6F70FD2BDD9797246165AC7FE98447E5AD4DF00_inline((&V_4), NULL);
+		L_79->___longitude = L_80;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_81 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_82 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_81->___trigger);
+		LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* L_83 = (LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC*)(&L_82->___location);
+		bool L_84;
+		L_84 = iOSNotificationLocationTrigger_get_NotifyOnEntry_m1CAB623B32CC86E1D88991D5D8D6610524C5F010_inline((&V_4), NULL);
+		if (L_84)
+		{
+			G_B43_0 = L_83;
+			goto IL_02a7;
+		}
+		G_B42_0 = L_83;
+	}
+	{
+		G_B44_0 = 0;
+		G_B44_1 = G_B42_0;
+		goto IL_02a8;
+	}
+
+IL_02a7:
+	{
+		G_B44_0 = 1;
+		G_B44_1 = G_B43_0;
+	}
+
+IL_02a8:
+	{
+		G_B44_1->___notifyOnEntry = (uint8_t)((int32_t)(uint8_t)G_B44_0);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_85 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_86 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_85->___trigger);
+		LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* L_87 = (LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC*)(&L_86->___location);
+		bool L_88;
+		L_88 = iOSNotificationLocationTrigger_get_NotifyOnExit_m8D0AAD323FAF46CA0DFCCE6FFE6C496A398E3FD6_inline((&V_4), NULL);
+		if (L_88)
+		{
+			G_B46_0 = L_87;
+			goto IL_02ca;
+		}
+		G_B45_0 = L_87;
+	}
+	{
+		G_B47_0 = 0;
+		G_B47_1 = G_B45_0;
+		goto IL_02cb;
+	}
+
+IL_02ca:
+	{
+		G_B47_0 = 1;
+		G_B47_1 = G_B46_0;
+	}
+
+IL_02cb:
+	{
+		G_B47_1->___notifyOnExit = (uint8_t)((int32_t)(uint8_t)G_B47_0);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_89 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_90 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_89->___trigger);
+		LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* L_91 = (LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC*)(&L_90->___location);
+		float L_92;
+		L_92 = iOSNotificationLocationTrigger_get_Radius_m0C88F4129F152878B4992FBCC5F74209168C6065_inline((&V_4), NULL);
+		L_91->___radius = L_92;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_93 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E* L_94 = (TriggerData_t5B00176E3EB034DB9078E419981580696EB8D39E*)(&L_93->___trigger);
+		LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC* L_95 = (LocationTriggerData_t6C709C3123CDD15B8FA218B532776BAB4B0172FC*)(&L_94->___location);
+		bool L_96;
+		L_96 = iOSNotificationLocationTrigger_get_Repeats_m8C0B2F1321CE19C7BEC39F45685502FE66D7A9D5_inline((&V_4), NULL);
+		if (L_96)
+		{
+			G_B49_0 = L_95;
+			goto IL_0309;
+		}
+		G_B48_0 = L_95;
+	}
+	{
+		G_B50_0 = 0;
+		G_B50_1 = G_B48_0;
+		goto IL_030a;
+	}
+
+IL_0309:
+	{
+		G_B50_0 = 1;
+		G_B50_1 = G_B49_0;
+	}
+
+IL_030a:
+	{
+		G_B50_1->___repeats = (uint8_t)((int32_t)(uint8_t)G_B50_0);
+		goto IL_032d;
+	}
+
+IL_0312:
+	{
+		RuntimeObject* L_97 = ___0_value;
+		NullCheck(L_97);
+		int32_t L_98;
+		L_98 = InterfaceFuncInvoker0< int32_t >::Invoke(0, ((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&iOSNotificationTrigger_tC158EA08A8FCFBF7CF13CAF3A98EF0B1285C4AB1_il2cpp_TypeInfo_var)), L_97);
+		int32_t L_99 = L_98;
+		RuntimeObject* L_100 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&iOSNotificationTriggerType_t191C42E4D4E634B4694FB50559A1451AEFF6A19D_il2cpp_TypeInfo_var)), &L_99);
+		String_t* L_101;
+		L_101 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral88B697A2C9C4DE6D613594AF141EACF167383C3E)), L_100, NULL);
+		Exception_t* L_102 = (Exception_t*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
+		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_102, L_101, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_102, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&iOSNotification_set_Trigger_m87A4F53B6CB98FE11AD98A5952F0CB2E95BCF52F_RuntimeMethod_var)));
+	}
+
+IL_032d:
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_103 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		RuntimeObject* L_104 = ___0_value;
+		NullCheck(L_104);
+		int32_t L_105;
+		L_105 = InterfaceFuncInvoker0< int32_t >::Invoke(0, iOSNotificationTrigger_tC158EA08A8FCFBF7CF13CAF3A98EF0B1285C4AB1_il2cpp_TypeInfo_var, L_104);
+		L_103->___triggerType = L_105;
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotification_GenerateUniqueID_mD6A35B90F34C752248B213A19EDCDC720EBF9C45 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral639F01DFEB0CC71DC57E14265FC5642D13533AEF);
+		s_Il2CppMethodInitialized = true;
+	}
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	int32_t V_1 = 0;
+	{
+		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0;
+		L_0 = DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C(NULL);
+		V_0 = L_0;
+		String_t* L_1;
+		L_1 = DateTime_ToString_m6963A84785C320DA776C9FCFFEDAF26C8F1A8D78((&V_0), _stringLiteral639F01DFEB0CC71DC57E14265FC5642D13533AEF, NULL);
+		NullCheck(L_1);
+		int32_t L_2;
+		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(2, L_1);
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		int32_t L_3;
+		L_3 = il2cpp_codegen_abs(L_2);
+		V_1 = L_3;
+		String_t* L_4;
+		L_4 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_1), NULL);
+		return L_4;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification__ctor_m7CFB3CF88F34E88EDC2CA56EC15F3510B1AAD69B (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0;
+		L_0 = iOSNotification_GenerateUniqueID_mD6A35B90F34C752248B213A19EDCDC720EBF9C45(NULL);
+		iOSNotification__ctor_m1EC6737F4C8ACFEA13E12E9F5F51C2F808AFEC58(__this, L_0, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification__ctor_m1EC6737F4C8ACFEA13E12E9F5F51C2F808AFEC58 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, String_t* ___0_identifier, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_0 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		il2cpp_codegen_initobj(L_0, sizeof(iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED));
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_1 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		String_t* L_2 = ___0_identifier;
+		L_1->___identifier = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___identifier), (void*)L_2);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_3 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		L_3->___title = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		Il2CppCodeGenWriteBarrier((void**)(&L_3->___title), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_4 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		L_4->___body = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		Il2CppCodeGenWriteBarrier((void**)(&L_4->___body), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_5 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		L_5->___badge = (-1);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_6 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		L_6->___subtitle = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		Il2CppCodeGenWriteBarrier((void**)(&L_6->___subtitle), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_7 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		L_7->___categoryIdentifier = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		Il2CppCodeGenWriteBarrier((void**)(&L_7->___categoryIdentifier), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_8 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		L_8->___threadIdentifier = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		Il2CppCodeGenWriteBarrier((void**)(&L_8->___threadIdentifier), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_9 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		L_9->___triggerType = (-1);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_10 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		L_10->___userInfo = 0;
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_11 = (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*)il2cpp_codegen_object_new(Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052(L_11, Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052_RuntimeMethod_var);
+		__this->___userInfo = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___userInfo), (void*)L_11);
+		iOSNotification_set_Data_mDDEDDFDC4DA023124B7CC8D0AA882F3EFD6C334A(__this, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
+		iOSNotification_set_ShowInForeground_mB8363BB4B0C40234B565A24F6A979641DBA5A8D8(__this, (bool)0, NULL);
+		iOSNotification_set_ForegroundPresentationOption_mE95C0D442FB78AC8ED3137CA19BF4C12963D2D57(__this, 6, NULL);
+		iOSNotification_set_InterruptionLevel_m5002199C8A5587D57D03283520AB5F19FCACBD10(__this, 0, NULL);
+		iOSNotification_set_RelevanceScore_mD639A6AE30BFA773E4205FD8ACB6376316EB9DD6(__this, (0.0), NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification__ctor_m480637048FB144A8C2E4014549FFEE9D4299F6E8 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_data, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_0 = ___0_data;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED L_1 = L_0.___data;
+		__this->___data = L_1;
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___data))->___identifier), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___data))->___title), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___data))->___body), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___data))->___subtitle), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___data))->___categoryIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___data))->___threadIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___data))->___soundName), (void*)NULL);
+		#endif
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_2 = ___0_data;
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_3 = L_2.___userInfo;
+		__this->___userInfo = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___userInfo), (void*)L_3);
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_4 = ___0_data;
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_5 = L_4.___attachments;
+		iOSNotification_set_Attachments_m93E8FB777A55F4C6AB38922DBD0A0C8E9890D15C_inline(__this, L_5, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 iOSNotification_GetDataForSending_m389ADA195D034D80F017CE145C149AFD66996B69 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_get_HasValue_mC149B1C717AF506BBE8932F2C1DC86C378D17EA8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_get_Value_mE3B978271FFA8D9DEE17BFB34320A3C67BE148EA_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_0 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		String_t* L_1 = L_0->___identifier;
+		if (L_1)
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_2 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		String_t* L_3;
+		L_3 = iOSNotification_GenerateUniqueID_mD6A35B90F34C752248B213A19EDCDC720EBF9C45(NULL);
+		L_2->___identifier = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&L_2->___identifier), (void*)L_3);
+	}
+
+IL_001d:
+	{
+		Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 L_4;
+		L_4 = iOSNotification_get_SoundVolume_m78AE382CC86FF14B9F75B8AF12490A6724DF1DA0_inline(__this, NULL);
+		V_1 = L_4;
+		bool L_5;
+		L_5 = Nullable_1_get_HasValue_mC149B1C717AF506BBE8932F2C1DC86C378D17EA8_inline((&V_1), Nullable_1_get_HasValue_mC149B1C717AF506BBE8932F2C1DC86C378D17EA8_RuntimeMethod_var);
+		if (!L_5)
+		{
+			goto IL_0048;
+		}
+	}
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_6 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 L_7;
+		L_7 = iOSNotification_get_SoundVolume_m78AE382CC86FF14B9F75B8AF12490A6724DF1DA0_inline(__this, NULL);
+		V_1 = L_7;
+		float L_8;
+		L_8 = Nullable_1_get_Value_mE3B978271FFA8D9DEE17BFB34320A3C67BE148EA((&V_1), Nullable_1_get_Value_mE3B978271FFA8D9DEE17BFB34320A3C67BE148EA_RuntimeMethod_var);
+		L_6->___soundVolume = L_8;
+		goto IL_0058;
+	}
+
+IL_0048:
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_9 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&__this->___data);
+		L_9->___soundVolume = (-1.0f);
+	}
+
+IL_0058:
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED L_10 = __this->___data;
+		(&V_0)->___data = L_10;
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___identifier), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___title), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___body), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___subtitle), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___categoryIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___threadIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___soundName), (void*)NULL);
+		#endif
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_11 = __this->___userInfo;
+		(&V_0)->___userInfo = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___userInfo), (void*)L_11);
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_12;
+		L_12 = iOSNotification_get_Attachments_m54CA2BC5B43417D01136FE5A72B0A0BD2636549D_inline(__this, NULL);
+		(&V_0)->___attachments = L_12;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___attachments), (void*)L_12);
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_13 = V_0;
+		return L_13;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationAction_get_Id_m2EDC9A71F4912737711EAE8C9B09D8D496A3E3FA (iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CIdU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationAction_get_Title_m44DF5E056FD6A12373E6AA43A2841BE2DB3EE012 (iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CTitleU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationAction_get_Options_mEEDBE525091EDE4B06F7638293682C1AB9DFC65D (iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->___U3COptionsU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationAction_CreateUNNotificationAction_m698604E70CF8536008644C3EB53667E63A696E88 (iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0;
+		L_0 = iOSNotificationAction_get_Id_m2EDC9A71F4912737711EAE8C9B09D8D496A3E3FA_inline(__this, NULL);
+		String_t* L_1;
+		L_1 = iOSNotificationAction_get_Title_m44DF5E056FD6A12373E6AA43A2841BE2DB3EE012_inline(__this, NULL);
+		int32_t L_2;
+		L_2 = iOSNotificationAction_get_Options_mEEDBE525091EDE4B06F7638293682C1AB9DFC65D_inline(__this, NULL);
+		int32_t L_3 = __this->____imageType;
+		String_t* L_4 = __this->____image;
+		intptr_t L_5;
+		L_5 = iOSNotificationsWrapper__CreateUNNotificationAction_m04EA43D32BFCCC435B32F9313DAD1708A5E1EAA2(L_0, L_1, L_2, L_3, L_4, NULL);
+		return L_5;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshal_pinvoke(const iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933& unmarshaled, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshaled_pinvoke& marshaled)
+{
+	marshaled.___U3CIdU3Ek__BackingField = il2cpp_codegen_marshal_string(unmarshaled.___U3CIdU3Ek__BackingField);
+	marshaled.___U3CUrlU3Ek__BackingField = il2cpp_codegen_marshal_string(unmarshaled.___U3CUrlU3Ek__BackingField);
+}
+IL2CPP_EXTERN_C void iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshal_pinvoke_back(const iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshaled_pinvoke& marshaled, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933& unmarshaled)
+{
+	unmarshaled.___U3CIdU3Ek__BackingField = il2cpp_codegen_marshal_string_result(marshaled.___U3CIdU3Ek__BackingField);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___U3CIdU3Ek__BackingField), (void*)il2cpp_codegen_marshal_string_result(marshaled.___U3CIdU3Ek__BackingField));
+	unmarshaled.___U3CUrlU3Ek__BackingField = il2cpp_codegen_marshal_string_result(marshaled.___U3CUrlU3Ek__BackingField);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___U3CUrlU3Ek__BackingField), (void*)il2cpp_codegen_marshal_string_result(marshaled.___U3CUrlU3Ek__BackingField));
+}
+IL2CPP_EXTERN_C void iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshal_pinvoke_cleanup(iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshaled_pinvoke& marshaled)
+{
+	il2cpp_codegen_marshal_free(marshaled.___U3CIdU3Ek__BackingField);
+	marshaled.___U3CIdU3Ek__BackingField = NULL;
+	il2cpp_codegen_marshal_free(marshaled.___U3CUrlU3Ek__BackingField);
+	marshaled.___U3CUrlU3Ek__BackingField = NULL;
+}
+IL2CPP_EXTERN_C void iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshal_com(const iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933& unmarshaled, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshaled_com& marshaled)
+{
+	marshaled.___U3CIdU3Ek__BackingField = il2cpp_codegen_marshal_bstring(unmarshaled.___U3CIdU3Ek__BackingField);
+	marshaled.___U3CUrlU3Ek__BackingField = il2cpp_codegen_marshal_bstring(unmarshaled.___U3CUrlU3Ek__BackingField);
+}
+IL2CPP_EXTERN_C void iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshal_com_back(const iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshaled_com& marshaled, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933& unmarshaled)
+{
+	unmarshaled.___U3CIdU3Ek__BackingField = il2cpp_codegen_marshal_bstring_result(marshaled.___U3CIdU3Ek__BackingField);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___U3CIdU3Ek__BackingField), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___U3CIdU3Ek__BackingField));
+	unmarshaled.___U3CUrlU3Ek__BackingField = il2cpp_codegen_marshal_bstring_result(marshaled.___U3CUrlU3Ek__BackingField);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___U3CUrlU3Ek__BackingField), (void*)il2cpp_codegen_marshal_bstring_result(marshaled.___U3CUrlU3Ek__BackingField));
+}
+IL2CPP_EXTERN_C void iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshal_com_cleanup(iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933_marshaled_com& marshaled)
+{
+	il2cpp_codegen_marshal_free_bstring(marshaled.___U3CIdU3Ek__BackingField);
+	marshaled.___U3CIdU3Ek__BackingField = NULL;
+	il2cpp_codegen_marshal_free_bstring(marshaled.___U3CUrlU3Ek__BackingField);
+	marshaled.___U3CUrlU3Ek__BackingField = NULL;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationAttachment_get_Id_m8A551CB233C83D05BDDACF9688CBECAAF9846C15 (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CIdU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  String_t* iOSNotificationAttachment_get_Id_m8A551CB233C83D05BDDACF9688CBECAAF9846C15_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933*>(__this + _offset);
+	String_t* _returnValue;
+	_returnValue = iOSNotificationAttachment_get_Id_m8A551CB233C83D05BDDACF9688CBECAAF9846C15_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationAttachment_set_Id_m7401F5705B3B4ADDC0DA5B372FE4579418891E7E (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___0_value;
+		__this->___U3CIdU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CIdU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationAttachment_set_Id_m7401F5705B3B4ADDC0DA5B372FE4579418891E7E_AdjustorThunk (RuntimeObject* __this, String_t* ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933*>(__this + _offset);
+	iOSNotificationAttachment_set_Id_m7401F5705B3B4ADDC0DA5B372FE4579418891E7E_inline(_thisAdjusted, ___0_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationAttachment_get_Url_mE0C69FB858552B293B9C0BDDFF2894FC6EBE9BF0 (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CUrlU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  String_t* iOSNotificationAttachment_get_Url_mE0C69FB858552B293B9C0BDDFF2894FC6EBE9BF0_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933*>(__this + _offset);
+	String_t* _returnValue;
+	_returnValue = iOSNotificationAttachment_get_Url_mE0C69FB858552B293B9C0BDDFF2894FC6EBE9BF0_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationAttachment_set_Url_m4F0B407457097EC2DEFDCD296E07CDDF624DE202 (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___0_value;
+		__this->___U3CUrlU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CUrlU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationAttachment_set_Url_m4F0B407457097EC2DEFDCD296E07CDDF624DE202_AdjustorThunk (RuntimeObject* __this, String_t* ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933*>(__this + _offset);
+	iOSNotificationAttachment_set_Url_m4F0B407457097EC2DEFDCD296E07CDDF624DE202_inline(_thisAdjusted, ___0_value, method);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationCategory_get_Id_m6A4071B537F6E5B51DA11DCB43613BBD691CFBA9 (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CIdU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* iOSNotificationCategory_get_Actions_m9958D87CD035EA242CEAB3BAC116C43B0CD8F895 (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_ToArray_m8FE3E081900C426C6F1CC9B83DEA764301795167_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		List_1_tC1CA64216E385BF5F13004E02F90F6B326BEA8F3* L_0 = __this->___m_Actions;
+		NullCheck(L_0);
+		iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* L_1;
+		L_1 = List_1_ToArray_m8FE3E081900C426C6F1CC9B83DEA764301795167(L_0, List_1_ToArray_m8FE3E081900C426C6F1CC9B83DEA764301795167_RuntimeMethod_var);
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* iOSNotificationCategory_get_IntentIdentifiers_m91CA55C622A693C0AAF6C5CE75322E3084B50FAC (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_ToArray_m2C402D882AA60FC1D5C7C09A129BE7779F833B4A_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_0 = __this->___m_IntentIdentifiers;
+		NullCheck(L_0);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1;
+		L_1 = List_1_ToArray_m2C402D882AA60FC1D5C7C09A129BE7779F833B4A(L_0, List_1_ToArray_m2C402D882AA60FC1D5C7C09A129BE7779F833B4A_RuntimeMethod_var);
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationCategory_get_HiddenPreviewsBodyPlaceholder_mCC5DF780F51E1AC578873FE372067DF14800A1C2 (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CHiddenPreviewsBodyPlaceholderU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationCategory_get_SummaryFormat_m6835C27643601AFBCD4F51CA3E28C72E850164CB (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CSummaryFormatU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationCategory_get_Options_m93741379CF2DF82295080957832C1D37D3DFC961 (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->___U3COptionsU3Ek__BackingField;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCenter_set_ApplicationBadge_mF99E5A0665BE591B48DCA64D37AC8B1947B2F6E4 (int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_value;
+		iOSNotificationsWrapper_SetApplicationBadge_m340452ADA2F0E0C35F2E034B97AAE8F86827893B(L_0, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationCenter_Initialize_m3ABD98E821A5025EDC2B8D97F5851194A336DA5F (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		bool L_0 = ((iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_StaticFields*)il2cpp_codegen_static_fields_for(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var))->___s_Initialized;
+		if (!L_0)
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		return (bool)1;
+	}
+
+IL_0009:
+	{
+		iOSNotificationsWrapper_RegisterOnReceivedCallback_m44AE9926E98242E6F356EBA0281584623627B436(NULL);
+		int32_t L_1 = 1;
+		il2cpp_codegen_runtime_class_init_inline(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		((iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_StaticFields*)il2cpp_codegen_static_fields_for(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var))->___s_Initialized = (bool)L_1;
+		return (bool)L_1;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCenter_ScheduleNotification_m12235032140F0EEDBCAA2B0F29876E8FE9AA5995 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = iOSNotificationCenter_Initialize_m3ABD98E821A5025EDC2B8D97F5851194A336DA5F(NULL);
+		if (L_0)
+		{
+			goto IL_0008;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0008:
+	{
+		iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* L_1 = ___0_notification;
+		NullCheck(L_1);
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_2;
+		L_2 = iOSNotification_GetDataForSending_m389ADA195D034D80F017CE145C149AFD66996B69(L_1, NULL);
+		iOSNotificationsWrapper_ScheduleLocalNotification_m2C66F2E8B8E6A438424896D297650C6AF4228361(L_2, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCenter_RemoveAllScheduledNotifications_m44068D9155DC22C114EE5C11CDEE34F747B3EE3F (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = iOSNotificationCenter_Initialize_m3ABD98E821A5025EDC2B8D97F5851194A336DA5F(NULL);
+		if (!L_0)
+		{
+			goto IL_000c;
+		}
+	}
+	{
+		iOSNotificationsWrapper__RemoveAllScheduledNotifications_m9B342D2C0E7C7824E1B2A386D16C1E8C306C9607(NULL);
+	}
+
+IL_000c:
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCenter_RemoveAllDeliveredNotifications_m853D9D2A75A28AEDDB7F5FD383C8E6FECB3B995F (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = iOSNotificationCenter_Initialize_m3ABD98E821A5025EDC2B8D97F5851194A336DA5F(NULL);
+		if (!L_0)
+		{
+			goto IL_000c;
+		}
+	}
+	{
+		iOSNotificationsWrapper__RemoveAllDeliveredNotifications_m23751F2136004EBC7AF50B4E95988D203FD520B5(NULL);
+	}
+
+IL_000c:
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCenter_OnReceivedRemoteNotification_mC510FFDD28917371EB9312D7F6E2F63CDE03FC22 (iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_data, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* V_0 = NULL;
+	{
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_0 = ___0_data;
+		iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* L_1 = (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327*)il2cpp_codegen_object_new(iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327_il2cpp_TypeInfo_var);
+		iOSNotification__ctor_m480637048FB144A8C2E4014549FFEE9D4299F6E8(L_1, L_0, NULL);
+		V_0 = L_1;
+		il2cpp_codegen_runtime_class_init_inline(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* L_2 = ((iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_StaticFields*)il2cpp_codegen_static_fields_for(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var))->___s_OnRemoteNotificationReceived;
+		iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* L_3 = V_0;
+		NullCheck(L_2);
+		NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_inline(L_2, L_3, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCenter_OnSentNotification_m544D0B4C4887048904106DE1C463663A6DC3A906 (iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_data, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* V_0 = NULL;
+	{
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_0 = ___0_data;
+		iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* L_1 = (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327*)il2cpp_codegen_object_new(iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327_il2cpp_TypeInfo_var);
+		iOSNotification__ctor_m480637048FB144A8C2E4014549FFEE9D4299F6E8(L_1, L_0, NULL);
+		V_0 = L_1;
+		il2cpp_codegen_runtime_class_init_inline(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* L_2 = ((iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_StaticFields*)il2cpp_codegen_static_fields_for(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var))->___s_OnNotificationReceived;
+		iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* L_3 = V_0;
+		NullCheck(L_2);
+		NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_inline(L_2, L_3, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCenter__cctor_m20CD6B08F2DFAFAF231368FC496254EA680228FC (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3C_cctorU3Eb__38_0_m199A8E36941FC6A81CB2C019BF06CA2F3E0D51FC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3C_cctorU3Eb__38_1_m4F8AE0FFC91B6C9E8C6C8619C5FD682F22A7C474_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_il2cpp_TypeInfo_var);
+		U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE* L_0 = ((U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_il2cpp_TypeInfo_var))->___U3CU3E9;
+		NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* L_1 = (NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1*)il2cpp_codegen_object_new(NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1_il2cpp_TypeInfo_var);
+		NotificationReceivedCallback__ctor_mF2B904C1330647023D5E7ECE08EDA8266BE8F55E(L_1, L_0, (intptr_t)((void*)U3CU3Ec_U3C_cctorU3Eb__38_0_m199A8E36941FC6A81CB2C019BF06CA2F3E0D51FC_RuntimeMethod_var), NULL);
+		((iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_StaticFields*)il2cpp_codegen_static_fields_for(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var))->___s_OnNotificationReceived = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_StaticFields*)il2cpp_codegen_static_fields_for(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var))->___s_OnNotificationReceived), (void*)L_1);
+		U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE* L_2 = ((U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_il2cpp_TypeInfo_var))->___U3CU3E9;
+		NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* L_3 = (NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1*)il2cpp_codegen_object_new(NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1_il2cpp_TypeInfo_var);
+		NotificationReceivedCallback__ctor_mF2B904C1330647023D5E7ECE08EDA8266BE8F55E(L_3, L_2, (intptr_t)((void*)U3CU3Ec_U3C_cctorU3Eb__38_1_m4F8AE0FFC91B6C9E8C6C8619C5FD682F22A7C474_RuntimeMethod_var), NULL);
+		((iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_StaticFields*)il2cpp_codegen_static_fields_for(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var))->___s_OnRemoteNotificationReceived = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&((iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_StaticFields*)il2cpp_codegen_static_fields_for(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var))->___s_OnRemoteNotificationReceived), (void*)L_3);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_Multicast(NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* currentDelegate = reinterpret_cast<NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327*, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_notification, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenInst(NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method)
+{
+	NullCheck(___0_notification);
+	typedef void (*FunctionPointerType) (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_notification, method);
+}
+void NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenStatic(NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_notification, method);
+}
+void NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenVirtual(NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method)
+{
+	NullCheck(___0_notification);
+	VirtualActionInvoker0::Invoke(il2cpp_codegen_method_get_slot(method), ___0_notification);
+}
+void NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenInterface(NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method)
+{
+	NullCheck(___0_notification);
+	InterfaceActionInvoker0::Invoke(il2cpp_codegen_method_get_slot(method), il2cpp_codegen_method_get_declaring_type(method), ___0_notification);
+}
+void NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenGenericVirtual(NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method)
+{
+	NullCheck(___0_notification);
+	GenericVirtualActionInvoker0::Invoke(method, ___0_notification);
+}
+void NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenGenericInterface(NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method)
+{
+	NullCheck(___0_notification);
+	GenericInterfaceActionInvoker0::Invoke(method, ___0_notification);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationReceivedCallback__ctor_mF2B904C1330647023D5E7ECE08EDA8266BE8F55E (NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		bool isOpen = parameterCount == 0;
+		if (isOpen)
+		{
+			if (__this->___method_is_virtual)
+			{
+				if (il2cpp_codegen_method_is_generic_instance_method((RuntimeMethod*)___1_method))
+					if (il2cpp_codegen_method_is_interface_method((RuntimeMethod*)___1_method))
+						__this->___invoke_impl = (intptr_t)&NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenGenericInterface;
+					else
+						__this->___invoke_impl = (intptr_t)&NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenGenericVirtual;
+				else
+					if (il2cpp_codegen_method_is_interface_method((RuntimeMethod*)___1_method))
+						__this->___invoke_impl = (intptr_t)&NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenInterface;
+					else
+						__this->___invoke_impl = (intptr_t)&NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenVirtual;
+			}
+			else
+			{
+				__this->___invoke_impl = (intptr_t)&NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_OpenInst;
+			}
+		}
+		else
+		{
+			if (___0_object == NULL)
+				il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+			__this->___invoke_impl = __this->___method_ptr;
+			__this->___method_code = (intptr_t)__this->___m_target;
+		}
+	}
+	__this->___extra_arg = (intptr_t)&NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_Multicast;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36 (NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_notification, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mBC9ECF1831C6FFC9ACD710C25890BDBF554081AB (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE* L_0 = (U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE*)il2cpp_codegen_object_new(U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_il2cpp_TypeInfo_var);
+		U3CU3Ec__ctor_m4E1D6DB8C20ABB34DA458F6F8EAAEACD25B2208B(L_0, NULL);
+		((U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_il2cpp_TypeInfo_var))->___U3CU3E9 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE_il2cpp_TypeInfo_var))->___U3CU3E9), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m4E1D6DB8C20ABB34DA458F6F8EAAEACD25B2208B (U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3C_cctorU3Eb__38_0_m199A8E36941FC6A81CB2C019BF06CA2F3E0D51FC (U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_U3Cp0U3E, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3C_cctorU3Eb__38_1_m4F8AE0FFC91B6C9E8C6C8619C5FD682F22A7C474 (U3CU3Ec_t4BB034961FECB1AD65FD080CE469C198E6FE36EE* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_U3Cp0U3E, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+
+IL2CPP_EXTERN_C void iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshal_pinvoke(const iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5& unmarshaled, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshaled_pinvoke& marshaled)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5____userInfo_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t* ___userInfoException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '%s' of type '%s'.", iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5____userInfo_FieldInfo_var, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_0_0_0_var);
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___userInfoException, NULL);
+}
+IL2CPP_EXTERN_C void iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshal_pinvoke_back(const iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshaled_pinvoke& marshaled, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5& unmarshaled)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5____userInfo_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t* ___userInfoException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '%s' of type '%s'.", iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5____userInfo_FieldInfo_var, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_0_0_0_var);
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___userInfoException, NULL);
+}
+IL2CPP_EXTERN_C void iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshal_pinvoke_cleanup(iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshaled_pinvoke& marshaled)
+{
+}
+
+
+IL2CPP_EXTERN_C void iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshal_com(const iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5& unmarshaled, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshaled_com& marshaled)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5____userInfo_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t* ___userInfoException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '%s' of type '%s'.", iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5____userInfo_FieldInfo_var, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_0_0_0_var);
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___userInfoException, NULL);
+}
+IL2CPP_EXTERN_C void iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshal_com_back(const iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshaled_com& marshaled, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5& unmarshaled)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5____userInfo_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t* ___userInfoException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '%s' of type '%s'.", iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5____userInfo_FieldInfo_var, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_0_0_0_var);
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___userInfoException, NULL);
+}
+IL2CPP_EXTERN_C void iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshal_com_cleanup(iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5_marshaled_com& marshaled)
+{
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_iOSNotificationsWrapper_AuthorizationRequestReceived_m4A6C75E5BFEA2C3E529F2F8CEEA8A813F428B3CD(intptr_t ___0_request, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke ___1_data)
+{
+
+
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ____1_data_unmarshaled;
+	memset((&____1_data_unmarshaled), 0, sizeof(____1_data_unmarshaled));
+	iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_pinvoke_back(___1_data, ____1_data_unmarshaled);
+
+	iOSNotificationsWrapper_AuthorizationRequestReceived_m4A6C75E5BFEA2C3E529F2F8CEEA8A813F428B3CD(___0_request, ____1_data_unmarshaled, NULL);
+
+}
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_iOSNotificationsWrapper_RemoteNotificationReceived_mBF44180FD060AC5811C9979FE6E771650AA35212(iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke ___0_data)
+{
+
+
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ____0_data_unmarshaled;
+	memset((&____0_data_unmarshaled), 0, sizeof(____0_data_unmarshaled));
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke_back(___0_data, ____0_data_unmarshaled);
+
+	iOSNotificationsWrapper_RemoteNotificationReceived_mBF44180FD060AC5811C9979FE6E771650AA35212(____0_data_unmarshaled, NULL);
+
+}
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_iOSNotificationsWrapper_NotificationReceived_mB7F4859AF321D5AF115D70F4BD8AB131543D7524(iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke ___0_data)
+{
+
+
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ____0_data_unmarshaled;
+	memset((&____0_data_unmarshaled), 0, sizeof(____0_data_unmarshaled));
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke_back(___0_data, ____0_data_unmarshaled);
+
+	iOSNotificationsWrapper_NotificationReceived_mB7F4859AF321D5AF115D70F4BD8AB131543D7524(____0_data_unmarshaled, NULL);
+
+}
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_iOSNotificationsWrapper_ReceiveNSDictionaryKeyValue_m57E371B7275602846E05E0770BFA78C6641BC856(intptr_t ___0_dict, char* ___1_key, char* ___2_value)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	String_t* ____1_key_unmarshaled = NULL;
+	____1_key_unmarshaled = il2cpp_codegen_marshal_string_result(___1_key);
+
+	String_t* ____2_value_unmarshaled = NULL;
+	____2_value_unmarshaled = il2cpp_codegen_marshal_string_result(___2_value);
+
+	iOSNotificationsWrapper_ReceiveNSDictionaryKeyValue_m57E371B7275602846E05E0770BFA78C6641BC856(___0_dict, ____1_key_unmarshaled, ____2_value_unmarshaled, NULL);
+
+}
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_iOSNotificationsWrapper_ReceiveUNNotificationAttachment_mF8194BDA3434E46D10AF292C61D4F3E00B654652(intptr_t ___0_array, char* ___1_id, char* ___2_url)
+{
+	il2cpp::vm::ScopedThreadAttacher _vmThreadHelper;
+
+	String_t* ____1_id_unmarshaled = NULL;
+	____1_id_unmarshaled = il2cpp_codegen_marshal_string_result(___1_id);
+
+	String_t* ____2_url_unmarshaled = NULL;
+	____2_url_unmarshaled = il2cpp_codegen_marshal_string_result(___2_url);
+
+	iOSNotificationsWrapper_ReceiveUNNotificationAttachment_mF8194BDA3434E46D10AF292C61D4F3E00B654652(___0_array, ____1_id_unmarshaled, ____2_url_unmarshaled, NULL);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__RequestAuthorization_mEA8CA44C7AA697DB3EA9D2C460924997CC075315 (intptr_t ___0_request, int32_t ___1_options, bool ___2_registerForRemote, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, int32_t, int32_t);
+
+	reinterpret_cast<PInvokeFunc>(_RequestAuthorization)(___0_request, ___1_options, static_cast<int32_t>(___2_registerForRemote));
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationsWrapper__RegisteredForRemoteNotifications_m7074DD3AC9D6067AA3181B38DE45A5A88888D6D7 (const RuntimeMethod* method) 
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) ();
+
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(_RegisteredForRemoteNotifications)();
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__UnregisterForRemoteNotifications_m44C6C0542E80A9B534E9443A56E679EA44CCDEC4 (const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) ();
+
+	reinterpret_cast<PInvokeFunc>(_UnregisterForRemoteNotifications)();
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__ScheduleLocalNotification_mD2CC306854403F4BBE98648D761A41726BC75F7C (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_data, const RuntimeMethod* method) 
+{
+
+
+	typedef void (DEFAULT_CALL *PInvokeFunc) (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke);
+
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke ____0_data_marshaled = {};
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke(___0_data, ____0_data_marshaled);
+
+	reinterpret_cast<PInvokeFunc>(_ScheduleLocalNotification)(____0_data_marshaled);
+
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke_cleanup(____0_data_marshaled);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__SetNotificationReceivedDelegate_m7EF790D86C1B8E585CFBD1872FABA96171D07A3A (NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* ___0_callback, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (Il2CppMethodPointer);
+
+	Il2CppMethodPointer ____0_callback_marshaled = NULL;
+	____0_callback_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___0_callback));
+
+	reinterpret_cast<PInvokeFunc>(_SetNotificationReceivedDelegate)(____0_callback_marshaled);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__SetRemoteNotificationReceivedDelegate_mABF9B547DD1F0D569E1E8B202FC8312DA876EBA1 (NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* ___0_callback, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (Il2CppMethodPointer);
+
+	Il2CppMethodPointer ____0_callback_marshaled = NULL;
+	____0_callback_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___0_callback));
+
+	reinterpret_cast<PInvokeFunc>(_SetRemoteNotificationReceivedDelegate)(____0_callback_marshaled);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__SetAuthorizationRequestReceivedDelegate_m88B1999865C9603B8A628DC185980C62A11E1731 (AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD* ___0_callback, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (Il2CppMethodPointer);
+
+	Il2CppMethodPointer ____0_callback_marshaled = NULL;
+	____0_callback_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___0_callback));
+
+	reinterpret_cast<PInvokeFunc>(_SetAuthorizationRequestReceivedDelegate)(____0_callback_marshaled);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationSettings_tBDCE6AE27851787C044FEBC52ED202D4BBD24B21 iOSNotificationsWrapper__GetNotificationSettings_m8DF3328D33595477ADD49C37CC36DA7553BF1077 (const RuntimeMethod* method) 
+{
+	typedef iOSNotificationSettings_tBDCE6AE27851787C044FEBC52ED202D4BBD24B21 (DEFAULT_CALL *PInvokeFunc) ();
+
+	iOSNotificationSettings_tBDCE6AE27851787C044FEBC52ED202D4BBD24B21 returnValue = reinterpret_cast<PInvokeFunc>(_GetNotificationSettings)();
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__GetScheduledNotificationDataArray_m17748B95E93D87E25DF727C4A77348CAF8686457 (int32_t* ___0_count, const RuntimeMethod* method) 
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (int32_t*);
+
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_GetScheduledNotificationDataArray)(___0_count);
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__GetDeliveredNotificationDataArray_m9416BEB875EA2D48C0927E85288E603D38AD92C0 (int32_t* ___0_count, const RuntimeMethod* method) 
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (int32_t*);
+
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_GetDeliveredNotificationDataArray)(___0_count);
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__RemoveScheduledNotification_m3D085E61FFCE3BBBBEE2C455F0D4757BD9FD4F6F (String_t* ___0_identifier, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (char*);
+
+	char* ____0_identifier_marshaled = NULL;
+	____0_identifier_marshaled = il2cpp_codegen_marshal_string(___0_identifier);
+
+	reinterpret_cast<PInvokeFunc>(_RemoveScheduledNotification)(____0_identifier_marshaled);
+
+	il2cpp_codegen_marshal_free(____0_identifier_marshaled);
+	____0_identifier_marshaled = NULL;
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__RemoveAllScheduledNotifications_m9B342D2C0E7C7824E1B2A386D16C1E8C306C9607 (const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) ();
+
+	reinterpret_cast<PInvokeFunc>(_RemoveAllScheduledNotifications)();
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__RemoveDeliveredNotification_m08D8941EED5B8205A4271B3DC67D67D3E8C2AD53 (String_t* ___0_identifier, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (char*);
+
+	char* ____0_identifier_marshaled = NULL;
+	____0_identifier_marshaled = il2cpp_codegen_marshal_string(___0_identifier);
+
+	reinterpret_cast<PInvokeFunc>(_RemoveDeliveredNotification)(____0_identifier_marshaled);
+
+	il2cpp_codegen_marshal_free(____0_identifier_marshaled);
+	____0_identifier_marshaled = NULL;
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__SetApplicationBadge_m425633D16CA2A2A7AB652ADC723F37D499B64FF7 (int32_t ___0_badge, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (int32_t);
+
+	reinterpret_cast<PInvokeFunc>(_SetApplicationBadge)(___0_badge);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationsWrapper__GetApplicationBadge_m53F1F38D3652F65C75E4ED7AE669F23B9D9628BC (const RuntimeMethod* method) 
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) ();
+
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(_GetApplicationBadge)();
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationsWrapper__GetAppOpenedUsingNotification_m6EDB04FD2C23285C778D51EC2F8D3E329AD73B31 (const RuntimeMethod* method) 
+{
+	typedef int32_t (DEFAULT_CALL *PInvokeFunc) ();
+
+	int32_t returnValue = reinterpret_cast<PInvokeFunc>(_GetAppOpenedUsingNotification)();
+
+	return static_cast<bool>(returnValue);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__RemoveAllDeliveredNotifications_m23751F2136004EBC7AF50B4E95988D203FD520B5 (const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) ();
+
+	reinterpret_cast<PInvokeFunc>(_RemoveAllDeliveredNotifications)();
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__GetLastNotificationData_mBDAFB058A017C90FFD50DE741698BE38F832A4D6 (const RuntimeMethod* method) 
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) ();
+
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_GetLastNotificationData)();
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationsWrapper__GetLastRespondedNotificationAction_mB6983CAFA2D834C868567F605F55CB844702BFF1 (const RuntimeMethod* method) 
+{
+	typedef char* (DEFAULT_CALL *PInvokeFunc) ();
+
+	char* returnValue = reinterpret_cast<PInvokeFunc>(_GetLastRespondedNotificationAction)();
+
+	String_t* _returnValue_unmarshaled = NULL;
+	_returnValue_unmarshaled = il2cpp_codegen_marshal_string_result(returnValue);
+
+	il2cpp_codegen_marshal_free(returnValue);
+	returnValue = NULL;
+
+	return _returnValue_unmarshaled;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationsWrapper__GetLastRespondedNotificationUserText_m39B79F2BDFA59A8780D852E5C8BBB4086E3A609B (const RuntimeMethod* method) 
+{
+	typedef char* (DEFAULT_CALL *PInvokeFunc) ();
+
+	char* returnValue = reinterpret_cast<PInvokeFunc>(_GetLastRespondedNotificationUserText)();
+
+	String_t* _returnValue_unmarshaled = NULL;
+	_returnValue_unmarshaled = il2cpp_codegen_marshal_string_result(returnValue);
+
+	il2cpp_codegen_marshal_free(returnValue);
+	returnValue = NULL;
+
+	return _returnValue_unmarshaled;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__FreeUnmanagediOSNotificationDataArray_m9BBE43390A00107B926480FA5C2062B81A8F1B1A (intptr_t ___0_ptr, int32_t ___1_count, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, int32_t);
+
+	reinterpret_cast<PInvokeFunc>(_FreeUnmanagediOSNotificationDataArray)(___0_ptr, ___1_count);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__AddItemToNSDictionary_m3798785725CBF97127669F924EE9E35B336D41A5 (intptr_t ___0_dict, String_t* ___1_key, String_t* ___2_value, const RuntimeMethod* method) 
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (intptr_t, char*, char*);
+
+	char* ____1_key_marshaled = NULL;
+	____1_key_marshaled = il2cpp_codegen_marshal_string(___1_key);
+
+	char* ____2_value_marshaled = NULL;
+	____2_value_marshaled = il2cpp_codegen_marshal_string(___2_value);
+
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_AddItemToNSDictionary)(___0_dict, ____1_key_marshaled, ____2_value_marshaled);
+
+	il2cpp_codegen_marshal_free(____1_key_marshaled);
+	____1_key_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____2_value_marshaled);
+	____2_value_marshaled = NULL;
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__AddAttachmentToNSArray_m84054FBACB7477A05721E119B028523ACA016F16 (intptr_t ___0_atts, String_t* ___1_id, String_t* ___2_url, intptr_t* ___3_error, const RuntimeMethod* method) 
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (intptr_t, char*, char*, intptr_t*);
+
+	char* ____1_id_marshaled = NULL;
+	____1_id_marshaled = il2cpp_codegen_marshal_string(___1_id);
+
+	char* ____2_url_marshaled = NULL;
+	____2_url_marshaled = il2cpp_codegen_marshal_string(___2_url);
+
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_AddAttachmentToNSArray)(___0_atts, ____1_id_marshaled, ____2_url_marshaled, ___3_error);
+
+	il2cpp_codegen_marshal_free(____1_id_marshaled);
+	____1_id_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____2_url_marshaled);
+	____2_url_marshaled = NULL;
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__ReadNSDictionary_m1C436D4473181385D91702AAF13FB7D28A70F714 (intptr_t ___0_handle, intptr_t ___1_nsDict, ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4* ___2_callback, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, Il2CppMethodPointer);
+
+	Il2CppMethodPointer ____2_callback_marshaled = NULL;
+	____2_callback_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___2_callback));
+
+	reinterpret_cast<PInvokeFunc>(_ReadNSDictionary)(___0_handle, ___1_nsDict, ____2_callback_marshaled);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__ReadAttachmentsNSArray_m493603B5A3AC41CA7E9366B21F3A11F3E0F2DED4 (intptr_t ___0_handle, intptr_t ___1_nsArray, ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E* ___2_callback, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, Il2CppMethodPointer);
+
+	Il2CppMethodPointer ____2_callback_marshaled = NULL;
+	____2_callback_marshaled = il2cpp_codegen_marshal_delegate(reinterpret_cast<MulticastDelegate_t*>(___2_callback));
+
+	reinterpret_cast<PInvokeFunc>(_ReadAttachmentsNSArray)(___0_handle, ___1_nsArray, ____2_callback_marshaled);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__CreateUNNotificationAction_m04EA43D32BFCCC435B32F9313DAD1708A5E1EAA2 (String_t* ___0_id, String_t* ___1_title, int32_t ___2_options, int32_t ___3_iconType, String_t* ___4_icon, const RuntimeMethod* method) 
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (char*, char*, int32_t, int32_t, char*);
+
+	char* ____0_id_marshaled = NULL;
+	____0_id_marshaled = il2cpp_codegen_marshal_string(___0_id);
+
+	char* ____1_title_marshaled = NULL;
+	____1_title_marshaled = il2cpp_codegen_marshal_string(___1_title);
+
+	char* ____4_icon_marshaled = NULL;
+	____4_icon_marshaled = il2cpp_codegen_marshal_string(___4_icon);
+
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_CreateUNNotificationAction)(____0_id_marshaled, ____1_title_marshaled, ___2_options, ___3_iconType, ____4_icon_marshaled);
+
+	il2cpp_codegen_marshal_free(____0_id_marshaled);
+	____0_id_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____1_title_marshaled);
+	____1_title_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____4_icon_marshaled);
+	____4_icon_marshaled = NULL;
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__CreateUNTextInputNotificationAction_mBEFFD80A7DE8204A20A8215E880FFC7456B625B8 (String_t* ___0_id, String_t* ___1_title, int32_t ___2_options, int32_t ___3_iconType, String_t* ___4_icon, String_t* ___5_buttonTitle, String_t* ___6_placeholder, const RuntimeMethod* method) 
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (char*, char*, int32_t, int32_t, char*, char*, char*);
+
+	char* ____0_id_marshaled = NULL;
+	____0_id_marshaled = il2cpp_codegen_marshal_string(___0_id);
+
+	char* ____1_title_marshaled = NULL;
+	____1_title_marshaled = il2cpp_codegen_marshal_string(___1_title);
+
+	char* ____4_icon_marshaled = NULL;
+	____4_icon_marshaled = il2cpp_codegen_marshal_string(___4_icon);
+
+	char* ____5_buttonTitle_marshaled = NULL;
+	____5_buttonTitle_marshaled = il2cpp_codegen_marshal_string(___5_buttonTitle);
+
+	char* ____6_placeholder_marshaled = NULL;
+	____6_placeholder_marshaled = il2cpp_codegen_marshal_string(___6_placeholder);
+
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_CreateUNTextInputNotificationAction)(____0_id_marshaled, ____1_title_marshaled, ___2_options, ___3_iconType, ____4_icon_marshaled, ____5_buttonTitle_marshaled, ____6_placeholder_marshaled);
+
+	il2cpp_codegen_marshal_free(____0_id_marshaled);
+	____0_id_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____1_title_marshaled);
+	____1_title_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____4_icon_marshaled);
+	____4_icon_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____5_buttonTitle_marshaled);
+	____5_buttonTitle_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____6_placeholder_marshaled);
+	____6_placeholder_marshaled = NULL;
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__ReleaseNSObject_mFFAD0F85055C706E8A5479A81B66A663831368FE (intptr_t ___0_obj, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t);
+
+	reinterpret_cast<PInvokeFunc>(_ReleaseNSObject)(___0_obj);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationsWrapper__NSErrorToMessage_m621C81B674107D57D52569733B5F7FAD29869C69 (intptr_t ___0_error, const RuntimeMethod* method) 
+{
+	typedef char* (DEFAULT_CALL *PInvokeFunc) (intptr_t);
+
+	char* returnValue = reinterpret_cast<PInvokeFunc>(_NSErrorToMessage)(___0_error);
+
+	String_t* _returnValue_unmarshaled = NULL;
+	_returnValue_unmarshaled = il2cpp_codegen_marshal_string_result(returnValue);
+
+	il2cpp_codegen_marshal_free(returnValue);
+	returnValue = NULL;
+
+	return _returnValue_unmarshaled;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__AddActionToNSArray_m686DFC012EFD29CFFD1BD4BF119F800C2FD29BCD (intptr_t ___0_actions, intptr_t ___1_action, int32_t ___2_capacity, const RuntimeMethod* method) 
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, int32_t);
+
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_AddActionToNSArray)(___0_actions, ___1_action, ___2_capacity);
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__CreateUNNotificationCategory_m11D21B22ED4FDF28B5F08E37EFC108A10D1415CE (String_t* ___0_id, String_t* ___1_hiddenPreviewsBodyPlaceholder, String_t* ___2_summaryFormat, int32_t ___3_options, intptr_t ___4_actions, intptr_t ___5_intentIdentifiers, const RuntimeMethod* method) 
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (char*, char*, char*, int32_t, intptr_t, intptr_t);
+
+	char* ____0_id_marshaled = NULL;
+	____0_id_marshaled = il2cpp_codegen_marshal_string(___0_id);
+
+	char* ____1_hiddenPreviewsBodyPlaceholder_marshaled = NULL;
+	____1_hiddenPreviewsBodyPlaceholder_marshaled = il2cpp_codegen_marshal_string(___1_hiddenPreviewsBodyPlaceholder);
+
+	char* ____2_summaryFormat_marshaled = NULL;
+	____2_summaryFormat_marshaled = il2cpp_codegen_marshal_string(___2_summaryFormat);
+
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_CreateUNNotificationCategory)(____0_id_marshaled, ____1_hiddenPreviewsBodyPlaceholder_marshaled, ____2_summaryFormat_marshaled, ___3_options, ___4_actions, ___5_intentIdentifiers);
+
+	il2cpp_codegen_marshal_free(____0_id_marshaled);
+	____0_id_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____1_hiddenPreviewsBodyPlaceholder_marshaled);
+	____1_hiddenPreviewsBodyPlaceholder_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____2_summaryFormat_marshaled);
+	____2_summaryFormat_marshaled = NULL;
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__AddCategoryToCategorySet_m358D50AFD799BB064CD2F079A7F2B89E04C1AEE4 (intptr_t ___0_categorySet, intptr_t ___1_category, const RuntimeMethod* method) 
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t);
+
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_AddCategoryToCategorySet)(___0_categorySet, ___1_category);
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__SetNotificationCategories_mD43856530598B70C8E32AF49A3D75E646484B46A (intptr_t ___0_categorySet, const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t);
+
+	reinterpret_cast<PInvokeFunc>(_SetNotificationCategories)(___0_categorySet);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper__AddStringToNSArray_m0BAB7C567291148EBE50227723B436D2066988AC (intptr_t ___0_array, String_t* ___1_str, int32_t ___2_capacity, const RuntimeMethod* method) 
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) (intptr_t, char*, int32_t);
+
+	char* ____1_str_marshaled = NULL;
+	____1_str_marshaled = il2cpp_codegen_marshal_string(___1_str);
+
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(_AddStringToNSArray)(___0_array, ____1_str_marshaled, ___2_capacity);
+
+	il2cpp_codegen_marshal_free(____1_str_marshaled);
+	____1_str_marshaled = NULL;
+
+	return returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__OpenNotificationSettings_m290E8631FF477F88F9D37727CD73F41A31ECD857 (const RuntimeMethod* method) 
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) ();
+
+	reinterpret_cast<PInvokeFunc>(_OpenNotificationSettings)();
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_RegisterAuthorizationRequestCallback_mCA40A1376B88E5CB45368F1814B8E29C82E16502 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationsWrapper_AuthorizationRequestReceived_m4A6C75E5BFEA2C3E529F2F8CEEA8A813F428B3CD_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD* L_0 = (AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD*)il2cpp_codegen_object_new(AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD_il2cpp_TypeInfo_var);
+		AuthorizationRequestCallback__ctor_mE709FAE919D090ACC25038070BD2145F520DA0FE(L_0, NULL, (intptr_t)((void*)iOSNotificationsWrapper_AuthorizationRequestReceived_m4A6C75E5BFEA2C3E529F2F8CEEA8A813F428B3CD_RuntimeMethod_var), NULL);
+		iOSNotificationsWrapper__SetAuthorizationRequestReceivedDelegate_m88B1999865C9603B8A628DC185980C62A11E1731(L_0, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_RegisterOnReceivedRemoteNotificationCallback_m771FE0AD91B59443803548F9404C40C695A964DE (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationsWrapper_RemoteNotificationReceived_mBF44180FD060AC5811C9979FE6E771650AA35212_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* L_0 = (NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2*)il2cpp_codegen_object_new(NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2_il2cpp_TypeInfo_var);
+		NotificationReceivedCallback__ctor_m3448352ED953E95C4E5BAAE13D4C576B7161B772(L_0, NULL, (intptr_t)((void*)iOSNotificationsWrapper_RemoteNotificationReceived_mBF44180FD060AC5811C9979FE6E771650AA35212_RuntimeMethod_var), NULL);
+		iOSNotificationsWrapper__SetRemoteNotificationReceivedDelegate_mABF9B547DD1F0D569E1E8B202FC8312DA876EBA1(L_0, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_RegisterOnReceivedCallback_m44AE9926E98242E6F356EBA0281584623627B436 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationsWrapper_NotificationReceived_mB7F4859AF321D5AF115D70F4BD8AB131543D7524_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* L_0 = (NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2*)il2cpp_codegen_object_new(NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2_il2cpp_TypeInfo_var);
+		NotificationReceivedCallback__ctor_m3448352ED953E95C4E5BAAE13D4C576B7161B772(L_0, NULL, (intptr_t)((void*)iOSNotificationsWrapper_NotificationReceived_mB7F4859AF321D5AF115D70F4BD8AB131543D7524_RuntimeMethod_var), NULL);
+		iOSNotificationsWrapper__SetNotificationReceivedDelegate_m7EF790D86C1B8E585CFBD1872FABA96171D07A3A(L_0, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_AuthorizationRequestReceived_m4A6C75E5BFEA2C3E529F2F8CEEA8A813F428B3CD (intptr_t ___0_request, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ___1_data, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		intptr_t L_0 = ___0_request;
+		iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC L_1 = ___1_data;
+		il2cpp_codegen_runtime_class_init_inline(AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6_il2cpp_TypeInfo_var);
+		AuthorizationRequest_OnAuthorizationRequestCompleted_m0F1A24F99EF966055A145B95406B0DE10ACF92A8(L_0, L_1, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_RemoteNotificationReceived_mBF44180FD060AC5811C9979FE6E771650AA35212 (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_data, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED L_0 = ___0_data;
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_1;
+		L_1 = iOSNotificationsWrapper_NotificationDataToDataWithUserInfo_mF4B498474102C537FAE4B24B8B1AE8613285A797(L_0, NULL);
+		il2cpp_codegen_runtime_class_init_inline(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		iOSNotificationCenter_OnReceivedRemoteNotification_mC510FFDD28917371EB9312D7F6E2F63CDE03FC22(L_1, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_NotificationReceived_mB7F4859AF321D5AF115D70F4BD8AB131543D7524 (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_data, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED L_0 = ___0_data;
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_1;
+		L_1 = iOSNotificationsWrapper_NotificationDataToDataWithUserInfo_mF4B498474102C537FAE4B24B8B1AE8613285A797(L_0, NULL);
+		il2cpp_codegen_runtime_class_init_inline(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		iOSNotificationCenter_OnSentNotification_m544D0B4C4887048904106DE1C463663A6DC3A906(L_1, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 iOSNotificationsWrapper_NotificationDataToDataWithUserInfo_mF4B498474102C537FAE4B24B8B1AE8613285A797 (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_data, const RuntimeMethod* method) 
+{
+	iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED L_0 = ___0_data;
+		(&V_0)->___data = L_0;
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___identifier), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___title), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___body), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___subtitle), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___categoryIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___threadIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_0)->___data))->___soundName), (void*)NULL);
+		#endif
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_1 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&(&V_0)->___data);
+		L_1->___userInfo = 0;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED L_2 = ___0_data;
+		intptr_t L_3 = L_2.___userInfo;
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_4;
+		L_4 = iOSNotificationsWrapper_NSDictionaryToCs_m5A2FBC09A16627FC083C2EC31150C87ED4112D79(L_3, NULL);
+		(&V_0)->___userInfo = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___userInfo), (void*)L_4);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED L_5 = ___0_data;
+		intptr_t L_6 = L_5.___attachments;
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_7;
+		L_7 = iOSNotificationsWrapper_AttachmentsNSArrayToCs_mC89DB0002C5D4E8E443C2353E2FDB80190784128(L_6, NULL);
+		(&V_0)->___attachments = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___attachments), (void*)L_7);
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_8 = V_0;
+		return L_8;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_ReceiveNSDictionaryKeyValue_m57E371B7275602846E05E0770BFA78C6641BC856 (intptr_t ___0_dict, String_t* ___1_key, String_t* ___2_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* V_1 = NULL;
+	{
+		intptr_t L_0 = ___0_dict;
+		GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC L_1;
+		L_1 = GCHandle_FromIntPtr_mA7848A4285D007CADC52B6272DB243C8FDFD5FAC(L_0, NULL);
+		V_0 = L_1;
+		RuntimeObject* L_2;
+		L_2 = GCHandle_get_Target_m481F9508DA5E384D33CD1F4450060DC56BBD4CD5_inline((&V_0), NULL);
+		V_1 = ((Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*)CastclassClass((RuntimeObject*)L_2, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var));
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_3 = V_1;
+		if (L_3)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0018:
+	{
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_4 = V_1;
+		String_t* L_5 = ___1_key;
+		String_t* L_6 = ___2_value;
+		NullCheck(L_4);
+		Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2(L_4, L_5, L_6, Dictionary_2_set_Item_m9BF625649E96E60C1509898A992A6447E351D1A2_RuntimeMethod_var);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_ReceiveUNNotificationAttachment_mF8194BDA3434E46D10AF292C61D4F3E00B654652 (intptr_t ___0_array, String_t* ___1_id, String_t* ___2_url, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m5AA65AE0FA98A54B451AF71C63369111FF50A855_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tC74F654247ABF5958BE119A0484FED155A4FA129_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* V_1 = NULL;
+	iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	{
+		intptr_t L_0 = ___0_array;
+		GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC L_1;
+		L_1 = GCHandle_FromIntPtr_mA7848A4285D007CADC52B6272DB243C8FDFD5FAC(L_0, NULL);
+		V_0 = L_1;
+		RuntimeObject* L_2;
+		L_2 = GCHandle_get_Target_m481F9508DA5E384D33CD1F4450060DC56BBD4CD5_inline((&V_0), NULL);
+		V_1 = ((List_1_tC74F654247ABF5958BE119A0484FED155A4FA129*)CastclassClass((RuntimeObject*)L_2, List_1_tC74F654247ABF5958BE119A0484FED155A4FA129_il2cpp_TypeInfo_var));
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_3 = V_1;
+		if (L_3)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0018:
+	{
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_4 = V_1;
+		il2cpp_codegen_initobj((&V_2), sizeof(iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933));
+		String_t* L_5 = ___1_id;
+		iOSNotificationAttachment_set_Id_m7401F5705B3B4ADDC0DA5B372FE4579418891E7E_inline((&V_2), L_5, NULL);
+		String_t* L_6 = ___2_url;
+		iOSNotificationAttachment_set_Url_m4F0B407457097EC2DEFDCD296E07CDDF624DE202_inline((&V_2), L_6, NULL);
+		iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 L_7 = V_2;
+		NullCheck(L_4);
+		List_1_Add_m5AA65AE0FA98A54B451AF71C63369111FF50A855_inline(L_4, L_7, List_1_Add_m5AA65AE0FA98A54B451AF71C63369111FF50A855_RuntimeMethod_var);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_RequestAuthorization_mC1062AF0F279E5610F4559CFA756401291648BFA (intptr_t ___0_request, int32_t ___1_options, bool ___2_registerRemote, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_request;
+		int32_t L_1 = ___1_options;
+		bool L_2 = ___2_registerRemote;
+		iOSNotificationsWrapper__RequestAuthorization_mEA8CA44C7AA697DB3EA9D2C460924997CC075315(L_0, L_1, L_2, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationsWrapper_RegisteredForRemoteNotifications_m63E81DBA2DF45724D6DF88C02593BBED67C091CB (const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0;
+		L_0 = iOSNotificationsWrapper__RegisteredForRemoteNotifications_m7074DD3AC9D6067AA3181B38DE45A5A88888D6D7(NULL);
+		return (bool)((!(((uint32_t)L_0) <= ((uint32_t)0)))? 1 : 0);
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_UnregisterForRemoteNotifications_m4D22E416A859059AA1AD803C97E18CBC5036BB11 (const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationsWrapper__UnregisterForRemoteNotifications_m44C6C0542E80A9B534E9443A56E679EA44CCDEC4(NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationSettings_tBDCE6AE27851787C044FEBC52ED202D4BBD24B21 iOSNotificationsWrapper_GetNotificationSettings_m659C38E583D6A52DA9747BBB5707432A5CECC797 (const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationSettings_tBDCE6AE27851787C044FEBC52ED202D4BBD24B21 L_0;
+		L_0 = iOSNotificationsWrapper__GetNotificationSettings_m8DF3328D33595477ADD49C37CC36DA7553BF1077(NULL);
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_ScheduleLocalNotification_m2C66F2E8B8E6A438424896D297650C6AF4228361 (iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_data, const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_0 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&(&___0_data)->___data);
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_1 = ___0_data;
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_2 = L_1.___userInfo;
+		intptr_t L_3;
+		L_3 = iOSNotificationsWrapper_CsDictionaryToObjC_mB8AE5486D42735F580154E24CFB8A024A8E47CE9(L_2, NULL);
+		L_0->___userInfo = L_3;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_4 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&(&___0_data)->___data);
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_5 = ___0_data;
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_6 = L_5.___attachments;
+		intptr_t L_7;
+		L_7 = iOSNotificationsWrapper_CsAttachmentsToObjc_m8EF0E9BAFFCCEE6A5EEC8C7D371C4BA1C5E15BF2(L_6, NULL);
+		L_4->___attachments = L_7;
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_8 = ___0_data;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED L_9 = L_8.___data;
+		iOSNotificationsWrapper__ScheduleLocalNotification_mD2CC306854403F4BBE98648D761A41726BC75F7C(L_9, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* iOSNotificationsWrapper_GetDeliveredNotificationData_m6570276DA5405AE52F6B5FB81CE3646052DB69E9 (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		intptr_t L_0;
+		L_0 = iOSNotificationsWrapper__GetDeliveredNotificationDataArray_m9416BEB875EA2D48C0927E85288E603D38AD92C0((&V_0), NULL);
+		int32_t L_1 = V_0;
+		iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* L_2;
+		L_2 = iOSNotificationsWrapper_MarshalAndFreeNotificationDataArray_m99000C4908D655F245E2EC76029B2B9718D7E491(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationsWrapper_GetLastRespondedNotificationAction_mDE70405A1228FF1C25E14A0819F2624EB009EDD9 (const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0;
+		L_0 = iOSNotificationsWrapper__GetLastRespondedNotificationAction_mB6983CAFA2D834C868567F605F55CB844702BFF1(NULL);
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* iOSNotificationsWrapper_GetLastRespondedNotificationUserText_mD7981FE4DC78ED85B7B7987875ED5CF30ADC4BE6 (const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0;
+		L_0 = iOSNotificationsWrapper__GetLastRespondedNotificationUserText_m39B79F2BDFA59A8780D852E5C8BBB4086E3A609B(NULL);
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* iOSNotificationsWrapper_GetScheduledNotificationData_m570771802615E6B7C2F423A59F24A5FF3D1AE4D1 (const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		intptr_t L_0;
+		L_0 = iOSNotificationsWrapper__GetScheduledNotificationDataArray_m17748B95E93D87E25DF727C4A77348CAF8686457((&V_0), NULL);
+		int32_t L_1 = V_0;
+		iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* L_2;
+		L_2 = iOSNotificationsWrapper_MarshalAndFreeNotificationDataArray_m99000C4908D655F245E2EC76029B2B9718D7E491(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* iOSNotificationsWrapper_MarshalAndFreeNotificationDataArray_m99000C4908D655F245E2EC76029B2B9718D7E491 (intptr_t ___0_ptr, int32_t ___1_count, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* V_0 = NULL;
+	int32_t V_1 = 0;
+	intptr_t V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	int32_t V_3 = 0;
+	{
+		int32_t L_0 = ___1_count;
+		if (!L_0)
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		intptr_t L_1 = ___0_ptr;
+		bool L_2;
+		L_2 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_1, 0, NULL);
+		if (!L_2)
+		{
+			goto IL_0012;
+		}
+	}
+
+IL_0010:
+	{
+		return (iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09*)NULL;
+	}
+
+IL_0012:
+	{
+		int32_t L_3 = ___1_count;
+		iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* L_4 = (iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09*)(iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09*)SZArrayNew(iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09_il2cpp_TypeInfo_var, (uint32_t)L_3);
+		V_0 = L_4;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_5 = { reinterpret_cast<intptr_t> (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
+		Type_t* L_6;
+		L_6 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_5, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
+		int32_t L_7;
+		L_7 = Marshal_SizeOf_mED64846722033D6F60C2973CA604B7C2D7D4A1B7(L_6, NULL);
+		V_1 = L_7;
+		intptr_t L_8 = ___0_ptr;
+		V_2 = L_8;
+		V_3 = 0;
+		goto IL_00a0;
+	}
+
+IL_002f:
+	{
+		iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* L_9 = V_0;
+		int32_t L_10 = V_3;
+		NullCheck(L_9);
+		intptr_t L_11 = V_2;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_12 = { reinterpret_cast<intptr_t> (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
+		Type_t* L_13;
+		L_13 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_12, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
+		RuntimeObject* L_14;
+		L_14 = Marshal_PtrToStructure_m235E141E21BFB69A01B07DDDF1702BA7D5723AC3(L_11, L_13, NULL);
+		((L_9)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_10)))->___data = ((*(iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)UnBox(L_14, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_il2cpp_TypeInfo_var)));
+		Il2CppCodeGenWriteBarrier((void**)&(((&((L_9)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_10)))->___data))->___identifier), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&((L_9)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_10)))->___data))->___title), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&((L_9)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_10)))->___data))->___body), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&((L_9)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_10)))->___data))->___subtitle), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&((L_9)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_10)))->___data))->___categoryIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&((L_9)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_10)))->___data))->___threadIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&((L_9)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_10)))->___data))->___soundName), (void*)NULL);
+		#endif
+		iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* L_15 = V_0;
+		int32_t L_16 = V_3;
+		NullCheck(L_15);
+		iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* L_17 = V_0;
+		int32_t L_18 = V_3;
+		NullCheck(L_17);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_19 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&((L_17)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_18)))->___data);
+		intptr_t L_20 = L_19->___userInfo;
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_21;
+		L_21 = iOSNotificationsWrapper_NSDictionaryToCs_m5A2FBC09A16627FC083C2EC31150C87ED4112D79(L_20, NULL);
+		((L_15)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_16)))->___userInfo = L_21;
+		Il2CppCodeGenWriteBarrier((void**)(&((L_15)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_16)))->___userInfo), (void*)L_21);
+		iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* L_22 = V_0;
+		int32_t L_23 = V_3;
+		NullCheck(L_22);
+		iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* L_24 = V_0;
+		int32_t L_25 = V_3;
+		NullCheck(L_24);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_26 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&((L_24)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_25)))->___data);
+		intptr_t L_27 = L_26->___attachments;
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_28;
+		L_28 = iOSNotificationsWrapper_AttachmentsNSArrayToCs_mC89DB0002C5D4E8E443C2353E2FDB80190784128(L_27, NULL);
+		((L_22)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_23)))->___attachments = L_28;
+		Il2CppCodeGenWriteBarrier((void**)(&((L_22)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_23)))->___attachments), (void*)L_28);
+		intptr_t L_29 = V_2;
+		int32_t L_30 = V_1;
+		intptr_t L_31;
+		L_31 = IntPtr_op_Addition_m6887593F991D01CEB382C914B7FDFA29CB900E2A(L_29, L_30, NULL);
+		V_2 = L_31;
+		int32_t L_32 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_32, 1));
+	}
+
+IL_00a0:
+	{
+		int32_t L_33 = V_3;
+		int32_t L_34 = ___1_count;
+		if ((((int32_t)L_33) < ((int32_t)L_34)))
+		{
+			goto IL_002f;
+		}
+	}
+	{
+		intptr_t L_35 = ___0_ptr;
+		int32_t L_36 = ___1_count;
+		iOSNotificationsWrapper__FreeUnmanagediOSNotificationDataArray_m9BBE43390A00107B926480FA5C2062B81A8F1B1A(L_35, L_36, NULL);
+		iOSNotificationWithUserInfoU5BU5D_tA10CD6260B4DF620F1E5B924B93D77510CBB1F09* L_37 = V_0;
+		return L_37;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper_CsDictionaryToObjC_mB8AE5486D42735F580154E24CFB8A024A8E47CE9 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___0_userInfo, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_GetEnumerator_m46EC45F42CA2279D83568CD3F216AAABA8E749F6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m068DDFF5CAFBB15C8A0602DEADA7F10C5BB7ADCD_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mA93491D9B55547D066053F3BC0A69C635F877438_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m49070E88C2E34AB46E6292A3FB1C227576B8506E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Key_m654BCCAE2F20CB11D8E8C2D2C886A0C8A13EB1C4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Value_m7345512A32CB4DCAA0643050B18DC8DCD71B927A_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Enumerator_t173E7BE1F35CA448C7E0EE77345C9E0EC0206562 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	{
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_0 = ___0_userInfo;
+		if (L_0)
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		return 0;
+	}
+
+IL_0009:
+	{
+		V_0 = 0;
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_1 = ___0_userInfo;
+		NullCheck(L_1);
+		Enumerator_t173E7BE1F35CA448C7E0EE77345C9E0EC0206562 L_2;
+		L_2 = Dictionary_2_GetEnumerator_m46EC45F42CA2279D83568CD3F216AAABA8E749F6(L_1, Dictionary_2_GetEnumerator_m46EC45F42CA2279D83568CD3F216AAABA8E749F6_RuntimeMethod_var);
+		V_1 = L_2;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0040:
+			{
+				Enumerator_Dispose_m068DDFF5CAFBB15C8A0602DEADA7F10C5BB7ADCD((&V_1), Enumerator_Dispose_m068DDFF5CAFBB15C8A0602DEADA7F10C5BB7ADCD_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_0035_1;
+			}
+
+IL_0018_1:
+			{
+				KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A L_3;
+				L_3 = Enumerator_get_Current_m49070E88C2E34AB46E6292A3FB1C227576B8506E_inline((&V_1), Enumerator_get_Current_m49070E88C2E34AB46E6292A3FB1C227576B8506E_RuntimeMethod_var);
+				V_2 = L_3;
+				intptr_t L_4 = V_0;
+				String_t* L_5;
+				L_5 = KeyValuePair_2_get_Key_m654BCCAE2F20CB11D8E8C2D2C886A0C8A13EB1C4_inline((&V_2), KeyValuePair_2_get_Key_m654BCCAE2F20CB11D8E8C2D2C886A0C8A13EB1C4_RuntimeMethod_var);
+				String_t* L_6;
+				L_6 = KeyValuePair_2_get_Value_m7345512A32CB4DCAA0643050B18DC8DCD71B927A_inline((&V_2), KeyValuePair_2_get_Value_m7345512A32CB4DCAA0643050B18DC8DCD71B927A_RuntimeMethod_var);
+				intptr_t L_7;
+				L_7 = iOSNotificationsWrapper__AddItemToNSDictionary_m3798785725CBF97127669F924EE9E35B336D41A5(L_4, L_5, L_6, NULL);
+				V_0 = L_7;
+			}
+
+IL_0035_1:
+			{
+				bool L_8;
+				L_8 = Enumerator_MoveNext_mA93491D9B55547D066053F3BC0A69C635F877438((&V_1), Enumerator_MoveNext_mA93491D9B55547D066053F3BC0A69C635F877438_RuntimeMethod_var);
+				if (L_8)
+				{
+					goto IL_0018_1;
+				}
+			}
+			{
+				goto IL_004e;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_004e:
+	{
+		intptr_t L_9 = V_0;
+		return L_9;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t iOSNotificationsWrapper_CsAttachmentsToObjc_m8EF0E9BAFFCCEE6A5EEC8C7D371C4BA1C5E15BF2 (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* ___0_attachments, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m95922EA1AC2DAA1D6A62F9CEDB8B2E71B49214BA_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m5AF13D1DDEFE6AC1F317C3F1861616F12D72E441_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m8C61C8C66929068D7ED0AACA335678BF2551F90C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m85DC382BDB220A86D7F10CD22CD1EADCBA5D6C29_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m3CB4D035F9ED8FB5E637FFC298A063FD58C0FC06_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	intptr_t V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	{
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_0 = ___0_attachments;
+		if (!L_0)
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_1 = ___0_attachments;
+		NullCheck(L_1);
+		int32_t L_2;
+		L_2 = List_1_get_Count_m3CB4D035F9ED8FB5E637FFC298A063FD58C0FC06_inline(L_1, List_1_get_Count_m3CB4D035F9ED8FB5E637FFC298A063FD58C0FC06_RuntimeMethod_var);
+		if (L_2)
+		{
+			goto IL_0011;
+		}
+	}
+
+IL_000b:
+	{
+		return 0;
+	}
+
+IL_0011:
+	{
+		V_0 = 0;
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_3 = ___0_attachments;
+		NullCheck(L_3);
+		Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2 L_4;
+		L_4 = List_1_GetEnumerator_m85DC382BDB220A86D7F10CD22CD1EADCBA5D6C29(L_3, List_1_GetEnumerator_m85DC382BDB220A86D7F10CD22CD1EADCBA5D6C29_RuntimeMethod_var);
+		V_1 = L_4;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0076:
+			{
+				Enumerator_Dispose_m95922EA1AC2DAA1D6A62F9CEDB8B2E71B49214BA((&V_1), Enumerator_Dispose_m95922EA1AC2DAA1D6A62F9CEDB8B2E71B49214BA_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_006b_1;
+			}
+
+IL_0020_1:
+			{
+				iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 L_5;
+				L_5 = Enumerator_get_Current_m8C61C8C66929068D7ED0AACA335678BF2551F90C_inline((&V_1), Enumerator_get_Current_m8C61C8C66929068D7ED0AACA335678BF2551F90C_RuntimeMethod_var);
+				V_2 = L_5;
+				intptr_t L_6 = V_0;
+				String_t* L_7;
+				L_7 = iOSNotificationAttachment_get_Id_m8A551CB233C83D05BDDACF9688CBECAAF9846C15_inline((&V_2), NULL);
+				String_t* L_8;
+				L_8 = iOSNotificationAttachment_get_Url_mE0C69FB858552B293B9C0BDDFF2894FC6EBE9BF0_inline((&V_2), NULL);
+				intptr_t L_9;
+				L_9 = iOSNotificationsWrapper__AddAttachmentToNSArray_m84054FBACB7477A05721E119B028523ACA016F16(L_6, L_7, L_8, (&V_3), NULL);
+				V_0 = L_9;
+				intptr_t L_10 = V_3;
+				bool L_11;
+				L_11 = IntPtr_op_Inequality_m90EFC9C4CAD9A33E309F2DDF98EE4E1DD253637B_inline(L_10, 0, NULL);
+				if (!L_11)
+				{
+					goto IL_006b_1;
+				}
+			}
+			{
+				intptr_t L_12 = V_0;
+				bool L_13;
+				L_13 = IntPtr_op_Inequality_m90EFC9C4CAD9A33E309F2DDF98EE4E1DD253637B_inline(L_12, 0, NULL);
+				if (!L_13)
+				{
+					goto IL_005f_1;
+				}
+			}
+			{
+				intptr_t L_14 = V_0;
+				iOSNotificationsWrapper__ReleaseNSObject_mFFAD0F85055C706E8A5479A81B66A663831368FE(L_14, NULL);
+			}
+
+IL_005f_1:
+			{
+				intptr_t L_15 = V_3;
+				String_t* L_16;
+				L_16 = iOSNotificationsWrapper__NSErrorToMessage_m621C81B674107D57D52569733B5F7FAD29869C69(L_15, NULL);
+				Exception_t* L_17 = (Exception_t*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
+				Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_17, L_16, NULL);
+				IL2CPP_RAISE_MANAGED_EXCEPTION(L_17, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&iOSNotificationsWrapper_CsAttachmentsToObjc_m8EF0E9BAFFCCEE6A5EEC8C7D371C4BA1C5E15BF2_RuntimeMethod_var)));
+			}
+
+IL_006b_1:
+			{
+				bool L_18;
+				L_18 = Enumerator_MoveNext_m5AF13D1DDEFE6AC1F317C3F1861616F12D72E441((&V_1), Enumerator_MoveNext_m5AF13D1DDEFE6AC1F317C3F1861616F12D72E441_RuntimeMethod_var);
+				if (L_18)
+				{
+					goto IL_0020_1;
+				}
+			}
+			{
+				goto IL_0084;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0084:
+	{
+		intptr_t L_19 = V_0;
+		return L_19;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* iOSNotificationsWrapper_NSDictionaryToCs_m5A2FBC09A16627FC083C2EC31150C87ED4112D79 (intptr_t ___0_dict, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationsWrapper_ReceiveNSDictionaryKeyValue_m57E371B7275602846E05E0770BFA78C6641BC856_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_0 = (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*)il2cpp_codegen_object_new(Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052(L_0, Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052_RuntimeMethod_var);
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_1 = L_0;
+		GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC L_2;
+		L_2 = GCHandle_Alloc_m845AB5ED62859B099C023F34C05BEAEDB4AFE27D(L_1, NULL);
+		V_0 = L_2;
+		GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC L_3 = V_0;
+		intptr_t L_4;
+		L_4 = GCHandle_ToIntPtr_m45294AA913461A070BD555F81103A8BF2E5ED976(L_3, NULL);
+		intptr_t L_5 = ___0_dict;
+		ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4* L_6 = (ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4*)il2cpp_codegen_object_new(ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4_il2cpp_TypeInfo_var);
+		ReceiveNSDictionaryKeyValueCallback__ctor_m7E31544BB059836C992783780D71576AA277A22D(L_6, NULL, (intptr_t)((void*)iOSNotificationsWrapper_ReceiveNSDictionaryKeyValue_m57E371B7275602846E05E0770BFA78C6641BC856_RuntimeMethod_var), NULL);
+		iOSNotificationsWrapper__ReadNSDictionary_m1C436D4473181385D91702AAF13FB7D28A70F714(L_4, L_5, L_6, NULL);
+		GCHandle_Free_m1320A260E487EB1EA6D95F9E54BFFCB5A4EF83A3((&V_0), NULL);
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* iOSNotificationsWrapper_AttachmentsNSArrayToCs_mC89DB0002C5D4E8E443C2353E2FDB80190784128 (intptr_t ___0_array, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mCA6A82D2347A66651ABA4216D8CAF21CBC97B06B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tC74F654247ABF5958BE119A0484FED155A4FA129_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationsWrapper_ReceiveUNNotificationAttachment_mF8194BDA3434E46D10AF292C61D4F3E00B654652_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		intptr_t L_0 = ___0_array;
+		bool L_1;
+		L_1 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_0, 0, NULL);
+		if (!L_1)
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		return (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129*)NULL;
+	}
+
+IL_000f:
+	{
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_2 = (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129*)il2cpp_codegen_object_new(List_1_tC74F654247ABF5958BE119A0484FED155A4FA129_il2cpp_TypeInfo_var);
+		List_1__ctor_mCA6A82D2347A66651ABA4216D8CAF21CBC97B06B(L_2, List_1__ctor_mCA6A82D2347A66651ABA4216D8CAF21CBC97B06B_RuntimeMethod_var);
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_3 = L_2;
+		GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC L_4;
+		L_4 = GCHandle_Alloc_m845AB5ED62859B099C023F34C05BEAEDB4AFE27D(L_3, NULL);
+		V_0 = L_4;
+		GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC L_5 = V_0;
+		intptr_t L_6;
+		L_6 = GCHandle_ToIntPtr_m45294AA913461A070BD555F81103A8BF2E5ED976(L_5, NULL);
+		intptr_t L_7 = ___0_array;
+		ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E* L_8 = (ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E*)il2cpp_codegen_object_new(ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E_il2cpp_TypeInfo_var);
+		ReceiveUNNotificationAttachmentCallback__ctor_m205C4D08A16088C9897995C35D865C64EDC016FC(L_8, NULL, (intptr_t)((void*)iOSNotificationsWrapper_ReceiveUNNotificationAttachment_mF8194BDA3434E46D10AF292C61D4F3E00B654652_RuntimeMethod_var), NULL);
+		iOSNotificationsWrapper__ReadAttachmentsNSArray_m493603B5A3AC41CA7E9366B21F3A11F3E0F2DED4(L_6, L_7, L_8, NULL);
+		GCHandle_Free_m1320A260E487EB1EA6D95F9E54BFFCB5A4EF83A3((&V_0), NULL);
+		return L_3;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_SetApplicationBadge_m340452ADA2F0E0C35F2E034B97AAE8F86827893B (int32_t ___0_badge, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_badge;
+		iOSNotificationsWrapper__SetApplicationBadge_m425633D16CA2A2A7AB652ADC723F37D499B64FF7(L_0, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationsWrapper_GetApplicationBadge_m0F9963248235DCA8F8D178390907819931B3FA79 (const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0;
+		L_0 = iOSNotificationsWrapper__GetApplicationBadge_m53F1F38D3652F65C75E4ED7AE669F23B9D9628BC(NULL);
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationsWrapper_GetAppOpenedUsingNotification_mD1DA7C06CE90D72977577DAC717BB2FCA85EEC07 (const RuntimeMethod* method) 
+{
+	{
+		bool L_0;
+		L_0 = iOSNotificationsWrapper__GetAppOpenedUsingNotification_m6EDB04FD2C23285C778D51EC2F8D3E329AD73B31(NULL);
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tE7C41C3C4F3877D5835C9E9568BDAADAD8FA67A8 iOSNotificationsWrapper_GetLastNotificationData_mEB08C18777114E3BD6197FC86C1BA4F6CBE3B3C0 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1__ctor_m560689C7326F028C51F97F2CB36CB9CDCF15935C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Nullable_1_tE7C41C3C4F3877D5835C9E9568BDAADAD8FA67A8 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	{
+		bool L_0;
+		L_0 = iOSNotificationsWrapper__GetAppOpenedUsingNotification_m6EDB04FD2C23285C778D51EC2F8D3E329AD73B31(NULL);
+		if (!L_0)
+		{
+			goto IL_0097;
+		}
+	}
+	{
+		intptr_t L_1;
+		L_1 = iOSNotificationsWrapper__GetLastNotificationData_mBDAFB058A017C90FFD50DE741698BE38F832A4D6(NULL);
+		V_0 = L_1;
+		intptr_t L_2 = V_0;
+		bool L_3;
+		L_3 = IntPtr_op_Inequality_m90EFC9C4CAD9A33E309F2DDF98EE4E1DD253637B_inline(L_2, 0, NULL);
+		if (!L_3)
+		{
+			goto IL_0097;
+		}
+	}
+	{
+		intptr_t L_4 = V_0;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_5 = { reinterpret_cast<intptr_t> (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
+		Type_t* L_6;
+		L_6 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_5, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
+		RuntimeObject* L_7;
+		L_7 = Marshal_PtrToStructure_m235E141E21BFB69A01B07DDDF1702BA7D5723AC3(L_4, L_6, NULL);
+		(&V_1)->___data = ((*(iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)UnBox(L_7, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_il2cpp_TypeInfo_var)));
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_1)->___data))->___identifier), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_1)->___data))->___title), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_1)->___data))->___body), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_1)->___data))->___subtitle), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_1)->___data))->___categoryIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_1)->___data))->___threadIdentifier), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_1)->___data))->___soundName), (void*)NULL);
+		#endif
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_8 = V_1;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED L_9 = L_8.___data;
+		intptr_t L_10 = L_9.___userInfo;
+		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_11;
+		L_11 = iOSNotificationsWrapper_NSDictionaryToCs_m5A2FBC09A16627FC083C2EC31150C87ED4112D79(L_10, NULL);
+		(&V_1)->___userInfo = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->___userInfo), (void*)L_11);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_12 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&(&V_1)->___data);
+		L_12->___userInfo = 0;
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_13 = V_1;
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED L_14 = L_13.___data;
+		intptr_t L_15 = L_14.___attachments;
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_16;
+		L_16 = iOSNotificationsWrapper_AttachmentsNSArrayToCs_mC89DB0002C5D4E8E443C2353E2FDB80190784128(L_15, NULL);
+		(&V_1)->___attachments = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_1)->___attachments), (void*)L_16);
+		iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED* L_17 = (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED*)(&(&V_1)->___data);
+		L_17->___attachments = 0;
+		intptr_t L_18 = V_0;
+		iOSNotificationsWrapper__FreeUnmanagediOSNotificationDataArray_m9BBE43390A00107B926480FA5C2062B81A8F1B1A(L_18, 1, NULL);
+		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_19 = V_1;
+		Nullable_1_tE7C41C3C4F3877D5835C9E9568BDAADAD8FA67A8 L_20;
+		memset((&L_20), 0, sizeof(L_20));
+		Nullable_1__ctor_m560689C7326F028C51F97F2CB36CB9CDCF15935C((&L_20), L_19, Nullable_1__ctor_m560689C7326F028C51F97F2CB36CB9CDCF15935C_RuntimeMethod_var);
+		return L_20;
+	}
+
+IL_0097:
+	{
+		il2cpp_codegen_initobj((&V_2), sizeof(Nullable_1_tE7C41C3C4F3877D5835C9E9568BDAADAD8FA67A8));
+		Nullable_1_tE7C41C3C4F3877D5835C9E9568BDAADAD8FA67A8 L_21 = V_2;
+		return L_21;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_SetNotificationCategories_m9874163A141115A2CAC03E821E582B70A48A4AEA (RuntimeObject* ___0_categories, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_ContainsKey_mE0C48AA68D5546E0616D5D05E689FA0D00036203_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_GetEnumerator_m41265919586D29EB9B9463CA58C718650069662E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m4ABDF05BA4B194A57967F3B53D7422F6439255F1_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_get_Item_m800AA5B33449643DC97AC1FF1F653A3B9D15CFE8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_set_Item_mA3778483431364C6C54E792CD1AC43576F137AB4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m3DBCD92FD0C9A216ADA0B3A7125D18F23AB20C44_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m827F25AFA853D56D738631CA3CCFB0DABDE9C260_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mF15CFF294BE6EAD4E0D494A943C48290FDE615CF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerable_1_t690156ADFB7DA3B6FFCBA7786B7F9E63BE340211_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_1_t7D43D204798B36A9A7FDE86EB3DEA6B375F1A977_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Value_m4F01AB5E5AD186F63C33C6326B4020B0D76465D5_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* V_0 = NULL;
+	intptr_t V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	RuntimeObject* V_2 = NULL;
+	iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* V_3 = NULL;
+	int32_t V_4 = 0;
+	iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* V_5 = NULL;
+	iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* V_6 = NULL;
+	intptr_t V_7;
+	memset((&V_7), 0, sizeof(V_7));
+	int32_t V_8 = 0;
+	intptr_t V_9;
+	memset((&V_9), 0, sizeof(V_9));
+	intptr_t V_10;
+	memset((&V_10), 0, sizeof(V_10));
+	iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* V_11 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_12 = NULL;
+	String_t* V_13 = NULL;
+	Enumerator_t4576E9828A5C7D89C43F2AD1D83855944862B6C8 V_14;
+	memset((&V_14), 0, sizeof(V_14));
+	KeyValuePair_2_t3FA9D502CC27B123E99A6A0DED92BFC1A6D755C6 V_15;
+	memset((&V_15), 0, sizeof(V_15));
+	{
+		Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* L_0 = (Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9*)il2cpp_codegen_object_new(Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m4ABDF05BA4B194A57967F3B53D7422F6439255F1(L_0, Dictionary_2__ctor_m4ABDF05BA4B194A57967F3B53D7422F6439255F1_RuntimeMethod_var);
+		V_0 = L_0;
+		RuntimeObject* L_1 = ___0_categories;
+		NullCheck(L_1);
+		RuntimeObject* L_2;
+		L_2 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0, IEnumerable_1_t690156ADFB7DA3B6FFCBA7786B7F9E63BE340211_il2cpp_TypeInfo_var, L_1);
+		V_2 = L_2;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0079:
+			{
+				{
+					RuntimeObject* L_3 = V_2;
+					if (!L_3)
+					{
+						goto IL_0082;
+					}
+				}
+				{
+					RuntimeObject* L_4 = V_2;
+					NullCheck(L_4);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_4);
+				}
+
+IL_0082:
+				{
+					return;
+				}
+			}
+		});
+		try
+		{
+			{
+				goto IL_006f_1;
+			}
+
+IL_000f_1:
+			{
+				RuntimeObject* L_5 = V_2;
+				NullCheck(L_5);
+				iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* L_6;
+				L_6 = InterfaceFuncInvoker0< iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* >::Invoke(0, IEnumerator_1_t7D43D204798B36A9A7FDE86EB3DEA6B375F1A977_il2cpp_TypeInfo_var, L_5);
+				NullCheck(L_6);
+				iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* L_7;
+				L_7 = iOSNotificationCategory_get_Actions_m9958D87CD035EA242CEAB3BAC116C43B0CD8F895(L_6, NULL);
+				V_3 = L_7;
+				V_4 = 0;
+				goto IL_0068_1;
+			}
+
+IL_0020_1:
+			{
+				iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* L_8 = V_3;
+				int32_t L_9 = V_4;
+				NullCheck(L_8);
+				int32_t L_10 = L_9;
+				iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* L_11 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
+				V_5 = L_11;
+				iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* L_12 = V_5;
+				NullCheck(L_12);
+				String_t* L_13;
+				L_13 = iOSNotificationAction_get_Id_m2EDC9A71F4912737711EAE8C9B09D8D496A3E3FA_inline(L_12, NULL);
+				bool L_14;
+				L_14 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_13, NULL);
+				if (!L_14)
+				{
+					goto IL_003f_1;
+				}
+			}
+			{
+				ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* L_15 = (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var)));
+				ArgumentException__ctor_m026938A67AF9D36BB7ED27F80425D7194B514465(L_15, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral3445424CCE31FF31906AAE9ADB0236D08C87E42B)), NULL);
+				IL2CPP_RAISE_MANAGED_EXCEPTION(L_15, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&iOSNotificationsWrapper_SetNotificationCategories_m9874163A141115A2CAC03E821E582B70A48A4AEA_RuntimeMethod_var)));
+			}
+
+IL_003f_1:
+			{
+				Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* L_16 = V_0;
+				iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* L_17 = V_5;
+				NullCheck(L_17);
+				String_t* L_18;
+				L_18 = iOSNotificationAction_get_Id_m2EDC9A71F4912737711EAE8C9B09D8D496A3E3FA_inline(L_17, NULL);
+				NullCheck(L_16);
+				bool L_19;
+				L_19 = Dictionary_2_ContainsKey_mE0C48AA68D5546E0616D5D05E689FA0D00036203(L_16, L_18, Dictionary_2_ContainsKey_mE0C48AA68D5546E0616D5D05E689FA0D00036203_RuntimeMethod_var);
+				if (L_19)
+				{
+					goto IL_0062_1;
+				}
+			}
+			{
+				Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* L_20 = V_0;
+				iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* L_21 = V_5;
+				NullCheck(L_21);
+				String_t* L_22;
+				L_22 = iOSNotificationAction_get_Id_m2EDC9A71F4912737711EAE8C9B09D8D496A3E3FA_inline(L_21, NULL);
+				iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* L_23 = V_5;
+				NullCheck(L_23);
+				intptr_t L_24;
+				L_24 = VirtualFuncInvoker0< intptr_t >::Invoke(4, L_23);
+				NullCheck(L_20);
+				Dictionary_2_set_Item_mA3778483431364C6C54E792CD1AC43576F137AB4(L_20, L_22, L_24, Dictionary_2_set_Item_mA3778483431364C6C54E792CD1AC43576F137AB4_RuntimeMethod_var);
+			}
+
+IL_0062_1:
+			{
+				int32_t L_25 = V_4;
+				V_4 = ((int32_t)il2cpp_codegen_add(L_25, 1));
+			}
+
+IL_0068_1:
+			{
+				int32_t L_26 = V_4;
+				iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* L_27 = V_3;
+				NullCheck(L_27);
+				if ((((int32_t)L_26) < ((int32_t)((int32_t)(((RuntimeArray*)L_27)->max_length)))))
+				{
+					goto IL_0020_1;
+				}
+			}
+
+IL_006f_1:
+			{
+				RuntimeObject* L_28 = V_2;
+				NullCheck(L_28);
+				bool L_29;
+				L_29 = InterfaceFuncInvoker0< bool >::Invoke(0, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_28);
+				if (L_29)
+				{
+					goto IL_000f_1;
+				}
+			}
+			{
+				goto IL_0083;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0083:
+	{
+		V_1 = 0;
+		RuntimeObject* L_30 = ___0_categories;
+		NullCheck(L_30);
+		RuntimeObject* L_31;
+		L_31 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0, IEnumerable_1_t690156ADFB7DA3B6FFCBA7786B7F9E63BE340211_il2cpp_TypeInfo_var, L_30);
+		V_2 = L_31;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0166:
+			{
+				{
+					RuntimeObject* L_32 = V_2;
+					if (!L_32)
+					{
+						goto IL_016f;
+					}
+				}
+				{
+					RuntimeObject* L_33 = V_2;
+					NullCheck(L_33);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_33);
+				}
+
+IL_016f:
+				{
+					return;
+				}
+			}
+		});
+		try
+		{
+			{
+				goto IL_0159_1;
+			}
+
+IL_0095_1:
+			{
+				RuntimeObject* L_34 = V_2;
+				NullCheck(L_34);
+				iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* L_35;
+				L_35 = InterfaceFuncInvoker0< iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* >::Invoke(0, IEnumerator_1_t7D43D204798B36A9A7FDE86EB3DEA6B375F1A977_il2cpp_TypeInfo_var, L_34);
+				V_6 = L_35;
+				V_7 = 0;
+				iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* L_36 = V_6;
+				NullCheck(L_36);
+				iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* L_37;
+				L_37 = iOSNotificationCategory_get_Actions_m9958D87CD035EA242CEAB3BAC116C43B0CD8F895(L_36, NULL);
+				NullCheck(L_37);
+				V_8 = ((int32_t)(((RuntimeArray*)L_37)->max_length));
+				iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* L_38 = V_6;
+				NullCheck(L_38);
+				iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* L_39;
+				L_39 = iOSNotificationCategory_get_Actions_m9958D87CD035EA242CEAB3BAC116C43B0CD8F895(L_38, NULL);
+				V_3 = L_39;
+				V_4 = 0;
+				goto IL_00e0_1;
+			}
+
+IL_00bc_1:
+			{
+				iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* L_40 = V_3;
+				int32_t L_41 = V_4;
+				NullCheck(L_40);
+				int32_t L_42 = L_41;
+				iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* L_43 = (L_40)->GetAt(static_cast<il2cpp_array_size_t>(L_42));
+				V_11 = L_43;
+				intptr_t L_44 = V_7;
+				Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* L_45 = V_0;
+				iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* L_46 = V_11;
+				NullCheck(L_46);
+				String_t* L_47;
+				L_47 = iOSNotificationAction_get_Id_m2EDC9A71F4912737711EAE8C9B09D8D496A3E3FA_inline(L_46, NULL);
+				NullCheck(L_45);
+				intptr_t L_48;
+				L_48 = Dictionary_2_get_Item_m800AA5B33449643DC97AC1FF1F653A3B9D15CFE8(L_45, L_47, Dictionary_2_get_Item_m800AA5B33449643DC97AC1FF1F653A3B9D15CFE8_RuntimeMethod_var);
+				int32_t L_49 = V_8;
+				intptr_t L_50;
+				L_50 = iOSNotificationsWrapper__AddActionToNSArray_m686DFC012EFD29CFFD1BD4BF119F800C2FD29BCD(L_44, L_48, L_49, NULL);
+				V_7 = L_50;
+				int32_t L_51 = V_4;
+				V_4 = ((int32_t)il2cpp_codegen_add(L_51, 1));
+			}
+
+IL_00e0_1:
+			{
+				int32_t L_52 = V_4;
+				iOSNotificationActionU5BU5D_t18A4AEF543002EF5A58DFB73858B184FFD525757* L_53 = V_3;
+				NullCheck(L_53);
+				if ((((int32_t)L_52) < ((int32_t)((int32_t)(((RuntimeArray*)L_53)->max_length)))))
+				{
+					goto IL_00bc_1;
+				}
+			}
+			{
+				V_9 = 0;
+				iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* L_54 = V_6;
+				NullCheck(L_54);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_55;
+				L_55 = iOSNotificationCategory_get_IntentIdentifiers_m91CA55C622A693C0AAF6C5CE75322E3084B50FAC(L_54, NULL);
+				NullCheck(L_55);
+				V_8 = ((int32_t)(((RuntimeArray*)L_55)->max_length));
+				iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* L_56 = V_6;
+				NullCheck(L_56);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_57;
+				L_57 = iOSNotificationCategory_get_IntentIdentifiers_m91CA55C622A693C0AAF6C5CE75322E3084B50FAC(L_56, NULL);
+				V_12 = L_57;
+				V_4 = 0;
+				goto IL_0121_1;
+			}
+
+IL_0107_1:
+			{
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_58 = V_12;
+				int32_t L_59 = V_4;
+				NullCheck(L_58);
+				int32_t L_60 = L_59;
+				String_t* L_61 = (L_58)->GetAt(static_cast<il2cpp_array_size_t>(L_60));
+				V_13 = L_61;
+				intptr_t L_62 = V_9;
+				String_t* L_63 = V_13;
+				int32_t L_64 = V_8;
+				intptr_t L_65;
+				L_65 = iOSNotificationsWrapper__AddStringToNSArray_m0BAB7C567291148EBE50227723B436D2066988AC(L_62, L_63, L_64, NULL);
+				V_9 = L_65;
+				int32_t L_66 = V_4;
+				V_4 = ((int32_t)il2cpp_codegen_add(L_66, 1));
+			}
+
+IL_0121_1:
+			{
+				int32_t L_67 = V_4;
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_68 = V_12;
+				NullCheck(L_68);
+				if ((((int32_t)L_67) < ((int32_t)((int32_t)(((RuntimeArray*)L_68)->max_length)))))
+				{
+					goto IL_0107_1;
+				}
+			}
+			{
+				iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* L_69 = V_6;
+				NullCheck(L_69);
+				String_t* L_70;
+				L_70 = iOSNotificationCategory_get_Id_m6A4071B537F6E5B51DA11DCB43613BBD691CFBA9_inline(L_69, NULL);
+				iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* L_71 = V_6;
+				NullCheck(L_71);
+				String_t* L_72;
+				L_72 = iOSNotificationCategory_get_HiddenPreviewsBodyPlaceholder_mCC5DF780F51E1AC578873FE372067DF14800A1C2_inline(L_71, NULL);
+				iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* L_73 = V_6;
+				NullCheck(L_73);
+				String_t* L_74;
+				L_74 = iOSNotificationCategory_get_SummaryFormat_m6835C27643601AFBCD4F51CA3E28C72E850164CB_inline(L_73, NULL);
+				iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* L_75 = V_6;
+				NullCheck(L_75);
+				int32_t L_76;
+				L_76 = iOSNotificationCategory_get_Options_m93741379CF2DF82295080957832C1D37D3DFC961_inline(L_75, NULL);
+				intptr_t L_77 = V_7;
+				intptr_t L_78 = V_9;
+				intptr_t L_79;
+				L_79 = iOSNotificationsWrapper__CreateUNNotificationCategory_m11D21B22ED4FDF28B5F08E37EFC108A10D1415CE(L_70, L_72, L_74, L_76, L_77, L_78, NULL);
+				V_10 = L_79;
+				intptr_t L_80 = V_1;
+				intptr_t L_81 = V_10;
+				intptr_t L_82;
+				L_82 = iOSNotificationsWrapper__AddCategoryToCategorySet_m358D50AFD799BB064CD2F079A7F2B89E04C1AEE4(L_80, L_81, NULL);
+				V_1 = L_82;
+			}
+
+IL_0159_1:
+			{
+				RuntimeObject* L_83 = V_2;
+				NullCheck(L_83);
+				bool L_84;
+				L_84 = InterfaceFuncInvoker0< bool >::Invoke(0, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_83);
+				if (L_84)
+				{
+					goto IL_0095_1;
+				}
+			}
+			{
+				goto IL_0170;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0170:
+	{
+		intptr_t L_85 = V_1;
+		iOSNotificationsWrapper__SetNotificationCategories_mD43856530598B70C8E32AF49A3D75E646484B46A(L_85, NULL);
+		Dictionary_2_t773E327FDA553CD97D06EAE14E2299684DFE7DF9* L_86 = V_0;
+		NullCheck(L_86);
+		Enumerator_t4576E9828A5C7D89C43F2AD1D83855944862B6C8 L_87;
+		L_87 = Dictionary_2_GetEnumerator_m41265919586D29EB9B9463CA58C718650069662E(L_86, Dictionary_2_GetEnumerator_m41265919586D29EB9B9463CA58C718650069662E_RuntimeMethod_var);
+		V_14 = L_87;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_01a0:
+			{
+				Enumerator_Dispose_m3DBCD92FD0C9A216ADA0B3A7125D18F23AB20C44((&V_14), Enumerator_Dispose_m3DBCD92FD0C9A216ADA0B3A7125D18F23AB20C44_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_0195_1;
+			}
+
+IL_0180_1:
+			{
+				KeyValuePair_2_t3FA9D502CC27B123E99A6A0DED92BFC1A6D755C6 L_88;
+				L_88 = Enumerator_get_Current_mF15CFF294BE6EAD4E0D494A943C48290FDE615CF_inline((&V_14), Enumerator_get_Current_mF15CFF294BE6EAD4E0D494A943C48290FDE615CF_RuntimeMethod_var);
+				V_15 = L_88;
+				intptr_t L_89;
+				L_89 = KeyValuePair_2_get_Value_m4F01AB5E5AD186F63C33C6326B4020B0D76465D5_inline((&V_15), KeyValuePair_2_get_Value_m4F01AB5E5AD186F63C33C6326B4020B0D76465D5_RuntimeMethod_var);
+				iOSNotificationsWrapper__ReleaseNSObject_mFFAD0F85055C706E8A5479A81B66A663831368FE(L_89, NULL);
+			}
+
+IL_0195_1:
+			{
+				bool L_90;
+				L_90 = Enumerator_MoveNext_m827F25AFA853D56D738631CA3CCFB0DABDE9C260((&V_14), Enumerator_MoveNext_m827F25AFA853D56D738631CA3CCFB0DABDE9C260_RuntimeMethod_var);
+				if (L_90)
+				{
+					goto IL_0180_1;
+				}
+			}
+			{
+				goto IL_01ae;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_01ae:
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__ctor_m62AE738599FAE8E65ABE3947FDCD7D80F6911F27 (iOSNotificationsWrapper_t03E2DC53BCC5038CF3B2643C4C2EB105AFB28975* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void AuthorizationRequestCallback_Invoke_m0BC99D8AACE6EEB72168EFFD58C14DF549BC8CA6_Multicast(AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD* __this, intptr_t ___0_request, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ___1_data, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD* currentDelegate = reinterpret_cast<AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_request, ___1_data, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void AuthorizationRequestCallback_Invoke_m0BC99D8AACE6EEB72168EFFD58C14DF549BC8CA6_OpenInst(AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD* __this, intptr_t ___0_request, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ___1_data, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_request, ___1_data, method);
+}
+void AuthorizationRequestCallback_Invoke_m0BC99D8AACE6EEB72168EFFD58C14DF549BC8CA6_OpenStatic(AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD* __this, intptr_t ___0_request, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ___1_data, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_request, ___1_data, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD (AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD* __this, intptr_t ___0_request, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ___1_data, const RuntimeMethod* method)
+{
+
+
+	typedef void (DEFAULT_CALL *PInvokeFunc)(intptr_t, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshaled_pinvoke ____1_data_marshaled = {};
+	iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_pinvoke(___1_data, ____1_data_marshaled);
+
+	il2cppPInvokeFunc(___0_request, ____1_data_marshaled);
+
+	iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC_marshal_pinvoke_cleanup(____1_data_marshaled);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequestCallback__ctor_mE709FAE919D090ACC25038070BD2145F520DA0FE (AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 2;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&AuthorizationRequestCallback_Invoke_m0BC99D8AACE6EEB72168EFFD58C14DF549BC8CA6_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&AuthorizationRequestCallback_Invoke_m0BC99D8AACE6EEB72168EFFD58C14DF549BC8CA6_Multicast;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthorizationRequestCallback_Invoke_m0BC99D8AACE6EEB72168EFFD58C14DF549BC8CA6 (AuthorizationRequestCallback_tA51CE2A78EDCE2D7440BBB2611695CC7DAD959CD* __this, intptr_t ___0_request, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC ___1_data, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, iOSAuthorizationRequestData_t216987B5D9A6729184F783B5F68AE9124B9321AC, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_request, ___1_data, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void NotificationReceivedCallback_Invoke_mD7BEEA306BE8224ACA9E4B9C6670E35FA4F24CEF_Multicast(NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* __this, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_notificationData, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* currentDelegate = reinterpret_cast<NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_notificationData, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void NotificationReceivedCallback_Invoke_mD7BEEA306BE8224ACA9E4B9C6670E35FA4F24CEF_OpenInst(NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* __this, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_notificationData, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_notificationData, method);
+}
+void NotificationReceivedCallback_Invoke_mD7BEEA306BE8224ACA9E4B9C6670E35FA4F24CEF_OpenStatic(NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* __this, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_notificationData, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_notificationData, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2 (NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* __this, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_notificationData, const RuntimeMethod* method)
+{
+
+
+	typedef void (DEFAULT_CALL *PInvokeFunc)(iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshaled_pinvoke ____0_notificationData_marshaled = {};
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke(___0_notificationData, ____0_notificationData_marshaled);
+
+	il2cppPInvokeFunc(____0_notificationData_marshaled);
+
+	iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED_marshal_pinvoke_cleanup(____0_notificationData_marshaled);
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationReceivedCallback__ctor_m3448352ED953E95C4E5BAAE13D4C576B7161B772 (NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&NotificationReceivedCallback_Invoke_mD7BEEA306BE8224ACA9E4B9C6670E35FA4F24CEF_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&NotificationReceivedCallback_Invoke_mD7BEEA306BE8224ACA9E4B9C6670E35FA4F24CEF_Multicast;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationReceivedCallback_Invoke_mD7BEEA306BE8224ACA9E4B9C6670E35FA4F24CEF (NotificationReceivedCallback_t7455AC9C9452A69E691AD6D87AFBF9CFA055AFC2* __this, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED ___0_notificationData, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, iOSNotificationData_t57D24EBD788D6C71F203ACE14688358AFA08BDED, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_notificationData, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void ReceiveNSDictionaryKeyValueCallback_Invoke_m97AC6546983BD91A90D6DE0D6FD4AE9407FA4F5C_Multicast(ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4* __this, intptr_t ___0_dict, String_t* ___1_key, String_t* ___2_value, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4* currentDelegate = reinterpret_cast<ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, String_t*, String_t*, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_dict, ___1_key, ___2_value, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void ReceiveNSDictionaryKeyValueCallback_Invoke_m97AC6546983BD91A90D6DE0D6FD4AE9407FA4F5C_OpenInst(ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4* __this, intptr_t ___0_dict, String_t* ___1_key, String_t* ___2_value, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, String_t*, String_t*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_dict, ___1_key, ___2_value, method);
+}
+void ReceiveNSDictionaryKeyValueCallback_Invoke_m97AC6546983BD91A90D6DE0D6FD4AE9407FA4F5C_OpenStatic(ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4* __this, intptr_t ___0_dict, String_t* ___1_key, String_t* ___2_value, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, String_t*, String_t*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_dict, ___1_key, ___2_value, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4 (ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4* __this, intptr_t ___0_dict, String_t* ___1_key, String_t* ___2_value, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc)(intptr_t, char*, char*);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	char* ____1_key_marshaled = NULL;
+	____1_key_marshaled = il2cpp_codegen_marshal_string(___1_key);
+
+	char* ____2_value_marshaled = NULL;
+	____2_value_marshaled = il2cpp_codegen_marshal_string(___2_value);
+
+	il2cppPInvokeFunc(___0_dict, ____1_key_marshaled, ____2_value_marshaled);
+
+	il2cpp_codegen_marshal_free(____1_key_marshaled);
+	____1_key_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____2_value_marshaled);
+	____2_value_marshaled = NULL;
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReceiveNSDictionaryKeyValueCallback__ctor_m7E31544BB059836C992783780D71576AA277A22D (ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 3;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&ReceiveNSDictionaryKeyValueCallback_Invoke_m97AC6546983BD91A90D6DE0D6FD4AE9407FA4F5C_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&ReceiveNSDictionaryKeyValueCallback_Invoke_m97AC6546983BD91A90D6DE0D6FD4AE9407FA4F5C_Multicast;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReceiveNSDictionaryKeyValueCallback_Invoke_m97AC6546983BD91A90D6DE0D6FD4AE9407FA4F5C (ReceiveNSDictionaryKeyValueCallback_tA8DB9C3C323EB0E5C364BDBD4D5EA233BA1863E4* __this, intptr_t ___0_dict, String_t* ___1_key, String_t* ___2_value, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, String_t*, String_t*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_dict, ___1_key, ___2_value, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void ReceiveUNNotificationAttachmentCallback_Invoke_mBABC4148DE22971FCC40FD0EA31047212BA329E2_Multicast(ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E* __this, intptr_t ___0_array, String_t* ___1_id, String_t* ___2_url, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E* currentDelegate = reinterpret_cast<ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, String_t*, String_t*, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_array, ___1_id, ___2_url, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void ReceiveUNNotificationAttachmentCallback_Invoke_mBABC4148DE22971FCC40FD0EA31047212BA329E2_OpenInst(ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E* __this, intptr_t ___0_array, String_t* ___1_id, String_t* ___2_url, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, String_t*, String_t*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_array, ___1_id, ___2_url, method);
+}
+void ReceiveUNNotificationAttachmentCallback_Invoke_mBABC4148DE22971FCC40FD0EA31047212BA329E2_OpenStatic(ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E* __this, intptr_t ___0_array, String_t* ___1_id, String_t* ___2_url, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (intptr_t, String_t*, String_t*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_array, ___1_id, ___2_url, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E (ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E* __this, intptr_t ___0_array, String_t* ___1_id, String_t* ___2_url, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc)(intptr_t, char*, char*);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	char* ____1_id_marshaled = NULL;
+	____1_id_marshaled = il2cpp_codegen_marshal_string(___1_id);
+
+	char* ____2_url_marshaled = NULL;
+	____2_url_marshaled = il2cpp_codegen_marshal_string(___2_url);
+
+	il2cppPInvokeFunc(___0_array, ____1_id_marshaled, ____2_url_marshaled);
+
+	il2cpp_codegen_marshal_free(____1_id_marshaled);
+	____1_id_marshaled = NULL;
+
+	il2cpp_codegen_marshal_free(____2_url_marshaled);
+	____2_url_marshaled = NULL;
+
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReceiveUNNotificationAttachmentCallback__ctor_m205C4D08A16088C9897995C35D865C64EDC016FC (ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 3;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&ReceiveUNNotificationAttachmentCallback_Invoke_mBABC4148DE22971FCC40FD0EA31047212BA329E2_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&ReceiveUNNotificationAttachmentCallback_Invoke_mBABC4148DE22971FCC40FD0EA31047212BA329E2_Multicast;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReceiveUNNotificationAttachmentCallback_Invoke_mBABC4148DE22971FCC40FD0EA31047212BA329E2 (ReceiveUNNotificationAttachmentCallback_t83B0A933BF29517D6BB5FA8A81B837112C902D3E* __this, intptr_t ___0_array, String_t* ___1_id, String_t* ___2_url, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, intptr_t, String_t*, String_t*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_array, ___1_id, ___2_url, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshal_pinvoke(const iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48& unmarshaled, iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshaled_pinvoke& marshaled)
+{
+	marshaled.___U3CLatitudeU3Ek__BackingField = unmarshaled.___U3CLatitudeU3Ek__BackingField;
+	marshaled.___U3CLongitudeU3Ek__BackingField = unmarshaled.___U3CLongitudeU3Ek__BackingField;
+	marshaled.___U3CRadiusU3Ek__BackingField = unmarshaled.___U3CRadiusU3Ek__BackingField;
+	marshaled.___U3CNotifyOnEntryU3Ek__BackingField = static_cast<int32_t>(unmarshaled.___U3CNotifyOnEntryU3Ek__BackingField);
+	marshaled.___U3CNotifyOnExitU3Ek__BackingField = static_cast<int32_t>(unmarshaled.___U3CNotifyOnExitU3Ek__BackingField);
+	marshaled.___U3CRepeatsU3Ek__BackingField = static_cast<int32_t>(unmarshaled.___U3CRepeatsU3Ek__BackingField);
+}
+IL2CPP_EXTERN_C void iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshal_pinvoke_back(const iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshaled_pinvoke& marshaled, iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48& unmarshaled)
+{
+	double unmarshaledU3CLatitudeU3Ek__BackingField_temp_0 = 0.0;
+	unmarshaledU3CLatitudeU3Ek__BackingField_temp_0 = marshaled.___U3CLatitudeU3Ek__BackingField;
+	unmarshaled.___U3CLatitudeU3Ek__BackingField = unmarshaledU3CLatitudeU3Ek__BackingField_temp_0;
+	double unmarshaledU3CLongitudeU3Ek__BackingField_temp_1 = 0.0;
+	unmarshaledU3CLongitudeU3Ek__BackingField_temp_1 = marshaled.___U3CLongitudeU3Ek__BackingField;
+	unmarshaled.___U3CLongitudeU3Ek__BackingField = unmarshaledU3CLongitudeU3Ek__BackingField_temp_1;
+	float unmarshaledU3CRadiusU3Ek__BackingField_temp_2 = 0.0f;
+	unmarshaledU3CRadiusU3Ek__BackingField_temp_2 = marshaled.___U3CRadiusU3Ek__BackingField;
+	unmarshaled.___U3CRadiusU3Ek__BackingField = unmarshaledU3CRadiusU3Ek__BackingField_temp_2;
+	bool unmarshaledU3CNotifyOnEntryU3Ek__BackingField_temp_3 = false;
+	unmarshaledU3CNotifyOnEntryU3Ek__BackingField_temp_3 = static_cast<bool>(marshaled.___U3CNotifyOnEntryU3Ek__BackingField);
+	unmarshaled.___U3CNotifyOnEntryU3Ek__BackingField = unmarshaledU3CNotifyOnEntryU3Ek__BackingField_temp_3;
+	bool unmarshaledU3CNotifyOnExitU3Ek__BackingField_temp_4 = false;
+	unmarshaledU3CNotifyOnExitU3Ek__BackingField_temp_4 = static_cast<bool>(marshaled.___U3CNotifyOnExitU3Ek__BackingField);
+	unmarshaled.___U3CNotifyOnExitU3Ek__BackingField = unmarshaledU3CNotifyOnExitU3Ek__BackingField_temp_4;
+	bool unmarshaledU3CRepeatsU3Ek__BackingField_temp_5 = false;
+	unmarshaledU3CRepeatsU3Ek__BackingField_temp_5 = static_cast<bool>(marshaled.___U3CRepeatsU3Ek__BackingField);
+	unmarshaled.___U3CRepeatsU3Ek__BackingField = unmarshaledU3CRepeatsU3Ek__BackingField_temp_5;
+}
+IL2CPP_EXTERN_C void iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshal_pinvoke_cleanup(iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshaled_pinvoke& marshaled)
+{
+}
+IL2CPP_EXTERN_C void iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshal_com(const iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48& unmarshaled, iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshaled_com& marshaled)
+{
+	marshaled.___U3CLatitudeU3Ek__BackingField = unmarshaled.___U3CLatitudeU3Ek__BackingField;
+	marshaled.___U3CLongitudeU3Ek__BackingField = unmarshaled.___U3CLongitudeU3Ek__BackingField;
+	marshaled.___U3CRadiusU3Ek__BackingField = unmarshaled.___U3CRadiusU3Ek__BackingField;
+	marshaled.___U3CNotifyOnEntryU3Ek__BackingField = static_cast<int32_t>(unmarshaled.___U3CNotifyOnEntryU3Ek__BackingField);
+	marshaled.___U3CNotifyOnExitU3Ek__BackingField = static_cast<int32_t>(unmarshaled.___U3CNotifyOnExitU3Ek__BackingField);
+	marshaled.___U3CRepeatsU3Ek__BackingField = static_cast<int32_t>(unmarshaled.___U3CRepeatsU3Ek__BackingField);
+}
+IL2CPP_EXTERN_C void iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshal_com_back(const iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshaled_com& marshaled, iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48& unmarshaled)
+{
+	double unmarshaledU3CLatitudeU3Ek__BackingField_temp_0 = 0.0;
+	unmarshaledU3CLatitudeU3Ek__BackingField_temp_0 = marshaled.___U3CLatitudeU3Ek__BackingField;
+	unmarshaled.___U3CLatitudeU3Ek__BackingField = unmarshaledU3CLatitudeU3Ek__BackingField_temp_0;
+	double unmarshaledU3CLongitudeU3Ek__BackingField_temp_1 = 0.0;
+	unmarshaledU3CLongitudeU3Ek__BackingField_temp_1 = marshaled.___U3CLongitudeU3Ek__BackingField;
+	unmarshaled.___U3CLongitudeU3Ek__BackingField = unmarshaledU3CLongitudeU3Ek__BackingField_temp_1;
+	float unmarshaledU3CRadiusU3Ek__BackingField_temp_2 = 0.0f;
+	unmarshaledU3CRadiusU3Ek__BackingField_temp_2 = marshaled.___U3CRadiusU3Ek__BackingField;
+	unmarshaled.___U3CRadiusU3Ek__BackingField = unmarshaledU3CRadiusU3Ek__BackingField_temp_2;
+	bool unmarshaledU3CNotifyOnEntryU3Ek__BackingField_temp_3 = false;
+	unmarshaledU3CNotifyOnEntryU3Ek__BackingField_temp_3 = static_cast<bool>(marshaled.___U3CNotifyOnEntryU3Ek__BackingField);
+	unmarshaled.___U3CNotifyOnEntryU3Ek__BackingField = unmarshaledU3CNotifyOnEntryU3Ek__BackingField_temp_3;
+	bool unmarshaledU3CNotifyOnExitU3Ek__BackingField_temp_4 = false;
+	unmarshaledU3CNotifyOnExitU3Ek__BackingField_temp_4 = static_cast<bool>(marshaled.___U3CNotifyOnExitU3Ek__BackingField);
+	unmarshaled.___U3CNotifyOnExitU3Ek__BackingField = unmarshaledU3CNotifyOnExitU3Ek__BackingField_temp_4;
+	bool unmarshaledU3CRepeatsU3Ek__BackingField_temp_5 = false;
+	unmarshaledU3CRepeatsU3Ek__BackingField_temp_5 = static_cast<bool>(marshaled.___U3CRepeatsU3Ek__BackingField);
+	unmarshaled.___U3CRepeatsU3Ek__BackingField = unmarshaledU3CRepeatsU3Ek__BackingField_temp_5;
+}
+IL2CPP_EXTERN_C void iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshal_com_cleanup(iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48_marshaled_com& marshaled)
+{
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationLocationTrigger_get_Type_m95AD5724B07112816285A5B3F9D72025C31D7B73 (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		return (int32_t)(((int32_t)20));
+	}
+}
+IL2CPP_EXTERN_C  int32_t iOSNotificationLocationTrigger_get_Type_m95AD5724B07112816285A5B3F9D72025C31D7B73_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48*>(__this + _offset);
+	int32_t _returnValue;
+	_returnValue = iOSNotificationLocationTrigger_get_Type_m95AD5724B07112816285A5B3F9D72025C31D7B73(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double iOSNotificationLocationTrigger_get_Latitude_m4DE69E4FEA40E9BEECBE69F3B4087929B9D097C7 (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		double L_0 = __this->___U3CLatitudeU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  double iOSNotificationLocationTrigger_get_Latitude_m4DE69E4FEA40E9BEECBE69F3B4087929B9D097C7_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48*>(__this + _offset);
+	double _returnValue;
+	_returnValue = iOSNotificationLocationTrigger_get_Latitude_m4DE69E4FEA40E9BEECBE69F3B4087929B9D097C7_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double iOSNotificationLocationTrigger_get_Longitude_mA6F70FD2BDD9797246165AC7FE98447E5AD4DF00 (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		double L_0 = __this->___U3CLongitudeU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  double iOSNotificationLocationTrigger_get_Longitude_mA6F70FD2BDD9797246165AC7FE98447E5AD4DF00_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48*>(__this + _offset);
+	double _returnValue;
+	_returnValue = iOSNotificationLocationTrigger_get_Longitude_mA6F70FD2BDD9797246165AC7FE98447E5AD4DF00_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float iOSNotificationLocationTrigger_get_Radius_m0C88F4129F152878B4992FBCC5F74209168C6065 (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = __this->___U3CRadiusU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  float iOSNotificationLocationTrigger_get_Radius_m0C88F4129F152878B4992FBCC5F74209168C6065_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48*>(__this + _offset);
+	float _returnValue;
+	_returnValue = iOSNotificationLocationTrigger_get_Radius_m0C88F4129F152878B4992FBCC5F74209168C6065_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationLocationTrigger_get_NotifyOnEntry_m1CAB623B32CC86E1D88991D5D8D6610524C5F010 (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CNotifyOnEntryU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  bool iOSNotificationLocationTrigger_get_NotifyOnEntry_m1CAB623B32CC86E1D88991D5D8D6610524C5F010_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48*>(__this + _offset);
+	bool _returnValue;
+	_returnValue = iOSNotificationLocationTrigger_get_NotifyOnEntry_m1CAB623B32CC86E1D88991D5D8D6610524C5F010_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationLocationTrigger_get_NotifyOnExit_m8D0AAD323FAF46CA0DFCCE6FFE6C496A398E3FD6 (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CNotifyOnExitU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  bool iOSNotificationLocationTrigger_get_NotifyOnExit_m8D0AAD323FAF46CA0DFCCE6FFE6C496A398E3FD6_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48*>(__this + _offset);
+	bool _returnValue;
+	_returnValue = iOSNotificationLocationTrigger_get_NotifyOnExit_m8D0AAD323FAF46CA0DFCCE6FFE6C496A398E3FD6_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationLocationTrigger_get_Repeats_m8C0B2F1321CE19C7BEC39F45685502FE66D7A9D5 (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CRepeatsU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  bool iOSNotificationLocationTrigger_get_Repeats_m8C0B2F1321CE19C7BEC39F45685502FE66D7A9D5_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48*>(__this + _offset);
+	bool _returnValue;
+	_returnValue = iOSNotificationLocationTrigger_get_Repeats_m8C0B2F1321CE19C7BEC39F45685502FE66D7A9D5_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshal_pinvoke(const iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649& unmarshaled, iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshaled_pinvoke& marshaled)
+{
+	marshaled.___timeInterval = unmarshaled.___timeInterval;
+	marshaled.___U3CRepeatsU3Ek__BackingField = static_cast<int32_t>(unmarshaled.___U3CRepeatsU3Ek__BackingField);
+}
+IL2CPP_EXTERN_C void iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshal_pinvoke_back(const iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshaled_pinvoke& marshaled, iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649& unmarshaled)
+{
+	int32_t unmarshaledtimeInterval_temp_0 = 0;
+	unmarshaledtimeInterval_temp_0 = marshaled.___timeInterval;
+	unmarshaled.___timeInterval = unmarshaledtimeInterval_temp_0;
+	bool unmarshaledU3CRepeatsU3Ek__BackingField_temp_1 = false;
+	unmarshaledU3CRepeatsU3Ek__BackingField_temp_1 = static_cast<bool>(marshaled.___U3CRepeatsU3Ek__BackingField);
+	unmarshaled.___U3CRepeatsU3Ek__BackingField = unmarshaledU3CRepeatsU3Ek__BackingField_temp_1;
+}
+IL2CPP_EXTERN_C void iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshal_pinvoke_cleanup(iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshaled_pinvoke& marshaled)
+{
+}
+IL2CPP_EXTERN_C void iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshal_com(const iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649& unmarshaled, iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshaled_com& marshaled)
+{
+	marshaled.___timeInterval = unmarshaled.___timeInterval;
+	marshaled.___U3CRepeatsU3Ek__BackingField = static_cast<int32_t>(unmarshaled.___U3CRepeatsU3Ek__BackingField);
+}
+IL2CPP_EXTERN_C void iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshal_com_back(const iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshaled_com& marshaled, iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649& unmarshaled)
+{
+	int32_t unmarshaledtimeInterval_temp_0 = 0;
+	unmarshaledtimeInterval_temp_0 = marshaled.___timeInterval;
+	unmarshaled.___timeInterval = unmarshaledtimeInterval_temp_0;
+	bool unmarshaledU3CRepeatsU3Ek__BackingField_temp_1 = false;
+	unmarshaledU3CRepeatsU3Ek__BackingField_temp_1 = static_cast<bool>(marshaled.___U3CRepeatsU3Ek__BackingField);
+	unmarshaled.___U3CRepeatsU3Ek__BackingField = unmarshaledU3CRepeatsU3Ek__BackingField_temp_1;
+}
+IL2CPP_EXTERN_C void iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshal_com_cleanup(iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649_marshaled_com& marshaled)
+{
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationTimeIntervalTrigger_get_Type_mC688FDD7770A276C2FE0862FB3208D07CA1A6849 (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, const RuntimeMethod* method) 
+{
+	{
+		return (int32_t)(0);
+	}
+}
+IL2CPP_EXTERN_C  int32_t iOSNotificationTimeIntervalTrigger_get_Type_mC688FDD7770A276C2FE0862FB3208D07CA1A6849_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649*>(__this + _offset);
+	int32_t _returnValue;
+	_returnValue = iOSNotificationTimeIntervalTrigger_get_Type_mC688FDD7770A276C2FE0862FB3208D07CA1A6849(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationTimeIntervalTrigger_set_TimeInterval_m8DDE94D778C187DAC0F82E324AF795E64E005130 (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
+		double L_0;
+		L_0 = TimeSpan_get_TotalSeconds_mED686E7CECE6A76A7DC38518698B9199DB8CDEA8((&___0_value), NULL);
+		__this->___timeInterval = il2cpp_codegen_cast_double_to_int<int32_t>(L_0);
+		int32_t L_1 = __this->___timeInterval;
+		if ((((int32_t)L_1) > ((int32_t)0)))
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* L_2 = (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var)));
+		ArgumentException__ctor_m026938A67AF9D36BB7ED27F80425D7194B514465(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralFCA8707FE0861CE909C71CAD2EB86B6143B5E8D7)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&iOSNotificationTimeIntervalTrigger_set_TimeInterval_m8DDE94D778C187DAC0F82E324AF795E64E005130_RuntimeMethod_var)));
+	}
+
+IL_0022:
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationTimeIntervalTrigger_set_TimeInterval_m8DDE94D778C187DAC0F82E324AF795E64E005130_AdjustorThunk (RuntimeObject* __this, TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649*>(__this + _offset);
+	iOSNotificationTimeIntervalTrigger_set_TimeInterval_m8DDE94D778C187DAC0F82E324AF795E64E005130(_thisAdjusted, ___0_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationTimeIntervalTrigger_get_Repeats_mFE259880B9E33257AC4D52608430BE18906C7EBD (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CRepeatsU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  bool iOSNotificationTimeIntervalTrigger_get_Repeats_mFE259880B9E33257AC4D52608430BE18906C7EBD_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649*>(__this + _offset);
+	bool _returnValue;
+	_returnValue = iOSNotificationTimeIntervalTrigger_get_Repeats_mFE259880B9E33257AC4D52608430BE18906C7EBD_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationTimeIntervalTrigger_set_Repeats_m7A9109F22E610DF25D696DD1CDEED9B311FBE5B9 (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = ___0_value;
+		__this->___U3CRepeatsU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationTimeIntervalTrigger_set_Repeats_m7A9109F22E610DF25D696DD1CDEED9B311FBE5B9_AdjustorThunk (RuntimeObject* __this, bool ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649*>(__this + _offset);
+	iOSNotificationTimeIntervalTrigger_set_Repeats_m7A9109F22E610DF25D696DD1CDEED9B311FBE5B9_inline(_thisAdjusted, ___0_value, method);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshal_pinvoke(const iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C& unmarshaled, iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshaled_pinvoke& marshaled)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C____U3CYearU3Ek__BackingField_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t* ___U3CYearU3Ek__BackingFieldException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '%s' of type '%s'.", iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C____U3CYearU3Ek__BackingField_FieldInfo_var, iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_0_0_0_var);
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___U3CYearU3Ek__BackingFieldException, NULL);
+}
+IL2CPP_EXTERN_C void iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshal_pinvoke_back(const iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshaled_pinvoke& marshaled, iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C& unmarshaled)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C____U3CYearU3Ek__BackingField_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t* ___U3CYearU3Ek__BackingFieldException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '%s' of type '%s'.", iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C____U3CYearU3Ek__BackingField_FieldInfo_var, iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_0_0_0_var);
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___U3CYearU3Ek__BackingFieldException, NULL);
+}
+IL2CPP_EXTERN_C void iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshal_pinvoke_cleanup(iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshaled_pinvoke& marshaled)
+{
+}
+IL2CPP_EXTERN_C void iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshal_com(const iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C& unmarshaled, iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshaled_com& marshaled)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C____U3CYearU3Ek__BackingField_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t* ___U3CYearU3Ek__BackingFieldException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '%s' of type '%s'.", iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C____U3CYearU3Ek__BackingField_FieldInfo_var, iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_0_0_0_var);
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___U3CYearU3Ek__BackingFieldException, NULL);
+}
+IL2CPP_EXTERN_C void iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshal_com_back(const iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshaled_com& marshaled, iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C& unmarshaled)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C____U3CYearU3Ek__BackingField_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t* ___U3CYearU3Ek__BackingFieldException = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '%s' of type '%s'.", iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C____U3CYearU3Ek__BackingField_FieldInfo_var, iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_0_0_0_var);
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___U3CYearU3Ek__BackingFieldException, NULL);
+}
+IL2CPP_EXTERN_C void iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshal_com_cleanup(iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C_marshaled_com& marshaled)
+{
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationCalendarTrigger_get_Type_mB3B8E3E49566CDA04FD16B12BDDD8F53CDEB0EBA (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		return (int32_t)(((int32_t)10));
+	}
+}
+IL2CPP_EXTERN_C  int32_t iOSNotificationCalendarTrigger_get_Type_mB3B8E3E49566CDA04FD16B12BDDD8F53CDEB0EBA_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	int32_t _returnValue;
+	_returnValue = iOSNotificationCalendarTrigger_get_Type_mB3B8E3E49566CDA04FD16B12BDDD8F53CDEB0EBA(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Year_m374E19995A7D455F538AD624B45038314F67A552 (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CYearU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Year_m374E19995A7D455F538AD624B45038314F67A552_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 _returnValue;
+	_returnValue = iOSNotificationCalendarTrigger_get_Year_m374E19995A7D455F538AD624B45038314F67A552_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Month_mDB1FF22A26190D324FA2E318A568DADD8052B880 (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CMonthU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Month_mDB1FF22A26190D324FA2E318A568DADD8052B880_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 _returnValue;
+	_returnValue = iOSNotificationCalendarTrigger_get_Month_mDB1FF22A26190D324FA2E318A568DADD8052B880_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Month_m6A0717CC00C5710782F55B6E8F235A8CCA783FCC (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CMonthU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationCalendarTrigger_set_Month_m6A0717CC00C5710782F55B6E8F235A8CCA783FCC_AdjustorThunk (RuntimeObject* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	iOSNotificationCalendarTrigger_set_Month_m6A0717CC00C5710782F55B6E8F235A8CCA783FCC_inline(_thisAdjusted, ___0_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Day_mC4F7971F8793F44ABC30D0EF92ACB3E48764E0AB (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CDayU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Day_mC4F7971F8793F44ABC30D0EF92ACB3E48764E0AB_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 _returnValue;
+	_returnValue = iOSNotificationCalendarTrigger_get_Day_mC4F7971F8793F44ABC30D0EF92ACB3E48764E0AB_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Day_m8FB648F44C32FF032448CA475F56AF12FC7E760B (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CDayU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationCalendarTrigger_set_Day_m8FB648F44C32FF032448CA475F56AF12FC7E760B_AdjustorThunk (RuntimeObject* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	iOSNotificationCalendarTrigger_set_Day_m8FB648F44C32FF032448CA475F56AF12FC7E760B_inline(_thisAdjusted, ___0_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Hour_mCD81C83676F017602B51D1F20874004DCA39FF6F (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CHourU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Hour_mCD81C83676F017602B51D1F20874004DCA39FF6F_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 _returnValue;
+	_returnValue = iOSNotificationCalendarTrigger_get_Hour_mCD81C83676F017602B51D1F20874004DCA39FF6F_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Hour_m3322D5351F9E8EFC284E552E55BF145355F8CF60 (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CHourU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationCalendarTrigger_set_Hour_m3322D5351F9E8EFC284E552E55BF145355F8CF60_AdjustorThunk (RuntimeObject* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	iOSNotificationCalendarTrigger_set_Hour_m3322D5351F9E8EFC284E552E55BF145355F8CF60_inline(_thisAdjusted, ___0_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Minute_m97CA25E0086BCBCA95CFE75393756A0831B32124 (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CMinuteU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Minute_m97CA25E0086BCBCA95CFE75393756A0831B32124_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 _returnValue;
+	_returnValue = iOSNotificationCalendarTrigger_get_Minute_m97CA25E0086BCBCA95CFE75393756A0831B32124_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Minute_mF59941F1A7D0B027AACDAB8445DAC99DAE9AEE82 (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CMinuteU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationCalendarTrigger_set_Minute_mF59941F1A7D0B027AACDAB8445DAC99DAE9AEE82_AdjustorThunk (RuntimeObject* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	iOSNotificationCalendarTrigger_set_Minute_mF59941F1A7D0B027AACDAB8445DAC99DAE9AEE82_inline(_thisAdjusted, ___0_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Second_m676B6BFE09F0C90AFF8CF222D4C8D859C9DA184F (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CSecondU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Second_m676B6BFE09F0C90AFF8CF222D4C8D859C9DA184F_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 _returnValue;
+	_returnValue = iOSNotificationCalendarTrigger_get_Second_m676B6BFE09F0C90AFF8CF222D4C8D859C9DA184F_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Second_m2347F668195B9C4773D4B0B3B297221FF8561F7D (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CSecondU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationCalendarTrigger_set_Second_m2347F668195B9C4773D4B0B3B297221FF8561F7D_AdjustorThunk (RuntimeObject* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	iOSNotificationCalendarTrigger_set_Second_m2347F668195B9C4773D4B0B3B297221FF8561F7D_inline(_thisAdjusted, ___0_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationCalendarTrigger_get_UtcTime_m5AA0A42A0D637AEC93FEE561A327E1910AE88E90 (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CUtcTimeU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  bool iOSNotificationCalendarTrigger_get_UtcTime_m5AA0A42A0D637AEC93FEE561A327E1910AE88E90_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	bool _returnValue;
+	_returnValue = iOSNotificationCalendarTrigger_get_UtcTime_m5AA0A42A0D637AEC93FEE561A327E1910AE88E90_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationCalendarTrigger_get_Repeats_m9F42C284F442180685A54C0108DFF7C3DBEC909E (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CRepeatsU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C  bool iOSNotificationCalendarTrigger_get_Repeats_m9F42C284F442180685A54C0108DFF7C3DBEC909E_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	bool _returnValue;
+	_returnValue = iOSNotificationCalendarTrigger_get_Repeats_m9F42C284F442180685A54C0108DFF7C3DBEC909E_inline(_thisAdjusted, method);
+	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Repeats_m61C090AF21271FBAEB5E30E8A37F349BE822AE07 (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = ___0_value;
+		__this->___U3CRepeatsU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationCalendarTrigger_set_Repeats_m61C090AF21271FBAEB5E30E8A37F349BE822AE07_AdjustorThunk (RuntimeObject* __this, bool ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	iOSNotificationCalendarTrigger_set_Repeats_m61C090AF21271FBAEB5E30E8A37F349BE822AE07_inline(_thisAdjusted, ___0_value, method);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthorizationRequest_set_IsFinished_m9AF9F366ABC34678151252ECFC3B4FF6959E6ED9_inline (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = ___0_value;
+		__this->___m_IsFinished = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthorizationRequest_set_Granted_mFC66547317A168FF388E5AFA19A4A1F31AAF7033_inline (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = ___0_value;
+		__this->___m_Granted = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthorizationRequest_set_Error_m0310B101EB0CDE8DEF8FAA58E69513A810AF5F41_inline (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___0_value;
+		__this->___m_Error = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Error), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthorizationRequest_set_DeviceToken_mDF3A4418B4B1D213AE14E590BCB36BD3C5FADAE3_inline (AuthorizationRequest_t47AE642A3B68B0822738A9B2101E8F28D47A99A6* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___0_value;
+		__this->___m_DeviceToken = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DeviceToken), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GCHandle_get_Target_m481F9508DA5E384D33CD1F4450060DC56BBD4CD5_inline (GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0;
+		L_0 = GCHandle_get_IsAllocated_m241908103D8D867E11CCAB73C918729825E86843_inline(__this, NULL);
+		if (L_0)
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_1 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral4EBC86E0EACFCA522AEB82874860D0E248D782A5)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&GCHandle_get_Target_m481F9508DA5E384D33CD1F4450060DC56BBD4CD5_RuntimeMethod_var)));
+	}
+
+IL_0013:
+	{
+		intptr_t L_2 = __this->___handle;
+		bool L_3;
+		L_3 = GCHandle_CanDereferenceHandle_mAAAC42D1268CEF3FDD040A3D1574773D08140579_inline(L_2, NULL);
+		if (!L_3)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		intptr_t L_4 = __this->___handle;
+		RuntimeObject* L_5;
+		L_5 = GCHandle_GetRef_mAC7E58E62417209DC41C99F66BA70F0C3AA18DA8_inline(L_4, NULL);
+		return L_5;
+	}
+
+IL_002c:
+	{
+		intptr_t L_6 = __this->___handle;
+		RuntimeObject* L_7;
+		L_7 = GCHandle_GetTarget_mE0AF851834410E2AEA6285B2497751570236C794(L_6, NULL);
+		return L_7;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationTimeIntervalTrigger_get_Repeats_mFE259880B9E33257AC4D52608430BE18906C7EBD_inline (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CRepeatsU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationCalendarTrigger_get_UtcTime_m5AA0A42A0D637AEC93FEE561A327E1910AE88E90_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CUtcTimeU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Year_m374E19995A7D455F538AD624B45038314F67A552_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CYearU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Month_mDB1FF22A26190D324FA2E318A568DADD8052B880_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CMonthU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Day_mC4F7971F8793F44ABC30D0EF92ACB3E48764E0AB_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CDayU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Hour_mCD81C83676F017602B51D1F20874004DCA39FF6F_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CHourU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Minute_m97CA25E0086BCBCA95CFE75393756A0831B32124_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CMinuteU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Second_m676B6BFE09F0C90AFF8CF222D4C8D859C9DA184F_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = __this->___U3CSecondU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationCalendarTrigger_get_Repeats_m9F42C284F442180685A54C0108DFF7C3DBEC909E_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CRepeatsU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double iOSNotificationLocationTrigger_get_Latitude_m4DE69E4FEA40E9BEECBE69F3B4087929B9D097C7_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		double L_0 = __this->___U3CLatitudeU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double iOSNotificationLocationTrigger_get_Longitude_mA6F70FD2BDD9797246165AC7FE98447E5AD4DF00_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		double L_0 = __this->___U3CLongitudeU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationLocationTrigger_get_NotifyOnEntry_m1CAB623B32CC86E1D88991D5D8D6610524C5F010_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CNotifyOnEntryU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationLocationTrigger_get_NotifyOnExit_m8D0AAD323FAF46CA0DFCCE6FFE6C496A398E3FD6_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CNotifyOnExitU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float iOSNotificationLocationTrigger_get_Radius_m0C88F4129F152878B4992FBCC5F74209168C6065_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = __this->___U3CRadiusU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool iOSNotificationLocationTrigger_get_Repeats_m8C0B2F1321CE19C7BEC39F45685502FE66D7A9D5_inline (iOSNotificationLocationTrigger_tA27CD1A09F1B72EC07D3E67173FDD25C8A914B48* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CRepeatsU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotification_set_Attachments_m93E8FB777A55F4C6AB38922DBD0A0C8E9890D15C_inline (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_0 = ___0_value;
+		__this->___U3CAttachmentsU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAttachmentsU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 iOSNotification_get_SoundVolume_m78AE382CC86FF14B9F75B8AF12490A6724DF1DA0_inline (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 L_0 = __this->___U3CSoundVolumeU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* iOSNotification_get_Attachments_m54CA2BC5B43417D01136FE5A72B0A0BD2636549D_inline (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, const RuntimeMethod* method) 
+{
+	{
+		List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* L_0 = __this->___U3CAttachmentsU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationAction_get_Id_m2EDC9A71F4912737711EAE8C9B09D8D496A3E3FA_inline (iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CIdU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationAction_get_Title_m44DF5E056FD6A12373E6AA43A2841BE2DB3EE012_inline (iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CTitleU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t iOSNotificationAction_get_Options_mEEDBE525091EDE4B06F7638293682C1AB9DFC65D_inline (iOSNotificationAction_tD8E5D341A875E263D6879512F6663003431FA319* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->___U3COptionsU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationAttachment_get_Id_m8A551CB233C83D05BDDACF9688CBECAAF9846C15_inline (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CIdU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationAttachment_set_Id_m7401F5705B3B4ADDC0DA5B372FE4579418891E7E_inline (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___0_value;
+		__this->___U3CIdU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CIdU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationAttachment_get_Url_mE0C69FB858552B293B9C0BDDFF2894FC6EBE9BF0_inline (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CUrlU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationAttachment_set_Url_m4F0B407457097EC2DEFDCD296E07CDDF624DE202_inline (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = ___0_value;
+		__this->___U3CUrlU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CUrlU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_inline (NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_notification, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_value1;
+		intptr_t L_1 = ___1_value2;
+		return (bool)((((intptr_t)L_0) == ((intptr_t)L_1))? 1 : 0);
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Inequality_m90EFC9C4CAD9A33E309F2DDF98EE4E1DD253637B_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_value1;
+		intptr_t L_1 = ___1_value2;
+		return (bool)((((int32_t)((((intptr_t)L_0) == ((intptr_t)L_1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationCategory_get_Id_m6A4071B537F6E5B51DA11DCB43613BBD691CFBA9_inline (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CIdU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationCategory_get_HiddenPreviewsBodyPlaceholder_mCC5DF780F51E1AC578873FE372067DF14800A1C2_inline (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CHiddenPreviewsBodyPlaceholderU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* iOSNotificationCategory_get_SummaryFormat_m6835C27643601AFBCD4F51CA3E28C72E850164CB_inline (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CSummaryFormatU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t iOSNotificationCategory_get_Options_m93741379CF2DF82295080957832C1D37D3DFC961_inline (iOSNotificationCategory_tA1484A3FB74ADB6798FDF886440E28EB19DEB89F* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->___U3COptionsU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationTimeIntervalTrigger_set_Repeats_m7A9109F22E610DF25D696DD1CDEED9B311FBE5B9_inline (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = ___0_value;
+		__this->___U3CRepeatsU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Month_m6A0717CC00C5710782F55B6E8F235A8CCA783FCC_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CMonthU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Day_m8FB648F44C32FF032448CA475F56AF12FC7E760B_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CDayU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Hour_m3322D5351F9E8EFC284E552E55BF145355F8CF60_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CHourU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Minute_mF59941F1A7D0B027AACDAB8445DAC99DAE9AEE82_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CMinuteU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Second_m2347F668195B9C4773D4B0B3B297221FF8561F7D_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CSecondU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Repeats_m61C090AF21271FBAEB5E30E8A37F349BE822AE07_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = ___0_value;
+		__this->___U3CRepeatsU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___hasValue;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mC149B1C717AF506BBE8932F2C1DC86C378D17EA8_gshared_inline (Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___hasValue;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m5AA65AE0FA98A54B451AF71C63369111FF50A855_gshared_inline (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 ___0_item, const RuntimeMethod* method) 
+{
+	iOSNotificationAttachmentU5BU5D_t609D3C4CF05546E716C096241B03644FD9A9F908* V_0 = NULL;
+	int32_t V_1 = 0;
+	{
+		int32_t L_0 = __this->____version;
+		__this->____version = ((int32_t)il2cpp_codegen_add(L_0, 1));
+		iOSNotificationAttachmentU5BU5D_t609D3C4CF05546E716C096241B03644FD9A9F908* L_1 = __this->____items;
+		V_0 = L_1;
+		int32_t L_2 = __this->____size;
+		V_1 = L_2;
+		int32_t L_3 = V_1;
+		iOSNotificationAttachmentU5BU5D_t609D3C4CF05546E716C096241B03644FD9A9F908* L_4 = V_0;
+		NullCheck(L_4);
+		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		int32_t L_5 = V_1;
+		__this->____size = ((int32_t)il2cpp_codegen_add(L_5, 1));
+		iOSNotificationAttachmentU5BU5D_t609D3C4CF05546E716C096241B03644FD9A9F908* L_6 = V_0;
+		int32_t L_7 = V_1;
+		iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 L_8 = ___0_item;
+		NullCheck(L_6);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933)L_8);
+		return;
+	}
+
+IL_0034:
+	{
+		iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 L_9 = ___0_item;
+		List_1_AddWithResize_m7EE54C381A95D31D447DDC6350E39CE5C247A3A3(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 14));
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_gshared_inline (Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9* __this, const RuntimeMethod* method) 
+{
+	{
+		KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 L_0 = __this->____current;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___key;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___value;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m3CB4D035F9ED8FB5E637FFC298A063FD58C0FC06_gshared_inline (List_1_tC74F654247ABF5958BE119A0484FED155A4FA129* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->____size;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 Enumerator_get_Current_m8C61C8C66929068D7ED0AACA335678BF2551F90C_gshared_inline (Enumerator_t56BF2F0145B3E67F0E126AF3268C9EC41795E1E2* __this, const RuntimeMethod* method) 
+{
+	{
+		iOSNotificationAttachment_t9EB7149B6AD8B739CD96042CCE0C5F4D2DC29933 L_0 = __this->____current;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC4FF02B97026C0CCC439FD7ED3DEFA306C098CE Enumerator_get_Current_m9424B04BBD0560732E1913809F3725C44401977C_gshared_inline (Enumerator_tA7EC39CE1B8A2482A44DEE4E5F736BB3945E048C* __this, const RuntimeMethod* method) 
+{
+	{
+		KeyValuePair_2_tFC4FF02B97026C0CCC439FD7ED3DEFA306C098CE L_0 = __this->____current;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t KeyValuePair_2_get_Value_mD9B8955E1A15CC8D0F45A0938E0AD24926071553_gshared_inline (KeyValuePair_2_tFC4FF02B97026C0CCC439FD7ED3DEFA306C098CE* __this, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = __this->___value;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool GCHandle_get_IsAllocated_m241908103D8D867E11CCAB73C918729825E86843_inline (GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC* __this, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = __this->___handle;
+		bool L_1;
+		L_1 = IntPtr_op_Inequality_m90EFC9C4CAD9A33E309F2DDF98EE4E1DD253637B_inline(L_0, 0, NULL);
+		return L_1;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool GCHandle_CanDereferenceHandle_mAAAC42D1268CEF3FDD040A3D1574773D08140579_inline (intptr_t ___0_handle, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_handle;
+		return (bool)((((intptr_t)((intptr_t)(L_0&((intptr_t)1)))) == ((intptr_t)((intptr_t)0)))? 1 : 0);
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GCHandle_GetRef_mAC7E58E62417209DC41C99F66BA70F0C3AA18DA8_inline (intptr_t ___0_handle, const RuntimeMethod* method) 
+{
+	{
+		intptr_t L_0 = ___0_handle;
+		void* L_1;
+		L_1 = IntPtr_op_Explicit_m2728CBA081E79B97DDCF1D4FAD77B309CA1E94BF(L_0, NULL);
+		RuntimeObject** L_2;
+		L_2 = il2cpp_unsafe_as_ref<RuntimeObject*>((intptr_t*)L_1);
+		RuntimeObject* L_3 = *((RuntimeObject**)L_2);
+		return L_3;
+	}
+}

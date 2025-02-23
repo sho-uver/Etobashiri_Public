@@ -177,7 +177,7 @@ public class Demo_Player : MonoBehaviour
             if (SystemInfo.supportsVibration)
             {
 #if UNITY_ANDROID || UNITY_IOS
-Handheld.Vibrate(); // Android/iOS のみの場合
+                Handheld.Vibrate(); // Android/iOS のみの場合
 #endif
 
             }
@@ -295,39 +295,25 @@ Handheld.Vibrate(); // Android/iOS のみの場合
     /// </summary>
     private void AdjustPlayerAngle(Collision2D collision)
     {
-        // 衝突点を拾い、Playerの中心 X との大小比較で「左 or 右」を判定
+        // 衝突点を取得
         ContactPoint2D contact = collision.GetContact(0);
-        Vector3 contactPos = contact.point; // ワールド座標の衝突点
+        Vector3 contactPos = contact.point;
         Vector3 playerPos = transform.position;
 
-        // ラインの中心
-        Vector3 lineCenter = collision.transform.position;
+        // 現在の進行方向を取得
+        Vector2 currentDir = (Vector2)(Quaternion.Euler(0, 0, transform.eulerAngles.z) * Vector2.up);
 
-        // プレイヤー中心→ライン中心ベクトル
-        Vector3 dir = lineCenter - playerPos;
+        // プレイヤーから衝突点へのベクトル
+        Vector2 dirToCollision = (contactPos - playerPos).normalized;
 
-        // 左半分 vs 右半分
-        bool isLeftHit = (contactPos.x < playerPos.x);
+        // 衝突が左右どちらで起きたかを判定
+        float cross = currentDir.x * dirToCollision.y - currentDir.y * dirToCollision.x;
+        float rotationSign = Mathf.Sign(cross); // 1なら左から衝突、-1なら右から衝突
 
-        // 「Playerの中心線と垂直になるように」
-        // → transform.right を (player→line)方向に合わせる
-        //    ただし左から当たったときは -dir にする等、好みで調整
-        if (isLeftHit)
-        {
-            // 左半分なら逆方向
-            // transform.right = -dir;
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x) * -1; // Y軸反転
-            transform.localScale = scale;
-        }
-        else
-        {
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x); // Y軸反転
-            transform.localScale = scale;
-            // 右半分ならそのまま
-            // transform.right = dir;
-        }
+        // スプライトの向きを設定（衝突の反対側を向く）
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * (-rotationSign); // 左からの衝突なら右向き、右からの衝突なら左向き
+        transform.localScale = scale;
     }
 
     public void ResetVelocity()

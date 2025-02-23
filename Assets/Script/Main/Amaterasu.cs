@@ -21,7 +21,7 @@ public class Amaterasu : MonoBehaviour
     {
         transform.position = player.transform.position + dis;
         lifeTime -= Time.deltaTime;
-        if(lifeTime < 0)
+        if (lifeTime < 0)
         {
             StartCoroutine(End());
         }
@@ -46,7 +46,7 @@ public class Amaterasu : MonoBehaviour
         audioSource.Play();
         tokuParticle.Play();
         GameObject obj;
-        obj = Instantiate(rainbow,transform.position,transform.rotation);
+        obj = Instantiate(rainbow, transform.position, transform.rotation);
         obj.transform.SetParent(transform);
     }
 
@@ -60,46 +60,46 @@ public class Amaterasu : MonoBehaviour
     {
         lifeTime = 10;
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,0,0);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
         yield return new WaitForSecondsRealtime(0.1f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         gameObject.SetActive(false);
     }
 
     public void SetStartTime()
     {
-        lifeTime = 10;
+        lifeTime = 20;
     }
 }

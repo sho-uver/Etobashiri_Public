@@ -14,7 +14,7 @@ public class GameSystemTrick : MonoBehaviour
 {
     public static GameSystemTrick instance;
     // const string STATISTICS_NAME = "Mugen_ver2.0";
-    const string STATISTICS_NAME = "Mugen_ver2.1";
+    const string STATISTICS_NAME = "Mugen_ver2.8";
     const string versionPlayCount = "PlayCount_ver2.1";
     public GameObject enemy;
     public GameObject player;
@@ -224,7 +224,10 @@ public class GameSystemTrick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (PlayerPrefs.GetInt("DemoDone", 0) == 0)
+        {
+            SceneManager.LoadScene("Demo");
+        }
         // Debug.developerConsoleVisible = true;
         // Debug.unityLogger.logEnabled = true;
         // Debug.Log(SceneManager.GetActiveScene().name);

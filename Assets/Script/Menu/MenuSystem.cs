@@ -10,7 +10,7 @@ using UnityEngine.Localization.Settings;
 
 public class MenuSystem : MonoBehaviour
 {
-    const string STATISTICS_NAME = "Mugen_ver2.1";
+    const string STATISTICS_NAME = "Mugen_ver2.8";
     public static MenuSystem instance;
     public GameObject rankingCanvas;
     public Slider levelSlider;

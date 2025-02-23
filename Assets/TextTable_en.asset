@@ -349,7 +349,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 36605634748080128
-    m_Localized: Eto Change
+    m_Localized: 'Eto Change
+
+      (comming soon...)'
     m_Metadata:
       m_Items: []
   - m_Id: 37264974211440640
@@ -401,51 +403,57 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 42440185940533248
-    m_Localized: "\u904A\u3073\u65B9\u3092\u8AAC\u660E\u3059\u308B\u306D\uFF01\n\u307E\u305A\u306F\u7DDA\u3092\u9577\u304F\u5F15\u3044\u3066\u307F\u3088\u3046"
+    m_Localized: "Let me explain how to play, fugo! \nFirst, try drawing a long line,
+      fugo!"
     m_Metadata:
       m_Items: []
   - m_Id: 42440247269646336
-    m_Localized: "\u3044\u3044\u306D\uFF01\n\u7DDA\u3092\u5F15\u3044\u305F\u3089\u7AF9\u306E\u58C1\u304C\u51FA\u3066\u304F\u308B\u3088"
+    m_Localized: "Nice, fugo! \nOnce you draw a line, a bamboo wall appears, fugo!"
     m_Metadata:
       m_Items: []
   - m_Id: 42448450527158272
-    m_Localized: "\u4ECA\u8D70\u3063\u3066\u3044\u308B\u306E\u306F\n\u3048\u3068\u3060\u3088"
+    m_Localized: Right now, Eto is running, fugo!
     m_Metadata:
       m_Items: []
   - m_Id: 42448566201868288
-    m_Localized: "\u3048\u3068\u304C\u7AF9\u306E\u58C1\u306B\u3076\u3064\u304B\u308B\u3088\u3046\u306B\u7DDA\u3092\u5F15\u3044\u3066\u307F\u3088\u3046"
+    m_Localized: Try drawing a line so that Eto collides with the bamboo wall, fugo!
     m_Metadata:
       m_Items: []
   - m_Id: 42448782556651520
-    m_Localized: "\u305D\u3046\u305D\u3046\uFF01\n\u3048\u3068\u306F\u7AF9\u306E\u58C1\u306B\u3076\u3064\u304B\u308B\u3068\n\u58C1\u3092\u8D70\u3063\u3066\u65B9\u5411\u3092\u5909\u3048\u308B\u3088"
+    m_Localized: "Fugo, fugo! \nWhen Eto hits the bamboo wall, \nhe runs along it
+      and changes direction, fugo!"
     m_Metadata:
       m_Items: []
   - m_Id: 42711394771001344
-    m_Localized: "\u4ECA\u51FA\u3066\u304D\u305F\u306E\u306F\u6575\u3060\u3088"
+    m_Localized: Now, an enemy appears, fugo!
     m_Metadata:
       m_Items: []
   - m_Id: 42711493458780160
-    m_Localized: "\u3046\u307E\u304F\u7AF9\u306E\u58C1\u3092\u4F5C\u3063\u3066\u6575\u306B\u3048\u3068\u3092\u3076\u3064\u3051\u3066\u307F\u3088\u3046\uFF01"
+    m_Localized: Skillfully create a bamboo wall and try to bump Eto into the enemy,
+      fugo!
     m_Metadata:
       m_Items: []
   - m_Id: 42711639340867584
-    m_Localized: "\u3046\u307E\u3044\uFF01\n\u3048\u3068\u3092\u3076\u3064\u3051\u308B\u3068\u6575\u3092\u5012\u305B\u308B\u3088\uFF01"
+    m_Localized: "Nice, fugo! \nWhen you bump Eto, you can defeat the enemy, fugo!"
     m_Metadata:
       m_Items: []
   - m_Id: 42712097346281472
-    m_Localized: "\u672C\u756A\u3067\u306F\u6575\u3092\u5012\u3057\u306A\u304C\u3089\n12\u5E74\u9593\u8D70\u308A\u629C\u3051\u308B\u3068\u30B2\u30FC\u30E0\u30AF\u30EA\u30A2\uFF01"
+    m_Localized: "In the actual game, if you run for 12 years while defeating enemies,
+      \nyou'll clear the game, fugo!"
     m_Metadata:
       m_Items: []
   - m_Id: 42712399323586560
-    m_Localized: "\u4ECA\u51FA\u3066\u304D\u305F\u306E\u306F\u5FDC\u63F4\u56E3\uFF01\n\u5F7C\u3089\u306E\u5FDC\u63F4\u306E\u304A\u304B\u3052\u3067\n\u3048\u3068\u306F\u8D70\u308B\u3053\u3068\u304C\u3067\u304D\u308B\u3088"
+    m_Localized: "Now, it's the cheer squad, fugo! \nThanks to their support, Eto
+      can keep running, fugo!"
     m_Metadata:
       m_Items: []
   - m_Id: 42712513937137664
-    m_Localized: "\u6575\u3092\u5012\u3057\u640D\u306D\u3066\u3057\u307E\u3046\u3068\n\u5FDC\u63F4\u56E3\u304C\u4E00\u4EBA\u5E30\u3063\u3066\u3057\u307E\u3046\u3088\n\u5168\u54E1\u3044\u306A\u304F\u306A\u3063\u305F\u3089\u30B2\u30FC\u30E0\u30AA\u30FC\u30D0\u30FC\uFF01"
+    m_Localized: "If you miss an enemy, one member of the cheer squad will leave,
+      fugo! \nWhen all of them are gone, it's game over, fugo!"
     m_Metadata:
       m_Items: []
   - m_Id: 42712778601914368
-    m_Localized: "\u305D\u308C\u3058\u3083\u3042\u3001\u5B8C\u8D70\u76EE\u6307\u3057\u3066\u9811\u5F35\u3063\u3066\u306D\uFF01"
+    m_Localized: Alright then, I'll do my best to reach the goal, fugo!
     m_Metadata:
       m_Items: []
   - m_Id: 42739099449155584
@@ -464,6 +472,235 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 44888901947482112
     m_Localized: To the game summary site of developer Hisho!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47336793329098752
+    m_Localized: picture book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47337873962164224
+    m_Localized: You
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47338215374315520
+    m_Localized: A bamboo wall can be created from a finger.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47338817454071808
+    m_Localized: Inoshishi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47344729296199680
+    m_Localized: "A type of Eto. It charges forward recklessly, \ncontinuously warding
+      off misfortunes. \nWhen it blasts away enemies in a chain, \nyou score 100
+      points for each enemy."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47350449970339840
+    m_Localized: cheer squad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47357313848172544
+    m_Localized: "People who cheer Eto on regardless of danger. \nAs long as they
+      are there, Eto will keep running."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47360207267815424
+    m_Localized: Bamboo wall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47360793556017152
+    m_Localized: The bamboo wall you create. Eto can run along it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47361965150953472
+    m_Localized: Giant Torii
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47362916758839296
+    m_Localized: "One of the powers for warding off misfortune. \nIt grows gigantic
+      and charges forward boldly. \nDefeating an enemy earns you 100 virtue points."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47363551700967424
+    m_Localized: Flock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47364620678062080
+    m_Localized: "One of the powers for warding off misfortune. \nUriboo allies come
+      to the rescue. \nEach time they hit an enemy, the chain count increases."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47366057407537152
+    m_Localized: Amaterasu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47371505552580608
+    m_Localized: "One of the powers for warding off misfortune. \nAmaterasu appears
+      above Eto's head. \nWhen you blast an enemy and hit it, \nyou earn virtue points
+      equal to 1,000 times your chain count."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47372975148621824
+    m_Localized: Jailed Virtue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47373378393202688
+    m_Localized: "Virtue captured by the enemy. After three hits, \nthe cage is destroyed
+      and you earn 3000 virtue points."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47373633268473856
+    m_Localized: Jailed cheer squad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47373978535190528
+    m_Localized: "Virtue captured by the enemy. \nAfter five hits, \nthe cage is
+      destroyed and one member is added to the cheer squad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47374505910198272
+    m_Localized: Black Misfortune Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47374838166183936
+    m_Localized: "A ball enemy of Eto containing the source of misfortune inside.
+      \nWhen warding off misfortune, you earn 10 virtue points."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47375131071209472
+    m_Localized: Green Misfortune Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47380462262280192
+    m_Localized: "A misfortune ball that resembles the tender leaves of spring. \nIt's
+      small and hard to hit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47380981739413504
+    m_Localized: Red Misfortune Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47381174882918400
+    m_Localized: "A misfortune ball resembling the blazing summer sun. \nWhile being
+      blasted away,\nit produces columns of fire."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47381454647189504
+    m_Localized: Fire pillar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47381800329142272
+    m_Localized: "When Eto collides with it,\nhe becomes overheated and unable to
+      move for a while, \nduring which the cheer squad is attacked by enemies."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47382054717874176
+    m_Localized: Wave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47382346016481280
+    m_Localized: "Waves that alternately come in from the left and right, \ncausing
+      enemies and some mechanisms to sway gently."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47385770279821312
+    m_Localized: Driftwood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47385838361763840
+    m_Localized: "Driftwood washed up on the beach. \nEto hitting it doesn't cause
+      any harm, \nbut it gets in the way."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47387049395740672
+    m_Localized: Bubble
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47387051694219264
+    m_Localized: "It drifts buoyantly. When Eto or enemies collide with it, \nthey're
+      bounced away."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47387638821281792
+    m_Localized: Yellow Misfortune Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47387701387714560
+    m_Localized: "A misfortune ball resembling a baked sweet potato. \nIt tumbles
+      from side to side."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47388445486604288
+    m_Localized: Hole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47388467464757248
+    m_Localized: "A hole. If Eto falls in, \nthe cheer squad will be vulnerable to
+      enemy attacks.\n\n\n\n\n\n\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47388738764922880
+    m_Localized: Rock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47388958823276544
+    m_Localized: Stone. Eto hitting it doesn't cause any problems, but it gets in
+      the way.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47389137362214912
+    m_Localized: Warp Gate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47391420716146688
+    m_Localized: "Two mysterious rings placed by the gods. \nEnter the right ring
+      and exit from the left, or enter the left ring and exit from the right."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47391658604486656
+    m_Localized: Yellow Misfortune Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47392018257666048
+    m_Localized: "A misfortune ball resembling a snowball and the winter blue sky.
+      \nWhen Eto approaches, it moves in a straight line."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47392333669326848
+    m_Localized: Snow Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47392457887834112
+    m_Localized: "A rolling snowball. \nWhen it collides, one member of the cheer
+      squad disappears."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47394098548563968
+    m_Localized: Ice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47394156841000960
+    m_Localized: When Eto passes through, it becomes slick, increasing his speed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47394721671143424
+    m_Localized: Golden Misfortune Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47394813102776320
+    m_Localized: "A massive misfortune ball that stores gold within its body. \nWhen
+      blasted away, \nit flies for a long time, and defeating it earns you 1,000
+      virtue points."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47395744091463680
+    m_Localized: Great Misfortune Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47395880540561408
+    m_Localized: "A misfortune ball that brings great calamity upon people. \nIt
+      possesses all the features of green, red, yellow, blue, and gold."
     m_Metadata:
       m_Items: []
   references:

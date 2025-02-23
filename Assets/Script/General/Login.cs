@@ -17,7 +17,7 @@ using System.Text.RegularExpressions;
 // ScrollViewにめっちゃいいhttps://www.youtube.com/watch?v=UZxxzeRGJxg
 public class Login : MonoBehaviour
 {
-    const string STATISTICS_NAME = "Mugen_ver2.1";
+    const string STATISTICS_NAME = "Mugen_ver2.8";
     // public string ranking;
     public Text text;
     public TMP_InputField name;

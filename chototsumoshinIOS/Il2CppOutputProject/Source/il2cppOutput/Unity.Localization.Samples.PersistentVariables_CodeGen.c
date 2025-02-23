@@ -1,0 +1,135 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void ItemGender_get_VariableName_m006F02A1D1B74E0E83474E76ADD174C660C13AF1 (void);
+extern void ItemGender_GetSourceValue_mC99E6A82FEC46368A9AEA475C4A29C823ED1928B (void);
+extern void ItemGender__ctor_m17D71C63835A09D44ED83B0CA4BB94CA7E30D60F (void);
+extern void SetLocalVariable_SetNestedStringEntry_mFF7F119B5A4F2DD267E0F9B6E30E3C2CC80296CB (void);
+extern void SetLocalVariable__ctor_mF08A0A27AD234A9E1D7A71099F334A5ACC197888 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mC6457021ED5EEB4101A510790DF2BB323304049A (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m5C9D7B87C0F5B4FFA65425C1E522C9A31212614C (void);
+extern void ChangePlayerName_get_PlayerName_m9DDC240E58F23E14AEFFC60755B46BAA1B1241F0 (void);
+extern void ChangePlayerName_set_PlayerName_mF973A1FF4FA17B3B3F29ED9CB0616787A9DCB6C7 (void);
+extern void ChangePlayerName_GetVariable_m8C2D9114DF90890A3E3E55E52E2FC0E25949EC35 (void);
+extern void ChangePlayerName_Start_mAA01549241BF48C62156193E1B6D1B981D70C449 (void);
+extern void ChangePlayerName_OnValueChanges_mFC79825B0C7AB47FABA96C40E09D5CC3E2B84AC8 (void);
+extern void ChangePlayerName__ctor_m08055D1FEF6EF27D930D20072FB030C9F9E6FF40 (void);
+extern void ChangePlayerStats_Start_m7E97407E876E9365951038FFE7ADF914CCDDD5E1 (void);
+extern void ChangePlayerStats_VariableValueChanged_mFFCC3616C3B669EAFCAFDD003A981CA7AEACCAB4 (void);
+extern void ChangePlayerStats_RefreshSliderValue_mDC8A21921D49D4F7C1B50073CE8DAEA9820E3BC8 (void);
+extern void ChangePlayerStats_OnValueChanges_mFC227DF69CCB51A04DDAB2A55CD85814430A92D8 (void);
+extern void ChangePlayerStats__ctor_m4F4F659A7DDE70021233AB3755094608FDBD61EE (void);
+extern void CurrentTime_GetSourceValue_mB51907BF2BCF16CDCB825452C3A68283AECCAAFB (void);
+extern void CurrentTime__ctor_mCFBFDC74F2EDF23235857CA4032FE99310F61FA6 (void);
+extern void RandomPlayerStats_RandomStats_m694F085C5FB49D9039B2D25FB8B0341E21A94A08 (void);
+extern void RandomPlayerStats__ctor_m1B453E5846A4CF451FB2159C07EB85E8A40ECB7D (void);
+extern void SetupScene_Awake_m6F5D90C0B7D37C8D62B2E504FE598B3580BF947B (void);
+extern void SetupScene__ctor_mCD770B9A609FA088E5E0DC07F116C13652161033 (void);
+extern void ReturnValue_get_SourceValue_m18F6EA93D4048C1FB694D01778F4887D745A600F (void);
+extern void ReturnValue_set_SourceValue_m1EB06F2F23DB35C68AC13AFC8BF7517CF745619D (void);
+extern void ReturnValue_GetSourceValue_m527BD6C357B85495AAA804BF9FD795B956FA8F66 (void);
+extern void WeaponDamageGroup_GetSourceValue_m15036C98CD5362C29C643DE1EE9BC8F2FD6AAD80 (void);
+extern void WeaponDamageGroup_TryGetValue_m8AA91400119F5092D263AE60FA7BD124327E3C03 (void);
+extern void WeaponDamageGroup__ctor_mE03491D741D29ED1C768A32BDBCABB1FE9DF4438 (void);
+static Il2CppMethodPointer s_methodPointers[30] = 
+{
+	ItemGender_get_VariableName_m006F02A1D1B74E0E83474E76ADD174C660C13AF1,
+	ItemGender_GetSourceValue_mC99E6A82FEC46368A9AEA475C4A29C823ED1928B,
+	ItemGender__ctor_m17D71C63835A09D44ED83B0CA4BB94CA7E30D60F,
+	SetLocalVariable_SetNestedStringEntry_mFF7F119B5A4F2DD267E0F9B6E30E3C2CC80296CB,
+	SetLocalVariable__ctor_mF08A0A27AD234A9E1D7A71099F334A5ACC197888,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mC6457021ED5EEB4101A510790DF2BB323304049A,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m5C9D7B87C0F5B4FFA65425C1E522C9A31212614C,
+	ChangePlayerName_get_PlayerName_m9DDC240E58F23E14AEFFC60755B46BAA1B1241F0,
+	ChangePlayerName_set_PlayerName_mF973A1FF4FA17B3B3F29ED9CB0616787A9DCB6C7,
+	ChangePlayerName_GetVariable_m8C2D9114DF90890A3E3E55E52E2FC0E25949EC35,
+	ChangePlayerName_Start_mAA01549241BF48C62156193E1B6D1B981D70C449,
+	ChangePlayerName_OnValueChanges_mFC79825B0C7AB47FABA96C40E09D5CC3E2B84AC8,
+	ChangePlayerName__ctor_m08055D1FEF6EF27D930D20072FB030C9F9E6FF40,
+	ChangePlayerStats_Start_m7E97407E876E9365951038FFE7ADF914CCDDD5E1,
+	ChangePlayerStats_VariableValueChanged_mFFCC3616C3B669EAFCAFDD003A981CA7AEACCAB4,
+	ChangePlayerStats_RefreshSliderValue_mDC8A21921D49D4F7C1B50073CE8DAEA9820E3BC8,
+	ChangePlayerStats_OnValueChanges_mFC227DF69CCB51A04DDAB2A55CD85814430A92D8,
+	ChangePlayerStats__ctor_m4F4F659A7DDE70021233AB3755094608FDBD61EE,
+	CurrentTime_GetSourceValue_mB51907BF2BCF16CDCB825452C3A68283AECCAAFB,
+	CurrentTime__ctor_mCFBFDC74F2EDF23235857CA4032FE99310F61FA6,
+	RandomPlayerStats_RandomStats_m694F085C5FB49D9039B2D25FB8B0341E21A94A08,
+	RandomPlayerStats__ctor_m1B453E5846A4CF451FB2159C07EB85E8A40ECB7D,
+	SetupScene_Awake_m6F5D90C0B7D37C8D62B2E504FE598B3580BF947B,
+	SetupScene__ctor_mCD770B9A609FA088E5E0DC07F116C13652161033,
+	ReturnValue_get_SourceValue_m18F6EA93D4048C1FB694D01778F4887D745A600F,
+	ReturnValue_set_SourceValue_m1EB06F2F23DB35C68AC13AFC8BF7517CF745619D,
+	ReturnValue_GetSourceValue_m527BD6C357B85495AAA804BF9FD795B956FA8F66,
+	WeaponDamageGroup_GetSourceValue_m15036C98CD5362C29C643DE1EE9BC8F2FD6AAD80,
+	WeaponDamageGroup_TryGetValue_m8AA91400119F5092D263AE60FA7BD124327E3C03,
+	WeaponDamageGroup__ctor_mE03491D741D29ED1C768A32BDBCABB1FE9DF4438,
+};
+extern void ReturnValue_get_SourceValue_m18F6EA93D4048C1FB694D01778F4887D745A600F_AdjustorThunk (void);
+extern void ReturnValue_set_SourceValue_m1EB06F2F23DB35C68AC13AFC8BF7517CF745619D_AdjustorThunk (void);
+extern void ReturnValue_GetSourceValue_m527BD6C357B85495AAA804BF9FD795B956FA8F66_AdjustorThunk (void);
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[3] = 
+{
+	{ 0x06000019, ReturnValue_get_SourceValue_m18F6EA93D4048C1FB694D01778F4887D745A600F_AdjustorThunk },
+	{ 0x0600001A, ReturnValue_set_SourceValue_m1EB06F2F23DB35C68AC13AFC8BF7517CF745619D_AdjustorThunk },
+	{ 0x0600001B, ReturnValue_GetSourceValue_m527BD6C357B85495AAA804BF9FD795B956FA8F66_AdjustorThunk },
+};
+static const int32_t s_InvokerIndices[30] = 
+{
+	9765,
+	6939,
+	9922,
+	7968,
+	9922,
+	14644,
+	9922,
+	9765,
+	7968,
+	9765,
+	9922,
+	7968,
+	9922,
+	9922,
+	7968,
+	9922,
+	8021,
+	9922,
+	6939,
+	9922,
+	9922,
+	9922,
+	9922,
+	9922,
+	9765,
+	7968,
+	6939,
+	6939,
+	2702,
+	9922,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Localization_Samples_PersistentVariables_CodeGenModule;
+const Il2CppCodeGenModule g_Unity_Localization_Samples_PersistentVariables_CodeGenModule = 
+{
+	"Unity.Localization.Samples.PersistentVariables.dll",
+	30,
+	s_methodPointers,
+	3,
+	s_adjustorThunks,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
