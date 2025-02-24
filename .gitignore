@@ -98,9 +98,49 @@ iOS_app_BackUpThisFolder_ButDontShipItWithYourGame/GameAssembly.dSYM/Contents/Re
 iOS_app_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericMethodPointerTable.c
 iOS_app_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppInvokerTable.cpp
 iOS_app_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppTypeDefinitions.c
+
+# Unity プロジェクトの自動生成フォルダ
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# OSごとの不要ファイル
+.DS_Store
+Thumbs.db
+*.swp
+
+# Visual Studio & JetBrains Rider の設定
+.vs/
+.idea/
+*.suo
+*.user
+*.userprefs
+
+# Android/iOS ビルドファイル
+*.apk
+*.aab
+*.ipa
+*.symbols.zip
+*.dSYM/
+*.so
+*.dbg
+
+# 環境設定・秘密情報
+*.env
+secrets.json
+config.json
+google-services.json
+GoogleService-Info.plist
+
+# 100MB以上のファイル
 110MB
 EtobashiriAnd/EtobashiriAndroid_20241110-2.7-v12.symbols.zip
 bigfile.txt
 chototsumoshinIOS/Libraries/libiPhone-lib.a
 のテストファイルを作成
 user.keystore
+
